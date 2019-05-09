@@ -18,16 +18,16 @@ public class CameraZoom : MonoBehaviour
     private void Update()
     {
         var camToFocusDistance = Vector3.Distance(transform.position, focusTransform.position);
-        var distance = Vector3.Distance(transform.position,player.position);
-        
+        var distance = Vector3.Distance(transform.position, player.position);
+
         // camToFocusDistance max
         // distance current
         // current/max
         var zoomPercentage = distance / camToFocusDistance;
         var newZoom = Mathf.Lerp(maxFOV, minFOV, zoomPercentage);
         var newZoomFocusPoint = Mathf.Lerp(minCamZoom, maxCamZoom, zoomPercentage);
-        
-        focusTransform.position = new Vector3(focusTransform.position.x,newZoomFocusPoint,focusTransform.position.z);
+
+        focusTransform.position = new Vector3(focusTransform.position.x, newZoomFocusPoint, focusTransform.position.z);
         cinemachineVirtualCamera.m_Lens.FieldOfView = newZoom;
     }
 }
