@@ -30,9 +30,20 @@ public class Harvest : MonoBehaviour
                 {
                     Vector3Int result;
                     if (level.Validate(hit.collider.gameObject, hit.point, out result))
-                        level.Plant(plant, result);
+                        Plant(level, plant, result);
                 }
             }
         }
     }
+    
+    public void Plant(FarmlandLevel level, GameObject plant, Vector3Int cell)
+    {
+
+        Vector3 position = level.GetWorldCord(cell);
+        
+        level.LockCell(cell);
+
+        Instantiate(plant, position, level.transform.rotation);
+    }
+    
 }
