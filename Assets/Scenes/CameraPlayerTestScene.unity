@@ -637,7 +637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463851064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.51, y: 8.57, z: 4.14}
+  m_LocalPosition: {x: 13.51, y: 10, z: 4.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 463851065}
   m_Follow: {fileID: 805143482}
   m_Lens:
-    FieldOfView: 47
+    FieldOfView: 32
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -1044,8 +1044,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838639375}
-  m_LocalRotation: {x: 0.12720867, y: 0.83487475, z: -0.2168958, w: 0.4896512}
-  m_LocalPosition: {x: -18.491024, y: 29, z: 22.037258}
+  m_LocalRotation: {x: 0.18015487, y: -0.03422052, z: 0.006271464, w: 0.9830228}
+  m_LocalPosition: {x: 16.993624, y: 29, z: -45.834858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526835048}
@@ -1157,6 +1157,7 @@ GameObject:
   - component: {fileID: 885945845}
   - component: {fileID: 885945844}
   - component: {fileID: 885945848}
+  - component: {fileID: 885945849}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -1234,7 +1235,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 47
+  field of view: 32
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1259,8 +1260,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885945843}
-  m_LocalRotation: {x: 0.12720867, y: 0.83487475, z: -0.2168958, w: 0.4896512}
-  m_LocalPosition: {x: -18.491024, y: 29, z: 22.037258}
+  m_LocalRotation: {x: 0.18015487, y: -0.03422052, z: 0.006271464, w: 0.9830228}
+  m_LocalPosition: {x: 16.993624, y: 29, z: -45.834858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1275,6 +1276,32 @@ Skybox:
   m_GameObject: {fileID: 885945843}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: f81fd1ae76fe1df46baacaea6e5515f7, type: 2}
+--- !u!114 &885945849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885945843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dabb44513169314596da898a372c7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusTransform: {fileID: 463851065}
+  player: {fileID: 805143482}
+  cinemachineVirtualCamera: {fileID: 838639376}
+  m_Lens:
+    FieldOfView: 0
+    OrthographicSize: 0
+    NearClipPlane: 0
+    FarClipPlane: 0
+    Dutch: 0
+    LensShift: {x: 0, y: 0}
+  minCamZoom: -40
+  maxCamZoom: 10
+  minFOV: 30
+  maxFOV: 100
 --- !u!1 &981747380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,11 +2083,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 675424731}
-  m_PathPosition: 3.4150746
+  m_PathPosition: 1.9456427
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
-  m_XDamping: 0
-  m_YDamping: 0
+  m_XDamping: 6
+  m_YDamping: 6
   m_ZDamping: 1
   m_CameraUp: 0
   m_PitchDamping: 0
@@ -2910,7 +2937,7 @@ PrefabInstance:
     - target: {fileID: 2942661260904024967, guid: 016a710caf24a2423a002ed4c8ba000c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.93
+      value: 13.83
       objectReference: {fileID: 0}
     - target: {fileID: 2942661260904024967, guid: 016a710caf24a2423a002ed4c8ba000c,
         type: 3}
@@ -2920,7 +2947,7 @@ PrefabInstance:
     - target: {fileID: 2942661260904024967, guid: 016a710caf24a2423a002ed4c8ba000c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.19
+      value: -14.32
       objectReference: {fileID: 0}
     - target: {fileID: 2942661260904024967, guid: 016a710caf24a2423a002ed4c8ba000c,
         type: 3}
