@@ -12,13 +12,12 @@ public class Farmland : MonoBehaviour
     {
         foreach (var map in GetComponentsInChildren<Tilemap>())
         {
-            map.color = Color.clear;
+            //map.color = Color.clear;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public FarmlandLevel[] GetAllLevels()
     {
-        
+        return GetComponentsInChildren<FarmlandLevel>();
     }
 }
