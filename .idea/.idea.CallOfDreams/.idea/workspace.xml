@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4cc108a-fc2d-4008-ba34-64f2e4e1e93f" name="Default Changelist" comment="" />
+    <list default="true" id="e4cc108a-fc2d-4008-ba34-64f2e4e1e93f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CallOfDreams/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CallOfDreams/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CallOfDreams/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CallOfDreams/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,18 +13,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Player/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+            <state relative-caret-position="298">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
-                <marker date="1557329537571" expanded="false" signature="6:78" ph="..." />
-                <marker date="1557329537571" expanded="true" signature="123:1263" ph="{...}" />
-                <marker date="1557329537571" expanded="true" signature="466:537" ph="{...}" />
-                <marker date="1557329537571" expanded="true" signature="564:1261" ph="{...}" />
-                <marker date="1557329537571" expanded="true" signature="606:1141" ph="{...}" />
-                <marker date="1557329537571" expanded="true" signature="1054:1131" ph="{...}" />
+                <marker date="1557393608984" expanded="true" signature="6:97" ph="..." />
+                <marker date="1557393608984" expanded="true" signature="142:1323" ph="{...}" />
+                <marker date="1557393608984" expanded="true" signature="457:528" ph="{...}" />
+                <marker date="1557393608984" expanded="true" signature="555:1321" ph="{...}" />
+                <marker date="1557393608984" expanded="true" signature="646:1200" ph="{...}" />
+                <marker date="1557393608984" expanded="true" signature="1113:1190" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Player/Camera/CameraZoom.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <marker date="1557397400900" expanded="false" signature="6:97" ph="..." />
+                <marker date="1557397400900" expanded="true" signature="138:1174" ph="{...}" />
+                <marker date="1557397400900" expanded="true" signature="503:1172" ph="{...}" />
+                <marker date="1557397400900" expanded="true" signature="700:776" ph="/* camToFocusDistance max ... */" />
               </folding>
             </state>
           </provider>
@@ -32,11 +50,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../CallOfDreams - Copy/Assets/Player/CameraMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player/Camera/CameraZoom.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/Camera/CameraZoom.cs" />
       </list>
     </option>
   </component>
@@ -51,7 +71,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -65,6 +84,7 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
@@ -118,11 +138,12 @@
       <workItem from="1556618516099" duration="195000" />
       <workItem from="1556618844809" duration="1529000" />
       <workItem from="1556892396675" duration="162000" />
+      <workItem from="1557390955777" duration="6156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3633000" />
+    <option name="totallyTimeSpent" value="9789000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -137,7 +158,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -205,15 +226,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Player/PlayerMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+        <state relative-caret-position="298">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
-            <marker date="1557329537571" expanded="false" signature="6:78" ph="..." />
-            <marker date="1557329537571" expanded="true" signature="123:1263" ph="{...}" />
-            <marker date="1557329537571" expanded="true" signature="466:537" ph="{...}" />
-            <marker date="1557329537571" expanded="true" signature="564:1261" ph="{...}" />
-            <marker date="1557329537571" expanded="true" signature="606:1141" ph="{...}" />
-            <marker date="1557329537571" expanded="true" signature="1054:1131" ph="{...}" />
+            <marker date="1557393608984" expanded="true" signature="6:97" ph="..." />
+            <marker date="1557393608984" expanded="true" signature="142:1323" ph="{...}" />
+            <marker date="1557393608984" expanded="true" signature="457:528" ph="{...}" />
+            <marker date="1557393608984" expanded="true" signature="555:1321" ph="{...}" />
+            <marker date="1557393608984" expanded="true" signature="646:1200" ph="{...}" />
+            <marker date="1557393608984" expanded="true" signature="1113:1190" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Player/Camera/CameraZoom.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <marker date="1557397400900" expanded="false" signature="6:97" ph="..." />
+            <marker date="1557397400900" expanded="true" signature="138:1174" ph="{...}" />
+            <marker date="1557397400900" expanded="true" signature="503:1172" ph="{...}" />
+            <marker date="1557397400900" expanded="true" signature="700:776" ph="/* camToFocusDistance max ... */" />
           </folding>
         </state>
       </provider>
