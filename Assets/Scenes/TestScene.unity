@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 41916892}
   - component: {fileID: 41916891}
   - component: {fileID: 41916890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 98019084}
   - component: {fileID: 98019083}
   - component: {fileID: 98019082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 195441367}
   - component: {fileID: 195441366}
   - component: {fileID: 195441365}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 354080651}
   - component: {fileID: 354080650}
   - component: {fileID: 354080649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 410514118}
   - component: {fileID: 410514117}
   - component: {fileID: 410514116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,13 +863,13 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 1
   m_Waypoints:
-  - position: {x: -1.6823587, y: 0, z: 29.196758}
+  - position: {x: 4.05459, y: 0, z: 39.02566}
     roll: 0
-  - position: {x: 31.30471, y: 0, z: 2.473084}
+  - position: {x: 48.692966, y: 0, z: -10.658039}
     roll: 0
-  - position: {x: 1.7758722, y: 0, z: -32.48112}
+  - position: {x: -0.18868828, y: 0, z: -51.380154}
     roll: 0
-  - position: {x: -24.8064, y: 0, z: -0.576375}
+  - position: {x: -43.09143, y: 0, z: -12.263873}
     roll: 0
 --- !u!4 &675424732
 Transform:
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 769644504}
   - component: {fileID: 769644503}
   - component: {fileID: 769644502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,8 +1044,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838639375}
-  m_LocalRotation: {x: 0.2976205, y: 0.39952004, z: -0.13893008, w: 0.85586464}
-  m_LocalPosition: {x: -6.2850533, y: 29, z: -12.442606}
+  m_LocalRotation: {x: 0.12720867, y: 0.83487475, z: -0.2168958, w: 0.4896512}
+  m_LocalPosition: {x: -18.491024, y: 29, z: 22.037258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1526835048}
@@ -1064,7 +1064,7 @@ GameObject:
   - component: {fileID: 867557187}
   - component: {fileID: 867557186}
   - component: {fileID: 867557185}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1156,6 +1156,7 @@ GameObject:
   - component: {fileID: 885945846}
   - component: {fileID: 885945845}
   - component: {fileID: 885945844}
+  - component: {fileID: 885945848}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -1218,7 +1219,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.16153437, g: 0.34085378, b: 0.6226415, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1258,13 +1259,22 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885945843}
-  m_LocalRotation: {x: 0.2976205, y: 0.39952004, z: -0.13893008, w: 0.85586464}
-  m_LocalPosition: {x: -6.2850533, y: 29, z: -12.442606}
+  m_LocalRotation: {x: 0.12720867, y: 0.83487475, z: -0.2168958, w: 0.4896512}
+  m_LocalPosition: {x: -18.491024, y: 29, z: 22.037258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!45 &885945848
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885945843}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: f81fd1ae76fe1df46baacaea6e5515f7, type: 2}
 --- !u!1 &981747380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,7 +1379,7 @@ GameObject:
   - component: {fileID: 987604865}
   - component: {fileID: 987604864}
   - component: {fileID: 987604863}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1449,6 +1459,97 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987604861}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1111272490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1111272492}
+  - component: {fileID: 1111272491}
+  m_Layer: 0
+  m_Name: Directional Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1111272491
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111272490}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.89
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0.76
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1111272492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111272490}
+  m_LocalRotation: {x: 0.6942548, y: -0.17994796, z: 0.17958535, w: 0.6733336}
+  m_LocalPosition: {x: 89.4, y: 4.3, z: 90.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 88.30501, y: 166.263, z: 195.72198}
 --- !u!1 &1214267235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1562,7 @@ GameObject:
   - component: {fileID: 1214267239}
   - component: {fileID: 1214267238}
   - component: {fileID: 1214267237}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1654,7 @@ GameObject:
   - component: {fileID: 1317210770}
   - component: {fileID: 1317210769}
   - component: {fileID: 1317210768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1645,7 +1746,7 @@ GameObject:
   - component: {fileID: 1361878393}
   - component: {fileID: 1361878392}
   - component: {fileID: 1361878391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1838,7 @@ GameObject:
   - component: {fileID: 1462637564}
   - component: {fileID: 1462637563}
   - component: {fileID: 1462637562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1829,7 +1930,7 @@ GameObject:
   - component: {fileID: 1466556470}
   - component: {fileID: 1466556469}
   - component: {fileID: 1466556468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1955,7 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 675424731}
-  m_PathPosition: 2.6246858
+  m_PathPosition: 3.4150746
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -2018,7 +2119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567946871}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2071,7 +2172,7 @@ GameObject:
   - component: {fileID: 1580660397}
   - component: {fileID: 1580660396}
   - component: {fileID: 1580660395}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2163,7 +2264,7 @@ GameObject:
   - component: {fileID: 1763414626}
   - component: {fileID: 1763414625}
   - component: {fileID: 1763414624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2255,7 +2356,7 @@ GameObject:
   - component: {fileID: 1824319344}
   - component: {fileID: 1824319343}
   - component: {fileID: 1824319342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2347,7 +2448,7 @@ GameObject:
   - component: {fileID: 1840805584}
   - component: {fileID: 1840805583}
   - component: {fileID: 1840805582}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2439,7 +2540,7 @@ GameObject:
   - component: {fileID: 1851949929}
   - component: {fileID: 1851949928}
   - component: {fileID: 1851949927}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2531,7 +2632,7 @@ GameObject:
   - component: {fileID: 1871942472}
   - component: {fileID: 1871942471}
   - component: {fileID: 1871942470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2638,7 +2739,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.56256676, g: 0.60897213, b: 0.9245283, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -2714,7 +2815,7 @@ GameObject:
   - component: {fileID: 2137511907}
   - component: {fileID: 2137511906}
   - component: {fileID: 2137511905}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2871,5 +2972,15 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 885945846}
+    - target: {fileID: 3186720173364877363, guid: 016a710caf24a2423a002ed4c8ba000c,
+        type: 3}
+      propertyPath: rotateSpeed
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720624329982019188, guid: 016a710caf24a2423a002ed4c8ba000c,
+        type: 3}
+      propertyPath: m_Name
+      value: VRBrille
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 016a710caf24a2423a002ed4c8ba000c, type: 3}
