@@ -30,6 +30,11 @@ public class FarmlandLevel : MonoBehaviour
         return _lockedCells.Contains(cell);
     }
 
+    public Vector3 GetWorldCord(Vector3Int cell)
+    {
+        return GetComponent<Grid>().GetCellCenterWorld(cell);
+    }
+
     public bool Validate(GameObject cloud, Vector3 position, out Vector3Int result)
     {
         if (clouds.Contains(cloud))
@@ -48,15 +53,7 @@ public class FarmlandLevel : MonoBehaviour
         return false;
     }
 
-    public void Plant(GameObject plant, Vector3Int cell)
-    {
-        var grid = GetComponent<Grid>();
-        Vector3 position = grid.GetCellCenterWorld(cell);
-        
-        LockCell(cell);
-
-        Instantiate(plant, position, grid.transform.rotation);
-    }
+    
     
     
     
