@@ -46,12 +46,13 @@ public class FarmlandLevel : MonoBehaviour
 
     public bool Validate(GameObject cloud, Vector3 position, out Vector3Int result)
     {
+        // TODO(FK): Test if cloud is a plant
         if (clouds.Contains(cloud))
         {
             var grid = GetComponent<Grid>();
             Vector3Int cell = grid.WorldToCell(position);
 
-            if (GetComponentInChildren<Tilemap>().HasTile(cell) && !IsLocked(cell))
+            if (GetComponentInChildren<Tilemap>().HasTile(cell))
             {
                 result = cell;
                 return true;

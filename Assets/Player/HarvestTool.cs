@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Harvest : MonoBehaviour
+public class HarvestTool : MonoBehaviour
 {
     [SerializeField] private GameObject plant;
     [SerializeField] private Camera cam;
@@ -19,7 +19,7 @@ public class Harvest : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Vector3Int result = new Vector3Int();
+        Vector3Int cell = new Vector3Int();
         FarmlandLevel targetLevel = null;
 
         if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
@@ -27,21 +27,28 @@ public class Harvest : MonoBehaviour
             foreach (var level in farmland.GetAllLevels())
             {
 
-                if (level.Validate(hit.collider.gameObject, hit.point, out result))
+                if (level.Validate(hit.collider.gameObject, hit.point, out cell))
                 {
                     targetLevel = level;
-                    level.SetSelector(true, result);
+                    level.SetSelector(true, cell);
                 }
                 else
                 {
-                    level.SetSelector(false, result);
+                    level.SetSelector(false, cell);
                 }
             }
         }
         
         if (Input.GetMouseButtonDown(0) && targetLevel != null)
         {
-            Plant(targetLevel, plant, result);
+            if (!targetLevel.IsLocked(cell))
+            {
+                Plant(targetLevel, plant, cell);
+            }
+            else
+            {
+                Harvest();
+            }
         }
     }
     
@@ -53,6 +60,11 @@ public class Harvest : MonoBehaviour
         level.LockCell(cell);
 
         Instantiate(plant, position, level.transform.rotation);
+    }
+
+    public void Harvest()
+    {
+        
     }
     
 }
