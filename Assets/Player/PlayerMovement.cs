@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 12.0f;
     public float jumpDuration = 8.0f;
     public float gravity = 20.0f;
-    public ParticleSystem PlayerTrail;
+    public ParticleSystem playerTrail;
 
     public float rotateSpeed = 5;
 
@@ -30,33 +30,32 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        checkIfRunning();
-        movePlayer();
+        CheckIfRunning();
+        MovePlayer();
         if (IsMoving())
         {
-            PlayerTrail.Emit(1);
-            Debug.Log("funktioniert, chef!");
+            playerTrail.Emit(1);
         }
         else
         {
-            PlayerTrail.Stop();
+            playerTrail.Stop();
         }
     }
 
-    private void movePlayer()
+    private void MovePlayer()
     {
         var step = rotateSpeed * Time.deltaTime;
-        
+
         if (_controller.isGrounded)
         {
-            _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"))*speed;
- 
+            _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * speed;
+
             _moveDirection = cam.transform.TransformDirection(_moveDirection);
             _moveDirection.y = 0;
-            
-            Vector3 newDir = Vector3.MoveTowards(transform.forward, _moveDirection, step);
+
+            var newDir = Vector3.MoveTowards(transform.forward, _moveDirection, step);
             transform.rotation = Quaternion.LookRotation(newDir);
-            
+
             //_moveDirection *= speed;
             Jump();
         }
@@ -74,12 +73,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void checkIfRunning()
+    private void CheckIfRunning()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed = runSpeed;
         }
+
+
         else if (Input.GetKeyUp((KeyCode.LeftShift)))
         {
             speed = _normalSpeed;
@@ -88,25 +89,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsMoving()
     {
-        //Debug.Log(_moveDirection);
         var x = _moveDirection.x;
         var z = _moveDirection.z;
 
-        Debug.Log(x);
-        Debug.Log(z);
-        
-        if (x >= 1 || z >= 1 || x<= -0.5 || z <= -0.5)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
-        //TODO Y != 0 <-- find fix
-        
-        //return _moveDirection != Vector3.zero;
+        return x >= 1 || z >= 1 || x <= -0.5 || z <= -0.5;
     }
-    
 }
