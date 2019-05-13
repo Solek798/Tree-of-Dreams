@@ -5,7 +5,6 @@ using UnityEngine;
 public class HarvestTool : MonoBehaviour
 {
     [SerializeField] private GameObject plant;
-    [SerializeField] private Camera cam;
     [SerializeField] private Farmland farmland;
     
     
@@ -22,7 +21,7 @@ public class HarvestTool : MonoBehaviour
         Vector3Int cell = new Vector3Int();
         FarmlandLevel targetLevel = null;
 
-        if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
             foreach (var level in farmland.GetAllLevels())
             {
