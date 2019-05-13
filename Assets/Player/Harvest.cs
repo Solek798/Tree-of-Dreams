@@ -18,21 +18,30 @@ public class Harvest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        RaycastHit hit;
+        Vector3Int result = new Vector3Int();
+        FarmlandLevel targetLevel = null;
+
+        if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            
-            if (Physics.Raycast(ray, out hit))
+            foreach (var level in farmland.GetAllLevels())
             {
-                
-                foreach (var level in farmland.GetAllLevels())
+
+                if (level.Validate(hit.collider.gameObject, hit.point, out result))
                 {
-                    Vector3Int result;
-                    if (level.Validate(hit.collider.gameObject, hit.point, out result))
-                        Plant(level, plant, result);
+                    targetLevel = level;
+                    level.SetSelector(true, result);
+                }
+                else
+                {
+                    level.SetSelector(false, result);
                 }
             }
+        }
+        
+        if (Input.GetMouseButtonDown(0) && targetLevel != null)
+        {
+            Plant(targetLevel, plant, result);
         }
     }
     

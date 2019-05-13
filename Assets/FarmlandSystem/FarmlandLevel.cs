@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class FarmlandLevel : MonoBehaviour
 {
+    [SerializeField] private GameObject cellSelector;
     private HashSet<Vector3Int> _lockedCells;
     public List<GameObject> clouds;
     
@@ -33,6 +34,14 @@ public class FarmlandLevel : MonoBehaviour
     public Vector3 GetWorldCord(Vector3Int cell)
     {
         return GetComponent<Grid>().GetCellCenterWorld(cell);
+    }
+
+    public void SetSelector(bool active, Vector3Int cell)
+    {
+        cellSelector.transform.position = GetWorldCord(cell);
+        // TODO(FK): hardcoded values
+        cellSelector.transform.Translate(0, 0.2f, 0);
+        cellSelector.SetActive(active);
     }
 
     public bool Validate(GameObject cloud, Vector3 position, out Vector3Int result)
