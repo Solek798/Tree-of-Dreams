@@ -10,7 +10,8 @@ public class PlantStateSystem : MonoBehaviour
 
     private void Update()
     {
-        //var CurrentModel = PlantObject.StateModel;
+        //TODO: Implement this one to the Day n Night Cycle and remove the Button which is only for Debugging
+        //Fire2 = left Alt key
         if (!Input.GetButtonDown("Fire2")) return;
         if (currentState < PlantObject.StateModel.Count)
         {
@@ -18,6 +19,7 @@ public class PlantStateSystem : MonoBehaviour
         }
     }
 
+    //Exchanges the current Model with the next Model in the list of the Scriptable Object
     private void UpdateCurrentState()
     {
         GameObject newPlantModel = PlantObject.StateModel[currentState];

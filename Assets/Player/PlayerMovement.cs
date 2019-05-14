@@ -26,12 +26,14 @@ public class PlayerMovement : MonoBehaviour
         _controller = GetComponent<CharacterController>();
         _normalSpeed = speed;
     }
-//strg+r  + m
 
     private void Update()
     {
+        //Checks if the Player presses Shift to run
         CheckIfRunning();
+        //Player Movement
         MovePlayer();
+        //Checks if the Player is moving and if he does it emits the fairy dust particles
         if (IsMoving())
         {
             playerTrail.Emit(1);
@@ -42,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //The Main movement method which checks Input and moves the Character depending on its position around the Tree 
     private void MovePlayer()
     {
         var step = rotateSpeed * Time.deltaTime;
@@ -53,10 +56,10 @@ public class PlayerMovement : MonoBehaviour
             _moveDirection = cam.transform.TransformDirection(_moveDirection);
             _moveDirection.y = 0;
 
+            //Move.Towards is for a smoother transition when the Model turns, so it doesn't turn instantly
             var newDir = Vector3.MoveTowards(transform.forward, _moveDirection, step);
             transform.rotation = Quaternion.LookRotation(newDir);
 
-            //_moveDirection *= speed;
             Jump();
         }
 
@@ -89,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsMoving()
     {
+        //Check if the Player is moving on x and z axis
         var x = _moveDirection.x;
         var z = _moveDirection.z;
 
