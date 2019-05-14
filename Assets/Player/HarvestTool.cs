@@ -58,7 +58,8 @@ public class HarvestTool : MonoBehaviour
         
         level.LockCell(cell);
 
-        Instantiate(plant, position, level.transform.rotation);
+        var newPlant = Instantiate(plant, position, level.transform.rotation);
+        
     }
 
     public void Harvest()
