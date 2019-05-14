@@ -44,13 +44,22 @@ public class FarmlandLevel : MonoBehaviour
         cellSelector.SetActive(active);
     }
 
-    public bool Validate(GameObject cloud, Vector3 position, out Vector3Int result)
+    public bool Validate(GameObject objectToVerify, Vector3 position, out Vector3Int result)
     {
-        // TODO(FK): Test if cloud is a plant
-        if (clouds.Contains(cloud))
+        // Test if object is a plant
+        
+        var plant = objectToVerify.GetComponent<PlantState>();
+        if (plant != null)
         {
-            var grid = GetComponent<Grid>();
-            Vector3Int cell = grid.WorldToCell(position);
+            result = GetComponent<Grid>().WorldToCell(objectToVerify.transform.position);
+            return true;
+        }
+        
+        // Test if object is a cloud
+        
+        if (clouds.Contains(objectToVerify))
+        {
+            Vector3Int cell = GetComponent<Grid>().WorldToCell(position);
 
             if (GetComponentInChildren<Tilemap>().HasTile(cell))
             {

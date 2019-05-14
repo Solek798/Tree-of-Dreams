@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2603246218300022539}
   - component: {fileID: 2122497696108340157}
+  - component: {fileID: 3232584544680734790}
   m_Layer: 0
   m_Name: TestPlant
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8038181292515298160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.999856, y: -0.60930824, z: -5.838705}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -45,3 +46,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantObject: {fileID: 11400000, guid: aafcbd51f5b4c9d329379d794af2838f, type: 2}
   currentState: 0
+--- !u!136 &3232584544680734790
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8038181292515298160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
