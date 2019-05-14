@@ -44,9 +44,12 @@ public class HarvestTool : MonoBehaviour
             {
                 Plant(targetLevel, plant, cell);
             }
-            else
+
+            var plantState = hit.collider.gameObject.GetComponent<PlantState>();
+            
+            if (plantState != null && plantState.currentState == 2)
             {
-                Harvest();
+                Harvest(targetLevel, hit.collider.gameObject, cell);
             }
         }
     }
@@ -62,9 +65,10 @@ public class HarvestTool : MonoBehaviour
         
     }
 
-    public void Harvest()
+    public void Harvest(FarmlandLevel level, GameObject plant, Vector3Int cell)
     {
-        
+        Destroy(plant);
+        level.UnlockCell(cell);
     }
     
 }
