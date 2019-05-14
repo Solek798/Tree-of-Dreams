@@ -6,7 +6,8 @@ public class HarvestTool : MonoBehaviour
 {
     [SerializeField] private GameObject plant;
     [SerializeField] private Farmland farmland;
-    
+
+    public float plantDistance = 60.0f;
     
     // Start is called before the first frame update
     void Start()
@@ -40,8 +41,10 @@ public class HarvestTool : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && targetLevel != null)
         {
-            if (!targetLevel.IsLocked(cell))
+            if (!targetLevel.IsLocked(cell) && 
+                (targetLevel.GetWorldCord(cell) - transform.position).sqrMagnitude <= plantDistance)
             {
+                
                 Plant(targetLevel, plant, cell);
             }
 
