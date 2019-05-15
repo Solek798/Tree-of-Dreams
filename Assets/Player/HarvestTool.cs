@@ -24,6 +24,7 @@ public class HarvestTool : MonoBehaviour
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
+           
             foreach (var level in farmland.GetAllLevels())
             {
 
