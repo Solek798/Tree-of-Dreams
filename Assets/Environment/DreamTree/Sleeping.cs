@@ -12,18 +12,25 @@ public class Sleeping : MonoBehaviour
 
     private void Update()
     {
+        if (SleepFunction()) return;
+
+        StartCoroutine(Wait());
+    }
+
+    private bool SleepFunction()
+    {
         var plants = GameObject.FindGameObjectsWithTag("Plant");
 
 
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
 
-        if (!Input.GetButtonDown("Fire2") || !(playerInRange <= maxDistanceToSleep)) return;
+        if (!Input.GetButtonDown("Fire2") || !(playerInRange <= maxDistanceToSleep)) return true;
         foreach (var plant in plants)
         {
             plant.GetComponent<PlantState>().UpdateCurrentState();
         }
 
-        StartCoroutine(Wait());
+        return false;
     }
 
     private void FadeBlack()
