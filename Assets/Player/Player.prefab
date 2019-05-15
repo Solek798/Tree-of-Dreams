@@ -4840,7 +4840,7 @@ GameObject:
   - component: {fileID: 2483433778295244367}
   - component: {fileID: 7425407827233562906}
   - component: {fileID: 7425407827233562909}
-  - component: {fileID: 2303680474604009308}
+  - component: {fileID: 852392804}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4908,7 +4908,7 @@ MonoBehaviour:
   gravity: 17
   playerTrail: {fileID: 1448441952}
   rotateSpeed: 22
---- !u!114 &2303680474604009308
+--- !u!114 &852392804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4920,9 +4920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810f277efec43fc8794bc4afca28dde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 5816874617844070828, guid: 6128affb0ce7c909dbc55fb05e45920b, type: 3}
-  cam: {fileID: 0}
+  plant: {fileID: 8038181292515298160, guid: e3d14bf94657a8d2b9d392b3cdf71f4a, type: 3}
   farmland: {fileID: 0}
+  plantDistance: 60
 --- !u!1 &2810296081910301075
 GameObject:
   m_ObjectHideFlags: 0
