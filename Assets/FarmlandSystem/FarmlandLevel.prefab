@@ -42,7 +42,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727626643146567992}
   m_Enabled: 1
-  m_CellSize: {x: 2, y: 2, z: 0}
+  m_CellSize: {x: 6, y: 2, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 1
@@ -207,16 +207,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6727626643146567990}
     m_Modifications:
-    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
-        type: 3}
-      propertyPath: m_Name
-      value: CellSelector
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9144305963856279455, guid: 303f5543027d337e6baec2088cd4a662,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -270,6 +260,16 @@ PrefabInstance:
     - target: {fileID: 9144305963856279455, guid: 303f5543027d337e6baec2088cd4a662,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
+        type: 3}
+      propertyPath: m_Name
+      value: CellSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
