@@ -13,7 +13,7 @@ public class FarmlandLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _lockedCells = new HashSet<Vector3Int>();
+        _lockedCells = new HashSet<Vector3Int>();    
     }
 
     public void LockCell(Vector3Int cellToLock)
@@ -34,7 +34,7 @@ public class FarmlandLevel : MonoBehaviour
     public Vector3 GetWorldCord(Vector3Int cell)
     {
         return GetComponent<Grid>().GetCellCenterWorld(cell);
-    }
+    }    
 
     public void SetSelector(bool active, Vector3Int cell)
     {
