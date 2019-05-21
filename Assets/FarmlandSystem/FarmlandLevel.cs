@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class FarmlandLevel : MonoBehaviour
 {
-    [SerializeField] private GameObject cellSelector;
+    [SerializeField] private GameObject cellSelector = null;
     private HashSet<Vector3Int> _lockedCells;
     public List<GameObject> clouds;
     

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
+    [SerializeField] private Camera cam = null;
 
     private CharacterController _controller;
 

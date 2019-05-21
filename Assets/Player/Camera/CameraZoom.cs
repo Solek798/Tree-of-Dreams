@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    [SerializeField] private Transform focusTransform;
-    [SerializeField] private Transform player;
-    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera;
+    [SerializeField] private Transform focusTransform =null;
+    [SerializeField] private Transform player = null;
+    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera = null;
     public LensSettings m_Lens;
     
     //CamZoom is the position of the Focuspoint. The lower it is, the lower the Camera is looking
