@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HarvestTool : MonoBehaviour
 {
-    [SerializeField] private GameObject plant;
-    [SerializeField] private Farmland farmland;
+    [SerializeField] private GameObject plant = null;
+    [SerializeField] private Farmland farmland = null;
 
     public float plantDistance = 60.0f;
     
