@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class HarvestTool : MonoBehaviour
 {
-    [SerializeField] private GameObject plant = null;
+    [SerializeField] private GameObject[] plants = null;
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private GameObject CropPopUp = null;
-    [SerializeField] private GameObject Plant1 = null;
-    [SerializeField] private GameObject Plant2 = null;
-    [SerializeField] private GameObject Plant3 = null;
-    [SerializeField] private GameObject Plant4 = null;
-    [SerializeField] private GameObject Plant5 = null;
 
     private FarmlandLevel currentTargetLevel;
     private Vector3Int currentCell;
@@ -85,85 +80,18 @@ public class HarvestTool : MonoBehaviour
         
     }
 
+    public void Plant(int index)
+    {
+        Vector3 position = currentTargetLevel.GetWorldCord(currentCell);
+        
+        currentTargetLevel.LockCell(currentCell);
+
+        var newPlant = Instantiate(plants[index], position, currentTargetLevel.transform.rotation);
+    }
+
     public void Harvest(FarmlandLevel level, GameObject plant, Vector3Int cell)
     {
         Destroy(plant);
         level.UnlockCell(cell);
-    }
-
-    
-    
-    
-    
-    //TODO buttonClick function
-    public void Button1Click()
-    {
-        var targetLevel = currentTargetLevel;
-        var cell = currentCell;
-        
-        plant = Plant1;
-        
-        Plant(targetLevel, plant, cell);
-        
-        CropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
-    }
-    
-    public void Button2Click()
-    {
-        var targetLevel = currentTargetLevel;
-        var cell = currentCell;
-        
-        plant = Plant1;
-        
-        Plant(targetLevel, plant, cell);
-        
-        CropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
-    }
-    public void Button3Click()
-    {
-        var targetLevel = currentTargetLevel;
-        var cell = currentCell;
-        
-        plant = Plant1;
-        
-        Plant(targetLevel, plant, cell);
-        
-        CropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
-    }
-    public void Button4Click()
-    {
-        var targetLevel = currentTargetLevel;
-        var cell = currentCell;
-        
-        plant = Plant1;
-        
-        Plant(targetLevel, plant, cell);
-        
-        CropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
-    }
-    public void Button5Click()
-    {
-        var targetLevel = currentTargetLevel;
-        var cell = currentCell;
-        
-        plant = Plant1;
-        
-        Plant(targetLevel, plant, cell);
-        
-        CropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    public void ExitButtonClick()
-    {
-        CropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
     }
 }

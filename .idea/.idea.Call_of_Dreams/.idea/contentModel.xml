@@ -7,6 +7,9 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Environment" t="Include">
+          <e p="DreamTree" t="Include">
+            <e p="Sleeping.cs" t="Include" />
+          </e>
           <e p="Plants" t="Include">
             <e p="PlantScriptableObject.cs" t="Include" />
             <e p="PlantState.cs" t="Include" />
@@ -22,6 +25,15 @@
           </e>
           <e p="HarvestTool.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="Button" t="Include">
+            <e p="ExitButtonBehaviour.cs" t="Include" />
+            <e p="SceneController.cs" t="Include" />
+          </e>
+          <e p="HarvestPopup" t="Include">
+            <e p="PopupCropUi.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Call_of_Dreams.sln" t="IncludeFlat" />
