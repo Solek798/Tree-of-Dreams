@@ -49,10 +49,6 @@ public class HarvestTool : MonoBehaviour
             if (!targetLevel.IsLocked(cell) && 
                 (targetLevel.GetWorldCord(cell) - transform.position).sqrMagnitude <= plantDistance)
             {
-                //TODO give buttonclick the targetLevel 
-                //Plant(targetLevel, plant, cell);
-                
-                
                 currentTargetLevel = targetLevel;
                 currentCell = cell;
                 
@@ -79,14 +75,10 @@ public class HarvestTool : MonoBehaviour
         var newPlant = Instantiate(plant, position, level.transform.rotation);
         
     }
-
-    public void Plant(int index)
+    
+    public void Plant(GameObject plant)
     {
-        Vector3 position = currentTargetLevel.GetWorldCord(currentCell);
-        
-        currentTargetLevel.LockCell(currentCell);
-
-        var newPlant = Instantiate(plants[index], position, currentTargetLevel.transform.rotation);
+        Plant(currentTargetLevel, plant, currentCell);
     }
 
     public void Harvest(FarmlandLevel level, GameObject plant, Vector3Int cell)
