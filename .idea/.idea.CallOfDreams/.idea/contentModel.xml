@@ -6,6 +6,20 @@
     <e p="C:\Users\Bryan.Printz\Desktop\CallOfDreams" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Environment" t="Include">
+          <e p="DreamTree" t="Include">
+            <e p="Sleeping.cs" t="Include" />
+          </e>
+          <e p="Plants" t="Include">
+            <e p="Plant5" t="Include">
+              <e p="Fake Poop" t="Include">
+                <e p="info.txt" t="Include" />
+              </e>
+            </e>
+            <e p="PlantScriptableObject.cs" t="Include" />
+            <e p="PlantState.cs" t="Include" />
+          </e>
+        </e>
         <e p="FarmlandSystem" t="Include">
           <e p="Farmland.cs" t="Include" />
           <e p="FarmlandLevel.cs" t="Include" />
@@ -14,16 +28,24 @@
           <e p="Camera" t="Include">
             <e p="CameraZoom.cs" t="Include" />
           </e>
+          <e p="HarvestTool.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="Button" t="Include">
+            <e p="ExitButtonBehaviour.cs" t="Include" />
+            <e p="SceneController.cs" t="Include" />
+          </e>
+          <e p="HarvestPopup" t="Include">
+            <e p="PopupCropUi.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="CallOfDreams.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
