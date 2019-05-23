@@ -4,15 +4,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+
+using System.Linq;
+
 public class FarmlandLevel : MonoBehaviour
 {
     [SerializeField] private GameObject cellSelector = null;
+    [SerializeField] private GameObject cloudContainer;
     private HashSet<Vector3Int> _lockedCells;
-    public List<GameObject> clouds;
+    private List<GameObject> _clouds;
     
     // Start is called before the first frame update
     void Start()
     {
+        _clouds =
+            cloudContainer
+                .GetComponentsInChildren<Transform>()
+                .Select(t => t.gameObject)
+                .ToList();
+
+        /*_clouds = new List<GameObject>();
+        foreach(Transform cloud in cloudContainer.GetComponentInChildren<Transform>())
+        {
+            if (cloud.gameObject != cloudContainer)
+            {
+                _clouds.Add(cloud.gameObject);
+            }
+        }*/
         _lockedCells = new HashSet<Vector3Int>();    
     }
 
@@ -57,7 +75,7 @@ public class FarmlandLevel : MonoBehaviour
         
         // Test if object is a cloud
         
-        if (clouds.Contains(objectToVerify))
+        if (_clouds.Contains(objectToVerify))
         {
             Vector3Int cell = GetComponent<Grid>().WorldToCell(position);
 
