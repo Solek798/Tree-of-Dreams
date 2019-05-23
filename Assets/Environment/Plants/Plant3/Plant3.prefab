@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2122497696108340157}
   - component: {fileID: 3232584544680734790}
   m_Layer: 0
-  m_Name: TestPlant
+  m_Name: Plant3
   m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6085d3723ba714f4aaf2cadcc42afb1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantObject: {fileID: 11400000, guid: aafcbd51f5b4c9d329379d794af2838f, type: 2}
+  plantObject: {fileID: 11400000, guid: bdfaeb4c1e3253d4f96c8e61588a9749, type: 2}
   currentState: 0
 --- !u!136 &3232584544680734790
 CapsuleCollider:
