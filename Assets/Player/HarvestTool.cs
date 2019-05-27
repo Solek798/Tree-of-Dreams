@@ -1,22 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class HarvestTool : MonoBehaviour
 {
     [SerializeField] private GameObject[] plants = null;
     [SerializeField] private Farmland farmland = null;
-    [SerializeField] private GameObject CropPopUp = null;
+    [SerializeField] private GameObject cropPopUp = null;
 
-    private FarmlandLevel currentTargetLevel;
-    private Vector3Int currentCell;
+    private FarmlandLevel _currentTargetLevel;
+    private Vector3Int _currentCell;
 
     public float plantDistance = 60.0f;
     
     // Start is called before the first frame update
     void Start()
     {
-        CropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
+        cropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class HarvestTool : MonoBehaviour
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
            
-            foreach (var level in farmland.GetAllLevels())
+            foreach (FarmlandLevel level in farmland)
             {
 
                 if (level.Validate(hit.collider.gameObject, hit.point, out cell))
@@ -49,10 +50,10 @@ public class HarvestTool : MonoBehaviour
             if (!targetLevel.IsLocked(cell) && 
                 (targetLevel.GetWorldCord(cell) - transform.position).sqrMagnitude <= plantDistance)
             {
-                currentTargetLevel = targetLevel;
-                currentCell = cell;
+                _currentTargetLevel = targetLevel;
+                _currentCell = cell;
                 
-                CropPopUp.GetComponent<PopupCropUi>().OpenUiMenu();
+                cropPopUp.GetComponent<PopupCropUi>().OpenUiMenu();
                 
             }
 
@@ -78,7 +79,7 @@ public class HarvestTool : MonoBehaviour
     
     public void Plant(GameObject plant)
     {
-        Plant(currentTargetLevel, plant, currentCell);
+        Plant(_currentTargetLevel, plant, _currentCell);
     }
 
     public void Harvest(FarmlandLevel level, GameObject plant, Vector3Int cell)
