@@ -10,7 +10,7 @@ public class FarmlandLevel : MonoBehaviour
     private HashSet<Vector3Int> _lockedCells;
     public List<GameObject> clouds;
     
-    // Start is called before the first frame update
+    
     void Start()
     {
         _lockedCells = new HashSet<Vector3Int>();    
@@ -70,6 +70,8 @@ public class FarmlandLevel : MonoBehaviour
         
         result = Vector3Int.zero;
         return false;
+        
+        
     }
 
     
