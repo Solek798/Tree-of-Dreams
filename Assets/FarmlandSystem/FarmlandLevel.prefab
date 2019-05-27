@@ -42,7 +42,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727626643146567992}
   m_Enabled: 1
-  m_CellSize: {x: 6, y: 2, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 1
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellSelector: {fileID: 367202824858779031}
-  clouds: []
+  cloudContainer: {fileID: 0}
 --- !u!1 &6727626643986742608
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,45 +111,45 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: 5.4514654e+11
-      e01: -8.769284e+15
-      e02: -2.542426e+14
-      e03: 1.08e-43
-      e10: 4.5916e-41
-      e11: 3.0942e-41
-      e12: 3.0942e-41
-      e13: 0
+      e00: NaN
+      e01: NaN
+      e02: 0
+      e03: 1.2605609e+37
+      e10: NaN
+      e11: NaN
+      e12: 448
+      e13: 1.12e-43
       e20: 0
       e21: 0
-      e22: -5.9968774e+12
-      e23: 4.3e-44
+      e22: 0
+      e23: -1.3178094e-18
       e30: 0
       e31: 0
-      e32: 3.0942e-41
-      e33: 0
+      e32: 0
+      e33: 4.5905e-41
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: 0, g: 0, b: 0, a: 0}
   - m_RefCount: 0
-    m_Data: {r: 0, g: 0, b: 0, a: 0}
+    m_Data: {r: 0.00005754223, g: 0.00005754223, b: 0.00005754223, a: 0.00005754223}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 4, y: 3, z: 1}
+  m_Origin: {x: -15, y: -4, z: 0}
+  m_Size: {x: 24, y: 17, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 6
   m_TileOrientationMatrix:
-    e00: 1.5
+    e00: 1
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 0.0005234778
+    e11: 0.000000059604645
     e12: -0.99999994
     e13: 0
     e20: 0
-    e21: 1.4999999
-    e22: 0.0003489852
+    e21: 0.99999994
+    e22: 0.000000059604645
     e23: 0
     e30: 0
     e31: 0
@@ -207,6 +207,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6727626643146567990}
     m_Modifications:
+    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
+        type: 3}
+      propertyPath: m_Name
+      value: CellSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9144305963856279455, guid: 303f5543027d337e6baec2088cd4a662,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -260,16 +270,6 @@ PrefabInstance:
     - target: {fileID: 9144305963856279455, guid: 303f5543027d337e6baec2088cd4a662,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
-        type: 3}
-      propertyPath: m_Name
-      value: CellSelector
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916656943823233904, guid: 303f5543027d337e6baec2088cd4a662,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
