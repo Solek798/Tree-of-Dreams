@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Farmland : MonoBehaviour
+public class Farmland : MonoBehaviour, IEnumerable
 {
     
     
@@ -15,9 +15,14 @@ public class Farmland : MonoBehaviour
             map.color = Color.clear;
         }
     }
-
+    
     public FarmlandLevel[] GetAllLevels()
     {
         return GetComponentsInChildren<FarmlandLevel>();
+    }
+
+    public IEnumerator GetEnumerator()
+    {
+        return GetAllLevels().GetEnumerator();
     }
 }
