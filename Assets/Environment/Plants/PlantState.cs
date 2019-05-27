@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using System.Linq;
 
 public class PlantState : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlantState : MonoBehaviour
         Instantiate(plantObject.StateModel[currentState], transform.position, Quaternion.identity, transform);
     }
 
+
     //Exchanges the current Model with the next Model in the list of the Scriptable Object
     public void UpdateCurrentState()
     {
@@ -23,14 +25,14 @@ public class PlantState : MonoBehaviour
         currentState++;
         GameObject newPlantModel = plantObject.StateModel[currentState];
 
-
+        this.DestroyAllChildren();
+        
         foreach (var childTransform in GetComponentsInChildren<Transform>())
         {
             if (childTransform != transform)
                 Destroy(childTransform.gameObject);
         }
 
-        GameObject PlantModel = Instantiate(newPlantModel, transform.position,
-            Quaternion.identity, transform);
+        Instantiate(newPlantModel, transform.position, Quaternion.identity, transform);
     }
 }
