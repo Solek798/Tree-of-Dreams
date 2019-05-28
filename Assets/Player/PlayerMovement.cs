@@ -58,7 +58,11 @@ public class PlayerMovement : MonoBehaviour
 
             //Move.Towards is for a smoother transition when the Model turns, so it doesn't turn instantly
             var newDir = Vector3.MoveTowards(transform.forward, _moveDirection, step);
-            transform.rotation = Quaternion.LookRotation(newDir);
+            if (newDir != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(newDir);
+            }
+            
 
             Jump();
         }
