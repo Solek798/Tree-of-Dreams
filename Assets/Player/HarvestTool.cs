@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
 public class HarvestTool : MonoBehaviour
@@ -84,7 +85,8 @@ public class HarvestTool : MonoBehaviour
 
     public void Harvest(FarmlandLevel level, GameObject plant, Vector3Int cell)
     {
-        Destroy(plant);
+        //Destroy(plant);
+        GetComponentInChildren<Inventory>()?.PickUp(plant);
         level.UnlockCell(cell);
     }
 }
