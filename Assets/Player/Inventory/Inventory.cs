@@ -9,10 +9,11 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private Text currencyText;
     [SerializeField] private GameObject slotContainer;
+    [SerializeField] private Transform playerTransform;
 
     private Slot[] _slots = null;
 
-    public Transform PlayerTransform { get; }
+    public Transform PlayerTransform => playerTransform;
 
 
     public int Currency
@@ -39,7 +40,7 @@ public class Inventory : MonoBehaviour
     public bool PickUp(GameObject newObject)
     {
         var item = newObject.GetComponent<InventoryItem>();
-
+        
         if (item == null) 
             return false;
 
