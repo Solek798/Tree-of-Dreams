@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     private Slot[] _slots = null;
 
     public Transform PlayerTransform => playerTransform;
+    
 
 
     public int Currency
@@ -47,7 +48,7 @@ public class Inventory : MonoBehaviour
         // TODO(FK): Convert to Linq?
         foreach (var slot in _slots)
         {
-            if (slot.Push(item))
+            if (slot.Put(item))
             {
                 item.Store(this);
                 return true;

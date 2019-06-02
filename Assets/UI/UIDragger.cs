@@ -1,26 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class UIDragger : MonoBehaviour
 {
+    public const string DRAG = "UIDragable";
+    public const string DROP = "UIDropable";
 
     private bool _isDragging = false;
     private GameObject _draggingObject;
-    private Transform _origPos;
-    private List<RaycastResult> _results;
+    private Transform _origParentTransform;
+
+    // TODO(FK): wait for UI Solution
+    public Canvas inventoryCanvas;
     
     // Start is called before the first frame update
     private void Start()
     {
-        _results = new List<RaycastResult>();
+        
     }
 
     // Update is called once per frame
     private void Update()
     {
+        // TODO(FK): Finish Drag 'n' drop mechanic
+        return;
         if (_isDragging)
         {
             _draggingObject.transform.position = Input.mousePosition;
@@ -29,35 +39,61 @@ public class UIDragger : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _draggingObject = GetDragableObject();
-            print(_draggingObject);
-
+            
             if (_draggingObject != null)
             {
-                _origPos = _draggingObject.transform.parent;
-                _draggingObject.transform.parent = _draggingObject.GetComponentInParent<Canvas>().transform;
-                _isDragging = true;
+                Drag();
             }  
         }
 
         if (Input.GetMouseButtonUp(0) && _isDragging)
         {
-            _draggingObject.transform.parent = _origPos;
-            _draggingObject.transform.localPosition = Vector2.zero;
-            _isDragging = false;
+            var o = DnDRaycaster.Raycast(inventoryCanvas, DROP);
+            Drop(o);
         }
     }
 
     private GameObject GetDragableObject()
     {
-        var pointer = new PointerEventData(EventSystem.current) {position = Input.mousePosition};
+        return DnDRaycaster.Raycast(inventoryCanvas, DRAG);
+    }
 
-        EventSystem.current.RaycastAll(pointer, _results);
+    private void Drag()
+    {
+        _origParentTransform = _draggingObject.transform.parent;
+        _draggingObject.transform.SetParent(_draggingObject.GetComponentInParent<Canvas>().transform);
+        _draggingObject.BroadcastMessage("OnDrag", SendMessageOptions.DontRequireReceiver);
+        _isDragging = true;
+    }
 
-        if (_results.Count == 0)
-            return null;
+    private void Drop(GameObject target)
+    {
+        _draggingObject.BroadcastMessage("OnDrop", SendMessageOptions.DontRequireReceiver);
+        _draggingObject.transform.SetParent(_origParentTransform, false);
+        _draggingObject.transform.localPosition = Vector2.zero;
         
-        return _results
-                .Select(t => t.gameObject)
-                .FirstOrDefault(t => t.CompareTag("UIDragable"));
+        _isDragging = false;
+    }
+
+    public class DnDRaycaster
+    {
+        public static GameObject Raycast(Canvas targetCanvas, string tagToCompare)
+        {
+
+            return targetCanvas
+                .gameObject
+                .GetAllChildren()
+                .Where(t => t.CompareTag(tagToCompare))
+                .FirstOrDefault(t => GetGlobalRect((RectTransform) t.transform).Contains(Input.mousePosition));
+        }
+
+        private static Rect GetGlobalRect(RectTransform rectTransform)
+        {
+            
+            var retVal = new Rect(rectTransform.rect);
+            retVal.position += (Vector2)rectTransform.position;
+            
+            return retVal;
+        }
     }
 }
