@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!223 &229246131 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8225644327968451887, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+    type: 3}
+  m_PrefabInstance: {fileID: 1643490307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &680780127
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +314,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1395069848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7680239066932301478, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+    type: 3}
+  m_PrefabInstance: {fileID: 1643490307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4dac21bc3ac2de494546c6348b26d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1538006866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -853,12 +871,24 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8225644327968451887, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
         type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2049828877}
-    m_RemovedComponents: []
+    - target: {fileID: 1957227639599713136, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8099039359579366320, guid: adedfb3da8b49683aa2bde5aa6c4b936, type: 3}
+    - {fileID: 8963087822787309185, guid: adedfb3da8b49683aa2bde5aa6c4b936, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: adedfb3da8b49683aa2bde5aa6c4b936, type: 3}
 --- !u!1 &1759717838
 GameObject:
@@ -1610,6 +1640,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIDragger
       objectReference: {fileID: 0}
+    - target: {fileID: 5499821611028735373, guid: b9fc4176c3784c179b0d659985c2538e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2664186188436764741, guid: b9fc4176c3784c179b0d659985c2538e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1665,5 +1700,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5122808648630244400, guid: b9fc4176c3784c179b0d659985c2538e,
+        type: 3}
+      propertyPath: testSlot
+      value: 
+      objectReference: {fileID: 1395069848}
+    - target: {fileID: 5122808648630244400, guid: b9fc4176c3784c179b0d659985c2538e,
+        type: 3}
+      propertyPath: inventoryCanvas
+      value: 
+      objectReference: {fileID: 229246131}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fc4176c3784c179b0d659985c2538e, type: 3}

@@ -14,6 +14,7 @@ public static class MonoBehaviourExtension
 
     public static GameObject[] GetAllChildren(this GameObject mb)
     {
+        
         return mb
             .GetComponentsInChildren<Transform>()
             .Select(t => t.gameObject)

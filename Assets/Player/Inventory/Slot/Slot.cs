@@ -1,54 +1,69 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Slot : MonoBehaviour
+public class Slot : MonoBehaviour, IDropTarget
 {
-    private Stack<InventoryItem> _items;
-    private Info _info;
-
+    
+    [SerializeField] private GameObject stackPrefab;
+    [SerializeField] private Transform stackParent;
 
     private void Start()
     {
-        _items = new Stack<InventoryItem>();
-        _info = GetComponentInChildren<Info>();
+        
+    }
+
+    /*public void OnDroppedOnTarget(GameObject dropedObject)
+    {
+        var origSlot = dropedObject.GetComponent<Stack>()?.Slot;
+
+        if (origSlot)
+            Swap(origSlot);
+        
+    }*/
+
+    public bool Put(InventoryItem item)
+    {
+        var stack = GetComponentInChildren<Stack>();
+        
+        if (!stack)
+        {
+            stack = CreateAndAttacheStack();
+            // TODO(FK): Wait a Frame?
+            stack.Initialize();
+        }
+
+        return stack.Push(item);
     }
     
     public void Swap(Slot other)
     {
-        var otherStack = other._items;
-        other._items = this._items;
-        this._items = otherStack;
+        var stack = this.GetComponentInChildren<Stack>();
+        var otherStack = other.GetComponentInChildren<Stack>();
+
+        if (stack)
+        {
+            stack.transform.parent = other.stackParent;
+            stack.transform.localPosition = Vector2.zero;
+        }
+
+        if (otherStack)
+        {
+            otherStack.transform.parent = this.stackParent;
+            otherStack.transform.localPosition = Vector2.zero;
+        }
     }
 
-    public bool Push(InventoryItem item)
+    private Stack CreateAndAttacheStack()
     {
-        if (_items.Count > 0 && _items.Peek().Identifier != item.Identifier) 
-            return false;
+        var newStack = Instantiate(stackPrefab, stackParent);
+        newStack.transform.SetAsFirstSibling();
         
-        _items.Push(item);
-        
-        _info.Refresh(_items.Count, item.Icon);
-        
+        return newStack.GetComponent<Stack>();
+    }
+
+    public bool Handle(GameObject draggable)
+    {
+        // TODO(FK): FFinish Drag 'n' drop mechanic
         return true;
     }
-    
-    public InventoryItem Pop()
-    {
-        var retVal = _items.Pop();
-        _info.Refresh(_items.Count);
-        return retVal;
-    }
-
-    public InventoryItem[] PopAll()
-    {
-        var retVal = _items.ToArray();
-        _items.Clear();
-        
-        _info.Refresh(_items.Count);
-
-        return retVal;
-    }
-    
 }
