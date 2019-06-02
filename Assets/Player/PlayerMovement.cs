@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 12.0f;
     public float jumpDuration = 8.0f;
     public float gravity = 20.0f;
-    public ParticleSystem playerTrail;
+    //public ParticleSystem playerTrail;
 
     public float rotateSpeed = 5;
 
@@ -34,14 +34,14 @@ public class PlayerMovement : MonoBehaviour
         //Player Movement
         MovePlayer();
         //Checks if the Player is moving and if he does it emits the fairy dust particles
-        if (IsMoving())
+        /*if (IsMoving())
         {
             playerTrail.Emit(1);
         }
         else
         {
             playerTrail.Stop();
-        }
+        }*/
     }
 
     //The Main movement method which checks Input and moves the Character depending on its position around the Tree 
