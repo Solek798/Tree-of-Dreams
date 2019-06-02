@@ -186,7 +186,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3893484033428216027}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -486,8 +486,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ExitButtonClick
+      - m_Target: {fileID: 3893484033428216098}
+        m_MethodName: CloseUiMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -31,6 +31,14 @@
             <e p="CameraZoom.cs" t="Include" />
           </e>
           <e p="HarvestTool.cs" t="Include" />
+          <e p="Inventory" t="Include">
+            <e p="Inventory.cs" t="Include" />
+            <e p="InventoryItem.cs" t="Include" />
+            <e p="Slot" t="Include">
+              <e p="Slot.cs" t="Include" />
+              <e p="Stack.cs" t="Include" />
+            </e>
+          </e>
           <e p="PlayerMovement.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
@@ -41,6 +49,8 @@
           <e p="HarvestPopup" t="Include">
             <e p="PopupCropUi.cs" t="Include" />
           </e>
+          <e p="IDropTarget.cs" t="Include" />
+          <e p="UIDragger.cs" t="Include" />
         </e>
       </e>
       <e p="Call_of_Dreams.sln" t="IncludeFlat" />
