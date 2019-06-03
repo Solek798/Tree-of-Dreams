@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Currency: '
+  m_Text: "Currency: 0\x13"
 --- !u!1 &3196317037095681460
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyText: {fileID: 825235369}
   slotContainer: {fileID: 3196317037095681460}
+  playerTransform: {fileID: 0}
 --- !u!1001 &1510148304100771920
 PrefabInstance:
   m_ObjectHideFlags: 0
