@@ -32,6 +32,13 @@
           <e p="HarvestTool.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
         </e>
+        <e p="Quests" t="Include">
+          <e p="Lampion" t="Include">
+            <e p="Lampion.cs" t="Include" />
+          </e>
+          <e p="Quest.cs" t="Include" />
+          <e p="QuestCard.cs" t="Include" />
+        </e>
         <e p="UI" t="Include">
           <e p="Button" t="Include">
             <e p="ExitButtonBehaviour.cs" t="Include" />
@@ -39,9 +46,6 @@
           </e>
           <e p="HarvestPopup" t="Include">
             <e p="PopupCropUi.cs" t="Include" />
-          </e>
-          <e p="PostOffice" t="Include">
-            <e p="Quest.cs" t="Include" />
           </e>
         </e>
       </e>

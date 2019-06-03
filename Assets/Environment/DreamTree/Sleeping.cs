@@ -24,7 +24,7 @@ public class Sleeping : MonoBehaviour
 
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
 
-        if (!Input.GetButtonDown("Fire2") || !(playerInRange <= maxDistanceToSleep)) return true;
+        if (!Input.GetKeyDown(KeyCode.E) || !(playerInRange <= maxDistanceToSleep)) return true;
         foreach (var plant in plants)
         {
             plant.GetComponent<PlantState>().UpdateCurrentState();

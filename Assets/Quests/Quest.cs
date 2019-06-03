@@ -11,6 +11,10 @@ public class Quest : ScriptableObject
 
     public string questDescription;
 
+    public Sprite questNPCImage;
+    
+    
+
     //Requirements
     public List<GameObject> requirements = new List<GameObject>();
 }
