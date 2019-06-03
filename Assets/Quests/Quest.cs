@@ -9,7 +9,7 @@ public class Quest : ScriptableObject
     //Questname
     public new string name;
 
-    public string questDescription;
+    [TextArea] public string questDescription;
 
     public Sprite questNPCImage;
     
