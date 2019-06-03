@@ -30,7 +30,7 @@ public class UIDragger : MonoBehaviour
     private void Update()
     {
         // TODO(FK): Finish Drag 'n' drop mechanic
-        return;
+        //return;
         if (_isDragging)
         {
             _draggingObject.transform.position = Input.mousePosition;
@@ -68,11 +68,20 @@ public class UIDragger : MonoBehaviour
 
     private void Drop(GameObject target)
     {
+        
         _draggingObject.BroadcastMessage("OnDrop", SendMessageOptions.DontRequireReceiver);
-        _draggingObject.transform.SetParent(_origParentTransform, false);
-        _draggingObject.transform.localPosition = Vector2.zero;
+        
+        var dropTarget = target?.GetComponentInChildren<IDropTarget>();
+        
+        if (dropTarget == null || !dropTarget.Handle(_draggingObject))
+        {
+            _draggingObject.transform.SetParent(_origParentTransform, false);
+            _draggingObject.transform.localPosition = Vector2.zero;
+        }
         
         _isDragging = false;
+        _draggingObject = null;
+        _origParentTransform = null;
     }
 
     public class DnDRaycaster

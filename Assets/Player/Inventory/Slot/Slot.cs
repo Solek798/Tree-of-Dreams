@@ -12,15 +12,6 @@ public class Slot : MonoBehaviour, IDropTarget
         
     }
 
-    /*public void OnDroppedOnTarget(GameObject dropedObject)
-    {
-        var origSlot = dropedObject.GetComponent<Stack>()?.Slot;
-
-        if (origSlot)
-            Swap(origSlot);
-        
-    }*/
-
     public bool Put(InventoryItem item)
     {
         var stack = GetComponentInChildren<Stack>();
@@ -35,20 +26,21 @@ public class Slot : MonoBehaviour, IDropTarget
         return stack.Push(item);
     }
     
-    public void Swap(Slot other)
+    public void Swap(Stack otherStack)
     {
-        var stack = this.GetComponentInChildren<Stack>();
-        var otherStack = other.GetComponentInChildren<Stack>();
-
+        var stack = GetComponentInChildren<Stack>();
+        
         if (stack)
         {
-            stack.transform.parent = other.stackParent;
+            stack.transform.parent = otherStack.Slot.stackParent;
+            stack.Slot = otherStack.Slot;
             stack.transform.localPosition = Vector2.zero;
         }
 
         if (otherStack)
         {
             otherStack.transform.parent = this.stackParent;
+            otherStack.Slot = this;
             otherStack.transform.localPosition = Vector2.zero;
         }
     }
@@ -63,7 +55,16 @@ public class Slot : MonoBehaviour, IDropTarget
 
     public bool Handle(GameObject draggable)
     {
-        // TODO(FK): FFinish Drag 'n' drop mechanic
-        return true;
+        // TODO(FK): Finish Drag 'n' drop mechanic
+        var otherStack = draggable.GetComponent<Stack>();
+
+        if (otherStack)
+        {
+            print("Swap");
+            Swap(otherStack);
+            return true;
+        }
+
+        return false;
     }
 }

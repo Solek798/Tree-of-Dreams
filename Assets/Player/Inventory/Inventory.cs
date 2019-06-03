@@ -14,7 +14,10 @@ public class Inventory : MonoBehaviour
     private Slot[] _slots = null;
 
     public Transform PlayerTransform => playerTransform;
-    
+
+    /*public InventoryItem SelectedItem => _slots
+        .Select(t => t.gameObject.GetComponent<InventoryItem>())
+        .FirstOrDefault(t => t.gameObject.GetComponent<Toggle>()?.isOn);*/
 
 
     public int Currency
@@ -36,6 +39,10 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            print(KeyCode.Alpha3.ToString());
+        }
     }
 
     public bool PickUp(GameObject newObject)

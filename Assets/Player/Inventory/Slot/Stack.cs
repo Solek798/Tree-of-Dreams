@@ -11,7 +11,10 @@ public class Stack : MonoBehaviour
     private Image _icon;
     private Slot _slot;
 
-    public Slot Slot => _slot;
+    public Slot Slot { 
+        get => _slot;
+        set => _slot = value;
+    }
 
 
     // Make sure Selector is visible
