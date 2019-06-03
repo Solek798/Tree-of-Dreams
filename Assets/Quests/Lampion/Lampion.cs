@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
+
 
 public class Lampion : MonoBehaviour
 {
@@ -11,18 +10,24 @@ public class Lampion : MonoBehaviour
     public Quest quest;
     public GameObject ui;
 
-    private string _text;
-
+    [SerializeField] private GameObject npcImage;
+    
+    
     private void Start()
     {
-        _text = quest.questDescription;
-        //ui.GetComponentInChildren<Image>() = quest.questNPCImage;
+        
+
         
     }
 
 
     private void LampionActivation()
     {
+        //Get Data of the Scriptable Object
+        ui.GetComponentInChildren<Text>().text = quest.questDescription;
+        npcImage.GetComponent<UnityEngine.UI.Image>().sprite = quest.questNPCImage;
+        
+        
         ui.GetComponent<Canvas>().enabled = true;
     }
 
