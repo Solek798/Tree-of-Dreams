@@ -30,6 +30,11 @@ public class Stack : MonoBehaviour
         _count = GetComponentInChildren<Text>();
         _icon = GetComponentInChildren<Image>();
     }
+
+    public InventoryItem Peek()
+    {
+        return _items.Peek();
+    }
     
     public bool Push(InventoryItem item)
     {
@@ -65,7 +70,7 @@ public class Stack : MonoBehaviour
     {
         if (_items.Count == 0)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
             return;
         }
         
