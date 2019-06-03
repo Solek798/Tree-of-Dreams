@@ -7,6 +7,8 @@ public class Slot : MonoBehaviour, IDropTarget
     [SerializeField] private GameObject stackPrefab;
     [SerializeField] private Transform stackParent;
 
+    public Stack Stack => GetComponentInChildren<Stack>();
+    
     private void Start()
     {
         
