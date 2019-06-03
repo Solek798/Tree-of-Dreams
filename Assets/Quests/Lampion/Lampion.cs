@@ -10,7 +10,7 @@ public class Lampion : MonoBehaviour
     public Quest quest;
     public GameObject ui;
 
-    [SerializeField] private GameObject npcImage;
+    [SerializeField] private GameObject npcImage = null;
     
     
     private void Start()
