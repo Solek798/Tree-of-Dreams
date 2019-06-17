@@ -30,6 +30,7 @@
           <e p="Camera" t="Include">
             <e p="CameraZoom.cs" t="Include" />
           </e>
+          <e p="Hand.cs" t="Include" />
           <e p="HarvestTool.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="Inventory.cs" t="Include" />
@@ -40,6 +41,25 @@
             </e>
           </e>
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="Tools" t="Include">
+            <e p="CloudPlow" t="Include">
+              <e p="CloudPlow.cs" t="Include" />
+            </e>
+            <e p="DreamSickle" t="Include">
+              <e p="DreamSickle.cs" t="Include" />
+            </e>
+            <e p="ITool.cs" t="Include" />
+            <e p="SeedFlute" t="Include">
+              <e p="SeedFlute.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Quests" t="Include">
+          <e p="Lampion" t="Include">
+            <e p="Lampion.cs" t="Include" />
+          </e>
+          <e p="Quest.cs" t="Include" />
+          <e p="QuestCard.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
           <e p="Button" t="Include">
@@ -50,9 +70,6 @@
             <e p="PopupCropUi.cs" t="Include" />
           </e>
           <e p="IDropTarget.cs" t="Include" />
-          <e p="PostOffice" t="Include">
-            <e p="Quest.cs" t="Include" />
-          </e>
           <e p="UIDragger.cs" t="Include" />
         </e>
       </e>
