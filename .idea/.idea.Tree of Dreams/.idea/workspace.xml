@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7add4035-9d54-4b65-8044-82dd73f76d52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tree of Dreams/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tree of Dreams/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tree of Dreams/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tree of Dreams/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tree of Dreams/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tree of Dreams/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Quests/Lampion/Lampion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Lampion/Lampion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Panel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Panel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Quest Card UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Quest Card UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Quests/Quest1/QuestObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Quest1/QuestObject.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Quest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Quests/Quest.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Player/HarvestTool.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
+            <state relative-caret-position="990">
               <caret line="92" selection-start-line="92" selection-end-line="92" />
               <folding>
                 <marker date="1559572466282" expanded="false" signature="6:143" ph="..." />
@@ -43,14 +39,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Quests/Quest.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="300">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
-                <marker date="1559572471159" expanded="false" signature="6:100" ph="..." />
-                <marker date="1559572471159" expanded="true" signature="232:459" ph="{...}" />
+                <marker date="1560936058215" expanded="false" signature="6:100" ph="..." />
+                <marker date="1560936058215" expanded="true" signature="232:572" ph="{...}" />
+                <marker date="1560936058215" expanded="true" signature="525:570" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -70,22 +67,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Quests/Lampion/Lampion.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+            <state relative-caret-position="405">
+              <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
               <folding>
-                <marker date="1560934779804" expanded="true" signature="6:118" ph="..." />
-                <marker date="1560934779804" expanded="true" signature="157:1953" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="524:563" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="639:784" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="827:1389" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="1093:1306" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="1416:1951" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="1620:1673" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="1731:1945" ph="{...}" />
-                <marker date="1560934779804" expanded="true" signature="1853:1935" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="6:118" ph="..." />
+                <marker date="1560938731670" expanded="true" signature="157:1987" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="524:563" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="639:784" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="827:1423" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="1128:1341" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="1450:1985" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="1654:1707" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="1765:1979" ph="{...}" />
+                <marker date="1560938731670" expanded="true" signature="1887:1969" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -94,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Quests/RequirementsPanel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="270">
+              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
               <folding>
                 <marker date="1560933629352" expanded="false" signature="6:144" ph="..." />
                 <marker date="1560933629352" expanded="true" signature="192:530" ph="{...}" />
@@ -155,9 +152,9 @@
         <option value="$PROJECT_DIR$/Assets/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/PostOffice/Quest.cs" />
         <option value="$PROJECT_DIR$/Assets/Environment/DreamTree/Sleeping.cs" />
-        <option value="$PROJECT_DIR$/Assets/Quests/Quest.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/QuestCard.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/RequirementsPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Quests/Quest.cs" />
         <option value="$PROJECT_DIR$/Assets/Quests/Lampion/Lampion.cs" />
       </list>
     </option>
@@ -245,12 +242,12 @@
       <workItem from="1559550092967" duration="14859000" />
       <workItem from="1560768149733" duration="1788000" />
       <workItem from="1560861863862" duration="6019000" />
-      <workItem from="1560932101517" duration="2706000" />
+      <workItem from="1560932101517" duration="6251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47473000" />
+    <option name="totallyTimeSpent" value="51018000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,7 +452,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Player/HarvestTool.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
+        <state relative-caret-position="990">
           <caret line="92" selection-start-line="92" selection-end-line="92" />
           <folding>
             <marker date="1559572466282" expanded="false" signature="6:143" ph="..." />
@@ -472,17 +469,6 @@
             <marker date="1559572466282" expanded="true" signature="2138:2332" ph="{...}" />
             <marker date="1559572466282" expanded="true" signature="2377:2446" ph="{...}" />
             <marker date="1559572466282" expanded="true" signature="2527:2657" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Quests/Quest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <marker date="1559572471159" expanded="false" signature="6:100" ph="..." />
-            <marker date="1559572471159" expanded="true" signature="232:459" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -514,8 +500,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Quests/RequirementsPanel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
             <marker date="1560933629352" expanded="false" signature="6:144" ph="..." />
             <marker date="1560933629352" expanded="true" signature="192:530" ph="{...}" />
@@ -527,19 +513,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Quests/Lampion/Lampion.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        <state relative-caret-position="405">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding>
-            <marker date="1560934779804" expanded="true" signature="6:118" ph="..." />
-            <marker date="1560934779804" expanded="true" signature="157:1953" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="524:563" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="639:784" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="827:1389" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="1093:1306" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="1416:1951" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="1620:1673" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="1731:1945" ph="{...}" />
-            <marker date="1560934779804" expanded="true" signature="1853:1935" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="6:118" ph="..." />
+            <marker date="1560938731670" expanded="true" signature="157:1987" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="524:563" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="639:784" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="827:1423" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="1128:1341" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="1450:1985" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="1654:1707" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="1765:1979" ph="{...}" />
+            <marker date="1560938731670" expanded="true" signature="1887:1969" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Quests/Quest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <marker date="1560936058215" expanded="false" signature="6:100" ph="..." />
+            <marker date="1560936058215" expanded="true" signature="232:572" ph="{...}" />
+            <marker date="1560936058215" expanded="true" signature="525:570" ph="{...}" />
           </folding>
         </state>
       </provider>
