@@ -34,6 +34,7 @@ public class Lampion : MonoBehaviour
 
     private void LampionActivation()
     {
+        quest.AddQuestToJournal();
         //Get Data of the Scriptable Object
         ui.GetComponentInChildren<Text>().text = quest.questDescription;
         npcImage.GetComponent<UnityEngine.UI.Image>().sprite = quest.questNPCImage;
@@ -44,7 +45,6 @@ public class Lampion : MonoBehaviour
             Parent(uiRequirements,panelVariant);
             uiPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
         }
-
         ui.GetComponent<Canvas>().enabled = true;
         _uiOpened = true;
     }

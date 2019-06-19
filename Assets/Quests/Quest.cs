@@ -12,9 +12,15 @@ public class Quest : ScriptableObject
     [TextArea] public string questDescription;
 
     public Sprite questNPCImage;
-    
+
+    public bool isJournal = false;
     
 
     //Requirements
     public List<GameObject> requirements = new List<GameObject>();
+
+    public bool AddQuestToJournal()
+    {
+        return isJournal = true;
+    }
 }
