@@ -26,8 +26,9 @@ public class Lampion : MonoBehaviour
 
     private static void Parent( GameObject parentOb, GameObject childOb )
     {
-        childOb.transform.parent = parentOb.transform;
+        childOb.transform.SetParent(parentOb.transform, true);
         childOb.transform.localScale = new Vector3(1, 1, 1);
+        
     }
     
 
@@ -41,6 +42,7 @@ public class Lampion : MonoBehaviour
         {
             var panelVariant = Instantiate(uiPanel);
             Parent(uiRequirements,panelVariant);
+            uiPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
         }
 
         ui.GetComponent<Canvas>().enabled = true;
