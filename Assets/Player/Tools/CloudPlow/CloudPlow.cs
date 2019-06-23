@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CloudPlow : MonoBehaviour, ITool
 {
+    [SerializeField] private float maxPlowDistance = 60.0f;
+    
     public bool Use(FarmlandSpace space)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Plowing");
+        return space.IsSoil = true;
     }
 
     public bool IsUsable(FarmlandSpace space, Vector3 usagePoint)
     {
-        throw new System.NotImplementedException();
+        Debug.Log(space.transform.position);
+        Debug.Log(usagePoint);
+        return (space.transform.position - usagePoint).sqrMagnitude <= maxPlowDistance;
     }
-
-    public float MaxUsingDistance { get; }
 }

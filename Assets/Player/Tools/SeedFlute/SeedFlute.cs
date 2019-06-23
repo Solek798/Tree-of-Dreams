@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeedFlute : MonoBehaviour, ITool
 {
-    [SerializeField] private float maxPlantDistance;
+    [SerializeField] private float maxPlantDistance = 60.0f;
     
     public bool Use(FarmlandSpace space)
     {
@@ -13,7 +13,8 @@ public class SeedFlute : MonoBehaviour, ITool
 
     public bool IsUsable(FarmlandSpace space, Vector3 usagePoint)
     {
-        throw new System.NotImplementedException();
+        return (space.transform.position - usagePoint).sqrMagnitude <= maxPlantDistance &&
+               space.IsSoil;
     }
 
 

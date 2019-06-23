@@ -28,12 +28,15 @@ public class FarmlandLevel : MonoBehaviour
     {
         var cell = _grid.WorldToCell(cellSelector.transform.position);
 
-        if (!_register.ContainsKey(cell))
-        {
-            _register.Add(cell, Instantiate(farmlandSpacePrefab, transform));
-        }
+        if (_register.ContainsKey(cell)) 
+            return _register[cell].GetComponent<FarmlandSpace>();
+        
+        
+        var space = Instantiate(farmlandSpacePrefab, transform, false);
+        space.transform.position = cellSelector.transform.position;
+        _register.Add(cell, space);
 
-        return _register[cell].GetComponent<FarmlandSpace>();
+        return space.GetComponent<FarmlandSpace>();
     }
 
     public Vector3 GetWorldCord(Vector3Int cell)
