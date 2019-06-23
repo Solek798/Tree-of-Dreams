@@ -1,6 +1,7 @@
-﻿
+﻿using UnityEngine;
+
 public interface ITool
 {
-    bool Use();
-    bool IsUsable(FarmlandSpace space);
+    bool Use(FarmlandSpace space);
+    bool IsUsable(FarmlandSpace space, Vector3 usagePoint);
 }

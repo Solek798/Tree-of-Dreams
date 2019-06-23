@@ -9,62 +9,59 @@ using System.Linq;
 
 public class FarmlandLevel : MonoBehaviour
 {
+    [SerializeField] private GameObject farmlandSpacePrefab;
+    private Grid _grid;
+    [SerializeField] private Tilemap tilemap;
     [SerializeField] private GameObject cellSelector = null;
-    [SerializeField] private GameObject cloudContainer;
-    private HashSet<Vector3Int> _lockedCells;
-    private List<GameObject> _clouds;
+    [SerializeField] private GameObject ground;
+    [SerializeField] private int range = 500;
+    private Dictionary<Vector3Int, GameObject> _register;
     
     
-    void Start()
+    private void Start()
     {
-        _clouds =
-            cloudContainer
-                .GetComponentsInChildren<Transform>()
-                .Select(t => t.gameObject)
-                .ToList();
+        _register = new Dictionary<Vector3Int, GameObject>();
+        _grid = GetComponent<Grid>();
+    }
 
-        /*_clouds = new List<GameObject>();
-        foreach(Transform cloud in cloudContainer.GetComponentInChildren<Transform>())
+    public FarmlandSpace Interact()
+    {
+        var cell = _grid.WorldToCell(cellSelector.transform.position);
+
+        if (!_register.ContainsKey(cell))
         {
-            if (cloud.gameObject != cloudContainer)
-            {
-                _clouds.Add(cloud.gameObject);
-            }
-        }*/
-        _lockedCells = new HashSet<Vector3Int>();    
-    }
+            _register.Add(cell, Instantiate(farmlandSpacePrefab, transform));
+        }
 
-    public void LockCell(Vector3Int cellToLock)
-    {
-        _lockedCells.Add(cellToLock);
-    }
-
-    public void UnlockCell(Vector3Int cellToUnlock)
-    {
-        _lockedCells.Remove(cellToUnlock);
-    }
-
-    public bool IsLocked(Vector3Int cell)
-    {
-        return _lockedCells.Contains(cell);
+        return _register[cell].GetComponent<FarmlandSpace>();
     }
 
     public Vector3 GetWorldCord(Vector3Int cell)
     {
-        return GetComponent<Grid>().GetCellCenterWorld(cell);
-    }    
-
-    public void SetSelector(bool active, Vector3Int cell)
-    {
-        cellSelector.transform.position = GetWorldCord(cell);
-        // TODO(FK): hardcoded values
-        cellSelector.transform.Translate(0, 0.2f, 0);
-        cellSelector.SetActive(active);
+        return _grid.GetCellCenterWorld(cell);
     }
 
-    public bool Validate(GameObject objectToVerify, Vector3 position, out Vector3Int result)
+    public void ChangeSelector(bool active, Vector3 position = default(Vector3))
     {
-        // Test if object is a plant
+        var cell = _grid.WorldToCell(position);
+        
+        
+        if (active && tilemap.HasTile(cell))
+        {
+            cellSelector.transform.position = GetWorldCord(cell);
+            // TODO(FK): hardcoded values
+            cellSelector.transform.Translate(0, 0.2f, 0);
+            cellSelector.SetActive(true);
+        }
+        else
+        {
+            cellSelector.SetActive(false);
+        }
+    }
+
+    public bool HitLevel(GameObject objectToVerify)
+    {
+        /*// Test if object is a plant
         
         var plant = objectToVerify.GetComponent<PlantState>();
         if (plant != null)
@@ -75,21 +72,12 @@ public class FarmlandLevel : MonoBehaviour
         
         // Test if object is a cloud
         
-        if (_clouds.Contains(objectToVerify))
+        if ()
         {
-            Vector3Int cell = GetComponent<Grid>().WorldToCell(position);
-
-            if (GetComponentInChildren<Tilemap>().HasTile(cell))
-            {
-                result = cell;
-                return true;
-            }
-        }
+            
+        }*/
         
-        result = Vector3Int.zero;
-        return false;
-        
-        
+        return objectToVerify == ground;
     }
 
     
