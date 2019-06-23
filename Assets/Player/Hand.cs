@@ -17,6 +17,7 @@ public class Hand : MonoBehaviour
     void Start()
     {
         cropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
+        currentTool = GetComponentInChildren<CloudPlow>();
     }
 
     // Update is called once per frame
@@ -46,9 +47,9 @@ public class Hand : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && targetLevel != null)
         {
-            /*var space = targetLevel.Interact();
+            var space = targetLevel.Interact();
 
-            if (currentTool.IsUsable(space))
+            if (currentTool.IsUsable(space, transform.parent.position))
                 currentTool.Use(space);
             
             /*if (!targetLevel.IsLocked(cell) && 
