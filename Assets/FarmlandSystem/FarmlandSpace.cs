@@ -5,23 +5,46 @@ using UnityEngine;
 public class FarmlandSpace : MonoBehaviour
 {
     [SerializeField] private GameObject soil;
+    [SerializeField] private GameObject nurturedSoil;
     private Vector3Int _cell;
-    private bool _isNurtured;
 
     public bool IsSoil
     {
-        get => soil.activeInHierarchy;
-        set => soil.SetActive(value);
+        get => soil.activeInHierarchy || IsNurtured;
+        set => soil.SetActive(value && !IsNurtured);
     }
 
-    void Start()
+    public bool IsNurtured
     {
-        
+        get => nurturedSoil.activeInHierarchy;
+        set => nurturedSoil.SetActive(value && IsSoil);
     }
 
-    // Update is called once per frame
-    void Update()
+    public PlantState Plant
+    {
+        get => GetComponentInChildren<PlantState>();
+        set => value.transform.SetParent(transform, true);
+    }
+
+    private void UpdateState()
     {
         
+        if (IsNurtured)
+        {
+            if (Plant == null)
+            {
+                IsNurtured = false;
+                IsSoil = true;
+            }
+            else
+            {
+                Plant.UpdateCurrentState();
+            }
+        }
+        
+        if (IsSoil && Plant == null)
+        {
+            IsSoil = false;
+        }
     }
 }

@@ -10,10 +10,8 @@ public class Hand : MonoBehaviour
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private GameObject cropPopUp = null;
 
-    private FarmlandLevel _currentTargetLevel;
-    private Vector3Int _currentCell;
-
     public float plantDistance = 60.0f;
+    public ITool currentTool;
     
     // Start is called before the first frame update
     void Start()
@@ -25,7 +23,7 @@ public class Hand : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        Vector3Int cell = new Vector3Int();
+        var cell = new Vector3Int();
         FarmlandLevel targetLevel = null;
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
@@ -34,21 +32,26 @@ public class Hand : MonoBehaviour
             foreach (FarmlandLevel level in farmland)
             {
 
-                if (level.Validate(hit.collider.gameObject, hit.point, out cell))
+                if (level.HitLevel(hit.collider.gameObject))
                 {
                     targetLevel = level;
-                    level.SetSelector(true, cell);
+                    level.ChangeSelector(true, hit.point);
                 }
                 else
                 {
-                    level.SetSelector(false, cell);
+                    level.ChangeSelector(false);
                 }
             }
         }
         
         if (Input.GetMouseButtonDown(0) && targetLevel != null)
         {
-            if (!targetLevel.IsLocked(cell) && 
+            /*var space = targetLevel.Interact();
+
+            if (currentTool.IsUsable(space))
+                currentTool.Use(space);
+            
+            /*if (!targetLevel.IsLocked(cell) && 
                 (targetLevel.GetWorldCord(cell) - transform.position).sqrMagnitude <= plantDistance)
             {
                 _currentTargetLevel = targetLevel;
@@ -63,11 +66,11 @@ public class Hand : MonoBehaviour
             if (plantState != null && plantState.currentState == 2)
             {
                 Harvest(targetLevel, hit.collider.gameObject, cell);
-            }
+            }*/
         }
     }
     
-    public void Plant(FarmlandLevel level, GameObject plant, Vector3Int cell)
+    /*public void Plant(FarmlandLevel level, GameObject plant, Vector3Int cell)
     {
 
         Vector3 position = level.GetWorldCord(cell);
@@ -88,5 +91,5 @@ public class Hand : MonoBehaviour
         //Destroy(plant);
         GetComponentInChildren<Inventory>()?.PickUp(plant);
         level.UnlockCell(cell);
-    }
+    }*/
 }
