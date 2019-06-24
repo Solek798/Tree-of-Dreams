@@ -13,6 +13,4 @@ public class DreamSickle : MonoBehaviour, ITool
     {
         throw new System.NotImplementedException();
     }
-
-    public float MaxUsingDistance { get; }
 }

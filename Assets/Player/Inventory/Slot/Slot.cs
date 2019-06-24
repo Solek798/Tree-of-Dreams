@@ -62,11 +62,18 @@ public class Slot : MonoBehaviour, IDropTarget
 
         if (otherStack)
         {
-            print("Swap");
             Swap(otherStack);
             return true;
         }
 
         return false;
+    }
+
+    public void ToggleFirstItem()
+    {
+        var stack = GetComponentInChildren<Stack>();
+        var toggle = GetComponent<Toggle>();
+        
+        stack?.Peek().gameObject.SetActive(toggle.isOn);
     }
 }

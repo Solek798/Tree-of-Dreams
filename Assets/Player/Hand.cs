@@ -7,7 +7,6 @@ using UnityEngine.Serialization;
 public class Hand : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
-    [SerializeField] private GameObject cropPopUp = null;
     [SerializeField] private Inventory inventory;
     public float plantDistance = 60.0f;
     
@@ -15,7 +14,7 @@ public class Hand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cropPopUp.GetComponent<PopupCropUi>().CloseUiMenu();
+        
     }
 
     // Update is called once per frame

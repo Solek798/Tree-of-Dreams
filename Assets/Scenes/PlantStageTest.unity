@@ -765,25 +765,50 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893484033358809124, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetPlantPrefab
+      objectReference: {fileID: 0}
     - target: {fileID: 3893484034193039328, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893484034193039328, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetPlantPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 3893484034761499096, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3893484034761499096, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetPlantPrefab
+      objectReference: {fileID: 0}
     - target: {fileID: 3893484034887390082, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893484034887390082, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetPlantPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893484035171990646, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3893484035171990646, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetPlantPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 632147668, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}
       propertyPath: farmland
@@ -792,7 +817,7 @@ PrefabInstance:
     - target: {fileID: 632147668, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}
       propertyPath: cropPopUp
       value: 
-      objectReference: {fileID: 1538006867}
+      objectReference: {fileID: 0}
     - target: {fileID: 632147668, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}
       propertyPath: inventory
       value: 
@@ -821,6 +846,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8709235122882233135, guid: 084bf09c49dd65b9db1b66b66d7a7901,
         type: 3}
+    - target: {fileID: 1343227870686488671, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_IsOn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4199131830814484282, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_IsOn
@@ -848,12 +878,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}
---- !u!1 &1538006867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3893484034116211531, guid: 0e18207248c31564fb1d158b50c8d9c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1538006866}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1759717838
 GameObject:
   m_ObjectHideFlags: 0
