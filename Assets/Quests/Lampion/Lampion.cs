@@ -15,12 +15,15 @@ public class Lampion : MonoBehaviour
     [SerializeField] private GameObject npcImage = null;
     [SerializeField] private GameObject uiRequirements = null;
     [SerializeField] private GameObject uiPanel = null;
+    [SerializeField] private GameObject dreamPostOffice = null;
 
     private bool _uiOpened;
     
     private void Start()
     {
         _uiOpened = false;
+        quest.isJournal = false;
+
     }
 
 
@@ -34,7 +37,12 @@ public class Lampion : MonoBehaviour
 
     private void LampionActivation()
     {
-        quest.AddQuestToJournal();
+        if (quest.isJournal == false)
+        {
+            dreamPostOffice.GetComponent<DreamPostOffice>().QuestAddedToJournal(quest);
+            quest.AddQuestToJournal();
+
+        }
         //Get Data of the Scriptable Object
         ui.GetComponentInChildren<Text>().text = quest.questDescription;
         npcImage.GetComponent<UnityEngine.UI.Image>().sprite = quest.questNPCImage;

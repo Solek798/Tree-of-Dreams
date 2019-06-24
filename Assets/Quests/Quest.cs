@@ -18,9 +18,10 @@ public class Quest : ScriptableObject
 
     //Requirements
     public List<GameObject> requirements = new List<GameObject>();
+    
 
-    public bool AddQuestToJournal()
+    public void AddQuestToJournal()
     {
-        return isJournal = true;
+        isJournal = true;
     }
 }
