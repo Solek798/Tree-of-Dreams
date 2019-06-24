@@ -20,8 +20,7 @@ public class Journal : MonoBehaviour
 
     private void Start()
     {
-        journalCanvas.enabled = false;
-        _uiOpened = false;
+        CloseJournal();
         slider.value = 1;
     }
 
