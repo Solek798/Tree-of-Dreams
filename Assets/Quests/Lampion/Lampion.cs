@@ -16,6 +16,7 @@ public class Lampion : MonoBehaviour
     [SerializeField] private GameObject uiRequirements = null;
     [SerializeField] private GameObject uiPanel = null;
     [SerializeField] private GameObject dreamPostOffice = null;
+    [SerializeField] private GameObject journalUi = null;
 
     private bool _uiOpened;
     
@@ -40,6 +41,7 @@ public class Lampion : MonoBehaviour
         if (quest.isJournal == false)
         {
             dreamPostOffice.GetComponent<DreamPostOffice>().QuestAddedToJournal(quest);
+            journalUi.GetComponent<Journal>().QuestAddedToJournal(quest);
             quest.AddQuestToJournal();
 
         }

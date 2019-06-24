@@ -14,6 +14,8 @@ public class Quest : ScriptableObject
     public Sprite questNPCImage;
 
     public bool isJournal = false;
+
+    public int rewardDreamEssence;
     
 
     //Requirements
