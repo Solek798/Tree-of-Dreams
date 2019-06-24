@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5670335005242233281}
   - component: {fileID: 738724575814391994}
+  - component: {fileID: 2878498831118431685}
   m_Layer: 0
   m_Name: SeedFlute
   m_TagString: Untagged
@@ -43,3 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efb49ff4486ca570a4d8191c6aed59c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPlantDistance: 60
+--- !u!114 &2878498831118431685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3839314312650628465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff31fc9cf4aca58498c2bf1011f60f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 5efcdafbeb7176cbd9264172b745aff6, type: 3}
+  identifier: SeedFlute

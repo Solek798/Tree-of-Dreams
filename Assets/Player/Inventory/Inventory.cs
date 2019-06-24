@@ -11,6 +11,11 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject slotContainer;
     [SerializeField] private Transform playerTransform;
 
+    [SerializeField] private GameObject cloudPlowPrefab;
+    [SerializeField] private GameObject stardustBagPrefab;
+    [SerializeField] private GameObject seedFlutePrefab;
+    [SerializeField] private GameObject dreamSicklePrefab;
+
     private Slot[] _slots = null;
 
     public Transform PlayerTransform => playerTransform;
@@ -19,10 +24,12 @@ public class Inventory : MonoBehaviour
     {
         get
         {
+            /*var test = _slots.Select(t => t.gameObject.GetComponent<Toggle>())
+                ?.FirstOrDefault(t => t.isOn);*/
             return _slots
                 .Select(t => t.gameObject.GetComponent<Toggle>())
                 .FirstOrDefault(t => t.isOn)
-                ?.gameObject.GetComponent<Stack>()
+                ?.gameObject.GetComponentInChildren<Stack>()
                 .Peek();
         }
     }
@@ -43,8 +50,11 @@ public class Inventory : MonoBehaviour
                 .Select(t => t.GetComponent<Slot>())
                 .OfType<Slot>()
                 .ToArray();
-        
-        
+
+        PickUp(Instantiate(cloudPlowPrefab));
+        PickUp(Instantiate(stardustBagPrefab));
+        PickUp(Instantiate(seedFlutePrefab));
+        PickUp(Instantiate(dreamSicklePrefab));
     }
 
     void Update()

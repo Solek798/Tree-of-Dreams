@@ -11,13 +11,21 @@ public class FarmlandSpace : MonoBehaviour
     public bool IsSoil
     {
         get => soil.activeInHierarchy || IsNurtured;
-        set => soil.SetActive(value && !IsNurtured);
+        set
+        {
+            if (value) IsNurtured = false;
+            soil.SetActive(value);
+        }
     }
 
     public bool IsNurtured
     {
         get => nurturedSoil.activeInHierarchy;
-        set => nurturedSoil.SetActive(value && IsSoil);
+        set
+        {
+            if (value) IsSoil = false;
+            nurturedSoil.SetActive(value);
+        }
     }
 
     public PlantState Plant
@@ -28,7 +36,7 @@ public class FarmlandSpace : MonoBehaviour
 
     private void UpdateState()
     {
-        
+        // TODO(FK)
         if (IsNurtured)
         {
             if (Plant == null)
