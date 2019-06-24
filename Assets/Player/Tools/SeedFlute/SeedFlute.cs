@@ -5,10 +5,21 @@ using UnityEngine;
 public class SeedFlute : MonoBehaviour, ITool
 {
     [SerializeField] private float maxPlantDistance = 60.0f;
-    
+    private FarmlandSpace _space;
+
+    public PopupCropUi cropUi;
+
     public bool Use(FarmlandSpace space)
     {
-        return false; //Plant();
+        _space = space;
+
+        //var ui = GetComponentInChildren<PopupCropUi>();
+
+        //if (ui == null) return false;
+        
+        cropUi.OpenUiMenu();
+
+        return true;
     }
 
     public bool IsUsable(FarmlandSpace space, Vector3 usagePoint)
@@ -17,15 +28,8 @@ public class SeedFlute : MonoBehaviour, ITool
                space.IsSoil;
     }
 
-
-    private void Plant(FarmlandLevel level, GameObject plant, Vector3Int cell)
+    public void Plant(GameObject plant)
     {
-
-        Vector3 position = level.GetWorldCord(cell);
-        
-        //level.LockCell(cell);
-
-        var newPlant = Instantiate(plant, position, level.transform.rotation);
-        
+        _space.Plant = Instantiate(plant, _space.transform, false).GetComponent<PlantState>();  
     }
 }

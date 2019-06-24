@@ -6,16 +6,27 @@ public class PopupCropUi : MonoBehaviour
 {
     private Vector3Int cell;
     private FarmlandLevel targetLevel;
-    
-    
+    private GameObject _plantPrefab = null;
+
+    public void SetPlantPrefab(GameObject prefab)
+    {
+        _plantPrefab = prefab;
+    }
+
+    public GameObject GetPlantPrefab()
+    {
+        return _plantPrefab;
+    }
+
     public void OpenUiMenu()
     {
-        this.GetComponent<Canvas>().enabled = true;
+        this.gameObject.SetActive(true);
+        _plantPrefab = null;
     }
 
     public void CloseUiMenu()
     {
-        this.GetComponent<Canvas>().enabled = false;
+        this.gameObject.SetActive(false);
     }
 
 
