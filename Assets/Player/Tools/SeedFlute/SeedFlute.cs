@@ -12,10 +12,6 @@ public class SeedFlute : MonoBehaviour, ITool
     public bool Use(FarmlandSpace space)
     {
         _space = space;
-
-        //var ui = GetComponentInChildren<PopupCropUi>();
-
-        //if (ui == null) return false;
         
         cropUi.OpenUiMenu();
 

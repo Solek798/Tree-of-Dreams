@@ -24,8 +24,6 @@ public class Inventory : MonoBehaviour
     {
         get
         {
-            /*var test = _slots.Select(t => t.gameObject.GetComponent<Toggle>())
-                ?.FirstOrDefault(t => t.isOn);*/
             return _slots
                 .Select(t => t.gameObject.GetComponent<Toggle>())
                 .FirstOrDefault(t => t.isOn)

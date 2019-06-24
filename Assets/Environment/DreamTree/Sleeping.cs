@@ -3,32 +3,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Sleeping : MonoBehaviour
 {
+    [SerializeField] private Farmland farmland;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
 
     private void Update()
     {
-        if (SleepFunction()) return;
+        if (Input.GetKeyDown(KeyCode.E) &&
+            Vector3.Distance(transform.position, player.transform.position) <= maxDistanceToSleep)
+        {
+            SleepFunction();
+            StartCoroutine(Wait());
+        }
 
-        StartCoroutine(Wait());
+        
     }
 
     private bool SleepFunction()
     {
-        var plants = GameObject.FindGameObjectsWithTag("Plant");
+        foreach (FarmlandLevel level in farmland)
+        {
+            foreach (var space in level.GetAllSpaces())
+            {
+                space.UpdateState();
+            }
+        }
+        
+        
+        /*var plants = GameObject.FindGameObjectsWithTag("Plant");
 
 
-        var playerInRange = Vector3.Distance(transform.position, player.transform.position);
+        var playerInRange = ;
 
         if (!Input.GetKeyDown(KeyCode.E) || !(playerInRange <= maxDistanceToSleep)) return true;
         foreach (var plant in plants)
         {
             plant.GetComponent<PlantState>().UpdateCurrentState();
-        }
+        }*/
 
         return false;
     }
