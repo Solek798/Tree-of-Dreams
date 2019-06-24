@@ -83,7 +83,13 @@ public class FarmlandLevel : MonoBehaviour
         return objectToVerify == ground;
     }
 
-    
+    public FarmlandSpace[] GetAllSpaces()
+    {
+        return _register
+            .Values
+            .Select(t => t.GetComponent<FarmlandSpace>())
+            .ToArray();
+    }
     
     
     

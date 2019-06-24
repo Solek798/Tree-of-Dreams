@@ -34,20 +34,12 @@ public class FarmlandSpace : MonoBehaviour
         set => value.transform.SetParent(transform, true);
     }
 
-    private void UpdateState()
+    public void UpdateState()
     {
-        // TODO(FK)
         if (IsNurtured)
         {
-            if (Plant == null)
-            {
-                IsNurtured = false;
-                IsSoil = true;
-            }
-            else
-            {
-                Plant.UpdateCurrentState();
-            }
+            IsSoil = true;
+            Plant?.UpdateCurrentState();
         }
         
         if (IsSoil && Plant == null)
