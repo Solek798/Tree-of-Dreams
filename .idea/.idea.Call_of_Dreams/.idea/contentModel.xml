@@ -6,6 +6,10 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="DreampostOffice" t="Include">
+          <e p="DreamPostOffice.cs" t="Include" />
+          <e p="QuestPanel.cs" t="Include" />
+        </e>
         <e p="Environment" t="Include">
           <e p="DreamTree" t="Include">
             <e p="Sleeping.cs" t="Include" />
@@ -24,6 +28,10 @@
           <e p="Farmland.cs" t="Include" />
           <e p="FarmlandLevel.cs" t="Include" />
           <e p="FarmlandSpace.cs" t="Include" />
+        </e>
+        <e p="Journal" t="Include">
+          <e p="Journal.cs" t="Include" />
+          <e p="JournalQuestPanel.cs" t="Include" />
         </e>
         <e p="MonoBehaviourExtension.cs" t="Include" />
         <e p="Player" t="Include">
@@ -62,6 +70,7 @@
           </e>
           <e p="Quest.cs" t="Include" />
           <e p="QuestCard.cs" t="Include" />
+          <e p="RequirementsPanel.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
           <e p="Button" t="Include">
