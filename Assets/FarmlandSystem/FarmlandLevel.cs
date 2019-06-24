@@ -64,22 +64,6 @@ public class FarmlandLevel : MonoBehaviour
 
     public bool HitLevel(GameObject objectToVerify)
     {
-        /*// Test if object is a plant
-        
-        var plant = objectToVerify.GetComponent<PlantState>();
-        if (plant != null)
-        {
-            result = GetComponent<Grid>().WorldToCell(objectToVerify.transform.position);
-            return true;
-        }
-        
-        // Test if object is a cloud
-        
-        if ()
-        {
-            
-        }*/
-        
         return objectToVerify == ground;
     }
 
@@ -90,7 +74,11 @@ public class FarmlandLevel : MonoBehaviour
             .Select(t => t.GetComponent<FarmlandSpace>())
             .ToArray();
     }
-    
-    
+
+    private void OnFarmlandSpaceDeleted(GameObject space)
+    {
+        Vector3Int cell = _grid.WorldToCell(space.transform.position);
+        _register.Remove(cell);
+    }
     
 }
