@@ -19,7 +19,7 @@ public class PlantState : MonoBehaviour
     //Exchanges the current Model with the next Model in the list of the Scriptable Object
     public void UpdateCurrentState()
     {
-        if (currentState >= plantObject.StateModel.Count - 1)
+        if (IsReadyToHarvest())
             return;
 
         currentState++;
@@ -34,5 +34,10 @@ public class PlantState : MonoBehaviour
         }
 
         Instantiate(newPlantModel, transform.position, Quaternion.identity, transform);
+    }
+
+    public bool IsReadyToHarvest()
+    {
+        return currentState >= plantObject.StateModel.Count - 1;
     }
 }
