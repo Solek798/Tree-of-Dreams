@@ -15,24 +15,36 @@ public class Lampion : MonoBehaviour
     [SerializeField] private GameObject npcImage = null;
     [SerializeField] private GameObject uiRequirements = null;
     [SerializeField] private GameObject uiPanel = null;
+    [SerializeField] private GameObject dreamPostOffice = null;
+    [SerializeField] private GameObject journalUi = null;
 
     private bool _uiOpened;
     
     private void Start()
     {
         _uiOpened = false;
+        quest.isJournal = false;
+
     }
 
 
     private static void Parent( GameObject parentOb, GameObject childOb )
     {
-        childOb.transform.parent = parentOb.transform;
+        childOb.transform.SetParent(parentOb.transform, true);
         childOb.transform.localScale = new Vector3(1, 1, 1);
+        
     }
     
 
     private void LampionActivation()
     {
+        if (quest.isJournal == false)
+        {
+            dreamPostOffice.GetComponent<DreamPostOffice>().QuestAddedToJournal(quest);
+            journalUi.GetComponent<Journal>().QuestAddedToJournal(quest);
+            quest.AddQuestToJournal();
+
+        }
         //Get Data of the Scriptable Object
         ui.GetComponentInChildren<Text>().text = quest.questDescription;
         npcImage.GetComponent<UnityEngine.UI.Image>().sprite = quest.questNPCImage;
@@ -41,8 +53,8 @@ public class Lampion : MonoBehaviour
         {
             var panelVariant = Instantiate(uiPanel);
             Parent(uiRequirements,panelVariant);
+            uiPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
         }
-
         ui.GetComponent<Canvas>().enabled = true;
         _uiOpened = true;
     }
