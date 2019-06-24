@@ -12,9 +12,18 @@ public class Quest : ScriptableObject
     [TextArea] public string questDescription;
 
     public Sprite questNPCImage;
-    
+
+    public bool isJournal = false;
+
+    public int rewardDreamEssence;
     
 
     //Requirements
     public List<GameObject> requirements = new List<GameObject>();
+    
+
+    public void AddQuestToJournal()
+    {
+        isJournal = true;
+    }
 }
