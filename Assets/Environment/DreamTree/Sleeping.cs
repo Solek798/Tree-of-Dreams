@@ -21,7 +21,6 @@ public class Sleeping : MonoBehaviour
     {
         var plants = GameObject.FindGameObjectsWithTag("Plant");
 
-
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
 
         if (!Input.GetKeyDown(KeyCode.E) || !(playerInRange <= maxDistanceToSleep)) return true;
