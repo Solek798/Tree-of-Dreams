@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class DreamPostOffice : MonoBehaviour
+public class Journal : MonoBehaviour
 {
     
     [SerializeField] private GameObject layoutGroup = null;
@@ -13,17 +12,15 @@ public class DreamPostOffice : MonoBehaviour
 
     [SerializeField] private GameObject questPanel = null;
 
-    [SerializeField] private GameObject dreamTree = null;
-
     [SerializeField] private Scrollbar slider = null;
-   
-    public GameObject player;
-    public float maxDistanceToPostOffice = 10f;
+
+    [SerializeField] private Canvas journalCanvas = null;
+    
     private bool _uiOpened;
-    
-    
+
     private void Start()
     {
+        journalCanvas.enabled = false;
         _uiOpened = false;
         slider.value = 1;
     }
@@ -31,31 +28,32 @@ public class DreamPostOffice : MonoBehaviour
     
     private static void Parent( GameObject parentOb, GameObject childOb )
     {
-        childOb.transform.SetParent(parentOb.transform, true);
+        childOb.transform.SetParent(parentOb.transform, false);
         childOb.transform.localScale = new Vector3(1, 1, 1);
-        
     }
 
     private void Update()
     {
-        var playerInRange = Vector3.Distance(dreamTree.transform.position, player.transform.position);
-
-        if (Input.GetKeyDown(KeyCode.E) && playerInRange <= maxDistanceToPostOffice && _uiOpened == false) 
+        
+        if (Input.GetKeyDown(KeyCode.Escape)  && _uiOpened == false)
         {
-            OpenPostOfficeMenu();
-            _uiOpened = true;
+            OpenJournal();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Escape) && _uiOpened == true)
+        {
+            CloseJournal();
         }
         
     }
-    
+
     public void QuestAddedToJournal(Quest quest)
     {
         var newQuest = Instantiate(questPanel);
         Parent(layoutGroup, newQuest);
-        newQuest.GetComponent<QuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
-        
+        newQuest.GetComponent<JournalQuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
+
         requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-            
         foreach (var value in quest.requirements)
         {
             var panelVariant = Instantiate(requirementsPanel);
@@ -63,23 +61,28 @@ public class DreamPostOffice : MonoBehaviour
             Parent(reqLayoutGroup,panelVariant);
             panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
         }
+        
     }
 
-    private void OpenPostOfficeMenu()
+    private void OpenJournal()
     {
-        gameObject.GetComponent<Canvas>().enabled = true;
+        journalCanvas.enabled = true;
         slider.value = 1;
+
         _uiOpened = true;
+    }
+    
+    
+    private void CloseJournal()
+    {
+        journalCanvas.enabled = false;
+        _uiOpened = false;
     }
     
     public void OnExitButtonClick()
     {
         _uiOpened = false;
-        gameObject.GetComponent<Canvas>().enabled = false;
+        journalCanvas.enabled = false;
     }
 
-    public void OnFulfillButtonClick()
-    {
-        //TODO
-    }
 }
