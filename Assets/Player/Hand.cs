@@ -8,17 +8,9 @@ public class Hand : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private Inventory inventory;
-    public float plantDistance = 60.0f;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         RaycastHit hit;
         var cell = new Vector3Int();
