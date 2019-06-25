@@ -15,7 +15,7 @@ public class DreamPostOffice : MonoBehaviour
 
     [SerializeField] private GameObject dreamTree = null;
 
-    [SerializeField] private Scrollbar slider = null;
+    public Scrollbar slider = null;
    
     public GameObject player;
     public float maxDistanceToPostOffice = 10f;
@@ -69,7 +69,6 @@ public class DreamPostOffice : MonoBehaviour
     {
         SetSliderDefaults();
         gameObject.GetComponent<Canvas>().enabled = true;
-
         _uiOpened = true;
     }
 
@@ -89,5 +88,6 @@ public class DreamPostOffice : MonoBehaviour
     public void OnFulfillButtonClick()
     {
         //TODO
+        
     }
 }
