@@ -23,4 +23,6 @@ public class DreamSickle : MonoBehaviour, ITool
                plant != null &&
                plant.IsReadyToHarvest();
     }
+
+    public float MaxUsingDistance => maxHarvestDistance;
 }

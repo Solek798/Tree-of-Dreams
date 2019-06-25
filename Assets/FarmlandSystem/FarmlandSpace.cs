@@ -40,17 +40,15 @@ public class FarmlandSpace : MonoBehaviour
         {
             IsSoil = true;
             Plant?.UpdateCurrentState();
+            return;
         }
         
         if (IsSoil && Plant == null)
         {
             IsSoil = false;
-        }
-
-        if (!IsSoil)
-        {
             SendMessageUpwards("OnFarmlandSpaceDeleted", this.gameObject);
             Destroy(this.gameObject);
+            return;
         }
     }
 }

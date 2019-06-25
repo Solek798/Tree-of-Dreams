@@ -33,18 +33,6 @@ public class Sleeping : MonoBehaviour
                 space.UpdateState();
             }
         }
-        
-        
-        /*var plants = GameObject.FindGameObjectsWithTag("Plant");
-
-
-        var playerInRange = ;
-
-        if (!Input.GetKeyDown(KeyCode.E) || !(playerInRange <= maxDistanceToSleep)) return true;
-        foreach (var plant in plants)
-        {
-            plant.GetComponent<PlantState>().UpdateCurrentState();
-        }*/
 
         return false;
     }

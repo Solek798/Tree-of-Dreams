@@ -18,9 +18,9 @@ public class InventoryItem : MonoBehaviour
     {
         _inventory = inventory;
         gameObject.SetActive(false);
-        transform.SetParent(inventory.PlayerTransform, true);
-        //transform.localPosition = Vector3.zero;
-        //transform.localRotation = Quaternion.identity;
+        transform.SetParent(inventory.HandTransform, true);
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
     }
 
     public void Release()

@@ -16,4 +16,6 @@ public class BagOfStardust : MonoBehaviour, ITool
         return (space.transform.position - usagePoint).sqrMagnitude <= maxThrowDistance &&
                space.IsSoil;
     }
+
+    public float MaxUsingDistance => maxThrowDistance;
 }
