@@ -12,7 +12,7 @@ public class Journal : MonoBehaviour
 
     [SerializeField] private GameObject questPanel = null;
 
-    [SerializeField] private Scrollbar slider = null;
+    public Scrollbar slider = null;
 
     [SerializeField] private Canvas journalCanvas = null;
     
