@@ -9,7 +9,7 @@ public class Lampion : MonoBehaviour
     public GameObject player;
     public float maxDistanceToPlayer = 10f;
     public Quest quest;
-    public GameObject ui;
+    public GameObject questCardUi;
     
 
     [SerializeField] private GameObject npcImage = null;
@@ -42,11 +42,13 @@ public class Lampion : MonoBehaviour
         {
             dreamPostOffice.GetComponent<DreamPostOffice>().QuestAddedToJournal(quest);
             journalUi.GetComponent<Journal>().QuestAddedToJournal(quest);
+            journalUi.GetComponent<Journal>().slider.value = 1;
+            dreamPostOffice.GetComponent<DreamPostOffice>().slider.value = 1;
             quest.AddQuestToJournal();
 
         }
         //Get Data of the Scriptable Object
-        ui.GetComponentInChildren<Text>().text = quest.questDescription;
+        questCardUi.GetComponentInChildren<Text>().text = quest.questDescription;
         npcImage.GetComponent<UnityEngine.UI.Image>().sprite = quest.questNPCImage;
         
         foreach (var value in quest.requirements)
@@ -55,7 +57,7 @@ public class Lampion : MonoBehaviour
             Parent(uiRequirements,panelVariant);
             uiPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
         }
-        ui.GetComponent<Canvas>().enabled = true;
+        questCardUi.GetComponent<Canvas>().enabled = true;
         _uiOpened = true;
     }
 
@@ -69,7 +71,7 @@ public class Lampion : MonoBehaviour
         }
 
 
-        if (ui.GetComponent<Canvas>().enabled == false)
+        if (questCardUi.GetComponent<Canvas>().enabled == false)
         {
             _uiOpened = false;
             
