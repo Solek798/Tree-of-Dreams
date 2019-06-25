@@ -31,7 +31,7 @@ public class FarmlandSpace : MonoBehaviour
     public PlantState Plant
     {
         get => GetComponentInChildren<PlantState>();
-        set => value.transform.SetParent(transform, true);
+        set => value?.transform.SetParent(transform, true);
     }
 
     public void UpdateState()
@@ -40,11 +40,15 @@ public class FarmlandSpace : MonoBehaviour
         {
             IsSoil = true;
             Plant?.UpdateCurrentState();
+            return;
         }
         
         if (IsSoil && Plant == null)
         {
             IsSoil = false;
+            SendMessageUpwards("OnFarmlandSpaceDeleted", this.gameObject);
+            Destroy(this.gameObject);
+            return;
         }
     }
 }
