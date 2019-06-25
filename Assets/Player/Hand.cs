@@ -8,21 +8,14 @@ public class Hand : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private Inventory inventory;
-    public float plantDistance = 60.0f;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         RaycastHit hit;
         var cell = new Vector3Int();
         FarmlandLevel targetLevel = null;
+        var currentTool = inventory.SelectedItem?.GetComponent<ITool>();
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
@@ -30,7 +23,8 @@ public class Hand : MonoBehaviour
             foreach (FarmlandLevel level in farmland)
             {
 
-                if (level.HitLevel(hit.collider.gameObject))
+                if (level.HitLevel(hit.collider.gameObject) && 
+                    CheckToolInRange(currentTool, hit.point))
                 {
                     targetLevel = level;
                     level.ChangeSelector(true, hit.point);
@@ -44,7 +38,7 @@ public class Hand : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && targetLevel != null)
         {
-            var currentTool = inventory.SelectedItem?.GetComponent<ITool>();
+            
 
             if (currentTool == null) return;
             
@@ -53,5 +47,11 @@ public class Hand : MonoBehaviour
             if (currentTool.IsUsable(space, transform.parent.position))
                 currentTool.Use(space);
         }
+    }
+
+    private bool CheckToolInRange(ITool tool, Vector3 target)
+    {
+        return (transform.parent.position - target).sqrMagnitude <=
+               (tool?.MaxUsingDistance ?? 0.0f);
     }
 }

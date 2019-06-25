@@ -15,4 +15,6 @@ public class CloudPlow : MonoBehaviour, ITool
     {
         return (space.transform.position - usagePoint).sqrMagnitude <= maxPlowDistance;
     }
+
+    public float MaxUsingDistance => maxPlowDistance;
 }
