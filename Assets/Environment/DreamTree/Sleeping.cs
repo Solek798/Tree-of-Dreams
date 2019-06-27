@@ -8,12 +8,14 @@ using System.Linq;
 public class Sleeping : MonoBehaviour
 {
     [SerializeField] private Farmland farmland;
+    [SerializeField] private QuestManager questManager;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
 
     private void Update()
     {
+        //Debug.Log(Vector3.Distance(transform.position, player.transform.position));
         if (Input.GetKeyDown(KeyCode.E) &&
             Vector3.Distance(transform.position, player.transform.position) <= maxDistanceToSleep)
         {
@@ -33,6 +35,8 @@ public class Sleeping : MonoBehaviour
                 space.UpdateState();
             }
         }
+
+        questManager.SendLampinion();
 
         return false;
     }
