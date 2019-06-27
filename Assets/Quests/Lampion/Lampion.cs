@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 using Image = UnityEngine.UIElements.Image;
@@ -19,12 +21,25 @@ public class Lampion : MonoBehaviour
     [SerializeField] private GameObject journalUi = null;
 
     private bool _uiOpened;
+    private Vector3 _travelTarget;
+    
+    public Vector3 TravelTarget
+    {
+        get => _travelTarget;
+        set
+        {
+            _travelTarget = value;
+            
+            StopCoroutine("Movement");
+            StartCoroutine("Movement", _travelTarget);
+        }
+    }
     
     private void Start()
     {
         _uiOpened = false;
         quest.isJournal = false;
-
+        
     }
 
 
@@ -63,6 +78,10 @@ public class Lampion : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            TravelTarget = new Vector3(28f, 8.08f, -40.27f);
+        }
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
 
         if (Input.GetKeyDown(KeyCode.E) && playerInRange <= maxDistanceToPlayer && _uiOpened == false) 
@@ -80,6 +99,16 @@ public class Lampion : MonoBehaviour
             {
                 GameObject.Destroy(child.gameObject);
             }
+        }
+    }
+
+    private IEnumerator Movement(Vector3 target)
+    {
+        while (Vector3.Distance(transform.position, target) > 0.1f)
+        {
+            transform.position += (target - transform.position).normalized * 14f *Time.deltaTime; //Vector3.Lerp(transform.position, target, 2f * Time.deltaTime);
+
+            yield return null;
         }
     }
 }
