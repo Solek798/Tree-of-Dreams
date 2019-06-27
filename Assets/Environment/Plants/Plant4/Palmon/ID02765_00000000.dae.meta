@@ -1,8 +1,101 @@
 fileFormatVersion: 2
 guid: 261fb0ae5560f1e4a9279655989c4f5c
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: a_nd020_hana
+    100002: b_od020_hana_naka
+    100004: //RootNode
+    100006: J_ago
+    100008: J_atama
+    100010: J_center
+    100012: J_hana
+    100014: J_hiji_L
+    100016: J_hiji_R
+    100018: J_hiza_L
+    100020: J_hiza_R
+    100022: J_kakato_L
+    100024: J_kakato_R
+    100026: J_kami
+    100028: J_momo_L
+    100030: J_momo_R
+    100032: J_mune
+    100034: J_sippo_01
+    100036: J_sippo_02
+    100038: J_te_L
+    100040: J_te_R
+    100042: J_ude_L
+    100044: J_ude_R
+    100046: MaxRootBone
+    100048: md020_ago
+    100050: md020_atama
+    100052: md020_body
+    100054: md020_body1
+    100056: md020_turu
+    100058: md020_turu_R
+    100060: obj_108_parumon
+    100062: part-a_nd020_hana
+    100064: part-b_od020_hana_naka
+    100066: part-md020_ago
+    100068: part-md020_atama
+    100070: part-md020_body
+    100072: part-md020_turu
+    100074: part-md020_turu_R
+    400000: a_nd020_hana
+    400002: b_od020_hana_naka
+    400004: //RootNode
+    400006: J_ago
+    400008: J_atama
+    400010: J_center
+    400012: J_hana
+    400014: J_hiji_L
+    400016: J_hiji_R
+    400018: J_hiza_L
+    400020: J_hiza_R
+    400022: J_kakato_L
+    400024: J_kakato_R
+    400026: J_kami
+    400028: J_momo_L
+    400030: J_momo_R
+    400032: J_mune
+    400034: J_sippo_01
+    400036: J_sippo_02
+    400038: J_te_L
+    400040: J_te_R
+    400042: J_ude_L
+    400044: J_ude_R
+    400046: MaxRootBone
+    400048: md020_ago
+    400050: md020_atama
+    400052: md020_body
+    400054: md020_body1
+    400056: md020_turu
+    400058: md020_turu_R
+    400060: obj_108_parumon
+    400062: part-a_nd020_hana
+    400064: part-b_od020_hana_naka
+    400066: part-md020_ago
+    400068: part-md020_atama
+    400070: part-md020_body
+    400072: part-md020_turu
+    400074: part-md020_turu_R
+    2100000: _000_X__DesignDataDigimon_Model_object_textures_parumon_tga
+    2100002: _001_X__DesignDataDigimon_Model_chara_ch020_parumon_parumon_tga
+    4300000: part-md020_turu
+    4300002: part-md020_turu_R
+    4300004: part-md020_body
+    4300006: part-md020_ago
+    4300008: part-md020_atama
+    4300010: part-a_nd020_hana
+    4300012: part-b_od020_hana_naka
+    9500000: //RootNode
+    13700000: part-a_nd020_hana
+    13700002: part-b_od020_hana_naka
+    13700004: part-md020_ago
+    13700006: part-md020_atama
+    13700008: part-md020_body
+    13700010: part-md020_turu
+    13700012: part-md020_turu_R
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +138,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +158,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +171,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

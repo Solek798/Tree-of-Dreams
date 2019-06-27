@@ -1,8 +1,224 @@
 fileFormatVersion: 2
 guid: 48d3786b6103b18489039022271aa014
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: polygon0
+    100004: polygon10
+    100006: polygon11
+    100008: polygon12
+    100010: polygon13
+    100012: polygon14
+    100014: polygon15
+    100016: polygon21
+    100018: polygon23
+    100020: polygon24
+    100022: polygon25
+    100024: polygon26
+    100026: polygon27
+    100028: polygon29
+    100030: polygon3
+    100032: polygon31
+    100034: polygon33
+    100036: polygon34
+    100038: polygon35
+    100040: polygon36
+    100042: polygon37
+    100044: polygon39
+    100046: polygon4
+    100048: polygon40
+    100050: polygon41
+    100052: polygon42
+    100054: polygon43
+    100056: polygon44
+    100058: polygon45
+    100060: polygon46
+    100062: polygon47
+    100064: polygon48
+    100066: polygon49
+    100068: polygon5
+    100070: polygon51
+    100072: polygon52
+    100074: polygon53
+    100076: polygon6
+    100078: polygon8
+    100080: polygon9
+    400000: //RootNode
+    400002: polygon0
+    400004: polygon10
+    400006: polygon11
+    400008: polygon12
+    400010: polygon13
+    400012: polygon14
+    400014: polygon15
+    400016: polygon21
+    400018: polygon23
+    400020: polygon24
+    400022: polygon25
+    400024: polygon26
+    400026: polygon27
+    400028: polygon29
+    400030: polygon3
+    400032: polygon31
+    400034: polygon33
+    400036: polygon34
+    400038: polygon35
+    400040: polygon36
+    400042: polygon37
+    400044: polygon39
+    400046: polygon4
+    400048: polygon40
+    400050: polygon41
+    400052: polygon42
+    400054: polygon43
+    400056: polygon44
+    400058: polygon45
+    400060: polygon46
+    400062: polygon47
+    400064: polygon48
+    400066: polygon49
+    400068: polygon5
+    400070: polygon51
+    400072: polygon52
+    400074: polygon53
+    400076: polygon6
+    400078: polygon8
+    400080: polygon9
+    2100000: mat11
+    2100002: mat7
+    2100004: mat10
+    2100006: mat13
+    2100008: mat8
+    2100010: mat1
+    2100012: mat12
+    2100014: mat2
+    2100016: mat3
+    2100018: mat9
+    2100020: mat14
+    2100022: mat5
+    2100024: mat6
+    2100026: mat4
+    2300000: polygon0
+    2300002: polygon10
+    2300004: polygon11
+    2300006: polygon12
+    2300008: polygon13
+    2300010: polygon14
+    2300012: polygon15
+    2300014: polygon21
+    2300016: polygon23
+    2300018: polygon24
+    2300020: polygon25
+    2300022: polygon26
+    2300024: polygon27
+    2300026: polygon29
+    2300028: polygon3
+    2300030: polygon31
+    2300032: polygon33
+    2300034: polygon34
+    2300036: polygon35
+    2300038: polygon36
+    2300040: polygon37
+    2300042: polygon39
+    2300044: polygon4
+    2300046: polygon40
+    2300048: polygon41
+    2300050: polygon42
+    2300052: polygon43
+    2300054: polygon44
+    2300056: polygon45
+    2300058: polygon46
+    2300060: polygon47
+    2300062: polygon48
+    2300064: polygon49
+    2300066: polygon5
+    2300068: polygon51
+    2300070: polygon52
+    2300072: polygon53
+    2300074: polygon6
+    2300076: polygon8
+    2300078: polygon9
+    3300000: polygon0
+    3300002: polygon10
+    3300004: polygon11
+    3300006: polygon12
+    3300008: polygon13
+    3300010: polygon14
+    3300012: polygon15
+    3300014: polygon21
+    3300016: polygon23
+    3300018: polygon24
+    3300020: polygon25
+    3300022: polygon26
+    3300024: polygon27
+    3300026: polygon29
+    3300028: polygon3
+    3300030: polygon31
+    3300032: polygon33
+    3300034: polygon34
+    3300036: polygon35
+    3300038: polygon36
+    3300040: polygon37
+    3300042: polygon39
+    3300044: polygon4
+    3300046: polygon40
+    3300048: polygon41
+    3300050: polygon42
+    3300052: polygon43
+    3300054: polygon44
+    3300056: polygon45
+    3300058: polygon46
+    3300060: polygon47
+    3300062: polygon48
+    3300064: polygon49
+    3300066: polygon5
+    3300068: polygon51
+    3300070: polygon52
+    3300072: polygon53
+    3300074: polygon6
+    3300076: polygon8
+    3300078: polygon9
+    4300000: polygon0
+    4300002: polygon10
+    4300004: polygon11
+    4300006: polygon12
+    4300008: polygon13
+    4300010: polygon14
+    4300012: polygon15
+    4300014: polygon21
+    4300016: polygon23
+    4300018: polygon24
+    4300020: polygon25
+    4300022: polygon26
+    4300024: polygon27
+    4300026: polygon29
+    4300028: polygon3
+    4300030: polygon31
+    4300032: polygon33
+    4300034: polygon34
+    4300036: polygon35
+    4300038: polygon36
+    4300040: polygon37
+    4300042: polygon39
+    4300044: polygon4
+    4300046: polygon40
+    4300048: polygon41
+    4300050: polygon42
+    4300052: polygon43
+    4300054: polygon44
+    4300056: polygon45
+    4300058: polygon46
+    4300060: polygon47
+    4300062: polygon48
+    4300064: polygon49
+    4300066: polygon5
+    4300068: polygon51
+    4300070: polygon52
+    4300072: polygon53
+    4300074: polygon6
+    4300076: polygon8
+    4300078: polygon9
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +261,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +281,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +294,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

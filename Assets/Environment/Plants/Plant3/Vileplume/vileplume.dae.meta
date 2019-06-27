@@ -1,8 +1,146 @@
 fileFormatVersion: 2
 guid: f474f684ff2997e4c9180292ed849e5c
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone_0
+    100002: Bone_1
+    100004: Bone_10
+    100006: Bone_11
+    100008: Bone_12
+    100010: Bone_13
+    100012: Bone_14
+    100014: Bone_15
+    100016: Bone_16
+    100018: Bone_17
+    100020: Bone_18
+    100022: Bone_19
+    100024: Bone_2
+    100026: Bone_20
+    100028: Bone_21
+    100030: Bone_22
+    100032: Bone_23
+    100034: Bone_24
+    100036: Bone_25
+    100038: Bone_26
+    100040: Bone_27
+    100042: Bone_28
+    100044: Bone_29
+    100046: Bone_3
+    100048: Bone_30
+    100050: Bone_31
+    100052: Bone_32
+    100054: Bone_33
+    100056: Bone_34
+    100058: Bone_35
+    100060: Bone_36
+    100062: Bone_37
+    100064: Bone_38
+    100066: Bone_39
+    100068: Bone_4
+    100070: Bone_5
+    100072: Bone_6
+    100074: Bone_7
+    100076: Bone_8
+    100078: Bone_9
+    100080: Texture_0_png
+    100082: Texture_10_png
+    100084: Texture_1_png
+    100086: Texture_2_png
+    100088: Texture_3_png
+    100090: Texture_4_png
+    100092: Texture_5_png
+    100094: Texture_6_png
+    100096: Texture_7_png
+    100098: Texture_8_png
+    100100: Texture_9_png
+    100102: //RootNode
+    400000: Bone_0
+    400002: Bone_1
+    400004: Bone_10
+    400006: Bone_11
+    400008: Bone_12
+    400010: Bone_13
+    400012: Bone_14
+    400014: Bone_15
+    400016: Bone_16
+    400018: Bone_17
+    400020: Bone_18
+    400022: Bone_19
+    400024: Bone_2
+    400026: Bone_20
+    400028: Bone_21
+    400030: Bone_22
+    400032: Bone_23
+    400034: Bone_24
+    400036: Bone_25
+    400038: Bone_26
+    400040: Bone_27
+    400042: Bone_28
+    400044: Bone_29
+    400046: Bone_3
+    400048: Bone_30
+    400050: Bone_31
+    400052: Bone_32
+    400054: Bone_33
+    400056: Bone_34
+    400058: Bone_35
+    400060: Bone_36
+    400062: Bone_37
+    400064: Bone_38
+    400066: Bone_39
+    400068: Bone_4
+    400070: Bone_5
+    400072: Bone_6
+    400074: Bone_7
+    400076: Bone_8
+    400078: Bone_9
+    400080: Texture_0_png
+    400082: Texture_10_png
+    400084: Texture_1_png
+    400086: Texture_2_png
+    400088: Texture_3_png
+    400090: Texture_4_png
+    400092: Texture_5_png
+    400094: Texture_6_png
+    400096: Texture_7_png
+    400098: Texture_8_png
+    400100: Texture_9_png
+    400102: //RootNode
+    2100000: Texture_0_png
+    2100002: Texture_1_png
+    2100004: Texture_2_png
+    2100006: Texture_3_png
+    2100008: Texture_4_png
+    2100010: Texture_5_png
+    2100012: Texture_6_png
+    2100014: Texture_7_png
+    2100016: Texture_8_png
+    2100018: Texture_9_png
+    2100020: Texture_10_png
+    4300000: Texture_0_png
+    4300002: Texture_1_png
+    4300004: Texture_2_png
+    4300006: Texture_3_png
+    4300008: Texture_4_png
+    4300010: Texture_5_png
+    4300012: Texture_6_png
+    4300014: Texture_7_png
+    4300016: Texture_8_png
+    4300018: Texture_9_png
+    4300020: Texture_10_png
+    9500000: //RootNode
+    13700000: Texture_0_png
+    13700002: Texture_10_png
+    13700004: Texture_1_png
+    13700006: Texture_2_png
+    13700008: Texture_3_png
+    13700010: Texture_4_png
+    13700012: Texture_5_png
+    13700014: Texture_6_png
+    13700016: Texture_7_png
+    13700018: Texture_8_png
+    13700020: Texture_9_png
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +183,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +203,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +216,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
