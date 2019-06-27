@@ -87,10 +87,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2831912848356252594}
   - component: {fileID: 5316211816063776456}
-  - component: {fileID: 7933535757225989209}
   - component: {fileID: 7764058629165721774}
   m_Layer: 0
-  m_Name: HouseModel
+  m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,21 +132,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7933535757225989209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1231629373102451105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e4de4f3fdfb1141b4ef4106b431835, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  farmland: {fileID: 0}
-  player: {fileID: 0}
-  maxDistanceToSleep: 10
 --- !u!65 &7764058629165721774
 BoxCollider:
   m_ObjectHideFlags: 0
