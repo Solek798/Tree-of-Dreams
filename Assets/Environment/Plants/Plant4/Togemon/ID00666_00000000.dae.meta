@@ -1,8 +1,91 @@
 fileFormatVersion: 2
 guid: ec9f29b4e87e5944db7fd8ff543d14cc
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ch028_toge
+    100002: ch028_toge 1
+    100004: ch028_togemon
+    100006: ch028_togemon 1
+    100008: //RootNode
+    100010: J_ashi_L
+    100012: J_ashi_R
+    100014: J_atama
+    100016: J_center
+    100018: J_hiji_L
+    100020: J_hiji_R
+    100022: J_hiza_L
+    100024: J_hiza_R
+    100026: J_joint10
+    100028: J_joint13
+    100030: J_joint14
+    100032: J_joint15
+    100034: J_ke
+    100036: J_koukaku
+    100038: J_kuti
+    100040: J_me_L
+    100042: J_me_R
+    100044: J_momo_L
+    100046: J_momo_R
+    100048: J_mune
+    100050: J_root_028
+    100052: J_te_L
+    100054: J_te_R
+    100056: J_tuma_L
+    100058: J_tuma_R
+    100060: J_ude_L
+    100062: J_ude_R
+    100064: loc_001
+    100066: loc_010
+    100068: loc_011
+    100070: loc_020
+    100072: loc_021
+    100074: loc_090
+    400000: ch028_toge
+    400002: ch028_toge 1
+    400004: ch028_togemon
+    400006: ch028_togemon 1
+    400008: //RootNode
+    400010: J_ashi_L
+    400012: J_ashi_R
+    400014: J_atama
+    400016: J_center
+    400018: J_hiji_L
+    400020: J_hiji_R
+    400022: J_hiza_L
+    400024: J_hiza_R
+    400026: J_joint10
+    400028: J_joint13
+    400030: J_joint14
+    400032: J_joint15
+    400034: J_ke
+    400036: J_koukaku
+    400038: J_kuti
+    400040: J_me_L
+    400042: J_me_R
+    400044: J_momo_L
+    400046: J_momo_R
+    400048: J_mune
+    400050: J_root_028
+    400052: J_te_L
+    400054: J_te_R
+    400056: J_tuma_L
+    400058: J_tuma_R
+    400060: J_ude_L
+    400062: J_ude_R
+    400064: loc_001
+    400066: loc_010
+    400068: loc_011
+    400070: loc_020
+    400072: loc_021
+    400074: loc_090
+    2100000: _000_X__DesignDataDigimon_Model_chara_ch028_togemon_togemon_tga
+    2100002: _001_X__DesignDataDigimon_Model_chara_ch028_togemon_togemon_tga
+    4300000: ch028_togemon
+    4300002: ch028_toge
+    9500000: //RootNode
+    13700000: ch028_toge 1
+    13700002: ch028_togemon
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +128,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +148,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +161,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

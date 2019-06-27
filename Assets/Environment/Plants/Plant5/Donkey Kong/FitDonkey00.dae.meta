@@ -1,8 +1,311 @@
 fileFormatVersion: 2
 guid: 82dd121f31a1d864285e20c47ac5b8ef
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: AgoN
+    100002: BustN
+    100004: EyeYellowM
+    100006: //RootNode
+    100008: HeadN
+    100010: HipN
+    100012: L1stNa
+    100014: L1stNb
+    100016: L2ndNa
+    100018: L2ndNb
+    100020: L3rdNa
+    100022: L3rdNb
+    100024: L4thNa
+    100026: L4thNb
+    100028: LArmJ
+    100030: LFootJ
+    100032: LHandN
+    100034: LHaveN
+    100036: LKneeJ
+    100038: LLegJ
+    100040: LShoulderJ
+    100042: LShoulderN
+    100044: LThumbNa
+    100046: LThumbNb
+    100048: LToe2N
+    100050: LToeN
+    100052: MouthEdge2N
+    100054: MouthEdgeN
+    100056: NeckN
+    100058: polygon0
+    100060: polygon10
+    100062: polygon11
+    100064: polygon12
+    100066: polygon13
+    100068: polygon14
+    100070: polygon15
+    100072: polygon21
+    100074: polygon23
+    100076: polygon24
+    100078: polygon25
+    100080: polygon26
+    100082: polygon27
+    100084: polygon29
+    100086: polygon3
+    100088: polygon31
+    100090: polygon33
+    100092: polygon34
+    100094: polygon35
+    100096: polygon36
+    100098: polygon37
+    100100: polygon39
+    100102: polygon4
+    100104: polygon40
+    100106: polygon41
+    100108: polygon42
+    100110: polygon43
+    100112: polygon44
+    100114: polygon45
+    100116: polygon46
+    100118: polygon47
+    100120: polygon48
+    100122: polygon49
+    100124: polygon5
+    100126: polygon51
+    100128: polygon52
+    100130: polygon53
+    100132: polygon6
+    100134: polygon8
+    100136: polygon9
+    100138: R1stNa
+    100140: R1stNb
+    100142: R2ndNa
+    100144: R2ndNb
+    100146: R3rdNa
+    100148: R3rdNb
+    100150: R4thNa
+    100152: R4thNb
+    100154: RArmJ
+    100156: RFootJ
+    100158: RHandN
+    100160: RHaveN
+    100162: RKneeJ
+    100164: RLegJ
+    100166: RShoulderJ
+    100168: RShoulderN
+    100170: RThumbNa
+    100172: RThumbNb
+    100174: RToe2N
+    100176: RToeN
+    100178: SitanohaM
+    100180: Tai1J
+    100182: Tai2J
+    100184: Tai3J
+    100186: Tai4J
+    100188: Tai5J
+    100190: ThrowN
+    100192: TopN
+    100194: TransN
+    100196: Tuno1J
+    100198: Tuno2J
+    100200: UenohaM
+    100202: WaistN
+    100204: XRotN
+    100206: YRotN
+    400000: AgoN
+    400002: BustN
+    400004: EyeYellowM
+    400006: //RootNode
+    400008: HeadN
+    400010: HipN
+    400012: L1stNa
+    400014: L1stNb
+    400016: L2ndNa
+    400018: L2ndNb
+    400020: L3rdNa
+    400022: L3rdNb
+    400024: L4thNa
+    400026: L4thNb
+    400028: LArmJ
+    400030: LFootJ
+    400032: LHandN
+    400034: LHaveN
+    400036: LKneeJ
+    400038: LLegJ
+    400040: LShoulderJ
+    400042: LShoulderN
+    400044: LThumbNa
+    400046: LThumbNb
+    400048: LToe2N
+    400050: LToeN
+    400052: MouthEdge2N
+    400054: MouthEdgeN
+    400056: NeckN
+    400058: polygon0
+    400060: polygon10
+    400062: polygon11
+    400064: polygon12
+    400066: polygon13
+    400068: polygon14
+    400070: polygon15
+    400072: polygon21
+    400074: polygon23
+    400076: polygon24
+    400078: polygon25
+    400080: polygon26
+    400082: polygon27
+    400084: polygon29
+    400086: polygon3
+    400088: polygon31
+    400090: polygon33
+    400092: polygon34
+    400094: polygon35
+    400096: polygon36
+    400098: polygon37
+    400100: polygon39
+    400102: polygon4
+    400104: polygon40
+    400106: polygon41
+    400108: polygon42
+    400110: polygon43
+    400112: polygon44
+    400114: polygon45
+    400116: polygon46
+    400118: polygon47
+    400120: polygon48
+    400122: polygon49
+    400124: polygon5
+    400126: polygon51
+    400128: polygon52
+    400130: polygon53
+    400132: polygon6
+    400134: polygon8
+    400136: polygon9
+    400138: R1stNa
+    400140: R1stNb
+    400142: R2ndNa
+    400144: R2ndNb
+    400146: R3rdNa
+    400148: R3rdNb
+    400150: R4thNa
+    400152: R4thNb
+    400154: RArmJ
+    400156: RFootJ
+    400158: RHandN
+    400160: RHaveN
+    400162: RKneeJ
+    400164: RLegJ
+    400166: RShoulderJ
+    400168: RShoulderN
+    400170: RThumbNa
+    400172: RThumbNb
+    400174: RToe2N
+    400176: RToeN
+    400178: SitanohaM
+    400180: Tai1J
+    400182: Tai2J
+    400184: Tai3J
+    400186: Tai4J
+    400188: Tai5J
+    400190: ThrowN
+    400192: TopN
+    400194: TransN
+    400196: Tuno1J
+    400198: Tuno2J
+    400200: UenohaM
+    400202: WaistN
+    400204: XRotN
+    400206: YRotN
+    2100000: asinoke16
+    2100002: ludenoke_98
+    2100004: Leg_M
+    2100006: asinoke10
+    2100008: Nekutai_M
+    2100010: Body_m
+    2100012: karada3
+    2100014: EyeYellowL
+    2100016: EyeYellowR
+    2100018: R_medamaM
+    2100020: maegami_28
+    2100022: Head_M
+    2100024: L_medamaM
+    2100026: Ha_M
+    4300000: polygon0
+    4300002: polygon3
+    4300004: polygon4
+    4300006: polygon5
+    4300008: polygon6
+    4300010: polygon8
+    4300012: polygon9
+    4300014: polygon10
+    4300016: polygon11
+    4300018: polygon12
+    4300020: polygon13
+    4300022: polygon14
+    4300024: polygon15
+    4300026: polygon21
+    4300028: polygon23
+    4300030: polygon24
+    4300032: polygon25
+    4300034: polygon26
+    4300036: polygon27
+    4300038: polygon29
+    4300040: polygon31
+    4300042: polygon33
+    4300044: polygon34
+    4300046: polygon35
+    4300048: polygon36
+    4300050: polygon37
+    4300052: polygon39
+    4300054: polygon40
+    4300056: polygon41
+    4300058: polygon42
+    4300060: polygon43
+    4300062: polygon44
+    4300064: polygon45
+    4300066: polygon46
+    4300068: polygon47
+    4300070: polygon48
+    4300072: polygon49
+    4300074: polygon51
+    4300076: polygon52
+    4300078: polygon53
+    9500000: //RootNode
+    13700000: polygon0
+    13700002: polygon10
+    13700004: polygon11
+    13700006: polygon12
+    13700008: polygon13
+    13700010: polygon14
+    13700012: polygon15
+    13700014: polygon21
+    13700016: polygon23
+    13700018: polygon24
+    13700020: polygon25
+    13700022: polygon26
+    13700024: polygon27
+    13700026: polygon29
+    13700028: polygon3
+    13700030: polygon31
+    13700032: polygon33
+    13700034: polygon34
+    13700036: polygon35
+    13700038: polygon36
+    13700040: polygon37
+    13700042: polygon39
+    13700044: polygon4
+    13700046: polygon40
+    13700048: polygon41
+    13700050: polygon42
+    13700052: polygon43
+    13700054: polygon44
+    13700056: polygon45
+    13700058: polygon46
+    13700060: polygon47
+    13700062: polygon48
+    13700064: polygon49
+    13700066: polygon5
+    13700068: polygon51
+    13700070: polygon52
+    13700072: polygon53
+    13700074: polygon6
+    13700076: polygon8
+    13700078: polygon9
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +348,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +368,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +381,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

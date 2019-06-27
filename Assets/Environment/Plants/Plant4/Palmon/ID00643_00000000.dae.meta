@@ -1,8 +1,136 @@
 fileFormatVersion: 2
 guid: 6c1125c791257c9479ec885ecd60b757
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: _000_md020_body
+    100002: _001_md020_turu
+    100004: _002_md020_turu_R
+    100006: _003_md020_ago
+    100008: _004_md020_hana_naka
+    100010: _005_md020_atama
+    100012: _006_md020_hana
+    100014: _007_md020_hana_naka
+    100016: //RootNode
+    100018: J_ago
+    100020: J_atama
+    100022: J_center
+    100024: J_hana
+    100026: J_hiji_L
+    100028: J_hiji_R
+    100030: J_hiza_L
+    100032: J_hiza_R
+    100034: J_kakato_L
+    100036: J_kakato_R
+    100038: J_kami
+    100040: J_Lstuta01
+    100042: J_Lstuta02
+    100044: J_Lstuta03
+    100046: J_Lstuta04
+    100048: J_Lstuta05
+    100050: J_momo_L
+    100052: J_momo_R
+    100054: J_mune
+    100056: J_root_020
+    100058: J_Rstuta01
+    100060: J_Rstuta02
+    100062: J_Rstuta03
+    100064: J_Rstuta04
+    100066: J_Rstuta05
+    100068: J_sippo_01
+    100070: J_sippo_02
+    100072: J_te_L
+    100074: J_te_R
+    100076: J_ude_L
+    100078: J_ude_R
+    100080: loc_001
+    100082: loc_010
+    100084: loc_011
+    100086: loc_020
+    100088: loc_021
+    100090: loc_090
+    100092: md020_ago
+    100094: md020_atama
+    100096: md020_body
+    100098: md020_body1
+    100100: md020_hana
+    100102: md020_hana_naka
+    100104: md020_turu
+    100106: md020_turu_R
+    400000: _000_md020_body
+    400002: _001_md020_turu
+    400004: _002_md020_turu_R
+    400006: _003_md020_ago
+    400008: _004_md020_hana_naka
+    400010: _005_md020_atama
+    400012: _006_md020_hana
+    400014: _007_md020_hana_naka
+    400016: //RootNode
+    400018: J_ago
+    400020: J_atama
+    400022: J_center
+    400024: J_hana
+    400026: J_hiji_L
+    400028: J_hiji_R
+    400030: J_hiza_L
+    400032: J_hiza_R
+    400034: J_kakato_L
+    400036: J_kakato_R
+    400038: J_kami
+    400040: J_Lstuta01
+    400042: J_Lstuta02
+    400044: J_Lstuta03
+    400046: J_Lstuta04
+    400048: J_Lstuta05
+    400050: J_momo_L
+    400052: J_momo_R
+    400054: J_mune
+    400056: J_root_020
+    400058: J_Rstuta01
+    400060: J_Rstuta02
+    400062: J_Rstuta03
+    400064: J_Rstuta04
+    400066: J_Rstuta05
+    400068: J_sippo_01
+    400070: J_sippo_02
+    400072: J_te_L
+    400074: J_te_R
+    400076: J_ude_L
+    400078: J_ude_R
+    400080: loc_001
+    400082: loc_010
+    400084: loc_011
+    400086: loc_020
+    400088: loc_021
+    400090: loc_090
+    400092: md020_ago
+    400094: md020_atama
+    400096: md020_body
+    400098: md020_body1
+    400100: md020_hana
+    400102: md020_hana_naka
+    400104: md020_turu
+    400106: md020_turu_R
+    2100000: _000_X__DesignDataDigimon_Model_chara_ch020_parumon_parumon_tga
+    2100002: _001_X__DesignDataDigimon_Model_chara_ch020_parumon_parumon_tga
+    2100004: _002_X__DesignDataDigimon_Model_chara_ch020_parumon_parumon_tga
+    4300000: _000_md020_body
+    4300002: _001_md020_turu
+    4300004: _002_md020_turu_R
+    4300006: _003_md020_ago
+    4300008: _004_md020_hana_naka
+    4300010: _005_md020_atama
+    4300012: _006_md020_hana
+    4300014: _007_md020_hana_naka
+    9500000: //RootNode
+    13700000: _000_md020_body
+    13700002: _001_md020_turu
+    13700004: _002_md020_turu_R
+    13700006: _003_md020_ago
+    13700008: _004_md020_hana_naka
+    13700010: _005_md020_atama
+    13700012: _006_md020_hana
+    13700014: _007_md020_hana_naka
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -45,19 +173,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -66,11 +193,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,7 +206,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
