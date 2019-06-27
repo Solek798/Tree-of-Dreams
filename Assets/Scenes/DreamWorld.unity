@@ -63168,16 +63168,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: VirtualMachineCameraManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3647201183914500833, guid: 3c06a6035483d2746b04bb86c557c7c8,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 531966653}
-    - target: {fileID: 3647201183914500833, guid: 3c06a6035483d2746b04bb86c557c7c8,
-        type: 3}
-      propertyPath: m_LookAt
-      value: 
-      objectReference: {fileID: 1970262424}
     - target: {fileID: 3647201183914500832, guid: 3c06a6035483d2746b04bb86c557c7c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -63233,6 +63223,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3647201183914500833, guid: 3c06a6035483d2746b04bb86c557c7c8,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 531966653}
+    - target: {fileID: 3647201183914500833, guid: 3c06a6035483d2746b04bb86c557c7c8,
+        type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 1970262424}
     - target: {fileID: 3647201184280124056, guid: 3c06a6035483d2746b04bb86c557c7c8,
         type: 3}
       propertyPath: m_Path
@@ -63582,6 +63582,16 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1720442939}
+    - target: {fileID: 7425407827233562909, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425407827233562909, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: runSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1957227639619902149, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -64077,22 +64087,22 @@ PrefabInstance:
     - target: {fileID: 6283761686638671226, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
       propertyPath: maxFOV
-      value: -9
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6283761686638671226, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
       propertyPath: minCamZoom
-      value: -97
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 6283761686638671226, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
       propertyPath: maxCamZoom
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6283761686638671226, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
       propertyPath: minFOV
-      value: 48
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6283761686638671223, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
