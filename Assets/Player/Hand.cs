@@ -17,7 +17,10 @@ public class Hand : MonoBehaviour
         FarmlandLevel targetLevel = null;
         var currentTool = inventory.SelectedItem?.GetComponent<ITool>();
 
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), 
+            out hit,
+            100,
+            1 << LayerMask.NameToLayer("Clouds")))
         {
            
             foreach (FarmlandLevel level in farmland)
