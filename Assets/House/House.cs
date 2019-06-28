@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public class Sleeping : MonoBehaviour
+public class House : MonoBehaviour
 {
     [SerializeField] private Farmland farmland;
     [SerializeField] private QuestManager questManager;
