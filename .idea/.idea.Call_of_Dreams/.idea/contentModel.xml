@@ -21,6 +21,10 @@
           <e p="FarmlandLevel.cs" t="Include" />
           <e p="FarmlandSpace.cs" t="Include" />
         </e>
+        <e p="GenericUI" t="Include">
+          <e p="IDropTarget.cs" t="Include" />
+          <e p="UIDragger.cs" t="Include" />
+        </e>
         <e p="House" t="Include">
           <e p="House.cs" t="Include" />
         </e>
@@ -55,6 +59,9 @@
             </e>
             <e p="ITool.cs" t="Include" />
             <e p="SeedFlute" t="Include">
+              <e p="HarvestPopup" t="Include">
+                <e p="PopupCropUi.cs" t="Include" />
+              </e>
               <e p="SeedFlute.cs" t="Include" />
             </e>
           </e>
@@ -67,6 +74,13 @@
           <e p="Quest.cs" t="Include" />
           <e p="QuestCard.cs" t="Include" />
           <e p="RequirementsPanel.cs" t="Include" />
+        </e>
+        <e p="Scenes" t="Include">
+          <e p="MainMenu" t="Include">
+            <e p="ButtonDropdownMenu.cs" t="Include" />
+            <e p="ExitButtonBehaviour.cs" t="Include" />
+            <e p="SceneController.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
@@ -135,18 +149,6 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
-        </e>
-        <e p="UI" t="Include">
-          <e p="Button" t="Include">
-            <e p="ExitButtonBehaviour.cs" t="Include" />
-            <e p="SceneController.cs" t="Include" />
-          </e>
-          <e p="ButtonDropdownMenu.cs" t="Include" />
-          <e p="HarvestPopup" t="Include">
-            <e p="PopupCropUi.cs" t="Include" />
-          </e>
-          <e p="IDropTarget.cs" t="Include" />
-          <e p="UIDragger.cs" t="Include" />
         </e>
       </e>
       <e p="Call_of_Dreams.sln" t="IncludeFlat" />
