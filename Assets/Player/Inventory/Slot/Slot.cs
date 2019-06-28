@@ -34,14 +34,16 @@ public class Slot : MonoBehaviour, IDropTarget
         
         if (stack)
         {
-            stack.transform.parent = otherStack.Slot.stackParent;
+            stack.transform.SetParent(otherStack.Slot.stackParent);
+            stack.transform.SetAsFirstSibling();
             stack.Slot = otherStack.Slot;
             stack.transform.localPosition = Vector2.zero;
         }
 
         if (otherStack)
         {
-            otherStack.transform.parent = this.stackParent;
+            otherStack.transform.SetParent(this.stackParent);
+            otherStack.transform.SetAsFirstSibling();
             otherStack.Slot = this;
             otherStack.transform.localPosition = Vector2.zero;
         }
