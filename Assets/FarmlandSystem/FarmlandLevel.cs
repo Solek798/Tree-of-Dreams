@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
-
 using System.Linq;
+
 
 public class FarmlandLevel : MonoBehaviour
 {
     [SerializeField] private GameObject farmlandSpacePrefab;
-    private Grid _grid;
     [SerializeField] private Tilemap tilemap;
     [SerializeField] private GameObject cellSelector = null;
     [SerializeField] private GameObject ground;
-    [SerializeField] private int range = 500;
     private Dictionary<Vector3Int, GameObject> _register;
+    private Grid _grid;
     
     
     private void Start()
@@ -39,21 +35,15 @@ public class FarmlandLevel : MonoBehaviour
         return space.GetComponent<FarmlandSpace>();
     }
 
-    public Vector3 GetWorldCord(Vector3Int cell)
-    {
-        return _grid.GetCellCenterWorld(cell);
-    }
-
-    public void ChangeSelector(bool active, Vector3 position = default(Vector3))
+    public void ChangeSelector(bool active, Vector3 position = default(Vector3), float heightPadding = 0.2f)
     {
         var cell = _grid.WorldToCell(position);
         
         
         if (active && tilemap.HasTile(cell))
         {
-            cellSelector.transform.position = GetWorldCord(cell);
-            // TODO(FK): hardcoded values
-            cellSelector.transform.Translate(0, 0.2f, 0);
+            cellSelector.transform.position = _grid.GetCellCenterWorld(cell);
+            cellSelector.transform.Translate(0, heightPadding, 0);
             cellSelector.SetActive(true);
         }
         else
@@ -67,17 +57,16 @@ public class FarmlandLevel : MonoBehaviour
         return objectToVerify == ground;
     }
 
-    public FarmlandSpace[] GetAllSpaces()
+    public IEnumerable<FarmlandSpace> GetAllSpaces()
     {
         return _register
             .Values
-            .Select(t => t.GetComponent<FarmlandSpace>())
-            .ToArray();
+            .Select(t => t.GetComponent<FarmlandSpace>());
     }
 
     private void OnFarmlandSpaceDeleted(GameObject space)
     {
-        Vector3Int cell = _grid.WorldToCell(space.transform.position);
+        var cell = _grid.WorldToCell(space.transform.position);
         _register.Remove(cell);
     }
     
