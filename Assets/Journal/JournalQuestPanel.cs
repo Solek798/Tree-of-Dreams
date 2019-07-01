@@ -7,8 +7,4 @@ public class JournalQuestPanel : MonoBehaviour
 {
     public GameObject npcIcon;
 
-    private void Update()
-    {
-        gameObject.transform.Rotate(0,0,0);
-    }
 }
