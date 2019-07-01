@@ -50,16 +50,19 @@ public class Journal : MonoBehaviour
     {
         var newQuest = Instantiate(questPanel);
         Parent(layoutGroup, newQuest);
-        newQuest.GetComponent<JournalQuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
-
-        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-        foreach (var value in quest.requirements)
-        {
-            var panelVariant = Instantiate(requirementsPanel);
-            var reqLayoutGroup = newQuest.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
-            Parent(reqLayoutGroup,panelVariant);
-            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-        }
+        
+        
+//        newQuest.GetComponent<JournalQuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
+//
+//        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
+//        foreach (var value in quest.requirements)
+//        {
+//            var panelVariant = Instantiate(requirementsPanel);
+//            var reqLayoutGroup = newQuest.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
+//            Parent(reqLayoutGroup,panelVariant);
+//            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
+//        }
+    newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(quest);
         
     }
 
