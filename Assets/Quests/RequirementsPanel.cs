@@ -11,9 +11,9 @@ public class RequirementsPanel : MonoBehaviour
     
     public void InitializePanel(List<GameObject> requirements)
     {
-        foreach (GameObject Requirement in requirements)
+        foreach (var requirement in requirements)
         {
-            Sprite reqSprite = Requirement.GetComponent<InventoryItem>().Icon;
+            var reqSprite = requirement.GetComponent<InventoryItem>().Icon;
             childImage.sprite = reqSprite;
         }
     }

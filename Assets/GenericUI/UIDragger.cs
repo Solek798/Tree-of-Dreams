@@ -9,35 +9,31 @@ using UnityEngine.UIElements;
 
 public class UIDragger : MonoBehaviour
 {
+    // Set to public for potential further usage
+    // ReSharper disable once MemberCanBePrivate.Global
     public const string DRAG = "UIDragable";
+    // ReSharper disable once MemberCanBePrivate.Global
     public const string DROP = "UIDropable";
-
+    
+    [SerializeField] private Canvas[] registeredCanvases;
+    
     private bool _isDragging = false;
     private GameObject _draggingObject;
     private Transform _origParentTransform;
-
-    // TODO(FK): wait for UI Solution
-    public Canvas inventoryCanvas;
     
-    // Start is called before the first frame update
-    private void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
+
     private void Update()
     {
-        // TODO(FK): Finish Drag 'n' drop mechanic
-        //return;
         if (_isDragging)
         {
             _draggingObject.transform.position = Input.mousePosition;
         }
-
+        
         if (Input.GetMouseButtonDown(0))
         {
-            _draggingObject = GetDragableObject();
+            _draggingObject = GetInteractableObject(DRAG);
             
             if (_draggingObject != null)
             {
@@ -47,14 +43,23 @@ public class UIDragger : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && _isDragging)
         {
-            var o = DnDRaycaster.Raycast(inventoryCanvas, DROP);
-            Drop(o);
+            var objectWhereToDrop = GetInteractableObject(DROP);
+            Drop(objectWhereToDrop);
         }
     }
 
-    private GameObject GetDragableObject()
+    private GameObject GetInteractableObject(string kind)
     {
-        return DnDRaycaster.Raycast(inventoryCanvas, DRAG);
+        GameObject retVal = null;
+        
+        foreach (var canvas in registeredCanvases)
+        {
+            retVal = DnDRaycaster.Raycast(canvas, kind);
+
+            if (retVal != null) break;
+        }
+        
+        return retVal;
     }
 
     private void Drag()
@@ -83,7 +88,9 @@ public class UIDragger : MonoBehaviour
         _origParentTransform = null;
     }
 
-    public class DnDRaycaster
+    // Set to public for potential further usage
+    // ReSharper disable once MemberCanBePrivate.Global
+    public static class DnDRaycaster
     {
         public static GameObject Raycast(Canvas targetCanvas, string tagToCompare)
         {
