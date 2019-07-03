@@ -5,14 +5,9 @@ using UnityEngine;
 public class ButtonDropdownMenu : MonoBehaviour
 {
 
-    [SerializeField] private Canvas canvasBtn;
-
-    private void Start()
+    
+    public void OnBtnClick(Canvas canvasBtn)
     {
-        canvasBtn.enabled = false;
-    }
-    public void OnBtnClick()
-    {
-        canvasBtn.enabled = true;
+        canvasBtn.enabled = !canvasBtn.enabled;
     }
 }
