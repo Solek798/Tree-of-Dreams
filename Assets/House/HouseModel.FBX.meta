@@ -1,11 +1,46 @@
 fileFormatVersion: 2
 guid: 9e46106882e92b44b80fdcc10e85b037
 ModelImporter:
-  serializedVersion: 25
-  internalIDToNameTable:
-  - first:
-      74: 1827226128182048838
-    second: Take 001
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: m_Bricks
+    100004: m_Clothline
+    100006: m_Fence
+    100008: m_House
+    100010: m_WoodenBeams
+    400000: //RootNode
+    400002: m_Bricks
+    400004: m_Clothline
+    400006: m_Fence
+    400008: m_House
+    400010: m_WoodenBeams
+    2100000: 'Material #81'
+    2100002: 'Material #158'
+    2100004: 'Material #2'
+    2100006: 'Material #1'
+    2100008: 'Material #25'
+    2100010: 'Material #26'
+    2100012: 'Material #166'
+    2100014: 'Material #59'
+    2100016: 'Material #32'
+    2300000: m_Bricks
+    2300002: m_Clothline
+    2300004: m_Fence
+    2300006: m_House
+    2300008: m_WoodenBeams
+    3300000: m_Bricks
+    3300002: m_Clothline
+    3300004: m_Fence
+    3300006: m_House
+    3300008: m_WoodenBeams
+    4300000: m_House
+    4300002: m_WoodenBeams
+    4300004: m_Clothline
+    4300006: m_Fence
+    4300008: m_Bricks
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -37,7 +72,6 @@ ModelImporter:
     - serializedVersion: 16
       name: Take 001
       takeName: Take 001
-      internalID: 1827226128182048838
       firstFrame: 0
       lastFrame: 100
       wrapMode: 0
@@ -77,19 +111,18 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.38099998
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -98,11 +131,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -112,7 +144,6 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.38099998
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
