@@ -8,8 +8,8 @@ public class PlantScriptableObject : ScriptableObject
     //Plantname
     public string Name;
     //The Time the Plant needs to grow
-    public List<int> StateReachTime = new List<int>();
+    public List<int> stateReachTime = new List<int>();
     //The Model of the specific State
-    public List<GameObject> StateModel = new List<GameObject>();
+    public List<GameObject> stateModel = new List<GameObject>();
 
 }

@@ -7,8 +7,8 @@ using System.Linq;
 
 public class House : MonoBehaviour
 {
-    [SerializeField] private Farmland farmland;
-    [SerializeField] private QuestManager questManager;
+    [SerializeField] private Farmland farmland = null;
+    [SerializeField] private QuestManager questManager = null;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
