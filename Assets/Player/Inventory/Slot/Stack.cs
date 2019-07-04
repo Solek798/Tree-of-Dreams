@@ -9,12 +9,8 @@ public class Stack : MonoBehaviour
     private Stack<InventoryItem> _items;
     private Text _count;
     private Image _icon;
-    private Slot _slot;
 
-    public Slot Slot { 
-        get => _slot;
-        set => _slot = value;
-    }
+    public Slot Slot { get; set; }
 
 
     // Make sure Selector is visible
@@ -26,7 +22,7 @@ public class Stack : MonoBehaviour
     public void Initialize()
     {
         _items = new Stack<InventoryItem>();
-        _slot = GetComponentInParent<Slot>();
+        Slot = GetComponentInParent<Slot>();
         _count = GetComponentInChildren<Text>();
         _icon = GetComponentInChildren<Image>();
     }

@@ -12,7 +12,7 @@ public class PlantState : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(plantObject.StateModel[currentState], transform.position, Quaternion.identity, transform);
+        Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.identity, transform);
     }
 
 
@@ -23,7 +23,7 @@ public class PlantState : MonoBehaviour
             return;
 
         currentState++;
-        GameObject newPlantModel = plantObject.StateModel[currentState];
+        GameObject newPlantModel = plantObject.stateModel[currentState];
 
         this.DestroyAllChildren();
         
@@ -38,6 +38,6 @@ public class PlantState : MonoBehaviour
 
     public bool IsReadyToHarvest()
     {
-        return currentState >= plantObject.StateModel.Count - 1;
+        return currentState >= plantObject.stateModel.Count - 1;
     }
 }

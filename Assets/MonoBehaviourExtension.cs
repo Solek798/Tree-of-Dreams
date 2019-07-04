@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Linq;
 
 public static class MonoBehaviourExtension
 {
@@ -10,14 +9,5 @@ public static class MonoBehaviourExtension
             if (childTransform != mb.transform)
                 MonoBehaviour.Destroy(childTransform.gameObject);
         }
-    }
-
-    public static GameObject[] GetAllChildren(this GameObject mb)
-    {
-        
-        return mb
-            .GetComponentsInChildren<Transform>()
-            .Select(t => t.gameObject)
-            .ToArray();
     }
 }
