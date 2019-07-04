@@ -15,7 +15,7 @@ public class UIDragger : MonoBehaviour
     // ReSharper disable once MemberCanBePrivate.Global
     public const string DROP = "UIDropable";
     
-    [SerializeField] private Canvas[] registeredCanvases;
+    [SerializeField] private Canvas[] registeredCanvases = null;
     
     private bool _isDragging = false;
     private GameObject _draggingObject;
