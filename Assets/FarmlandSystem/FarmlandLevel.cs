@@ -6,10 +6,10 @@ using System.Linq;
 
 public class FarmlandLevel : MonoBehaviour
 {
-    [SerializeField] private GameObject farmlandSpacePrefab;
-    [SerializeField] private Tilemap tilemap;
+    [SerializeField] private GameObject farmlandSpacePrefab = null;
+    [SerializeField] private Tilemap tilemap = null;
     [SerializeField] private GameObject cellSelector = null;
-    [SerializeField] private GameObject ground;
+    [SerializeField] private GameObject ground = null;
     private Dictionary<Vector3Int, GameObject> _register;
     private Grid _grid;
     
@@ -61,7 +61,8 @@ public class FarmlandLevel : MonoBehaviour
     {
         return _register
             .Values
-            .Select(t => t.GetComponent<FarmlandSpace>());
+            .Select(t => t.GetComponent<FarmlandSpace>())
+            .ToArray();
     }
 
     private void OnFarmlandSpaceDeleted(GameObject space)
