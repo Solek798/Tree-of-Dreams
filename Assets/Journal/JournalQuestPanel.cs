@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class JournalQuestPanel : MonoBehaviour
 {
     
-    [SerializeField] private UnityEngine.UI.Image npcIconUI;
+    [SerializeField] private UnityEngine.UI.Image npcIconUI = null;
     [SerializeField] private GameObject requirementsPanel = null;
     
     private static void Parent( GameObject parentOb, GameObject childOb )
