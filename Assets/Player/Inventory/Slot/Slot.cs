@@ -4,15 +4,10 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour, IDropTarget
 {
     
-    [SerializeField] private GameObject stackPrefab;
-    [SerializeField] private Transform stackParent;
+    [SerializeField] private GameObject stackPrefab = null;
+    [SerializeField] private Transform stackParent = null;
 
     public Stack Stack => GetComponentInChildren<Stack>();
-    
-    private void Start()
-    {
-        
-    }
 
     public bool Put(InventoryItem item)
     {
@@ -21,7 +16,6 @@ public class Slot : MonoBehaviour, IDropTarget
         if (!stack)
         {
             stack = CreateAndAttacheStack();
-            // TODO(FK): Wait a Frame?
             stack.Initialize();
         }
 
@@ -59,7 +53,6 @@ public class Slot : MonoBehaviour, IDropTarget
 
     public bool Handle(GameObject draggable)
     {
-        // TODO(FK): Finish Drag 'n' drop mechanic
         var otherStack = draggable.GetComponent<Stack>();
 
         if (otherStack)
@@ -78,4 +71,6 @@ public class Slot : MonoBehaviour, IDropTarget
         
         stack?.Peek().gameObject.SetActive(toggle.isOn);
     }
+    
+    
 }

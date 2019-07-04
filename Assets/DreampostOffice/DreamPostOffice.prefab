@@ -481,7 +481,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7083425643579348844}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5
+  m_Size: 0.5655755
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -829,7 +829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000000323077, y: 96145.22}
+  m_AnchoredPosition: {x: -0.000000323077, y: -0.000061035156}
   m_SizeDelta: {x: 0, y: 422}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &7083425643939099586
@@ -971,7 +971,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 204
   m_TargetDisplay: 0
 --- !u!114 &7083425643941102304
 MonoBehaviour:
@@ -1025,14 +1025,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layoutGroup: {fileID: 7083425644102692318}
-  requirementsPanel: {fileID: 1723317179452447283, guid: b0d94b9566d850844bfa38008cced243,
-    type: 3}
   questPanel: {fileID: 4077663790294319252, guid: 2c12b175e22e76e49a03e2ea1785ad7b,
     type: 3}
   dreamTree: {fileID: 0}
   slider: {fileID: 7083425643094928117}
   player: {fileID: 0}
-  maxDistanceToPostOffice: 10
+  maxDistanceToPostOffice: 15
 --- !u!1 &7083425643945633737
 GameObject:
   m_ObjectHideFlags: 0

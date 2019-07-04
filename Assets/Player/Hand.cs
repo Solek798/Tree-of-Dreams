@@ -7,20 +7,28 @@ using UnityEngine.Serialization;
 public class Hand : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
-    [SerializeField] private Inventory inventory;
+    [SerializeField] private Inventory inventory = null;
+    [SerializeField] private int usageDistance = 100;
+    [SerializeField] private string collisionMaskName = "";
+
+    private int _collisionMask = 0;
+
+    private void Start()
+    {
+        _collisionMask = 1 << LayerMask.NameToLayer(collisionMaskName);
+    }
 
     // Update is called once per frame
     private void Update()
     {
-        RaycastHit hit;
-        var cell = new Vector3Int();
         FarmlandLevel targetLevel = null;
         var currentTool = inventory.SelectedItem?.GetComponent<ITool>();
 
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), 
-            out hit,
-            100,
-            1 << LayerMask.NameToLayer("Clouds")))
+        if (Physics.Raycast(
+            Camera.main.ScreenPointToRay(Input.mousePosition), 
+            out var hit,
+            usageDistance,
+            _collisionMask))
         {
            
             foreach (FarmlandLevel level in farmland)
