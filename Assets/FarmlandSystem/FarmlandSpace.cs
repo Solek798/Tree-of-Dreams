@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FarmlandSpace : MonoBehaviour
 {
-    [SerializeField] private GameObject soil;
-    [SerializeField] private GameObject nurturedSoil;
+    [SerializeField] private GameObject soil = null;
+    [SerializeField] private GameObject nurturedSoil = null;
     private Vector3Int _cell;
 
     public bool IsSoil
@@ -43,7 +43,7 @@ public class FarmlandSpace : MonoBehaviour
             return;
         }
         
-        if (IsSoil && Plant == null)
+        if ((IsSoil && Plant == null) || !IsSoil)
         {
             IsSoil = false;
             SendMessageUpwards("OnFarmlandSpaceDeleted", this.gameObject);
