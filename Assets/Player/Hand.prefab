@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810f277efec43fc8794bc4afca28dde9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plants: []
   farmland: {fileID: 0}
-  cropPopUp: {fileID: 0}
-  plantDistance: 60
+  inventory: {fileID: 0}
+  usageDistance: 100
+  collisionMaskName: Clouds

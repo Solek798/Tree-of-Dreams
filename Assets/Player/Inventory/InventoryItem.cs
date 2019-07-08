@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class InventoryItem : MonoBehaviour
 {
-    [SerializeField] private Sprite icon;
-    [SerializeField] private string identifier;
-    private Inventory _inventory;
+    [SerializeField] private Sprite icon = null;
+    [SerializeField] private string identifier = null;
 
     public Sprite Icon => icon;
     public string Identifier => identifier;
-    public Inventory Inventory => _inventory;
+    public Inventory Inventory { get; private set; }
 
-    
+
     public void Store(Inventory inventory)
     {
-        _inventory = inventory;
+        Inventory = inventory;
         gameObject.SetActive(false);
         transform.SetParent(inventory.HandTransform, true);
         transform.localPosition = Vector3.zero;
@@ -25,7 +24,7 @@ public class InventoryItem : MonoBehaviour
 
     public void Release()
     {
-        transform.parent = transform.root;
+        transform.SetParent(transform.root);
         gameObject.SetActive(true);
     }
 }

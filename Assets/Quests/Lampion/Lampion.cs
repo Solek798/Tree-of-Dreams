@@ -63,10 +63,6 @@ public class Lampion : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            TravelTarget = new Vector3(28f, 8.08f, -40.27f);
-        }
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
 
         if (Input.GetKeyDown(KeyCode.E) && playerInRange <= maxDistanceToPlayer && _uiOpened == false) 
