@@ -7,8 +7,6 @@ public class QuestManager : MonoBehaviour
 {
     [SerializeField] private Vector3[] targets = null;
     private int _tempIndex = 0;
-    
-    
 
     public void SendLampinion()
     {
