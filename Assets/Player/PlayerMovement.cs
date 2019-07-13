@@ -49,15 +49,20 @@ public class PlayerMovement : MonoBehaviour
     {
         var step = rotateSpeed * Time.deltaTime;
 
+        Vector3 step1, step2, step3;
+
         if (_controller.isGrounded)
         {
             _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * speed;
-
+            step1 = _moveDirection;
+            
             _moveDirection = cam.transform.TransformDirection(_moveDirection);
             _moveDirection.y = 0;
+            step2 = _moveDirection;
 
             //Move.Towards is for a smoother transition when the Model turns, so it doesn't turn instantly
             var newDir = Vector3.MoveTowards(transform.forward, _moveDirection, step);
+            step3 = newDir;
             if (newDir != Vector3.zero)
             {
                 transform.rotation = Quaternion.LookRotation(newDir);
@@ -68,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _moveDirection.y -= gravity * Time.deltaTime;
+        if ((_moveDirection * Time.deltaTime).sqrMagnitude >= 0.05f)
+        {
+            Debug.Log("Peng! " + _moveDirection);
+        }
         _controller.Move(_moveDirection * Time.deltaTime);
     }
 
