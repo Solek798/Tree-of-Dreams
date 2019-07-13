@@ -19,9 +19,20 @@ public class CameraZoom : MonoBehaviour
 
     private void Update()
     {
-        var camToFocusDistance = Vector3.Distance(transform.position, focusTransform.position);
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            transform.Translate(0, 0, 5);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            transform.Translate(0, 0, -5);
+        }
+        
+        
+        
+        /*var camToFocusDistance = Vector3.Distance(transform.position, focusTransform.position);
         var distance = Vector3.Distance(transform.position, player.position);
-
+        //CinemachineVirtualCamera
  
         var zoomPercentage = distance / camToFocusDistance;
         //Zooms in by the percentage of distance relative to camToFocusDistance
@@ -31,6 +42,6 @@ public class CameraZoom : MonoBehaviour
         focusTransform.position = new Vector3(focusTransform.position.x, newZoomFocusPoint, focusTransform.position.z);
         
         //applies the new FOV to the Cinemachine Inhouse function
-        cinemachineVirtualCamera.m_Lens.FieldOfView = newZoom;
+        cinemachineVirtualCamera.m_Lens.FieldOfView = newZoom;*/
     }
 }
