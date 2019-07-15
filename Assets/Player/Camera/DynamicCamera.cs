@@ -13,32 +13,26 @@ public class DynamicCamera : MonoBehaviour
     [SerializeField, Range(0, 1)] private float turnDumpingFactor = 1;
     [SerializeField, Range(1, 20)] private float turnSpeedFactor = 1;
 
-    /// <summary>
-    /// The maximum range the Camera can travel on the ZoomDolly.
-    /// Based on the Position of the zoomDolly/TurnDolly to the focusPoint
-    /// </summary>
+    [Tooltip("The maximum range the Camera can travel on the ZoomDolly. " +
+             "Based on the Position of the zoomDolly/TurnDolly to the focusPoint)")]
     [SerializeField, Range(0, float.PositiveInfinity)] private float maxZoom = 80;
-    /// <summary>
-    /// Minimal Distance that the Player can have to the focus Point (When he is standing in front of the tree)
-    /// </summary>
+    [Tooltip("Minimal Distance that the Player can have to the focus Point (When he is standing in front of the tree)")]
     [SerializeField, Range(0, float.PositiveInfinity)] private float minDistance = 13;
-    /// <summary>
-    /// Maximum Distance that the Player can have to the focus Point (When he is at the end of the level)
-    /// </summary>
+    [Tooltip("Maximum Distance that the Player can have to the focus Point (When he is at the end of the level)")]
     [SerializeField, Range(0, float.PositiveInfinity)] private float maxDistance = 60;
     
     private float _zoomStep = 0;
     private float _zoomedDistance = 0;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _zoomStep = maxZoom / (maxDistance - minDistance);
         Debug.Log(_zoomStep);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Move TurnDolly
         
