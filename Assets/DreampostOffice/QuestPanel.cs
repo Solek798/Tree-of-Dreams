@@ -7,7 +7,7 @@ public class QuestPanel : MonoBehaviour
     public GameObject npcIcon;
     
     [SerializeField] private Image npcIconUI = null;
-    [SerializeField] private GameObject requirementsPanel = null;
+    [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private HorizontalLayoutGroup requirementsLayoutGroup = null;
     
     
@@ -23,11 +23,11 @@ public class QuestPanel : MonoBehaviour
     {
         npcIconUI.sprite = quest.questNPCImage;
         
-        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
+        requirementSlotPrefab.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
         
         foreach (var value in quest.requirements)
         {
-            var panelVariant = Instantiate(requirementsPanel);
+            var panelVariant = Instantiate(requirementSlotPrefab);
             var reqLayoutGroup = requirementsLayoutGroup.gameObject;
             Parent(reqLayoutGroup,panelVariant);
             panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
