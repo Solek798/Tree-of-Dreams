@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,12 +10,23 @@ public class DynamicCamera : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform zoomTransform;
 
-    [SerializeField] private float turnDumpingFactor = 1;
-    [SerializeField] private float turnSpeedFactor = 1;
+    [SerializeField, Range(0, 1)] private float turnDumpingFactor = 1;
+    [SerializeField, Range(1, 20)] private float turnSpeedFactor = 1;
 
-    [SerializeField] private float maxZoom = 80;
-    [SerializeField] private float minDistance = 13;
-    [SerializeField] private float maxDistance = 60;
+    /// <summary>
+    /// The maximum range the Camera can travel on the ZoomDolly.
+    /// Based on the Position of the zoomDolly/TurnDolly to the focusPoint
+    /// </summary>
+    [SerializeField, Range(0, float.PositiveInfinity)] private float maxZoom = 80;
+    /// <summary>
+    /// Minimal Distance that the Player can have to the focus Point (When he is standing in front of the tree)
+    /// </summary>
+    [SerializeField, Range(0, float.PositiveInfinity)] private float minDistance = 13;
+    /// <summary>
+    /// Maximum Distance that the Player can have to the focus Point (When he is at the end of the level)
+    /// </summary>
+    [SerializeField, Range(0, float.PositiveInfinity)] private float maxDistance = 60;
+    
     private float _zoomStep = 0;
     private float _zoomedDistance = 0;
     
