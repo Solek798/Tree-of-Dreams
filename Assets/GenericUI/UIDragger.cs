@@ -55,7 +55,7 @@ public class UIDragger : MonoBehaviour
         foreach (var canvas in registeredCanvases)
         {
             retVal = DnDRaycaster.Raycast(canvas, kind);
-
+            
             if (retVal != null) break;
         }
         

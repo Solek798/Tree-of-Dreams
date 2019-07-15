@@ -1,15 +1,12 @@
-﻿    using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-    using UnityEngine.UI;
-    using UnityEngine.UIElements;
+﻿using UnityEngine;
+using UnityEngine.UI;
+
 
 public class QuestPanel : MonoBehaviour
 {
     public GameObject npcIcon;
     
-    [SerializeField] private UnityEngine.UI.Image npcIconUI = null;
+    [SerializeField] private Image npcIconUI = null;
     [SerializeField] private GameObject requirementsPanel = null;
     [SerializeField] private HorizontalLayoutGroup requirementsLayoutGroup = null;
     
@@ -27,7 +24,7 @@ public class QuestPanel : MonoBehaviour
         npcIconUI.sprite = quest.questNPCImage;
         
         requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-            
+        
         foreach (var value in quest.requirements)
         {
             var panelVariant = Instantiate(requirementsPanel);
