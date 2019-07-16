@@ -408,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 2146796652940156307, guid: 2a4e1bed4e607034f888549ad741e49f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00024414062
+      value: 42219696
       objectReference: {fileID: 0}
     - target: {fileID: 2146796652510755563, guid: 2a4e1bed4e607034f888549ad741e49f,
         type: 3}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 691062109}
   - component: {fileID: 691062108}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Clouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5248,8 +5248,8 @@ Transform:
   m_LocalPosition: {x: 15.6, y: -6.99, z: -4.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1210081922}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -447.006, y: -2.976, z: 90.629005}
 --- !u!4 &732080886 stripped
 Transform:
@@ -5307,7 +5307,7 @@ PrefabInstance:
     - target: {fileID: 7135695909882648240, guid: 43ff7f3244d85bc389df4e8a81e85f30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7135695909882648240, guid: 43ff7f3244d85bc389df4e8a81e85f30,
         type: 3}
@@ -67443,7 +67443,7 @@ PrefabInstance:
     - target: {fileID: 7083425643850425753, guid: 3c01a140bd68f094ea82cc5da91844dc,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.008056641
+      value: 33945972
       objectReference: {fileID: 0}
     - target: {fileID: 7083425643579348844, guid: 3c01a140bd68f094ea82cc5da91844dc,
         type: 3}
@@ -68121,6 +68121,7 @@ Transform:
   - {fileID: 6192221243581453233}
   - {fileID: 732080886}
   - {fileID: 1328359129}
+  - {fileID: 691062110}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
