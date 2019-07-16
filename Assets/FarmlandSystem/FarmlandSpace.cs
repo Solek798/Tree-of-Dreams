@@ -6,6 +6,8 @@ public class FarmlandSpace : MonoBehaviour
 {
     [SerializeField] private GameObject soil = null;
     [SerializeField] private GameObject nurturedSoil = null;
+    public ParticleSystem particleSystem;
+    
     private Vector3Int _cell;
 
     public bool IsSoil
