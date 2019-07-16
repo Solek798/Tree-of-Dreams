@@ -37,6 +37,7 @@
         <e p="Player" t="Include">
           <e p="Camera" t="Include">
             <e p="CameraZoom.cs" t="Include" />
+            <e p="DynamicCamera.cs" t="Include" />
           </e>
           <e p="Hand.cs" t="Include" />
           <e p="Inventory" t="Include">
@@ -61,6 +62,7 @@
             <e p="ITool.cs" t="Include" />
             <e p="SeedFlute" t="Include">
               <e p="HarvestPopup" t="Include">
+                <e p="HappinessText.cs" t="Include" />
                 <e p="PopupCropUi.cs" t="Include" />
               </e>
               <e p="SeedFlute.cs" t="Include" />
