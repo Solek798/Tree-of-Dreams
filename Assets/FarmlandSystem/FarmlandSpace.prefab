@@ -63,7 +63,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b5448393b33943279377f8635993ee9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b5448393b33943279377f8635993ee9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,6 +232,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeedFluteParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 3566211106945138896, guid: 75328ce4ac0a2e047b13f25fdc03df53,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566211106945138896, guid: 75328ce4ac0a2e047b13f25fdc03df53,
+        type: 3}
+      propertyPath: ShapeModule.angle
+      value: 12.110279
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566211106945138896, guid: 75328ce4ac0a2e047b13f25fdc03df53,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.31417298
+      objectReference: {fileID: 0}
     - target: {fileID: 3566211106945138899, guid: 75328ce4ac0a2e047b13f25fdc03df53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -286,21 +301,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3566211106945138896, guid: 75328ce4ac0a2e047b13f25fdc03df53,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3566211106945138896, guid: 75328ce4ac0a2e047b13f25fdc03df53,
-        type: 3}
-      propertyPath: ShapeModule.angle
-      value: 12.110279
-      objectReference: {fileID: 0}
-    - target: {fileID: 3566211106945138896, guid: 75328ce4ac0a2e047b13f25fdc03df53,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.31417298
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75328ce4ac0a2e047b13f25fdc03df53, type: 3}

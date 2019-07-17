@@ -13,6 +13,9 @@ public class DreamPostOffice : MonoBehaviour
     [FormerlySerializedAs("questPanel")] [SerializeField] private GameObject questPanelPrefab = null;
 
     [SerializeField] private GameObject dreamTree = null;
+    
+    // temp
+    [SerializeField] private Inventory inventory = null;
 
     public Scrollbar slider = null;
    
@@ -75,9 +78,8 @@ public class DreamPostOffice : MonoBehaviour
         gameObject.GetComponent<Canvas>().enabled = false;
     }
 
-    public void OnFulfillButtonClick()
+    public void OnQuestFillfilled(int earnedCash)
     {
-        //TODO
-        
+        inventory.Currency += earnedCash;
     }
 }

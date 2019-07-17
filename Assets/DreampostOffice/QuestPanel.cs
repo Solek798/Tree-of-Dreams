@@ -10,6 +10,8 @@ public class QuestPanel : MonoBehaviour
     [SerializeField] private Image npcIconUI = null;
     [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private HorizontalLayoutGroup requirementsLayoutGroup = null;
+
+    private Quest _quest = null;
     
     
     private static void Parent( GameObject parentOb, GameObject childOb )
@@ -22,6 +24,7 @@ public class QuestPanel : MonoBehaviour
     
     public void InitializeQuestPanel(Quest quest)
     {
+        _quest = quest;
         npcIconUI.sprite = quest.questNPCImage;
 
 
@@ -39,6 +42,19 @@ public class QuestPanel : MonoBehaviour
             newSlot.Amount = requirementGroup.Count();
             newSlot.Icon = requirementGroup.First().Icon;
         }
+    }
+
+    public void OnButtonPressed()
+    {
+        if (requirementsLayoutGroup.GetComponentsInChildren<Toggle>()
+            .Any(requirement => !requirement.isOn))
+            return;
+
+        SendMessageUpwards("OnQuestFillfilled", 
+            _quest.rewardDreamEssence, 
+            SendMessageOptions.RequireReceiver);
+        
+        Destroy(this.gameObject);
     }
 
 }
