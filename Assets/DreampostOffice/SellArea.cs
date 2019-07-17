@@ -16,16 +16,25 @@ public class SellArea : MonoBehaviour, IDropTarget
 
         var plants = 
             stack.PopAll()
-                .Select(t => t.GetComponent<PlantState>().plantObject);
+                .Select(t => t.GetComponent<PlantState>());
         var stackPrice = 0;
 
         foreach (var plant in plants)
         {
-            stackPrice += plant.sellPrice;
+            stackPrice += plant.plantObject.sellPrice;
+            Destroy(plant.gameObject);
         }
         
         inventory.Currency += stackPrice;
 
         return true;
+    }
+
+    private void Start()
+    {
+        int i = Convert.ToInt32("0");
+        
+        Debug.Log(i);
+        Debug.Log("0".Length);
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 
@@ -22,15 +23,21 @@ public class QuestPanel : MonoBehaviour
     public void InitializeQuestPanel(Quest quest)
     {
         npcIconUI.sprite = quest.questNPCImage;
-        
-        requirementSlotPrefab.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-        
-        foreach (var value in quest.requirements)
+
+
+        var requirementGroups = quest.requirements
+            .Select(t => t.GetComponent<PlantState>())
+            .GroupBy(t => t.plantObject, t => t.GetComponent<InventoryItem>());
+
+
+        foreach (var requirementGroup in requirementGroups)
         {
-            var panelVariant = Instantiate(requirementSlotPrefab);
-            var reqLayoutGroup = requirementsLayoutGroup.gameObject;
-            Parent(reqLayoutGroup,panelVariant);
-            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
+            var newSlot = Instantiate(requirementSlotPrefab, requirementsLayoutGroup.transform)
+                .GetComponent<RequirementSlot>();
+
+            newSlot.PlantScriptableObject = requirementGroup.Key;
+            newSlot.Amount = requirementGroup.Count();
+            newSlot.Icon = requirementGroup.First().Icon;
         }
     }
 
