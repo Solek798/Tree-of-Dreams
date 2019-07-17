@@ -77,6 +77,7 @@ public class UIDragger : MonoBehaviour
         
         var dropTarget = target?.GetComponentInChildren<IDropTarget>();
         
+        
         if (dropTarget == null || !dropTarget.Handle(_draggingObject))
         {
             _draggingObject.transform.SetParent(_origParentTransform, false);
