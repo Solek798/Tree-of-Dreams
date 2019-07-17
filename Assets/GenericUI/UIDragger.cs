@@ -55,7 +55,7 @@ public class UIDragger : MonoBehaviour
         foreach (var canvas in registeredCanvases)
         {
             retVal = DnDRaycaster.Raycast(canvas, kind);
-
+            
             if (retVal != null) break;
         }
         
@@ -76,6 +76,7 @@ public class UIDragger : MonoBehaviour
         _draggingObject.BroadcastMessage("OnDrop", SendMessageOptions.DontRequireReceiver);
         
         var dropTarget = target?.GetComponentInChildren<IDropTarget>();
+        
         
         if (dropTarget == null || !dropTarget.Handle(_draggingObject))
         {

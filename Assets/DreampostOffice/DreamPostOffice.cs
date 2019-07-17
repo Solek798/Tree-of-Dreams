@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class DreamPostOffice : MonoBehaviour
@@ -9,7 +10,7 @@ public class DreamPostOffice : MonoBehaviour
     
     [SerializeField] private GameObject layoutGroup = null;
 
-    [SerializeField] private GameObject questPanel = null;
+    [FormerlySerializedAs("questPanel")] [SerializeField] private GameObject questPanelPrefab = null;
 
     [SerializeField] private GameObject dreamTree = null;
 
@@ -37,7 +38,7 @@ public class DreamPostOffice : MonoBehaviour
     private void Update()
     {
         var playerInRange = Vector3.Distance(dreamTree.transform.position, player.transform.position);
-
+        
         if (Input.GetKeyDown(KeyCode.E) && playerInRange <= maxDistanceToPostOffice && _uiOpened == false) 
         {
             OpenPostOfficeMenu();
@@ -48,7 +49,7 @@ public class DreamPostOffice : MonoBehaviour
     
     public void QuestAddedToJournal(Quest quest)
     {
-        var newQuest = Instantiate(questPanel);
+        var newQuest = Instantiate(questPanelPrefab);
         Parent(layoutGroup, newQuest);
 
         newQuest.GetComponent<QuestPanel>().InitializeQuestPanel(quest);
