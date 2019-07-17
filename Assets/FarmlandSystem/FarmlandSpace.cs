@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class FarmlandSpace : MonoBehaviour
 {
+    public ParticleSystem seedFluteParticle;
+    public ParticleSystem bagOfStardustParticle;
+    
+
     [SerializeField] private GameObject soil = null;
     [SerializeField] private GameObject nurturedSoil = null;
-    public ParticleSystem particleSystem;
+    
     
     private Vector3Int _cell;
 

@@ -28,7 +28,7 @@ public class SeedFlute : MonoBehaviour, ITool
     public void Plant(GameObject plant)
     {
         _space.Plant = Instantiate(plant, _space.transform, false).GetComponent<PlantState>();  
-        _space.particleSystem.Play();
+        _space.seedFluteParticle.Play();
     }
     
     public float MaxUsingDistance => maxPlantDistance;
