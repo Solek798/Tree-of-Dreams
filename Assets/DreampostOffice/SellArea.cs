@@ -32,9 +32,6 @@ public class SellArea : MonoBehaviour, IDropTarget
 
     private void Start()
     {
-        int i = Convert.ToInt32("0");
         
-        Debug.Log(i);
-        Debug.Log("0".Length);
     }
 }
