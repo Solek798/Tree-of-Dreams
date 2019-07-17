@@ -26,12 +26,14 @@ public class Inventory : MonoBehaviour
 
     public int Currency
     {
-        set => currencyText.text = "Currency: " + value;
-        get => Convert.ToInt32(currencyText.text.Replace("Currency: ", ""));
+        set => currencyText.text = value.ToString();
+        get => Convert.ToInt32(currencyText.text);
     }
     
     void Start()
     {
+        Currency = 0;
+        
         _slots =
             slotContainer
                 .GetAllChildren()

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,7 +13,8 @@ public class Stack : MonoBehaviour
 
     public Slot Slot { get; set; }
 
-
+    public int Count => _count.text == string.Empty ? 1 : Convert.ToInt32(_count.text);
+    
     // Make sure Selector is visible
     private void OnDrop()
     {
@@ -47,6 +49,7 @@ public class Stack : MonoBehaviour
     
     public InventoryItem Pop()
     {
+        
         var retVal = _items.Pop();
         UpdateInfo();
         return retVal;

@@ -1,16 +1,14 @@
-﻿    using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
 using UnityEngine;
-    using UnityEngine.UI;
-    using UnityEngine.UIElements;
+using UnityEngine.UI;
+
 
 public class QuestPanel : MonoBehaviour
 {
     public GameObject npcIcon;
     
-    [SerializeField] private UnityEngine.UI.Image npcIconUI = null;
-    [SerializeField] private GameObject requirementsPanel = null;
+    [SerializeField] private Image npcIconUI = null;
+    [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private HorizontalLayoutGroup requirementsLayoutGroup = null;
     
     
@@ -25,15 +23,21 @@ public class QuestPanel : MonoBehaviour
     public void InitializeQuestPanel(Quest quest)
     {
         npcIconUI.sprite = quest.questNPCImage;
-        
-        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-            
-        foreach (var value in quest.requirements)
+
+
+        var requirementGroups = quest.requirements
+            .Select(t => t.GetComponent<PlantState>())
+            .GroupBy(t => t.plantObject, t => t.GetComponent<InventoryItem>());
+
+
+        foreach (var requirementGroup in requirementGroups)
         {
-            var panelVariant = Instantiate(requirementsPanel);
-            var reqLayoutGroup = requirementsLayoutGroup.gameObject;
-            Parent(reqLayoutGroup,panelVariant);
-            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
+            var newSlot = Instantiate(requirementSlotPrefab, requirementsLayoutGroup.transform)
+                .GetComponent<RequirementSlot>();
+
+            newSlot.PlantScriptableObject = requirementGroup.Key;
+            newSlot.Amount = requirementGroup.Count();
+            newSlot.Icon = requirementGroup.First().Icon;
         }
     }
 
