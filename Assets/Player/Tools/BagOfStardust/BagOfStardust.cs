@@ -8,6 +8,7 @@ public class BagOfStardust : MonoBehaviour, ITool
     
     public bool Use(FarmlandSpace space)
     {
+        space.bagOfStardustParticle.Play();
         return space.IsNurtured = true;
     }
 
