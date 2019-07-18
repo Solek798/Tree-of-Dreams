@@ -6,6 +6,7 @@ public class FarmlandSpace : MonoBehaviour
 {
     public ParticleSystem seedFluteParticle;
     public ParticleSystem bagOfStardustParticle;
+    public ParticleSystem farmlandSpaceParticle;
     
 
     [SerializeField] private GameObject soil = null;
@@ -21,6 +22,7 @@ public class FarmlandSpace : MonoBehaviour
         {
             if (value) IsNurtured = false;
             soil.SetActive(value);
+            farmlandSpaceParticle.Play();
         }
     }
 
@@ -31,6 +33,7 @@ public class FarmlandSpace : MonoBehaviour
         {
             if (value) IsSoil = false;
             nurturedSoil.SetActive(value);
+            farmlandSpaceParticle.Stop();
         }
     }
 
