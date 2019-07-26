@@ -12,5 +12,6 @@ public class PlantScriptableObject : ScriptableObject
     //The Model of the specific State
     public List<GameObject> stateModel = new List<GameObject>();
 
-    public int sellPrice;
+    public int buyPrice = 0;
+    public int sellPrice = 0;
 }
