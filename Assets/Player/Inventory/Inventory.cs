@@ -11,28 +11,32 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Text currencyText = null;
     [SerializeField] private GameObject slotContainer = null;
     [SerializeField] private Transform handTransform = null;
+    [SerializeField] private int maxCurrency = 0;
+    [SerializeField] private int startCurrency = 0;
 
     [SerializeField] private GameObject cloudPlowPrefab = null;
     [SerializeField] private GameObject stardustBagPrefab = null;
     [SerializeField] private GameObject seedFlutePrefab = null;
     [SerializeField] private GameObject dreamSicklePrefab = null;
+    
 
     private Slot[] _slots = null;
 
     public Transform HandTransform => handTransform;
+    public int MaxCurrency => maxCurrency;
 
     public InventoryItem SelectedItem { get; private set; }
 
 
     public int Currency
     {
-        set => currencyText.text = value.ToString();
+        set => currencyText.text = value <= maxCurrency ? value.ToString() : currencyText.text;
         get => Convert.ToInt32(currencyText.text);
     }
     
     void Start()
     {
-        Currency = 0;
+        Currency = startCurrency;
         
         _slots =
             slotContainer

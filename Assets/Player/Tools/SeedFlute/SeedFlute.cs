@@ -13,7 +13,10 @@ public class SeedFlute : MonoBehaviour, ITool
     {
         _space = space;
         
-        cropUi.OpenUiMenu();
+        var inventory = GetComponent<InventoryItem>().Inventory;
+        Debug.Log(inventory);
+        if (inventory != null)
+            cropUi.OpenUiMenu(inventory);
 
         return true;
     }

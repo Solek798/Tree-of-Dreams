@@ -252,6 +252,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
         type: 3}
+      propertyPath: maxCurrency
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+        type: 3}
+      propertyPath: startCurrency
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+        type: 3}
       propertyPath: cloudPlowPrefab
       value: 
       objectReference: {fileID: 5556272877422503818, guid: b58c75be10b679671971ff60c8700ef2,
@@ -303,11 +313,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Spacing
       value: 13.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957227640364743508, guid: adedfb3da8b49683aa2bde5aa6c4b936,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adedfb3da8b49683aa2bde5aa6c4b936, type: 3}
