@@ -32,7 +32,7 @@ public class QuestPanel : MonoBehaviour
             .Select(t => t.GetComponent<PlantState>())
             .GroupBy(t => t.plantObject, t => t.GetComponent<InventoryItem>());
 
-
+        
         foreach (var requirementGroup in requirementGroups)
         {
             var newSlot = Instantiate(requirementSlotPrefab, requirementsLayoutGroup.transform)
