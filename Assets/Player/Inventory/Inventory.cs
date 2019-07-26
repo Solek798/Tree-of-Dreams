@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
 
     public int Currency
     {
-        set => currencyText.text = value <= maxCurrency ? value.ToString() : currencyText.text;
+        set => currencyText.text = value <= maxCurrency ? value.ToString() : maxCurrency.ToString();
         get => Convert.ToInt32(currencyText.text);
     }
     
