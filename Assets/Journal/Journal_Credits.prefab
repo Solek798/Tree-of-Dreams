@@ -944,7 +944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2146796652510755560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1400,7 +1400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -367, y: -12.5}
+  m_AnchoredPosition: {x: 0, y: -12.5}
   m_SizeDelta: {x: 200, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1496774612862408271
@@ -3546,6 +3546,7 @@ GameObject:
   - component: {fileID: 9000696632107848564}
   - component: {fileID: 7682232124856872034}
   - component: {fileID: 8055871935744116265}
+  - component: {fileID: 4275249626127853206}
   m_Layer: 5
   m_Name: DreamLetters
   m_TagString: Untagged
@@ -3652,9 +3653,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7682232124856872034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4275249626127853206}
+        m_MethodName: openSubMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4275249626127853206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476288592171140442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563, guid: 2a4e1bed4e607034f888549ad741e49f, type: 3}
+  - {fileID: 2146796652510755563}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
 --- !u!1 &6718178007391585843
 GameObject:
   m_ObjectHideFlags: 0
@@ -4853,6 +4884,7 @@ GameObject:
   - component: {fileID: 6437914393319598368}
   - component: {fileID: 7538289726783815767}
   - component: {fileID: 4297838278777960985}
+  - component: {fileID: 7243796347589864103}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -4959,9 +4991,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7538289726783815767}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7243796347589864103}
+        m_MethodName: openSubMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7243796347589864103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732229613280308914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563, guid: 2a4e1bed4e607034f888549ad741e49f, type: 3}
+  - {fileID: 2146796652510755563}
+  - {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf, type: 3}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
 --- !u!1 &8895894642344061656
 GameObject:
   m_ObjectHideFlags: 0
@@ -5241,6 +5303,7 @@ GameObject:
   - component: {fileID: 3386644339825892002}
   - component: {fileID: 6985322937368759136}
   - component: {fileID: 8311242969958813296}
+  - component: {fileID: 8428595080725289251}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -5265,7 +5328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: 386.86}
+  m_AnchoredPosition: {x: -492.1, y: 386.86}
   m_SizeDelta: {x: 131.4, y: 48.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3386644339825892002
@@ -5347,9 +5410,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6985322937368759136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8428595080725289251}
+        m_MethodName: openSubMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8428595080725289251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053493601882842686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563, guid: 2a4e1bed4e607034f888549ad741e49f, type: 3}
+  - {fileID: 2146796652510755563}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
 --- !u!1 &9189478739175651993
 GameObject:
   m_ObjectHideFlags: 0
