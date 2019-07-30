@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7019883084834487934}
   - component: {fileID: 5314585022015525724}
   - component: {fileID: 5880800566020910711}
+  - component: {fileID: 1783511013332553910}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -118,9 +119,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5314585022015525724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1783511013332553910}
+        m_MethodName: openSubMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2146796652510755563, guid: 5ca9aa87b16b92c498978ca8a6e7f29e,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1783511013332553910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237809936613032929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563}
+  - {fileID: 2146796652510755563, guid: 5ca9aa87b16b92c498978ca8a6e7f29e, type: 3}
+  - {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf, type: 3}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
 --- !u!1 &1347495466571366348
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +324,7 @@ GameObject:
   - component: {fileID: 2146796651374291924}
   - component: {fileID: 2146796651374291927}
   m_Layer: 5
-  m_Name: QuestsTextbox
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,13 +896,14 @@ GameObject:
   - component: {fileID: 2146796652510755562}
   - component: {fileID: 2146796652510755565}
   - component: {fileID: 2146796652510755567}
+  - component: {fileID: 3806418367428130581}
   m_Layer: 5
   m_Name: Journal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2146796652510755560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -971,6 +1003,24 @@ MonoBehaviour:
     type: 3}
   slider: {fileID: 2146796652151100159}
   journalCanvas: {fileID: 2146796652510755563}
+--- !u!114 &3806418367428130581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146796652510755564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563, guid: 5ca9aa87b16b92c498978ca8a6e7f29e, type: 3}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
+  - {fileID: 2146796652510755563}
 --- !u!1 &2146796652617536980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,6 +2362,7 @@ GameObject:
   - component: {fileID: 9000696632107848564}
   - component: {fileID: 7682232124856872034}
   - component: {fileID: 8055871935744116265}
+  - component: {fileID: 7220278819511039446}
   m_Layer: 5
   m_Name: DreamLetters
   m_TagString: Untagged
@@ -2431,8 +2482,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7220278819511039446}
+        m_MethodName: openSubMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7220278819511039446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6476288592171140442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563}
+  - {fileID: 2146796652510755563, guid: 5ca9aa87b16b92c498978ca8a6e7f29e, type: 3}
+  - {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf, type: 3}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
 --- !u!1 &6794470283953153285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,6 +2689,7 @@ GameObject:
   - component: {fileID: 6437914393319598368}
   - component: {fileID: 7538289726783815767}
   - component: {fileID: 4297838278777960985}
+  - component: {fileID: 3516615321222955583}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -2632,7 +2714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122.4, y: 386.86}
+  m_AnchoredPosition: {x: -124.99998, y: 386.86}
   m_SizeDelta: {x: 131.4, y: 48.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6437914393319598368
@@ -2714,9 +2796,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7538289726783815767}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3516615321222955583}
+        m_MethodName: openSubMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3516615321222955583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732229613280308914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563}
+  - {fileID: 2146796652510755563, guid: 5ca9aa87b16b92c498978ca8a6e7f29e, type: 3}
+  - {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf, type: 3}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
 --- !u!1 &9053493601882842686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,8 +2841,9 @@ GameObject:
   - component: {fileID: 3386644339825892002}
   - component: {fileID: 6985322937368759136}
   - component: {fileID: 8311242969958813296}
+  - component: {fileID: 3463847150549976757}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: Opitons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,6 +2951,24 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3463847150549976757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053493601882842686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SubMenus:
+  - {fileID: 2146796652510755563}
+  - {fileID: 2146796652510755563, guid: 5ca9aa87b16b92c498978ca8a6e7f29e, type: 3}
+  - {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf, type: 3}
+  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
+  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
 --- !u!1 &9189478739175651993
 GameObject:
   m_ObjectHideFlags: 0
