@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 504, y: 386.86}
-  m_SizeDelta: {x: 131.4, y: 48.92}
+  m_AnchoredPosition: {x: 500.4, y: 386.86}
+  m_SizeDelta: {x: 171, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7019883084834487934
 CanvasRenderer:
@@ -896,14 +896,13 @@ GameObject:
   - component: {fileID: 2146796652510755562}
   - component: {fileID: 2146796652510755565}
   - component: {fileID: 2146796652510755567}
-  - component: {fileID: 3806418367428130581}
   m_Layer: 5
   m_Name: Journal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2146796652510755560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1003,24 +1002,6 @@ MonoBehaviour:
     type: 3}
   slider: {fileID: 2146796652151100159}
   journalCanvas: {fileID: 2146796652510755563}
---- !u!114 &3806418367428130581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146796652510755564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e6ac6fb9f5a1f40a50e732d7e894bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SubMenus:
-  - {fileID: 2146796652510755563, guid: 5ca9aa87b16b92c498978ca8a6e7f29e, type: 3}
-  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
-  - {fileID: 2146796652510755563, guid: 36c298cbf8b24ce44b2e60245852e59f, type: 3}
-  - {fileID: 6513982126594789390, guid: 884a44097f8507b49a7af3263b222c0f, type: 3}
-  - {fileID: 2146796652510755563}
 --- !u!1 &2146796652617536980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,7 +2310,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -2387,8 +2368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.34, y: 386.86}
-  m_SizeDelta: {x: 131.4, y: 48.92}
+  m_AnchoredPosition: {x: -310.97, y: 386.86}
+  m_SizeDelta: {x: 170.86, y: 48.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9000696632107848564
 CanvasRenderer:
@@ -2714,8 +2695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.99998, y: 386.86}
-  m_SizeDelta: {x: 131.4, y: 48.92}
+  m_AnchoredPosition: {x: -128.22, y: 386.86}
+  m_SizeDelta: {x: 171.66, y: 48.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6437914393319598368
 CanvasRenderer:
@@ -2948,7 +2929,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6985322937368759136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3463847150549976757}
+        m_MethodName: openSubMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2146796652510755563, guid: c63f0b6bcfcdafa47b8fe2242d3e2acf,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Canvas, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &3463847150549976757
