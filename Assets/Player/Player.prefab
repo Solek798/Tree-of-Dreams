@@ -47,12 +47,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 3.76
+  m_Radius: 3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.71, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7425407827233562909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,11 +341,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2483433778295244367}
     m_Modifications:
-    - target: {fileID: 364890180114221266, guid: 5ca7c02f461f6384dbbb9433c1a6ea7a,
-        type: 3}
-      propertyPath: m_Name
-      value: Hand
-      objectReference: {fileID: 0}
     - target: {fileID: 364890180114221267, guid: 5ca7c02f461f6384dbbb9433c1a6ea7a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,6 +396,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 364890180114221266, guid: 5ca7c02f461f6384dbbb9433c1a6ea7a,
+        type: 3}
+      propertyPath: m_Name
+      value: Hand
+      objectReference: {fileID: 0}
     - target: {fileID: 364890180114221264, guid: 5ca7c02f461f6384dbbb9433c1a6ea7a,
         type: 3}
       propertyPath: inventory
@@ -449,12 +449,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 923360c197f7bcd448a6e4310b690d58,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.902
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 923360c197f7bcd448a6e4310b690d58,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.476
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 923360c197f7bcd448a6e4310b690d58,
         type: 3}
@@ -495,6 +495,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 923360c197f7bcd448a6e4310b690d58,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 923360c197f7bcd448a6e4310b690d58,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 923360c197f7bcd448a6e4310b690d58,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3495350442445263088, guid: 923360c197f7bcd448a6e4310b690d58,
         type: 3}
