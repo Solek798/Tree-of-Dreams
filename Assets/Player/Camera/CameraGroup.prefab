@@ -95,7 +95,9 @@ MonoBehaviour:
   m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
+  m_BeforeStackBundles:
+  - assemblyQualifiedName: LWRPAO, Post-processLWRPAO, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   m_AfterStackBundles: []
 --- !u!1 &7135695909770077701
 GameObject:
@@ -148,8 +150,8 @@ MonoBehaviour:
   turnDumpingFactor: 0.1
   turnSpeedFactor: 1
   maxZoom: 80
-  minDistance: 13
-  maxDistance: 60
+  minDistance: 10
+  maxDistance: 70
 --- !u!1 &7135695909882648207
 GameObject:
   m_ObjectHideFlags: 0
