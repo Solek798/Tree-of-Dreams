@@ -5,6 +5,9 @@ using UnityEngine;
 public class SeedFlute : MonoBehaviour, ITool
 {
     [SerializeField] private float maxPlantDistance = 60.0f;
+    [SerializeField] private AudioClip SeedfluteSfx;
+    [SerializeField] private AudioSource SeedflutePlayer;
+
     private FarmlandSpace _space;
 
     public PopupCropUi cropUi;
@@ -32,6 +35,9 @@ public class SeedFlute : MonoBehaviour, ITool
     {
         _space.Plant = Instantiate(plant, _space.transform, false).GetComponent<PlantState>();  
         _space.seedFluteParticle.Play();
+        SeedflutePlayer.clip = SeedfluteSfx;
+        SeedflutePlayer.Play();
+
     }
     
     public float MaxUsingDistance => maxPlantDistance;
