@@ -157,10 +157,17 @@
         </e>
         <e p="VFX" t="Include">
           <e p="Outline.shader" t="Include" />
+          <e p="Post-process LWRP AO" t="Include">
+            <e p="Runtime" t="Include">
+              <e p="LWRPAO.cs" t="Include" />
+              <e p="Post-process LWRP AO.Runtime.asmdef" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="Post-processLWRPAO.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
       <e p="Tree of Dreams.sln" t="IncludeFlat" />
     </e>
