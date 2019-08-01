@@ -12,6 +12,7 @@ public class DreamSickle : MonoBehaviour, ITool
         var plant = space.Plant;
         space.Plant = null;
         GetComponent<InventoryItem>().Inventory.PickUp(plant.gameObject);
+        space.dreamSickleParticle.Play();
 
         return true;
     }
