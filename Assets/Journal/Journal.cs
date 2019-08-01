@@ -46,11 +46,12 @@ public class Journal : MonoBehaviour
         
     }
 
-    public void QuestAddedToJournal(QuestData questData)
+    public void AddDisplay(QuestDisplay display)
     {
-        var newQuest = Instantiate(questPanel);
-        Parent(layoutGroup, newQuest);
         
+        //var newQuest = Instantiate(questPanel);
+        //Parent(layoutGroup, newQuest);
+        display.transform.SetParent(layoutGroup.transform);
         
 //        newQuest.GetComponent<JournalQuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
 //
@@ -62,7 +63,7 @@ public class Journal : MonoBehaviour
 //            Parent(reqLayoutGroup,panelVariant);
 //            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
 //        }
-    newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(questData);
+    //newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(questData);
         
     }
 

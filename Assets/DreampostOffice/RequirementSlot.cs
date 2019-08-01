@@ -20,6 +20,7 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
             icon.sprite = value;
             icon.color = iconColor;
         }
+        get => icon.sprite;
     }
     
     public int Amount
@@ -76,9 +77,15 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
     {
         if (Amount == 0)
         {
-            GetComponent<Toggle>().isOn = true;
-            amountText.text = "";
-            icon.color = fullFilledColor;
+            MarkAsSatisfactioned();
+            SendMessageUpwards("OnRequirementSatisfactioned", this);
         }
+    }
+
+    public void MarkAsSatisfactioned()
+    {
+        GetComponent<Toggle>().isOn = true;
+        amountText.text = "";
+        icon.color = fullFilledColor;
     }
 }

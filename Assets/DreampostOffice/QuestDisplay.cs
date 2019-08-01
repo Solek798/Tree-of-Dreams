@@ -21,28 +21,65 @@ public class QuestDisplay : MonoBehaviour
     }
     
     
-    public void Initialize(Quest quest, GameObject[] requirements)
+    public void Initialize(Quest quest)
     {
         _quest = quest;
         npcIconUI.sprite = quest.Data.questNPCImage;
         
-        foreach (var requirement in requirements)
+        /*foreach (var requirement in requirements)
         {
             requirement.transform.SetParent(requirementsLayoutGroup.transform);
+        }*/
+        
+        var requirementGroups = quest.Data.requirements
+            .Select(t => t.GetComponent<PlantState>())
+            .GroupBy(t => t.plantObject, t => t.GetComponent<InventoryItem>());
+
+        
+        foreach (var requirementGroup in requirementGroups)
+        {
+            var newSlot = Instantiate(requirementSlotPrefab, requirementsLayoutGroup.transform)
+                .GetComponent<RequirementSlot>();
+
+            newSlot.PlantScriptableObject = requirementGroup.Key;
+            newSlot.Amount = requirementGroup.Count();
+            newSlot.Icon = requirementGroup.First().Icon;
         }
     }
 
-    public void OnButtonPressed()
+    public void OnRequirementSatisfactioned(RequirementSlot slot)
+    {
+        _quest.OnSlotSatisfactioned(slot);
+        CheckForFullfillment();
+    }
+
+    public void CheckForFullfillment()
     {
         if (requirementsLayoutGroup.GetComponentsInChildren<Toggle>()
             .Any(requirement => !requirement.isOn))
             return;
 
+        GetComponentInChildren<Button>().interactable = true;
+    }
+
+    public void OnButtonPressed()
+    {
         SendMessageUpwards("OnQuestFillfilled", 
             _quest.Data.rewardDreamEssence, 
             SendMessageOptions.RequireReceiver);
         
-        Destroy(this.gameObject);
+        _quest.DestroyAllDisplays();
     }
 
+
+    public void SetSlotSatisfactioned(RequirementSlot slot)
+    {
+        foreach (var requirementSlotlot in requirementsLayoutGroup.GetComponentsInChildren<RequirementSlot>())
+        {
+            if (requirementSlotlot.Icon == slot.Icon)
+            {
+                requirementSlotlot.MarkAsSatisfactioned();
+            }
+        }
+    }
 }

@@ -50,10 +50,9 @@ public class DreamPostOffice : MonoBehaviour
         
     }
     
-    public void QuestAddedToJournal(QuestData questData)
+    public void AddDisplay(QuestDisplay display)
     {
-        var newQuest = Instantiate(questPanelPrefab);
-        Parent(layoutGroup, newQuest);
+        display.transform.SetParent(layoutGroup.transform);
 
         //newQuest.GetComponent<QuestDisplay>().Initialize(questData);
     }
