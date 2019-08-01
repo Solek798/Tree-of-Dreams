@@ -14,7 +14,8 @@ public class Lampion : MonoBehaviour
     
     [SerializeField] private GameObject dreamPostOffice = null;
     [SerializeField] private GameObject journalUi = null;
-    [SerializeField] private GameObject questCard = null;
+    [SerializeField] private QuestCard questCard = null;
+    [SerializeField] private GameObject questPrefab = null;
 
     private bool _uiOpened;
     private Vector3 _travelTarget;
@@ -57,8 +58,10 @@ public class Lampion : MonoBehaviour
             //journalUi.GetComponent<Journal>().QuestAddedToJournal(quest);
             //journalUi.GetComponent<Journal>().slider.value = 1;
             //dreamPostOffice.GetComponent<DreamPostOffice>().slider.value = 1;
-            questData.AddQuestToJournal();
-            questCard.GetComponent<QuestCard>().InitializeQuestCard(questData);
+            //questData.AddQuestToJournal();
+            var newQuest = Instantiate(questPrefab).GetComponent<Quest>();
+            newQuest.Initialize(questData);
+            questCard.InitializeQuestCard(newQuest);
         }
         
     }
@@ -67,7 +70,9 @@ public class Lampion : MonoBehaviour
     {
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
         
-        if (Input.GetKeyDown(KeyCode.E) && playerInRange <= maxDistanceToPlayer && !questCard.activeInHierarchy) 
+        if (Input.GetKeyDown(KeyCode.E) && 
+            playerInRange <= maxDistanceToPlayer && 
+            !questCard.gameObject.activeInHierarchy) 
         {
             LampionActivation();
         }

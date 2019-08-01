@@ -55,7 +55,7 @@ public class DreamPostOffice : MonoBehaviour
         var newQuest = Instantiate(questPanelPrefab);
         Parent(layoutGroup, newQuest);
 
-        newQuest.GetComponent<Quest>().Initialize(questData);
+        //newQuest.GetComponent<QuestDisplay>().Initialize(questData);
     }
 
     private void OpenPostOfficeMenu()
