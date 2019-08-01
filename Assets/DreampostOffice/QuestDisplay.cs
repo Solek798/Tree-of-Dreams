@@ -3,15 +3,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Quest : MonoBehaviour
+public class QuestDisplay : MonoBehaviour
 {
-    public GameObject npcIcon;
     
     [SerializeField] private Image npcIconUI = null;
     [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private HorizontalLayoutGroup requirementsLayoutGroup = null;
 
-    private QuestData _questData = null;
+    private Quest _quest = null;
     
     
     private static void Parent( GameObject parentOb, GameObject childOb )
@@ -22,10 +21,10 @@ public class Quest : MonoBehaviour
     }
     
     
-    public void Initialize(QuestData questData, GameObject[] requirements)
+    public void Initialize(Quest quest, GameObject[] requirements)
     {
-        _questData = questData;
-        npcIconUI.sprite = questData.questNPCImage;
+        _quest = quest;
+        npcIconUI.sprite = quest.Data.questNPCImage;
         
         foreach (var requirement in requirements)
         {
@@ -40,7 +39,7 @@ public class Quest : MonoBehaviour
             return;
 
         SendMessageUpwards("OnQuestFillfilled", 
-            _questData.rewardDreamEssence, 
+            _quest.Data.rewardDreamEssence, 
             SendMessageOptions.RequireReceiver);
         
         Destroy(this.gameObject);

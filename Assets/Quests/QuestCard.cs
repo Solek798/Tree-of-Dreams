@@ -13,7 +13,8 @@ public class QuestCard : MonoBehaviour
     [SerializeField] private GameObject questPrefab = null;
     [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private Transform questParent = null;
-    
+
+    private Quest _quest = null;
     
     private static void Parent( GameObject parentOb, GameObject childOb )
     {
@@ -22,12 +23,13 @@ public class QuestCard : MonoBehaviour
         
     }
 
-    public void InitializeQuestCard(QuestData questData)
+    public void InitializeQuestCard(Quest quest)
     {
-        description.text = questData.questDescription;
-        npcIcon.sprite = questData.questNPCImage;
+        _quest = quest;
+        description.text = quest.Data.questDescription;
+        npcIcon.sprite = quest.Data.questNPCImage;
 
-        var requirementGroups = questData.requirements
+        var requirementGroups = quest.Data.requirements
             .Select(t => t.GetComponent<PlantState>())
             .GroupBy(t => t.plantObject, t => t.GetComponent<InventoryItem>());
 
@@ -51,9 +53,7 @@ public class QuestCard : MonoBehaviour
     {
         gameObject.SetActive(false);
         
-        var newQuest = Instantiate(questPrefab, questParent);
-        
-        newQuest.GetComponent<Quest>().Initialize(questData);
+        //_quest.Initialize(_quest.Data);
         
         // Send Quest to DreamPostOffice
     }
