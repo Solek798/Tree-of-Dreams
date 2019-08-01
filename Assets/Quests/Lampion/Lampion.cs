@@ -62,6 +62,8 @@ public class Lampion : MonoBehaviour
             var newQuest = Instantiate(questPrefab).GetComponent<Quest>();
             newQuest.Initialize(questData);
             questCard.InitializeQuestCard(newQuest);
+            
+            player.GetComponentInChildren<QuestCollector>()?.AddNewQuest(newQuest);
         }
         
     }

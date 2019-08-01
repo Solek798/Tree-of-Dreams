@@ -22,7 +22,15 @@ public class Quest : MonoBehaviour
     {
         foreach (var display in _displays)
         {
-            Destroy(display);
+            Destroy(display.gameObject);
+        }
+    }
+
+    public void OnSlotSatisfactioned(RequirementSlot slot)
+    {
+        foreach (var display in _displays)
+        {
+            display.SetSlotSatisfactioned(slot);
         }
     }
 }
