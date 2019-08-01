@@ -7,6 +7,7 @@ public class FarmlandSpace : MonoBehaviour
     public ParticleSystem seedFluteParticle;
     public ParticleSystem bagOfStardustParticle;
     public ParticleSystem farmlandSpaceParticle;
+    public ParticleSystem dreamSickleParticle;
     
 
     [SerializeField] private GameObject soil = null;
