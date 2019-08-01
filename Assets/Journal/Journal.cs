@@ -46,7 +46,7 @@ public class Journal : MonoBehaviour
         
     }
 
-    public void QuestAddedToJournal(Quest quest)
+    public void QuestAddedToJournal(QuestData questData)
     {
         var newQuest = Instantiate(questPanel);
         Parent(layoutGroup, newQuest);
@@ -62,7 +62,7 @@ public class Journal : MonoBehaviour
 //            Parent(reqLayoutGroup,panelVariant);
 //            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
 //        }
-    newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(quest);
+    newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(questData);
         
     }
 

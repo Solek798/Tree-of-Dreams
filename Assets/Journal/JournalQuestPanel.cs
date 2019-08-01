@@ -18,17 +18,17 @@ public class JournalQuestPanel : MonoBehaviour
 
 
 
-    public void InitializeJournalQuestPanel(Quest quest)
+    public void InitializeJournalQuestPanel(QuestData questData)
     {
-        npcIconUI.sprite = quest.questNPCImage;
+        npcIconUI.sprite = questData.questNPCImage;
 
-        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-        foreach (var value in quest.requirements)
+        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(questData.requirements);
+        foreach (var value in questData.requirements)
         {
             var panelVariant = Instantiate(requirementsPanel);
             var reqLayoutGroup = gameObject.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
             Parent(reqLayoutGroup,panelVariant);
-            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
+            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(questData.requirements);
         }
     }
 
