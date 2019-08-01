@@ -13,7 +13,7 @@
           <e p="SellArea.cs" t="Include" />
         </e>
         <e p="Environment" t="Include">
-          <e p="Plants" t="Include">
+          <e p="Crops" t="Include">
             <e p="PlantScriptableObject.cs" t="Include" />
             <e p="PlantState.cs" t="Include" />
           </e>
@@ -34,6 +34,7 @@
         <e p="Journal" t="Include">
           <e p="Journal.cs" t="Include" />
           <e p="JournalQuestPanel.cs" t="Include" />
+          <e p="JournalTab.cs" t="Include" />
         </e>
         <e p="MonoBehaviourExtension.cs" t="Include" />
         <e p="Player" t="Include">
@@ -159,10 +160,17 @@
         </e>
         <e p="VFX" t="Include">
           <e p="Outline.shader" t="Include" />
+          <e p="Post-process LWRP AO" t="Include">
+            <e p="Runtime" t="Include">
+              <e p="LWRPAO.cs" t="Include" />
+              <e p="Post-process LWRP AO.Runtime.asmdef" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="Call_of_Dreams.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
+      <e p="Post-processLWRPAO.csproj" t="IncludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
       </e>
