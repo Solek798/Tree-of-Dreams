@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "QuestObject", menuName = "ScriptableObjects/Quest", order = 2)]
-public class Quest : ScriptableObject
+public class QuestData : ScriptableObject
 {
     //Questname
     public new string name;

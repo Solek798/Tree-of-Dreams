@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class QuestPanel : MonoBehaviour
+public class Quest : MonoBehaviour
 {
     public GameObject npcIcon;
     
@@ -11,7 +11,7 @@ public class QuestPanel : MonoBehaviour
     [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private HorizontalLayoutGroup requirementsLayoutGroup = null;
 
-    private Quest _quest = null;
+    private QuestData _questData = null;
     
     
     private static void Parent( GameObject parentOb, GameObject childOb )
@@ -22,25 +22,14 @@ public class QuestPanel : MonoBehaviour
     }
     
     
-    public void InitializeQuestPanel(Quest quest)
+    public void Initialize(QuestData questData, GameObject[] requirements)
     {
-        _quest = quest;
-        npcIconUI.sprite = quest.questNPCImage;
-
-
-        var requirementGroups = quest.requirements
-            .Select(t => t.GetComponent<PlantState>())
-            .GroupBy(t => t.plantObject, t => t.GetComponent<InventoryItem>());
-
+        _questData = questData;
+        npcIconUI.sprite = questData.questNPCImage;
         
-        foreach (var requirementGroup in requirementGroups)
+        foreach (var requirement in requirements)
         {
-            var newSlot = Instantiate(requirementSlotPrefab, requirementsLayoutGroup.transform)
-                .GetComponent<RequirementSlot>();
-
-            newSlot.PlantScriptableObject = requirementGroup.Key;
-            newSlot.Amount = requirementGroup.Count();
-            newSlot.Icon = requirementGroup.First().Icon;
+            requirement.transform.SetParent(requirementsLayoutGroup.transform);
         }
     }
 
@@ -51,7 +40,7 @@ public class QuestPanel : MonoBehaviour
             return;
 
         SendMessageUpwards("OnQuestFillfilled", 
-            _quest.rewardDreamEssence, 
+            _questData.rewardDreamEssence, 
             SendMessageOptions.RequireReceiver);
         
         Destroy(this.gameObject);
