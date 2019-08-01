@@ -12,8 +12,7 @@ public class Lampion : MonoBehaviour
     public float maxDistanceToPlayer = 10f;
     public QuestData questData;
     
-    [SerializeField] private GameObject dreamPostOffice = null;
-    [SerializeField] private GameObject journalUi = null;
+    
     [SerializeField] private QuestCard questCard = null;
     [SerializeField] private GameObject questPrefab = null;
 

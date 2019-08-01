@@ -95,11 +95,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DreamtreeOutline
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -157,14 +152,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2416733968201007103, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4d300bd6500c1d343bc2faf6a0674813, type: 2}
-    - target: {fileID: -2416733968201007103, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
-        type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2416733968201007103, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d300bd6500c1d343bc2faf6a0674813, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3ccd5204a2875c4e9ff3dcebf20d425, type: 3}
 --- !u!1001 &83009742327584895
@@ -307,7 +302,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
         type: 3}
@@ -317,7 +312,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6
+      value: -3.06
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e3ccd5204a2875c4e9ff3dcebf20d425,
         type: 3}
