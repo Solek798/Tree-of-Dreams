@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 4815144749767116182}
   - component: {fileID: 5074675284168879093}
   m_Layer: 5
-  m_Name: Seed2
+  m_Name: LoveSeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 3893484033370821745}
   - component: {fileID: 3893484033370821744}
   m_Layer: 5
-  m_Name: Plant5
+  m_Name: TrustCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,7 +431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 629.33997, y: -157}
+  m_AnchoredPosition: {x: 897.33997, y: -157}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3893484033370821746
@@ -518,7 +518,7 @@ MonoBehaviour:
         m_MethodName: Buy
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8038181292515298160, guid: 60af9288f14d86341935ab5011f33366,
+          m_ObjectArgument: {fileID: 7740363277250983914, guid: 832b6974580791e4382048c29d61942e,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 3893484034181022645}
   - component: {fileID: 3893484034181022644}
   m_Layer: 5
-  m_Name: Plant3
+  m_Name: CuriosityCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,14 +865,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1939227872477390360}
+  - {fileID: 7966116058488694386}
   - {fileID: 66974345079156729}
   m_Father: {fileID: 3893484033428216100}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 314.5, y: -157}
+  m_AnchoredPosition: {x: 582.5, y: -157}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3893484034181022646
@@ -959,7 +959,7 @@ MonoBehaviour:
         m_MethodName: Buy
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8038181292515298160, guid: 12e7af5fa8670c74b8d2a3d80832cf87,
+          m_ObjectArgument: {fileID: 8038181292515298160, guid: 2f02670d8a3c8544b8667e066d8836c3,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 3477694189767978594}
   - component: {fileID: 3893484034249373670}
   m_Layer: 5
-  m_Name: Plant1
+  m_Name: HappinessCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,7 +1007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.33999634, y: -157}
+  m_AnchoredPosition: {x: 267.66, y: -157}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3893484034249373664
@@ -1131,7 +1131,7 @@ GameObject:
   - component: {fileID: 3893484034534938643}
   - component: {fileID: 3893484034534938642}
   m_Layer: 5
-  m_Name: Plant2
+  m_Name: LoveCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1155,7 +1155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 157.08, y: -157}
+  m_AnchoredPosition: {x: 425.08002, y: -157}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3893484034534938652
@@ -1243,7 +1243,7 @@ MonoBehaviour:
         m_MethodName: Buy
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8038181292515298160, guid: 12a6a7768d969e54a938beeb200b8990,
+          m_ObjectArgument: {fileID: 2196528755678127294, guid: 8454cf1b574b87f439b4f5e59dd319f3,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 3893484034946181705}
   - component: {fileID: 3893484034946181704}
   m_Layer: 5
-  m_Name: Plant4
+  m_Name: CourageCrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1283,14 +1283,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7966116058488694386}
+  - {fileID: 1939227872477390360}
   - {fileID: 5118465097728348332}
   m_Father: {fileID: 3893484033428216100}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 471.91998, y: -157}
+  m_AnchoredPosition: {x: 739.92, y: -157}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3893484034946181706
@@ -1377,7 +1377,7 @@ MonoBehaviour:
         m_MethodName: Buy
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8038181292515298160, guid: 2f02670d8a3c8544b8667e066d8836c3,
+          m_ObjectArgument: {fileID: 8038181292515298160, guid: d553b1ade0c2f2748b2bed1ef4c50170,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1879,7 +1879,7 @@ GameObject:
   - component: {fileID: 9163084812432384214}
   - component: {fileID: 7916123749008731870}
   m_Layer: 5
-  m_Name: Seed3
+  m_Name: CourageSeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1892,11 +1892,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6670902768313631849}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3893484034181022635}
+  m_Father: {fileID: 3893484034946181711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1953,7 +1953,7 @@ GameObject:
   - component: {fileID: 7111423715217988738}
   - component: {fileID: 7814011831425792726}
   m_Layer: 5
-  m_Name: Seed4
+  m_Name: CuriositySeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1966,11 +1966,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7722280345784882063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3893484034946181711}
+  m_Father: {fileID: 3893484034181022635}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2027,7 +2027,7 @@ GameObject:
   - component: {fileID: 7505698712956678650}
   - component: {fileID: 3449389145654459347}
   m_Layer: 5
-  m_Name: Seed1
+  m_Name: HappinessSeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2101,7 +2101,7 @@ GameObject:
   - component: {fileID: 2022358124497849623}
   - component: {fileID: 6738000954622862664}
   m_Layer: 5
-  m_Name: Seed5
+  m_Name: TrustSeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
