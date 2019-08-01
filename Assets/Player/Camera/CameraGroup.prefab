@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: bb4ad1ac77a2c7444b54f885f321167e, type: 2}
+  sharedProfile: {fileID: 11400000, guid: f494a683b4828e94a8909c0638d2f6dc, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -262,17 +262,17 @@ PrefabInstance:
     - target: {fileID: 4275965179554761606, guid: 81ceb34198a5133498e19e9aa315a3f4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.85
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4275965179554761606, guid: 81ceb34198a5133498e19e9aa315a3f4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.71
       objectReference: {fileID: 0}
     - target: {fileID: 4275965179554761606, guid: 81ceb34198a5133498e19e9aa315a3f4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.83
       objectReference: {fileID: 0}
     - target: {fileID: 4275965179554761606, guid: 81ceb34198a5133498e19e9aa315a3f4,
         type: 3}
@@ -323,6 +323,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7135695910036589313}
     m_Modifications:
+    - target: {fileID: 6283761686638671216, guid: 3a24efc49239f784db28abcd85bc18b3,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283761686638671216, guid: 3a24efc49239f784db28abcd85bc18b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6283761686638671220, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -378,22 +388,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6283761686638671216, guid: 3a24efc49239f784db28abcd85bc18b3,
-        type: 3}
-      propertyPath: m_Name
-      value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 6283761686638671216, guid: 3a24efc49239f784db28abcd85bc18b3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6283761686638671221, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
       propertyPath: field of view
       value: 26.991467
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6283761686638671227, guid: 3a24efc49239f784db28abcd85bc18b3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a24efc49239f784db28abcd85bc18b3, type: 3}
 --- !u!1 &3761475911296300623 stripped
 GameObject:
@@ -414,6 +415,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7135695909882648240}
     m_Modifications:
+    - target: {fileID: 7966337560031206930, guid: 878217a76395167438140aaa6b90e063,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraFocusPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 7966337560031206931, guid: 878217a76395167438140aaa6b90e063,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -468,11 +474,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7966337560031206930, guid: 878217a76395167438140aaa6b90e063,
-        type: 3}
-      propertyPath: m_Name
-      value: CameraFocusPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 878217a76395167438140aaa6b90e063, type: 3}
