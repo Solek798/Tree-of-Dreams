@@ -219,11 +219,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7135695910036589313}
     m_Modifications:
-    - target: {fileID: 6283761686638671216, guid: 3a24efc49239f784db28abcd85bc18b3,
-        type: 3}
-      propertyPath: m_Name
-      value: MainCamera
-      objectReference: {fileID: 0}
     - target: {fileID: 6283761686638671220, guid: 3a24efc49239f784db28abcd85bc18b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,6 +274,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6283761686638671216, guid: 3a24efc49239f784db28abcd85bc18b3,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a24efc49239f784db28abcd85bc18b3, type: 3}
 --- !u!4 &3761475911296300619 stripped
@@ -294,11 +294,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7135695909882648240}
     m_Modifications:
-    - target: {fileID: 7966337560031206930, guid: 878217a76395167438140aaa6b90e063,
-        type: 3}
-      propertyPath: m_Name
-      value: CameraFocusPoint
-      objectReference: {fileID: 0}
     - target: {fileID: 7966337560031206931, guid: 878217a76395167438140aaa6b90e063,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -353,6 +348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966337560031206930, guid: 878217a76395167438140aaa6b90e063,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraFocusPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 878217a76395167438140aaa6b90e063, type: 3}
