@@ -52,12 +52,7 @@ public class Lampion : MonoBehaviour
         
         if (questData.isJournal == false)
         {
-            Debug.Log("Test");
-            //dreamPostOffice.GetComponent<DreamPostOffice>().QuestAddedToJournal(quest);
-            //journalUi.GetComponent<Journal>().QuestAddedToJournal(quest);
-            //journalUi.GetComponent<Journal>().slider.value = 1;
-            //dreamPostOffice.GetComponent<DreamPostOffice>().slider.value = 1;
-            //questData.AddQuestToJournal();
+            
             var newQuest = Instantiate(questPrefab).GetComponent<Quest>();
             newQuest.Initialize(questData);
             questCard.InitializeQuestCard(newQuest);
@@ -72,6 +67,7 @@ public class Lampion : MonoBehaviour
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
         
         if (Input.GetKeyDown(KeyCode.E) && 
+            questCard != null &&
             playerInRange <= maxDistanceToPlayer && 
             !questCard.gameObject.activeInHierarchy) 
         {
