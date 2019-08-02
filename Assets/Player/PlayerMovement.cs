@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!PlayerScriptor.Instance.AllowMoving)
+            return;
+        
         //Checks if the Player presses Shift to run
         CheckIfRunning();
         //Player Movement

@@ -44,14 +44,16 @@ public class QuestCard : MonoBehaviour
             newSlot.Icon = requirementGroup.First().Icon;
         }
         
-
         gameObject.SetActive(true);
+        UIStatus.Instance.DialogOpened = true;
     }
     
     
     public void OnExitButtonPressed()
     {
         gameObject.SetActive(false);
+        
+        UIStatus.Instance.DialogOpened = false;
         
         //_quest.Initialize(_quest.Data);
         
