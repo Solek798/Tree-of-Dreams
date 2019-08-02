@@ -68,6 +68,8 @@ public class Journal : MonoBehaviour
         slider.value = 1;
 
         _uiOpened = true;
+
+        UIStatus.Instance.DialogOpened = true;
     }
     
     
@@ -75,12 +77,13 @@ public class Journal : MonoBehaviour
     {
         journalCanvas.enabled = false;
         _uiOpened = false;
+        
+        UIStatus.Instance.DialogOpened = false;
     }
     
     public void OnExitButtonClick()
     {
-        _uiOpened = false;
-        journalCanvas.enabled = false;
+        CloseJournal();
     }
 
 }
