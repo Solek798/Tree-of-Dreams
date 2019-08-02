@@ -10,14 +10,15 @@ public class PopupCropUi : MonoBehaviour
     public void OpenUiMenu(Inventory inventory)
     {
         _inventory = inventory;
-        Debug.Log(_inventory);
         this.gameObject.SetActive(true);
+        UIStatus.Instance.DialogOpened = true;
     }
 
     public void CloseUiMenu()
     {
         this.gameObject.SetActive(false);
         _inventory = null;
+        UIStatus.Instance.DialogOpened = false;
     }
 
     public void Buy(GameObject plant)
