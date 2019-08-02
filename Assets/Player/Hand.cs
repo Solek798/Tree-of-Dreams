@@ -21,6 +21,9 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (!PlayerScriptor.Instance.AllowInteracting)
+            return;
+        
         FarmlandLevel targetLevel = null;
         var currentTool = inventory.SelectedItem?.GetComponent<ITool>();
 

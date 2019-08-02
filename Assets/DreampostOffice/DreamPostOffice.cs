@@ -62,6 +62,8 @@ public class DreamPostOffice : MonoBehaviour
         SetSliderDefaults();
         gameObject.GetComponent<Canvas>().enabled = true;
         _uiOpened = true;
+        
+        UIStatus.Instance.DialogOpened = true;
     }
 
     private void SetSliderDefaults()
@@ -75,6 +77,8 @@ public class DreamPostOffice : MonoBehaviour
     {
         _uiOpened = false;
         gameObject.GetComponent<Canvas>().enabled = false;
+        
+        UIStatus.Instance.DialogOpened = false;
     }
 
     public void OnQuestFillfilled(int earnedCash)
