@@ -55,6 +55,8 @@ public class QuestCard : MonoBehaviour
         
         UIStatus.Instance.DialogOpened = false;
         
+        Destroy(this.gameObject);
+        
         //_quest.Initialize(_quest.Data);
         
         // Send Quest to DreamPostOffice
