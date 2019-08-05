@@ -8,11 +8,12 @@ using System.Linq;
 public class PlantState : MonoBehaviour
 {
     public PlantScriptableObject plantObject;
-    public int currentState = 0;
+    public int currentState = 1;
+    private int ageOfState = 0;
 
     private void Start()
     {
-        Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.identity, transform);
+        Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.identity, transform);       
     }
 
 
@@ -20,20 +21,29 @@ public class PlantState : MonoBehaviour
     public void UpdateCurrentState()
     {
         if (IsReadyToHarvest())
-            return;
-
-        currentState++;
-        GameObject newPlantModel = plantObject.stateModel[currentState];
-
-        this.DestroyAllChildren();
-        
-        foreach (var childTransform in GetComponentsInChildren<Transform>())
         {
-            if (childTransform != transform)
-                Destroy(childTransform.gameObject);
+            return;
+        }
+        else
+        {
+            ageOfState++;
+            if (ageOfState == plantObject.stateReachTime[currentState])
+            {
+                currentState++;
+                GameObject newPlantModel = plantObject.stateModel[currentState];
+
+                this.DestroyAllChildren();
+
+                foreach (var childTransform in GetComponentsInChildren<Transform>())
+                {
+                    if (childTransform != transform)
+                        Destroy(childTransform.gameObject);
+                }
+
+                Instantiate(newPlantModel, transform.position, Quaternion.identity, transform);
+            }
         }
 
-        Instantiate(newPlantModel, transform.position, Quaternion.identity, transform);
     }
 
     public bool IsReadyToHarvest()
