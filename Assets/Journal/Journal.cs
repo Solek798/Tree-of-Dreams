@@ -15,8 +15,8 @@ public class Journal : MonoBehaviour
 
     private void Start()
     {
-        CloseJournal();
-        slider.value = 1;
+        //CloseJournal();
+        //slider.value = 1;
     }
 
     
