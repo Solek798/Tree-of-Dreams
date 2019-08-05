@@ -10,13 +10,15 @@ public class Journal : MonoBehaviour
     public Scrollbar slider = null;
 
     [SerializeField] private Canvas journalCanvas = null;
+
+    [SerializeField] private Toggle pauseTab = null;
     
     private bool _uiOpened;
 
     private void Start()
     {
-        CloseJournal();
-        slider.value = 1;
+        //CloseJournal();
+        //slider.value = 1;
     }
 
     
@@ -64,6 +66,8 @@ public class Journal : MonoBehaviour
 
     private void OpenJournal()
     {
+        pauseTab.isOn = true;
+        
         journalCanvas.enabled = true;
         slider.value = 1;
 
