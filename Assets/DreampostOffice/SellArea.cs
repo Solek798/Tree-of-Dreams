@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class SellArea : MonoBehaviour, IDropTarget
 {
-    [SerializeField] private Inventory inventory = null;
+    public Inventory Inventory { get; set; }
+    public Journal Journal { get; set; }
 
     public bool Handle(GameObject draggable)
     {
@@ -25,13 +26,9 @@ public class SellArea : MonoBehaviour, IDropTarget
             Destroy(plant.gameObject);
         }
         
-        inventory.Currency += stackPrice;
+        Inventory.Currency += stackPrice;
+        Journal.EarningsCounter += stackPrice;
 
         return true;
-    }
-
-    private void Start()
-    {
-        
     }
 }

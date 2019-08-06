@@ -9,6 +9,7 @@ public class House : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private QuestManager questManager = null;
+    [SerializeField] private Journal journal = null;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
@@ -37,6 +38,8 @@ public class House : MonoBehaviour
         }
 
         questManager.SendLampinion();
+
+        journal.Days++;
 
         return false;
     }
