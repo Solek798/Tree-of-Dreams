@@ -1885,7 +1885,13 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 531966653}
-    m_RemovedComponents: []
+    - target: {fileID: 3761475911296300612, guid: 43ff7f3244d85bc389df4e8a81e85f30,
+        type: 3}
+      propertyPath: m_CustomSkybox
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3761475911296300612, guid: 43ff7f3244d85bc389df4e8a81e85f30, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 43ff7f3244d85bc389df4e8a81e85f30, type: 3}
 --- !u!1 &831872113
 GameObject:
@@ -2280,6 +2286,12 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 953829094}
+    - target: {fileID: 9078388752699895163, guid: 236bebae7f10d8459950029fd7f55722,
+        type: 3}
+      propertyPath: farmlandSpacePrefab
+      value: 
+      objectReference: {fileID: 1044097632813396466, guid: 6d50a7ecbd2141b2cab258a1612a477e,
+        type: 3}
     - target: {fileID: 5075422923183059878, guid: 236bebae7f10d8459950029fd7f55722,
         type: 3}
       propertyPath: m_Tiles.Array.size
