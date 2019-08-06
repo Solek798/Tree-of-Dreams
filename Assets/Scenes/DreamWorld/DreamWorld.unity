@@ -65966,14 +65966,16 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 422
+      value: 421.99994
       objectReference: {fileID: 0}
     - target: {fileID: 5891307867673125693, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5709089038266347256, guid: 87cdd19e8b7087a4f889e99dfa2aa511, type: 3}
+    - {fileID: 2019384290835091969, guid: 87cdd19e8b7087a4f889e99dfa2aa511, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 87cdd19e8b7087a4f889e99dfa2aa511, type: 3}
 --- !u!114 &1632083539 stripped
 MonoBehaviour:
