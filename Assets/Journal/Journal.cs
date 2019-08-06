@@ -5,20 +5,32 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Journal : MonoBehaviour
 {
+    public Scrollbar slider = null;
     
     [SerializeField] private GameObject layoutGroup = null;
-    public Scrollbar slider = null;
-
     [SerializeField] private Canvas journalCanvas = null;
-
     [SerializeField] private Toggle pauseTab = null;
+    [SerializeField] private Text dayCounter = null;
+    [SerializeField] private Text earningsCounter = null;
     
     private bool _uiOpened;
 
+    public int Days
+    {
+        get => Convert.ToInt32(dayCounter.text);
+        set => dayCounter.text = value.ToString();
+    }
+
+    public int EarningsCounter
+    {
+        get => Convert.ToInt32(earningsCounter.text);
+        set => earningsCounter.text = value.ToString();
+    }
+
     private void Start()
     {
-        //CloseJournal();
-        //slider.value = 1;
+        Days = 0;
+        EarningsCounter = 0;
     }
 
     
@@ -31,7 +43,7 @@ public class Journal : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Escape)  && _uiOpened == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && _uiOpened == false)
         {
             OpenJournal();
         }

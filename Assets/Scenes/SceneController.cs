@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public int SceneToLoad;
-    
-    public void OnButtonClick()
+    public void LoadMenu()
     {
-        SceneManager.LoadScene(SceneToLoad);
+        SceneManager.LoadScene("MainMenu"); 
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("DreamWorld");
     }
 }
