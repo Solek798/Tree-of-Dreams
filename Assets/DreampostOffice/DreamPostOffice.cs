@@ -9,13 +9,12 @@ public class DreamPostOffice : MonoBehaviour
 {
     
     [SerializeField] private GameObject layoutGroup = null;
-
     [FormerlySerializedAs("questPanel")] [SerializeField] private GameObject questPanelPrefab = null;
-
     [SerializeField] private GameObject dreamTree = null;
     
     // temp
     [SerializeField] private Inventory inventory = null;
+    [SerializeField] private Journal journal = null;
 
     public Scrollbar slider = null;
    
@@ -28,6 +27,12 @@ public class DreamPostOffice : MonoBehaviour
     {
         _uiOpened = false;
         SetSliderDefaults();
+
+        var sellArea = GetComponentInChildren<SellArea>();
+        if (!sellArea) return;
+        
+        sellArea.Inventory = inventory;
+        sellArea.Journal = journal;
     }
 
     
@@ -84,5 +89,7 @@ public class DreamPostOffice : MonoBehaviour
     public void OnQuestFillfilled(int earnedCash)
     {
         inventory.Currency += earnedCash;
+        journal.EarningsCounter += 
+            inventory.Currency + earnedCash > inventory.MaxCurrency ? inventory.MaxCurrency : earnedCash;
     }
 }
