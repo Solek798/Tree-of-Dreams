@@ -86,6 +86,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1047739682585969686}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: e25439172920af04aaee710906bf43f4,
+        type: 3}
+      propertyPath: m_Name
+      value: DreamPostOfficeOutline
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e25439172920af04aaee710906bf43f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -140,11 +145,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.886
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e25439172920af04aaee710906bf43f4,
-        type: 3}
-      propertyPath: m_Name
-      value: DreamPostOfficeOutline
       objectReference: {fileID: 0}
     - target: {fileID: -5975033157549033438, guid: e25439172920af04aaee710906bf43f4,
         type: 3}
@@ -314,15 +314,14 @@ PrefabInstance:
       propertyPath: dreamTree
       value: 
       objectReference: {fileID: 6270721760860248612}
-    - target: {fileID: 7083425643094928117, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_Value
-      value: 0.00000057853185
+    - target: {fileID: 482727599, guid: 3c01a140bd68f094ea82cc5da91844dc, type: 3}
+      propertyPath: maxDistanceToPostOffice
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7083425643094928117, guid: 3c01a140bd68f094ea82cc5da91844dc,
         type: 3}
-      propertyPath: m_Size
-      value: 0.5655753
+      propertyPath: m_Value
+      value: 0.00000014463308
       objectReference: {fileID: 0}
     - target: {fileID: 7083425643850425753, guid: 3c01a140bd68f094ea82cc5da91844dc,
         type: 3}
@@ -339,46 +338,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4803478509349051512, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803478509349051512, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803478509349051512, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803478509349051512, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980102649137187464, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980102649137187464, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980102649137187464, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980102649137187464, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7083425643579348844, guid: 3c01a140bd68f094ea82cc5da91844dc,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -387,11 +346,6 @@ PrefabInstance:
     - target: {fileID: 7083425643579348844, guid: 3c01a140bd68f094ea82cc5da91844dc,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083425643579348844, guid: 3c01a140bd68f094ea82cc5da91844dc,
-        type: 3}
-      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -409,6 +363,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7015849484193490999}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: e25439172920af04aaee710906bf43f4,
+        type: 3}
+      propertyPath: m_Name
+      value: DreamPostOffice
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e25439172920af04aaee710906bf43f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,11 +422,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: e25439172920af04aaee710906bf43f4,
-        type: 3}
-      propertyPath: m_Name
-      value: DreamPostOffice
       objectReference: {fileID: 0}
     - target: {fileID: -5975033157549033438, guid: e25439172920af04aaee710906bf43f4,
         type: 3}

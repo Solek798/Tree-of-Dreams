@@ -10,11 +10,11 @@ public class Lampion : MonoBehaviour
 {
     public GameObject player;
     public float maxDistanceToPlayer = 10f;
-    public Quest quest;
+    public QuestData questData;
     
-    [SerializeField] private GameObject dreamPostOffice = null;
-    [SerializeField] private GameObject journalUi = null;
-    [SerializeField] private GameObject questCard = null;
+    
+    [SerializeField] private QuestCard questCard = null;
+    [SerializeField] private GameObject questPrefab = null;
 
     private bool _uiOpened;
     private Vector3 _travelTarget;
@@ -34,7 +34,7 @@ public class Lampion : MonoBehaviour
     private void Start()
     {
         _uiOpened = false;
-        quest.isJournal = false;
+        questData.isJournal = false;
         
     }
 
@@ -49,23 +49,27 @@ public class Lampion : MonoBehaviour
 
     private void LampionActivation()
     {
-        if (quest.isJournal == false)
+        
+        if (questData.isJournal == false)
         {
-            dreamPostOffice.GetComponent<DreamPostOffice>().QuestAddedToJournal(quest);
-            journalUi.GetComponent<Journal>().QuestAddedToJournal(quest);
-            journalUi.GetComponent<Journal>().slider.value = 1;
-            dreamPostOffice.GetComponent<DreamPostOffice>().slider.value = 1;
-            quest.AddQuestToJournal();
-
+            
+            var newQuest = Instantiate(questPrefab).GetComponent<Quest>();
+            newQuest.Initialize(questData);
+            questCard.InitializeQuestCard(newQuest);
+            
+            player.GetComponentInChildren<QuestCollector>()?.AddNewQuest(newQuest);
         }
-        questCard.GetComponent<QuestCard>().InitializeQuestCard(quest);
+        
     }
 
     private void Update()
     {
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
-
-        if (Input.GetKeyDown(KeyCode.E) && playerInRange <= maxDistanceToPlayer && _uiOpened == false) 
+        
+        if (Input.GetKeyDown(KeyCode.E) && 
+            questCard != null &&
+            playerInRange <= maxDistanceToPlayer && 
+            !questCard.gameObject.activeInHierarchy) 
         {
             LampionActivation();
         }

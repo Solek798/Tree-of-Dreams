@@ -1,29 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "QuestObject", menuName = "ScriptableObjects/Quest", order = 2)]
-public class Quest : ScriptableObject
+public class Quest : MonoBehaviour
 {
-    //Questname
-    public new string name;
-
-    [TextArea] public string questDescription;
-
-    public Sprite questNPCImage;
-
-    public bool isJournal = false;
-
-    public int rewardDreamEssence;
+    private List<QuestDisplay> _displays = new List<QuestDisplay>();
     
+    public QuestData Data { get; private set; }
 
-    //Requirements
-    public List<GameObject> requirements = new List<GameObject>();
-    
-
-    public void AddQuestToJournal()
+    public void Initialize(QuestData questData)
     {
-        isJournal = true;
+        Data = questData;
+    }
+
+    public void AddDisplay(QuestDisplay newDisplay)
+    {
+        _displays.Add(newDisplay);
+    }
+
+    public void DestroyAllDisplays()
+    {
+        foreach (var display in _displays)
+        {
+            Destroy(display.gameObject);
+        }
+    }
+
+    public void OnSlotSatisfactioned(RequirementSlot slot)
+    {
+        foreach (var display in _displays)
+        {
+            display.SetSlotSatisfactioned(slot);
+        }
     }
 }
