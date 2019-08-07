@@ -65973,6 +65973,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5891307867673125693, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87cdd19e8b7087a4f889e99dfa2aa511, type: 3}
 --- !u!114 &1632083539 stripped
@@ -66115,22 +66120,22 @@ PrefabInstance:
     - target: {fileID: 2483433778295244367, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2483433778295244367, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6087414
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2483433778295244367, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2483433778295244367, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7933688
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2483433778295244367, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
@@ -66145,7 +66150,7 @@ PrefabInstance:
     - target: {fileID: 2483433778295244367, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 74.997
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2483433778295244367, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
@@ -66442,6 +66447,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7257099253462409632, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 612cf6e1a5fceef41a031a85d903486f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}
 --- !u!1 &1695035264
