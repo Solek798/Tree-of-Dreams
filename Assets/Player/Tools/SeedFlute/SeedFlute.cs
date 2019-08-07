@@ -17,7 +17,7 @@ public class SeedFlute : MonoBehaviour, ITool
         _space = space;
         
         var inventory = GetComponent<InventoryItem>().Inventory;
-        Debug.Log(inventory);
+        
         if (inventory != null)
             cropUi.OpenUiMenu(inventory);
 

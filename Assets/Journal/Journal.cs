@@ -7,21 +7,18 @@ public class Journal : MonoBehaviour
 {
     
     [SerializeField] private GameObject layoutGroup = null;
-
-    [SerializeField] private GameObject requirementsPanel = null;
-
-    [SerializeField] private GameObject questPanel = null;
-
     public Scrollbar slider = null;
 
     [SerializeField] private Canvas journalCanvas = null;
+
+    [SerializeField] private Toggle pauseTab = null;
     
     private bool _uiOpened;
 
     private void Start()
     {
-        CloseJournal();
-        slider.value = 1;
+        //CloseJournal();
+        //slider.value = 1;
     }
 
     
@@ -46,11 +43,12 @@ public class Journal : MonoBehaviour
         
     }
 
-    public void QuestAddedToJournal(Quest quest)
+    public void AddDisplay(QuestDisplay display)
     {
-        var newQuest = Instantiate(questPanel);
-        Parent(layoutGroup, newQuest);
         
+        //var newQuest = Instantiate(questPanel);
+        //Parent(layoutGroup, newQuest);
+        display.transform.SetParent(layoutGroup.transform);
         
 //        newQuest.GetComponent<JournalQuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
 //
@@ -62,16 +60,20 @@ public class Journal : MonoBehaviour
 //            Parent(reqLayoutGroup,panelVariant);
 //            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
 //        }
-    newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(quest);
+    //newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(questData);
         
     }
 
     private void OpenJournal()
     {
+        pauseTab.isOn = true;
+        
         journalCanvas.enabled = true;
         slider.value = 1;
 
         _uiOpened = true;
+
+        UIStatus.Instance.DialogOpened = true;
     }
     
     
@@ -79,12 +81,13 @@ public class Journal : MonoBehaviour
     {
         journalCanvas.enabled = false;
         _uiOpened = false;
+        
+        UIStatus.Instance.DialogOpened = false;
     }
     
     public void OnExitButtonClick()
     {
-        _uiOpened = false;
-        journalCanvas.enabled = false;
+        CloseJournal();
     }
 
 }

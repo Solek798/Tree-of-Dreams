@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
         get => Convert.ToInt32(currencyText.text);
     }
     
-    void Start()
+    private void Start()
     {
         Currency = startCurrency;
         
@@ -51,8 +51,11 @@ public class Inventory : MonoBehaviour
         PickUp(Instantiate(dreamSicklePrefab));
     }
 
-    void Update()
+    private void Update()
     {
+        if (!PlayerScriptor.Instance.AllowInteracting)
+            return;
+        
         for (int i=0; i<=9; i++)
         {
             if (!Input.GetKeyDown(((i + 1) % 10).ToString())) continue;

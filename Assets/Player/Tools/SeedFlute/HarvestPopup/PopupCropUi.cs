@@ -10,14 +10,15 @@ public class PopupCropUi : MonoBehaviour
     public void OpenUiMenu(Inventory inventory)
     {
         _inventory = inventory;
-        Debug.Log(_inventory);
         this.gameObject.SetActive(true);
+        UIStatus.Instance.DialogOpened = true;
     }
 
     public void CloseUiMenu()
     {
         this.gameObject.SetActive(false);
         _inventory = null;
+        UIStatus.Instance.DialogOpened = false;
     }
 
     public void Buy(GameObject plant)
@@ -26,8 +27,11 @@ public class PopupCropUi : MonoBehaviour
         {
             var price = plant.GetComponent<PlantState>()?.plantObject.buyPrice ?? _inventory.MaxCurrency + 1;
             
-            _inventory.Currency -= _inventory.Currency - price > 0 ? price : 0;
-            GetComponentInParent<SeedFlute>().Plant(plant);
+            if (_inventory.Currency - price >= 0)
+            {
+                _inventory.Currency -= price;
+                GetComponentInParent<SeedFlute>().Plant(plant);
+            }
         }
 
         CloseUiMenu();

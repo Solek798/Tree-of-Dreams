@@ -8,12 +8,12 @@
       <e p="Assets" t="Include">
         <e p="DreampostOffice" t="Include">
           <e p="DreamPostOffice.cs" t="Include" />
-          <e p="QuestPanel.cs" t="Include" />
+          <e p="QuestDisplay.cs" t="Include" />
           <e p="RequirementSlot.cs" t="Include" />
           <e p="SellArea.cs" t="Include" />
         </e>
         <e p="Environment" t="Include">
-          <e p="Plants" t="Include">
+          <e p="Crops" t="Include">
             <e p="PlantScriptableObject.cs" t="Include" />
             <e p="PlantState.cs" t="Include" />
           </e>
@@ -27,13 +27,19 @@
         <e p="GenericUI" t="Include">
           <e p="IDropTarget.cs" t="Include" />
           <e p="UIDragger.cs" t="Include" />
+          <e p="UIStatus.cs" t="Include" />
         </e>
         <e p="House" t="Include">
+          <e p="DreamhouseMat.mat" t="Include" />
+          <e p="DreamhouseOutlineMat.mat" t="Include" />
           <e p="House.cs" t="Include" />
+          <e p="S4G_House.obj" t="Include" />
+          <e p="S4G_House_Diff.png" t="Include" />
         </e>
         <e p="Journal" t="Include">
           <e p="Journal.cs" t="Include" />
           <e p="JournalQuestPanel.cs" t="Include" />
+          <e p="JournalTab.cs" t="Include" />
         </e>
         <e p="MonoBehaviourExtension.cs" t="Include" />
         <e p="Player" t="Include">
@@ -51,6 +57,8 @@
             </e>
           </e>
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="PlayerScriptor.cs" t="Include" />
+          <e p="QuestCollector.cs" t="Include" />
           <e p="Tools" t="Include">
             <e p="BagOfStardust" t="Include">
               <e p="BagOfStardust.cs" t="Include" />
@@ -78,6 +86,7 @@
           </e>
           <e p="Quest.cs" t="Include" />
           <e p="QuestCard.cs" t="Include" />
+          <e p="QuestData.cs" t="Include" />
           <e p="RequirementsPanel.cs" t="Include" />
         </e>
         <e p="Scenes" t="Include">
@@ -155,9 +164,19 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="VFX" t="Include">
+          <e p="Outline.shader" t="Include" />
+          <e p="Post-process LWRP AO" t="Include">
+            <e p="Runtime" t="Include">
+              <e p="LWRPAO.cs" t="Include" />
+              <e p="Post-process LWRP AO.Runtime.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="Call_of_Dreams.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
+      <e p="Post-processLWRPAO.csproj" t="IncludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
       </e>

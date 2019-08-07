@@ -117,7 +117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1747627089476645999, guid: 149293860055696458f28d2eb6a3272b,
         type: 3}
-      propertyPath: quest
+      propertyPath: questData
       value: 
       objectReference: {fileID: 11400000, guid: 601e91acd3746db47b4b1adefc4aa8ff,
         type: 2}
@@ -196,6 +196,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lampion
       objectReference: {fileID: 0}
+    - target: {fileID: 1747627089476645999, guid: 149293860055696458f28d2eb6a3272b,
+        type: 3}
+      propertyPath: questData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ea39aac0b15c0c4e939e7b181c2004a,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149293860055696458f28d2eb6a3272b, type: 3}
 --- !u!4 &8823650123063497404 stripped
