@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a2a6454a9303e47b4466f79d94337d, type: 3}
+  m_Name: MiasQuest
+  m_EditorClassIdentifier: 
+  name: Mia
+  questDescription: Hello up there, since my brother moved away I can't sleep well.
+    I wish to spend some time with him in my dreams.
+  questNPCImage: {fileID: 0}
+  isJournal: 0
+  rewardDreamEssence: 100
+  requirements:
+  - {fileID: 64698235151549181, guid: 00211e8261611cddfb40bac63a2d72ab, type: 3}
+  - {fileID: 64698235151549181, guid: 00211e8261611cddfb40bac63a2d72ab, type: 3}
+  - {fileID: 2196528755678127294, guid: 8454cf1b574b87f439b4f5e59dd319f3, type: 3}
+  - {fileID: 2196528755678127294, guid: 8454cf1b574b87f439b4f5e59dd319f3, type: 3}
