@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a2a6454a9303e47b4466f79d94337d, type: 3}
+  m_Name: HumphreysQuest
+  m_EditorClassIdentifier: 
+  name: Humphrey
+  questDescription: "Dear Dreamtree, my dreams are not nice these days, it's too warm
+    outside. I wish to dream about my next holiday somewhere cold\u2026"
+  questNPCImage: {fileID: 0}
+  isJournal: 0
+  rewardDreamEssence: 100
+  requirements:
+  - {fileID: 64698235151549181, guid: 00211e8261611cddfb40bac63a2d72ab, type: 3}
+  - {fileID: 8038181292515298160, guid: 2f02670d8a3c8544b8667e066d8836c3, type: 3}
