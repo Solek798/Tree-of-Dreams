@@ -9,6 +9,7 @@ public class PlayerScriptor : MonoBehaviour
     public bool AllowMoving { get; set; } = true;
     public bool AllowInteracting { get; set; } = true;
     
+    
     private void Awake()
     {
         if (Instance == null)
