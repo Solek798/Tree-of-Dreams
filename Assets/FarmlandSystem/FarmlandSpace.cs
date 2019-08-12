@@ -23,7 +23,6 @@ public class FarmlandSpace : MonoBehaviour
         {
             if (value) IsNurtured = false;
             soil.SetActive(value);
-            farmlandSpaceParticle.Play();
         }
     }
 
