@@ -433,8 +433,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 3305111551
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.76862746}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -451,13 +451,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 35.6
+  m_fontSizeBase: 35.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 32
   m_textAlignment: 513
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -64.19446, y: 0, z: -79.756836, w: 0}
+  m_margin: {x: -58.17273, y: 0, z: -2.4785156, w: 0}
   m_textInfo:
     textComponent: {fileID: 7314823273000392872}
     characterCount: 13
@@ -781,8 +781,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 68.2}
-  m_SizeDelta: {x: 418.1, y: 123.1}
+  m_AnchoredPosition: {x: 0, y: 54.2}
+  m_SizeDelta: {x: 418.1, y: 84.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7083425642864153566
 CanvasRenderer:
@@ -812,7 +812,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8fa56992b68c2364581460b07c3ebbf8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4cbabe139d2cf0c40abec5db9f7d46fc, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7083425643579348845}
   m_HandleRect: {fileID: 7083425643579348844}
   m_Direction: 2
-  m_Value: 0.00000028926615
+  m_Value: 0.00000014463308
   m_Size: 0.5655755
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1119,15 +1119,15 @@ RectTransform:
   m_GameObject: {fileID: 7083425643579348819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.78000003, y: 0.19545922, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7083425643345116795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 63}
+  m_AnchoredPosition: {x: -0.000024795532, y: -133}
+  m_SizeDelta: {x: 65.9, y: -203.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7083425643579348846
 CanvasRenderer:
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 7083425643941102311}
   - component: {fileID: 482727599}
   m_Layer: 5
-  m_Name: DreamPostOffice
+  m_Name: DreamPostOfficeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
