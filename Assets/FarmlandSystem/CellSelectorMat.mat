@@ -8,13 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CellSelectorMat
-  m_Shader: {fileID: -6465566751694194690, guid: 1e54b2db4b31718439c3cce82507dd4a,
+  m_Shader: {fileID: -6465566751694194690, guid: 9444aa57d3392a6458a82e0f7541f768,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3002
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -72,6 +72,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_49942971: {r: 0.7176471, g: 0.074509814, b: 0.29212132, a: 0}
     - Color_BCACA34C: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_E253BD94: {r: 18.8, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
