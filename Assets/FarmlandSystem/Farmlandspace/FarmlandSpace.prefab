@@ -57,7 +57,6 @@ MonoBehaviour:
   dreamSickleParticle: {fileID: 2471184341555011173}
   soil: {fileID: 8822404080909912204}
   nurturedSoil: {fileID: 4751117234296182630}
-  animator: {fileID: -2012853102263643723}
 --- !u!95 &-2012853102263643723
 Animator:
   serializedVersion: 3
@@ -4970,6 +4969,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 701860659852341743, guid: 01ca1380bdfb982c1b4385778d8ff23b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 701860659852341743, guid: 01ca1380bdfb982c1b4385778d8ff23b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0541
+      objectReference: {fileID: 0}
+    - target: {fileID: 701860659852341743, guid: 01ca1380bdfb982c1b4385778d8ff23b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01ca1380bdfb982c1b4385778d8ff23b, type: 3}
 --- !u!1 &4751117234296182630 stripped
@@ -5080,6 +5094,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826486827838182504, guid: 133e4e92a7f5d6c879712f5e8df6a2e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 133e4e92a7f5d6c879712f5e8df6a2e6, type: 3}
