@@ -12,6 +12,7 @@ public class Journal : MonoBehaviour
     [SerializeField] private Toggle pauseTab = null;
     [SerializeField] private Text dayCounter = null;
     [SerializeField] private Text earningsCounter = null;
+    [SerializeField] private Animator animator;
     
     private bool _uiOpened;
 
@@ -78,6 +79,8 @@ public class Journal : MonoBehaviour
 
     private void OpenJournal()
     {
+        animator.SetTrigger("Open");
+
         pauseTab.isOn = true;
         
         journalCanvas.enabled = true;
@@ -91,6 +94,7 @@ public class Journal : MonoBehaviour
     
     private void CloseJournal()
     {
+        animator.SetTrigger("Leave");
         journalCanvas.enabled = false;
         _uiOpened = false;
         
