@@ -4823,7 +4823,7 @@ ParticleSystem:
 --- !u!199 &2437062880896633966
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5005,16 +5005,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1044097632813396467}
     m_Modifications:
-    - target: {fileID: 4158924965287021359, guid: 133e4e92a7f5d6c879712f5e8df6a2e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Soil
-      objectReference: {fileID: 0}
-    - target: {fileID: 4158924965287021359, guid: 133e4e92a7f5d6c879712f5e8df6a2e6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1147329253125732668, guid: 133e4e92a7f5d6c879712f5e8df6a2e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5085,6 +5075,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4158924965287021359, guid: 133e4e92a7f5d6c879712f5e8df6a2e6,
+        type: 3}
+      propertyPath: m_Name
+      value: Soil
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158924965287021359, guid: 133e4e92a7f5d6c879712f5e8df6a2e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2460281316770553624, guid: 133e4e92a7f5d6c879712f5e8df6a2e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5121,11 +5121,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1044097632813396467}
     m_Modifications:
-    - target: {fileID: 735751059358688394, guid: c2adaf08687937e42b0c209839788b07,
-        type: 3}
-      propertyPath: m_Name
-      value: BagOfStardustParticle
-      objectReference: {fileID: 0}
     - target: {fileID: 735751059358688500, guid: c2adaf08687937e42b0c209839788b07,
         type: 3}
       propertyPath: playOnAwake
@@ -5201,6 +5196,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 735751059358688394, guid: c2adaf08687937e42b0c209839788b07,
+        type: 3}
+      propertyPath: m_Name
+      value: BagOfStardustParticle
+      objectReference: {fileID: 0}
     - target: {fileID: 735751060010720014, guid: c2adaf08687937e42b0c209839788b07,
         type: 3}
       propertyPath: playOnAwake
@@ -5252,11 +5252,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1044097632813396467}
     m_Modifications:
-    - target: {fileID: 3566211106945138910, guid: 75328ce4ac0a2e047b13f25fdc03df53,
-        type: 3}
-      propertyPath: m_Name
-      value: SeedFluteParticle
-      objectReference: {fileID: 0}
     - target: {fileID: 3566211106945138896, guid: 75328ce4ac0a2e047b13f25fdc03df53,
         type: 3}
       propertyPath: looping
@@ -5332,6 +5327,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3566211106945138910, guid: 75328ce4ac0a2e047b13f25fdc03df53,
+        type: 3}
+      propertyPath: m_Name
+      value: SeedFluteParticle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75328ce4ac0a2e047b13f25fdc03df53, type: 3}
 --- !u!4 &7376541033627985182 stripped
@@ -5353,11 +5353,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1044097632813396467}
     m_Modifications:
-    - target: {fileID: 3005530901724592742, guid: 314f47c1d93d7734a949e8e95743140f,
-        type: 3}
-      propertyPath: m_Name
-      value: DreamSickleParticle
-      objectReference: {fileID: 0}
     - target: {fileID: 3044401429937682667, guid: 314f47c1d93d7734a949e8e95743140f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5412,6 +5407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005530901724592742, guid: 314f47c1d93d7734a949e8e95743140f,
+        type: 3}
+      propertyPath: m_Name
+      value: DreamSickleParticle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 314f47c1d93d7734a949e8e95743140f, type: 3}
@@ -5704,21 +5704,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1044097632813396467}
     m_Modifications:
-    - target: {fileID: 3566211106945138896, guid: af3a2503be550eb42bb543932a1a3e0a,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 3566211106945138896, guid: af3a2503be550eb42bb543932a1a3e0a,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3566211106945138896, guid: af3a2503be550eb42bb543932a1a3e0a,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3566211106945138899, guid: af3a2503be550eb42bb543932a1a3e0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5772,6 +5757,21 @@ PrefabInstance:
     - target: {fileID: 3566211106945138899, guid: af3a2503be550eb42bb543932a1a3e0a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566211106945138896, guid: af3a2503be550eb42bb543932a1a3e0a,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566211106945138896, guid: af3a2503be550eb42bb543932a1a3e0a,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566211106945138896, guid: af3a2503be550eb42bb543932a1a3e0a,
+        type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3566211106945138910, guid: af3a2503be550eb42bb543932a1a3e0a,
