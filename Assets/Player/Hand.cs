@@ -43,7 +43,7 @@ public class Hand : MonoBehaviour
             {
                 
                 if (level.HitLevel(hit.collider.gameObject) && 
-                    CheckToolInRange(currentTool, hit.point))
+                    CheckToolInRange(currentTool, level.GetCellPosition(hit.point)))
                 {
                     targetLevel = level;
                     level.ChangeSelector(true, hit.point);
@@ -63,14 +63,15 @@ public class Hand : MonoBehaviour
             
             var space = targetLevel.Interact();
 
-            if (currentTool.IsUsable(space, transform.parent.position))
+            if (currentTool.IsUsable(space))
                 currentTool.Use(space);
         }
     }
 
-    private bool CheckToolInRange(ITool tool, Vector3 target)
+    private bool CheckToolInRange(ITool tool, Vector3 cell)
     {
-        return (transform.parent.position - target).sqrMagnitude <=
+        Debug.Log((transform.parent.position - cell).sqrMagnitude);
+        return (transform.parent.position - cell).sqrMagnitude <=
                (tool?.MaxUsingDistance ?? 0.0f);
     }
 }
