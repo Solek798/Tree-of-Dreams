@@ -26,6 +26,10 @@ public class Hand : MonoBehaviour
         {
             EditorApplication.isPaused = true;
         }
+        
+        //Debug.Log(transform.parent.position);
+        //Debug.Log(transform.parent.position);
+        
         if (!PlayerScriptor.Instance.AllowInteracting)
             return;
         
@@ -38,10 +42,11 @@ public class Hand : MonoBehaviour
             raycastDistance,
             _collisionMask))
         {
-           
+            //Debug.Log("hit: " + (transform.parent.position - hit.point));
             foreach (FarmlandLevel level in farmland)
             {
-                
+                Debug.Log(transform.parent.position);
+                Debug.Log(level.GetCellPosition(transform.parent.position));
                 if (level.HitLevel(hit.collider.gameObject) && 
                     CheckToolInRange(currentTool, level.GetCellPosition(hit.point)))
                 {
@@ -70,7 +75,7 @@ public class Hand : MonoBehaviour
 
     private bool CheckToolInRange(ITool tool, Vector3 cell)
     {
-        Debug.Log((transform.parent.position - cell).sqrMagnitude);
+        //Debug.Log("Cell: " + (transform.parent.position - cell));
         return (transform.parent.position - cell).sqrMagnitude <=
                (tool?.MaxUsingDistance ?? 0.0f);
     }

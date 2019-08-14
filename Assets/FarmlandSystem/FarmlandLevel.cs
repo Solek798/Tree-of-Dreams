@@ -74,7 +74,7 @@ public class FarmlandLevel : MonoBehaviour
 
     public Vector3 GetCellPosition(Vector3 worldPosition)
     {
-        return _grid.CellToWorld(_grid.WorldToCell(worldPosition));
+        return _grid.GetCellCenterWorld(_grid.WorldToCell(worldPosition));
     }
     
 }
