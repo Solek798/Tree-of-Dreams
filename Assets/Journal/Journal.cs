@@ -51,7 +51,7 @@ public class Journal : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.Escape) && _uiOpened == true)
         {
-            StartCoroutine(CloseJournal());
+            CloseJournal();
         }
         
     }
@@ -79,44 +79,34 @@ public class Journal : MonoBehaviour
 
     private void OpenJournal()
     {
-        animator.SetTrigger("Open");
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState"))
+        {
+            animator.SetTrigger("Open");
 
-        pauseTab.isOn = true;
-        
-        journalCanvas.enabled = true;
-        slider.value = 1;
+            pauseTab.isOn = true;
 
-        _uiOpened = true;
+            slider.value = 1;
 
-        UIStatus.Instance.DialogOpened = true;
+            _uiOpened = true;
+
+            UIStatus.Instance.DialogOpened = true;
+        }      
     }
     
     
-    private IEnumerator CloseJournal()
+    private void CloseJournal()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("PopUPPanelOut"))
-        {
-            StopCoroutine(CloseJournal());
-            _uiOpened = false;
-        }
-        else
-        {
-            animator.SetTrigger("Leave");
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("PopUPPanelIn"))
+        animator.SetTrigger("Leave");
 
-            yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        _uiOpened = false;
 
-            _uiOpened = false;
-
-            journalCanvas.enabled = false;
-
-            UIStatus.Instance.DialogOpened = false;
-        }
-        
+        UIStatus.Instance.DialogOpened = false;
     }
     
     public void OnExitButtonClick()
     {
-        StartCoroutine(CloseJournal());
+        CloseJournal();
     }
 
 }
