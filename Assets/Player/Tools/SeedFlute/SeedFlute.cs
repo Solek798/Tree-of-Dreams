@@ -24,11 +24,9 @@ public class SeedFlute : MonoBehaviour, ITool
         return true;
     }
 
-    public bool IsUsable(FarmlandSpace space, Vector3 usagePoint)
+    public bool IsUsable(FarmlandSpace space)
     {
-        return (space.transform.position - usagePoint).sqrMagnitude <= maxPlantDistance &&
-               space.IsSoil &&
-               space.Plant == null;
+        return space.IsSoil && space.Plant == null;
     }
 
     public void Plant(GameObject plant)
