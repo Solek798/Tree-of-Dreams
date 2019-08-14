@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -8,7 +9,7 @@ public class Hand : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private Inventory inventory = null;
-    [SerializeField] private int usageDistance = 100;
+    [SerializeField] private int raycastDistance = 100;
     [SerializeField] private string collisionMaskName = "";
 
     private int _collisionMask = 0;
@@ -21,6 +22,10 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            EditorApplication.isPaused = true;
+        }
         if (!PlayerScriptor.Instance.AllowInteracting)
             return;
         
@@ -30,7 +35,7 @@ public class Hand : MonoBehaviour
         if (Physics.Raycast(
             Camera.main.ScreenPointToRay(Input.mousePosition), 
             out var hit,
-            usageDistance,
+            raycastDistance,
             _collisionMask))
         {
            

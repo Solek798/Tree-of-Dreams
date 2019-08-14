@@ -39,11 +39,12 @@ public class FarmlandLevel : MonoBehaviour
     {
         var cell = _grid.WorldToCell(position);
         
-        
         if (active && tilemap.HasTile(cell))
         {
-            cellSelector.transform.position = _grid.GetCellCenterWorld(cell);
-            cellSelector.transform.Translate(0, heightPadding, 0);
+            var newPosition = _grid.GetCellCenterWorld(cell);
+            newPosition.y = 0;
+            cellSelector.transform.position = newPosition;
+            //cellSelector.transform.Translate(0, heightPadding, 0);
             cellSelector.SetActive(true);
         }
         else
