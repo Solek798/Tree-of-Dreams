@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 8186756147526038909}
   - component: {fileID: 7067789456870696168}
   - component: {fileID: 3504984947986506530}
+  - component: {fileID: 8915316764174364315}
   m_Layer: 5
   m_Name: RequirementSlot
   m_TagString: UIDropable
@@ -177,6 +178,20 @@ MonoBehaviour:
   amountText: {fileID: 4685897637797426139}
   iconColor: {r: 1, g: 1, b: 1, a: 0.7137255}
   fullFilledColor: {r: 1, g: 1, b: 1, a: 0.3529412}
+--- !u!114 &8915316764174364315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5812087797811348244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1 &6899727426658770844
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,14 +253,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5495906, g: 0.49123356, b: 0.7830189, a: 1}
+  m_Color: {r: 0.39215687, g: 0.33333334, b: 0.627451, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 10e530df960051f4f86c2964d9813918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c256c108e7a8a946825c08573c1a28e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
