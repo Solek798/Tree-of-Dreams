@@ -8,12 +8,13 @@ using UnityEngine.UI;
 public class Stack : MonoBehaviour
 {
     private Stack<InventoryItem> _items;
-    private Text _count;
-    private Image _icon;
+    [SerializeField] private Text count;
+    [SerializeField] private Image icon;
+    [SerializeField] private Image countBackground;
 
     public Slot Slot { get; set; }
 
-    public int Count => _count.text == string.Empty ? 1 : Convert.ToInt32(_count.text);
+    public int Count => count.text == string.Empty ? 1 : Convert.ToInt32(count.text);
     
     // Make sure Selector is visible
     private void OnDrop()
@@ -25,8 +26,6 @@ public class Stack : MonoBehaviour
     {
         _items = new Stack<InventoryItem>();
         Slot = GetComponentInParent<Slot>();
-        _count = GetComponentInChildren<Text>();
-        _icon = GetComponentInChildren<Image>();
     }
 
     public InventoryItem Peek()
@@ -72,12 +71,22 @@ public class Stack : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
-        
-        _count.text = _items.Count > 1 ? _items.Count.ToString() : "";
-        if (_icon.sprite == null)
+
+        if (_items.Count > 1)
         {
-            _icon.sprite = _items.Peek().Icon;
-            _icon.color = Color.white;
+            count.text = _items.Count.ToString();
+            countBackground.gameObject.SetActive(true);
+        }
+        else
+        {
+            count.text = "";
+            countBackground.gameObject.SetActive(false);
+        }
+
+        if (icon.sprite == null)
+        {
+            icon.sprite = _items.Peek().Icon;
+            icon.color = Color.white;
         }
     }
 }
