@@ -35,7 +35,7 @@ public class FarmlandLevel : MonoBehaviour
         return space.GetComponent<FarmlandSpace>();
     }
 
-    public void ChangeSelector(bool active, Vector3 position = default(Vector3), float heightPadding = 0.2f)
+    public void ChangeSelector(bool active, Vector3 position = default(Vector3))
     {
         var cell = _grid.WorldToCell(position);
         
@@ -43,8 +43,8 @@ public class FarmlandLevel : MonoBehaviour
         {
             var newPosition = _grid.GetCellCenterWorld(cell);
             newPosition.y = 0;
+            
             cellSelector.transform.position = newPosition;
-            //cellSelector.transform.Translate(0, heightPadding, 0);
             cellSelector.SetActive(true);
         }
         else
@@ -70,6 +70,11 @@ public class FarmlandLevel : MonoBehaviour
     {
         var cell = _grid.WorldToCell(space.transform.position);
         _register.Remove(cell);
+    }
+
+    public Vector3 GetCellPosition(Vector3 worldPosition)
+    {
+        return _grid.GetCellCenterWorld(_grid.WorldToCell(worldPosition));
     }
     
 }

@@ -3,7 +3,7 @@
 public interface ITool
 {
     bool Use(FarmlandSpace space);
-    bool IsUsable(FarmlandSpace space, Vector3 usagePoint);
+    bool IsUsable(FarmlandSpace space);
     
     float MaxUsingDistance { get; }
 }

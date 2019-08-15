@@ -16,10 +16,9 @@ public class BagOfStardust : MonoBehaviour, ITool
         return space.IsNurtured = true;
     }
 
-    public bool IsUsable(FarmlandSpace space, Vector3 usagePoint)
+    public bool IsUsable(FarmlandSpace space)
     {
-        return (space.transform.position - usagePoint).sqrMagnitude <= maxThrowDistance &&
-               space.IsSoil;
+        return space.IsSoil;
     }
 
     public float MaxUsingDistance => maxThrowDistance;
