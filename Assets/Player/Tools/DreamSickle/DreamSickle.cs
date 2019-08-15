@@ -17,12 +17,11 @@ public class DreamSickle : MonoBehaviour, ITool
         return true;
     }
 
-    public bool IsUsable(FarmlandSpace space, Vector3 usagePoint)
+    public bool IsUsable(FarmlandSpace space)
     {
         var plant = space.Plant;
-        return (space.transform.position - usagePoint).sqrMagnitude <= maxHarvestDistance &&
-               plant != null &&
-               plant.IsReadyToHarvest();
+        
+        return plant != null && plant.IsReadyToHarvest();
     }
 
     public float MaxUsingDistance => maxHarvestDistance;
