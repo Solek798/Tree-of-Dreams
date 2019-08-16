@@ -12,7 +12,7 @@ public class SeedFlute : MonoBehaviour, ITool
 
     public PopupCropUi cropUi;
 
-    public bool Use(FarmlandSpace space)
+    public IEnumerator Use(FarmlandSpace space)
     {
         _space = space;
         
@@ -21,7 +21,7 @@ public class SeedFlute : MonoBehaviour, ITool
         if (inventory != null)
             cropUi.OpenUiMenu(inventory);
 
-        return true;
+        yield return true;
     }
 
     public bool IsUsable(FarmlandSpace space)

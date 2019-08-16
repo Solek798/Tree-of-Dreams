@@ -69,7 +69,7 @@ public class Hand : MonoBehaviour
             var space = targetLevel.Interact();
 
             if (currentTool.IsUsable(space))
-                currentTool.Use(space);
+                StartCoroutine(currentTool.Use(space));
         }
     }
 

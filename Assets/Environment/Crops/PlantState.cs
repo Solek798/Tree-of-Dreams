@@ -11,6 +11,8 @@ public class PlantState : MonoBehaviour
     public int currentState = 1;
     private int ageOfState = 0;
 
+    [SerializeField] public Animator animator;
+
     private void Start()
     {
         Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.identity, transform);       
