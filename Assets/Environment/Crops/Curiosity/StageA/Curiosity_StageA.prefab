@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597499345717407530}
   m_Layer: 0
-  m_Name: CuriosityStageA
+  m_Name: Curiosity_StageA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,11 +27,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1156676474687363114}
+  - {fileID: 8259560795676753521}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &8293979216691968533
+--- !u!1001 &1263453000070929486
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 7140304408766522050, guid: 0ce49fd178731f844bb258eb8a35ced5,
         type: 3}
       propertyPath: m_Name
-      value: Courage_StageA
+      value: CuriositySeedVFX
       objectReference: {fileID: 0}
     - target: {fileID: 7140304408766521919, guid: 0ce49fd178731f844bb258eb8a35ced5,
         type: 3}
@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 7140304408766521919, guid: 0ce49fd178731f844bb258eb8a35ced5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.948
       objectReference: {fileID: 0}
     - target: {fileID: 7140304408766521919, guid: 0ce49fd178731f844bb258eb8a35ced5,
         type: 3}
@@ -100,9 +100,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce49fd178731f844bb258eb8a35ced5, type: 3}
---- !u!4 &1156676474687363114 stripped
+--- !u!4 &8259560795676753521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7140304408766521919, guid: 0ce49fd178731f844bb258eb8a35ced5,
     type: 3}
-  m_PrefabInstance: {fileID: 8293979216691968533}
+  m_PrefabInstance: {fileID: 1263453000070929486}
   m_PrefabAsset: {fileID: 0}
