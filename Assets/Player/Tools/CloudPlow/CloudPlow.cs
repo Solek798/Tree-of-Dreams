@@ -11,6 +11,7 @@ public class CloudPlow : MonoBehaviour, ITool
 
     public IEnumerator Use(FarmlandSpace space)
     {
+        Debug.Log("Is Soil " + space.IsSoil);
         if (space.IsSoil)
         {
             CloudPlowPlayer.clip = CloudPlowSfx;
@@ -28,6 +29,7 @@ public class CloudPlow : MonoBehaviour, ITool
             CloudPlowPlayer.clip = CloudPlowSfx;
             CloudPlowPlayer.Play();
             space.animator.Play("SoilSpawnAnimation");
+            Debug.Log("animator space " + space.animator.GetCurrentAnimatorStateInfo(0));
             yield return space.IsSoil = true;
         }
         
@@ -35,7 +37,6 @@ public class CloudPlow : MonoBehaviour, ITool
 
     public bool IsUsable(FarmlandSpace space)
     {
-        Debug.Log("is not nurtured " + !space.IsNurtured);
         return !space.IsNurtured && (space.Plant == null);
     }
 
