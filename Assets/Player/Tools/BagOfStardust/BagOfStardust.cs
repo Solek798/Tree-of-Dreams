@@ -11,10 +11,14 @@ public class BagOfStardust : MonoBehaviour, ITool
     public IEnumerator Use(FarmlandSpace space)
     {
         space.bagOfStardustParticle.Play();
-        space.Plant.animator.Play("NurturingAnimation");
+        space.IsNurtured = true;
+        if(!(space.Plant == null))
+        { 
+            space.Plant.animator.Play("NurturingAnimation");
+        }
         BagOfStardustPlayer.clip = BagOfStardustSfx;
-        BagOfStardustPlayer.Play();
-        yield return space.IsNurtured = true;
+        BagOfStardustPlayer.Play(); 
+        yield return new WaitForEndOfFrame();
     }
 
     public bool IsUsable(FarmlandSpace space)
