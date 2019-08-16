@@ -9,11 +9,11 @@ public class CloudPlow : MonoBehaviour, ITool
     [SerializeField] private AudioSource CloudPlowPlayer;
 
 
-    public bool Use(FarmlandSpace space)
+    public IEnumerator Use(FarmlandSpace space)
     {
         CloudPlowPlayer.clip = CloudPlowSfx;
         CloudPlowPlayer.Play();
-        return space.IsSoil = true;
+        yield return space.IsSoil = true;
     }
 
     public bool IsUsable(FarmlandSpace space)

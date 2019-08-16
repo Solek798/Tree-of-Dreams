@@ -8,12 +8,13 @@ public class BagOfStardust : MonoBehaviour, ITool
     [SerializeField] private AudioClip BagOfStardustSfx;
     [SerializeField] private AudioSource BagOfStardustPlayer;
 
-    public bool Use(FarmlandSpace space)
+    public IEnumerator Use(FarmlandSpace space)
     {
         space.bagOfStardustParticle.Play();
+        space.Plant.animator.Play("NurturingAnimation");
         BagOfStardustPlayer.clip = BagOfStardustSfx;
         BagOfStardustPlayer.Play();
-        return space.IsNurtured = true;
+        yield return space.IsNurtured = true;
     }
 
     public bool IsUsable(FarmlandSpace space)
