@@ -12,6 +12,7 @@ public class FarmlandSpace : MonoBehaviour
 
     [SerializeField] private GameObject soil = null;
     [SerializeField] private GameObject nurturedSoil = null;
+    [SerializeField] public Animator animator;
     
     
     private Vector3Int _cell;
