@@ -11,14 +11,32 @@ public class CloudPlow : MonoBehaviour, ITool
 
     public IEnumerator Use(FarmlandSpace space)
     {
-        CloudPlowPlayer.clip = CloudPlowSfx;
-        CloudPlowPlayer.Play();
-        yield return space.IsSoil = true;
+        if (space.IsSoil)
+        {
+            CloudPlowPlayer.clip = CloudPlowSfx;
+            CloudPlowPlayer.Play();
+            space.animator.Play("SoilDespawnAnimation");
+
+            yield return new WaitForSeconds(space.animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
+
+            space.UpdateState();
+                        
+            yield return space.IsSoil = false;
+        }
+        else
+        {
+            CloudPlowPlayer.clip = CloudPlowSfx;
+            CloudPlowPlayer.Play();
+            space.animator.Play("SoilSpawnAnimation");
+            yield return space.IsSoil = true;
+        }
+        
     }
 
     public bool IsUsable(FarmlandSpace space)
     {
-        return !space.IsSoil && !space.IsNurtured;
+        Debug.Log("is not nurtured " + !space.IsNurtured);
+        return !space.IsNurtured && (space.Plant == null);
     }
 
     public float MaxUsingDistance => maxPlowDistance;
