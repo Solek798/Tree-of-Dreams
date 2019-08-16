@@ -35,6 +35,7 @@ public class CloudPlow : MonoBehaviour, ITool
 
     public bool IsUsable(FarmlandSpace space)
     {
+        Debug.Log("is not nurtured " + !space.IsNurtured);
         return !space.IsNurtured && (space.Plant == null);
     }
 
