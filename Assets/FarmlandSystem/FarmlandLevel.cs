@@ -23,7 +23,7 @@ public class FarmlandLevel : MonoBehaviour
     public FarmlandSpace Interact()
     {
         var cell = _grid.WorldToCell(cellSelector.transform.position);
-
+        
         if (_register.ContainsKey(cell)) 
             return _register[cell].GetComponent<FarmlandSpace>();
         
