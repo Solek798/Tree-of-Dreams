@@ -45,8 +45,8 @@ public class Hand : MonoBehaviour
             //Debug.Log("hit: " + (transform.parent.position - hit.point));
             foreach (FarmlandLevel level in farmland)
             {
-                Debug.Log(transform.parent.position);
-                Debug.Log(level.GetCellPosition(transform.parent.position));
+                //Debug.Log(transform.parent.position);
+                //Debug.Log(level.GetCellPosition(transform.parent.position));
                 if (level.HitLevel(hit.collider.gameObject) && 
                     CheckToolInRange(currentTool, level.GetCellPosition(hit.point)))
                 {
