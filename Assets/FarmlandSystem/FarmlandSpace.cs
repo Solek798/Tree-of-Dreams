@@ -37,6 +37,12 @@ public class FarmlandSpace : MonoBehaviour
         }
     }
 
+    public Lampion Lampion
+    {
+        get => GetComponentInChildren<Lampion>();
+        set => value.transform.SetParent(transform);
+    }
+
     public PlantState Plant
     {
         get => GetComponentInChildren<PlantState>();
