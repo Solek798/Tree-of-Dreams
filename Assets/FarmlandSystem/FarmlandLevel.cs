@@ -95,10 +95,8 @@ public class FarmlandLevel : MonoBehaviour
                 Random.Range(randomCellBounds.zMin, randomCellBounds.zMax)
             );
             
-            Debug.Log("Attempt " + i + ": " + position + ", " + tilemap.HasTile(position));
             if (tilemap.HasTile(position) && !_register.ContainsKey(position))
             {
-                Debug.Log("Return something");
                 return CreateSpace(position);
             }
         }
