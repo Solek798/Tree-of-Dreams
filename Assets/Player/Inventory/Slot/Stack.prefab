@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09a5df5c27a22abf89f4ef9f444ade5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStackCount: 1000
+  maxStackCount: 9999
   isClosed: 0
 --- !u!222 &2334804002219902555
 CanvasRenderer:
@@ -198,7 +198,7 @@ RectTransform:
   m_AnchorMin: {x: 0.8, y: 0.8}
   m_AnchorMax: {x: 0.8, y: 0.8}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 30}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3841128330917742431
 CanvasRenderer:
