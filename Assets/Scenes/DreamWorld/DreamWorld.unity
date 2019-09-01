@@ -10632,12 +10632,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
         type: 3}
-      propertyPath: lampionPrefab
-      value: 
-      objectReference: {fileID: 4038198100676796921, guid: 149293860055696458f28d2eb6a3272b,
-        type: 3}
-    - target: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
-        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 474779525}
@@ -10648,13 +10642,23 @@ PrefabInstance:
       objectReference: {fileID: 230269633}
     - target: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
         type: 3}
-      propertyPath: spawnRadius
-      value: 100
+      propertyPath: targetBounds.m_Position.x
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
         type: 3}
-      propertyPath: maxGeneratingAttempts
-      value: 100
+      propertyPath: targetBounds.m_Position.y
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
+        type: 3}
+      propertyPath: targetBounds.m_Size.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
+        type: 3}
+      propertyPath: targetBounds.m_Size.y
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3458134733114103187, guid: 5347234aadc00fedc8de30857131ff85,
         type: 3}
