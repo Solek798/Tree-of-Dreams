@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -60,7 +60,7 @@ public class Hand : MonoBehaviour
             var space = targetLevel.Interact();
 
             if (currentTool.IsUsable(space))
-                currentTool.Use(space);
+                StartCoroutine(currentTool.Use(space));
         }
     }
 

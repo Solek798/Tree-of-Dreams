@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +12,7 @@ public class FarmlandSpace : MonoBehaviour
 
     [SerializeField] private GameObject soil = null;
     [SerializeField] private GameObject nurturedSoil = null;
+    [SerializeField] public Animator animator;
 
     public bool IsSoil
     {
