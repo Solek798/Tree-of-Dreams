@@ -8,7 +8,7 @@ using System.Linq;
 public class House : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
-    [SerializeField] private QuestManager questManager = null;
+    [SerializeField] private LampionFabric lampionFabric = null;
     [SerializeField] private Journal journal = null;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
@@ -37,7 +37,7 @@ public class House : MonoBehaviour
             }
         }
 
-        questManager.SendLampinion();
+        lampionFabric.CreateAndSend();
 
         journal.Days++;
 
