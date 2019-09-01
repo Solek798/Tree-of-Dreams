@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public interface ITool
 {
-    bool Use(FarmlandSpace space);
+    IEnumerator Use(FarmlandSpace space);
     bool IsUsable(FarmlandSpace space);
     
     float MaxUsingDistance { get; }
