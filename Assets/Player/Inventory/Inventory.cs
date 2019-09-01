@@ -73,6 +73,10 @@ public class Inventory : MonoBehaviour
             return false;
 
         // TODO(FK): Convert to Linq?
+        
+        /*_slots
+            .Where(t => t.Stack != null)
+            .*/
         foreach (var slot in _slots)
         {
             if (slot.Put(item))

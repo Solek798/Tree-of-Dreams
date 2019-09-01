@@ -7,9 +7,13 @@ using UnityEngine.UI;
 
 public class Stack : MonoBehaviour
 {
+    [SerializeField] private int maxStackCount = 9999;
+    [SerializeField] private bool isClosed = false;
+    
     private Stack<InventoryItem> _items;
     private Text _count;
     private Image _icon;
+    
 
     public Slot Slot { get; set; }
 
@@ -37,10 +41,14 @@ public class Stack : MonoBehaviour
     public bool Push(InventoryItem item)
     {
         
-        if (_items.Count > 0 && _items.Peek().Identifier != item.Identifier) 
+        if ((_items.Count > 0 && _items.Peek().Identifier != item.Identifier) || isClosed)
             return false;
         
         _items.Push(item);
+        item.transform.SetParent(transform);
+
+        if (_items.Count >= maxStackCount || item.IsTool)
+            isClosed = true;
         
         UpdateInfo();
         
