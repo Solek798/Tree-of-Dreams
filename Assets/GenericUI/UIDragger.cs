@@ -14,10 +14,12 @@ public class UIDragger : MonoBehaviour
     public const string DRAG = "UIDragable";
     // ReSharper disable once MemberCanBePrivate.Global
     public const string DROP = "UIDropable";
-    
+
+    [SerializeField] private float timeBeforeDrag = 0.25f;
     [SerializeField] private Canvas[] registeredCanvases = null;
     
     private bool _isDragging = false;
+    private bool _prefacingDrag = false;
     private GameObject _draggingObject;
     private Transform _origParentTransform;
     
@@ -37,14 +39,26 @@ public class UIDragger : MonoBehaviour
             
             if (_draggingObject != null)
             {
-                Drag();
+                StartCoroutine(nameof(PrefaceDrag));
             }  
         }
 
-        if (Input.GetMouseButtonUp(0) && _isDragging)
+        if (Input.GetMouseButtonUp(0))
         {
-            var objectWhereToDrop = GetInteractableObject(DROP);
-            Drop(objectWhereToDrop);
+            if (_prefacingDrag)
+            {
+                StopCoroutine(nameof(PrefaceDrag));
+                _prefacingDrag = false;
+            }
+            
+            if (_isDragging)
+            {
+                StopCoroutine(nameof(PrefaceDrag));
+                _prefacingDrag = false;
+                
+                var objectWhereToDrop = GetInteractableObject(DROP);
+                Drop(objectWhereToDrop);
+            }
         }
     }
 
@@ -87,6 +101,15 @@ public class UIDragger : MonoBehaviour
         _isDragging = false;
         _draggingObject = null;
         _origParentTransform = null;
+    }
+
+    private IEnumerator PrefaceDrag()
+    {
+        _prefacingDrag = true;
+        yield return new WaitForSeconds(timeBeforeDrag);
+        _prefacingDrag = false;
+        
+        Drag();
     }
 
     // Set to public for potential further usage

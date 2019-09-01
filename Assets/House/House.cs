@@ -10,6 +10,7 @@ public class House : MonoBehaviour
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private LampionFabric lampionFabric = null;
     [SerializeField] private Journal journal = null;
+    [SerializeField] private GameObject sleepUI = null;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
@@ -46,10 +47,11 @@ public class House : MonoBehaviour
 
     private void FadeBlack()
     {
-        var image = GetComponentInChildren<Image>();
-        var tempColor = image.color;
-        tempColor.a = 255f;
-        image.color = tempColor;
+        sleepUI.SetActive(true);
+        //var image = GetComponentInChildren<Image>();
+        //var tempColor = image.color;
+        //tempColor.a = 255f;
+        //image.color = tempColor;
     }
 
     private IEnumerator Wait()
@@ -63,9 +65,10 @@ public class House : MonoBehaviour
 
     private void FadeTransparent()
     {
-        var image = GetComponentInChildren<Image>();
-        var tempColor = image.color;
-        tempColor.a = 0f;
-        image.color = tempColor;
+        sleepUI.SetActive(false);
+        //var image = GetComponentInChildren<Image>();
+        //var tempColor = image.color;
+        //tempColor.a = 0f;
+        //image.color = tempColor;
     }
 }
