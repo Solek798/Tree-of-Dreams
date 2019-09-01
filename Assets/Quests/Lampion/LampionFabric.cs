@@ -26,15 +26,25 @@ public class LampionFabric : MonoBehaviour
         var targetSpace = targetLevel.GetRandomSpace(maxGeneratingAttempts);
 
         if (targetSpace == null) return;
+
+        var newLampion = Create();
         
-        
-        // create Lampion
+        Send(newLampion, targetSpace);
+    }
+
+    private Lampion Create()
+    {
         var newLampion = Instantiate(lampionPrefab, transform).GetComponent<Lampion>();
         newLampion.player = player;
+        
         newLampion.questData = questData[Random.Range(0, questData.Count - 1)];
         questData.Remove(newLampion.questData);
-        
-        
+
+        return newLampion;
+    }
+
+    private void Send(Lampion newLampion, FarmlandSpace targetSpace)
+    {
         // Select random spawn point
         newLampion.transform.localPosition = new Vector3(spawnRadius * Random.value, 0, 0);
         newLampion.transform.RotateAround(
@@ -42,7 +52,8 @@ public class LampionFabric : MonoBehaviour
             Vector3.up, 
             360 * Random.value
         );
-
+        
+        // send Lampion by setting TravelTarget
         targetSpace.Lampion = newLampion;
         newLampion.TravelTarget = targetSpace.transform.position;
     }

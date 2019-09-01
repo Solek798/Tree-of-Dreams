@@ -10,7 +10,7 @@ public class Farmland : MonoBehaviour, IEnumerable
     {
         foreach (var map in GetComponentsInChildren<Tilemap>())
         {
-            //map.color = Color.clear;
+            map.color = Color.clear;
         }
     }
 

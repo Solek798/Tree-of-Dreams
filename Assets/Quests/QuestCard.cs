@@ -53,7 +53,7 @@ public class QuestCard : MonoBehaviour
     {
         UIStatus.Instance.DialogOpened = false;
         
-        SendMessageUpwards("OnQuestCardClosed");
+        SendMessageUpwards("OnQuestCardClosed", SendMessageOptions.RequireReceiver);
         
         gameObject.SetActive(false);
         
