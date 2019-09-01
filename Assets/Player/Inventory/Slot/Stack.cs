@@ -16,7 +16,7 @@ public class Stack : MonoBehaviour
     
 
     public Slot Slot { get; set; }
-
+    public bool IsClosed => isClosed;
     public int Count => _count.text == string.Empty ? 1 : Convert.ToInt32(_count.text);
     
     // Make sure Selector is visible
