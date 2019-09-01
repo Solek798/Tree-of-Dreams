@@ -85,4 +85,9 @@ public class Lampion : MonoBehaviour
             yield return null;
         }
     }
+
+    private void OnQuestCardClosed()
+    {
+        Destroy(gameObject);
+    }
 }

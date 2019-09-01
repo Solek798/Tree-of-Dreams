@@ -14,9 +14,12 @@ public class LampionFabric : MonoBehaviour
     [SerializeField] private BoundsInt targetBounds;
     [SerializeField] private float spawnRadius = 30;
     [SerializeField] private int maxGeneratingAttempts = 10;
+    [SerializeField] private List<QuestData> questData;
 
     public void CreateAndSend()
     {
+        if (questData.Count <= 0) return;
+        
         // Select random FarmlandSpace
         var levels = farmland.GetAllLevels();
         var targetLevel = levels[Random.Range(0, levels.Length - 1)];
@@ -24,12 +27,12 @@ public class LampionFabric : MonoBehaviour
 
         if (targetSpace == null) return;
         
-        //Debug.Log(targetSpace);
         
         // create Lampion
         var newLampion = Instantiate(lampionPrefab, transform).GetComponent<Lampion>();
         newLampion.player = player;
-        newLampion.questData = null;
+        newLampion.questData = questData[Random.Range(0, questData.Count - 1)];
+        questData.Remove(newLampion.questData);
         
         
         // Select random spawn point
@@ -42,21 +45,5 @@ public class LampionFabric : MonoBehaviour
 
         targetSpace.Lampion = newLampion;
         newLampion.TravelTarget = targetSpace.transform.position;
-
-        /*var children = this.gameObject
-            .GetAllChildren()
-            .Select(t => t.GetComponent<Lampion>())
-            .Where(t => t != null)
-            .ToArray();
-        
-        if (children.Length == 0) return;
-
-        var child = children[Random.Range(0, children.Length)];
-
-        child.transform.SetParent(transform.parent, true);
-        
-        
-        child.TravelTarget = targets[_tempIndex];
-        _tempIndex++;*/
     }
 }

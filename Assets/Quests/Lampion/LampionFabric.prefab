@@ -43,6 +43,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e1184aaed298b85abad878dd4b411c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {x: 8.02, y: 0, z: -38.99}
-  - {x: 25.1, y: 0, z: 65.4}
+  lampionPrefab: {fileID: 4038198100676796921, guid: 149293860055696458f28d2eb6a3272b,
+    type: 3}
+  player: {fileID: 0}
+  farmland: {fileID: 0}
+  targetBounds:
+    m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 0, y: 0, z: 0}
+  spawnRadius: 100
+  maxGeneratingAttempts: 100
+  questData:
+  - {fileID: 11400000, guid: 72a4d6e0c04701f469ea7b7dcd8f833c, type: 2}
+  - {fileID: 11400000, guid: be4b473090fb35342814deb2319afc19, type: 2}
+  - {fileID: 11400000, guid: feb2421b87aeaad4abe6a2d8ba432ac1, type: 2}
+  - {fileID: 11400000, guid: 559fbf346015dc841b7974fa98ebf3c5, type: 2}
+  - {fileID: 11400000, guid: a4458fee94e5b3348857d3b107976299, type: 2}
+  - {fileID: 11400000, guid: 4a591ded5c419b74392532680dff2a6e, type: 2}
+  - {fileID: 11400000, guid: 03b75771820ea0545ba774920a34d6e2, type: 2}
+  - {fileID: 11400000, guid: f2c6168eabb50af41a04b777e7dc7e88, type: 2}
+  - {fileID: 11400000, guid: 2e153cdc97074ec4ba18ec94782acb3a, type: 2}
+  - {fileID: 11400000, guid: ed4299652ffbbb24a94ab8b20bcf573e, type: 2}
+  - {fileID: 11400000, guid: 9155f6c7acca7f84b976b1d964da00f3, type: 2}
+  - {fileID: 11400000, guid: 9211cc594cd0f314a95b888252ff0267, type: 2}
+  - {fileID: 11400000, guid: 692b0441a7f7d68419894c67a91c7037, type: 2}
+  - {fileID: 11400000, guid: 6da9cbf96ffe01c4689d65e6a0d9a926, type: 2}
+  - {fileID: 11400000, guid: ae2e2ca86c88db540bd03f101cab9d09, type: 2}
+  - {fileID: 11400000, guid: ab11477e64c533641b6e042bbdf90ee9, type: 2}
+  - {fileID: 11400000, guid: c1165e00fc5c40945ab88bc6522a2a3d, type: 2}
+  - {fileID: 11400000, guid: 37388932eadf4c04ebbb5d2f3aa86db7, type: 2}
+  - {fileID: 11400000, guid: fdf1c85611e10ed458a84894dbfe7ada, type: 2}
+  - {fileID: 11400000, guid: 4a67c4d20feab6946a1f49a2740e03dd, type: 2}
