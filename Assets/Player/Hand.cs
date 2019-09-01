@@ -26,7 +26,7 @@ public class Hand : MonoBehaviour
             return;
         
         FarmlandLevel targetLevel = null;
-        var currentTool = inventory.SelectedItem?.GetComponent<ITool>();
+        var currentTool = inventory?.SelectedItem?.GetComponent<ITool>();
 
         if (Physics.Raycast(
             Camera.main.ScreenPointToRay(Input.mousePosition), 
