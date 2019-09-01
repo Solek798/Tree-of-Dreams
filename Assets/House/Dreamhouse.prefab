@@ -86,8 +86,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   farmland: {fileID: 0}
-  questManager: {fileID: 0}
+  lampionFabric: {fileID: 0}
   journal: {fileID: 0}
+  sleepUI: {fileID: 5850660164025619457}
   player: {fileID: 0}
   maxDistanceToSleep: 15
 --- !u!65 &5850660163728790374
@@ -657,15 +658,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be544bad72692d54183cb014c133c46e, type: 3}
---- !u!4 &5850660164452405569 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5207946793720474178, guid: be544bad72692d54183cb014c133c46e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1835182144740211459}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5850660164634201018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5207946793671585977, guid: be544bad72692d54183cb014c133c46e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1835182144740211459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5850660164452405569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5207946793720474178, guid: be544bad72692d54183cb014c133c46e,
     type: 3}
   m_PrefabInstance: {fileID: 1835182144740211459}
   m_PrefabAsset: {fileID: 0}
@@ -875,6 +876,12 @@ PrefabInstance:
 --- !u!224 &5850660164025619456 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8591410736740713678, guid: 688c45a6eb5471e42856659929710cf0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2741402310380802254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5850660164025619457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8591410736740713679, guid: 688c45a6eb5471e42856659929710cf0,
     type: 3}
   m_PrefabInstance: {fileID: 2741402310380802254}
   m_PrefabAsset: {fileID: 0}

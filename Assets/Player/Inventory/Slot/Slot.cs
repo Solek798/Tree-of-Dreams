@@ -41,6 +41,8 @@ public class Slot : MonoBehaviour, IDropTarget
             otherStack.Slot = this;
             otherStack.transform.localPosition = Vector2.zero;
         }
+
+        GetComponent<Toggle>().isOn = true;
     }
 
     private Stack CreateAndAttacheStack()
