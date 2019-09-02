@@ -11471,6 +11471,18 @@ Canvas:
     type: 3}
   m_PrefabInstance: {fileID: 1659361758}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2046306799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1681382406}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e1184aaed298b85abad878dd4b411c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2083039413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6884308598472093979, guid: d24f4dd77a67d4149b3c0049b882fc6c,
@@ -12011,7 +12023,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lampionFabric
       value: 
-      objectReference: {fileID: 1503095601}
+      objectReference: {fileID: 2046306799}
     - target: {fileID: 5850660163728790363, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: m_Controller
