@@ -46,8 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPlowDistance: 50
-  CloudPlowSfx: {fileID: 8300000, guid: 29a71b03d3056424bbbd0cefe2459e27, type: 3}
-  CloudPlowPlayer: {fileID: -1626974025657312817}
+  audioPlayer: {fileID: -1626974025657312817}
+  fillAudio: {fileID: 8300000, guid: f7406527f0b60734eb1be6c51d5fed2f, type: 3}
+  plowAudio: {fileID: 8300000, guid: d1d5aff846931dc4fb10ebe05e415cda, type: 3}
 --- !u!114 &4937032120992199263
 MonoBehaviour:
   m_ObjectHideFlags: 0

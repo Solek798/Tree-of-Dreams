@@ -4775,7 +4775,7 @@ ParticleSystem:
 --- !u!199 &2770675833295823381
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 5459201253982000688, guid: 23a796a71523ef443be3917250826190,
     type: 3}
   m_PrefabInstance: {fileID: 7904257564407084069}
@@ -9558,7 +9558,7 @@ ParticleSystem:
 --- !u!199 &2999421772959223745
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4904849171756039140, guid: 23a796a71523ef443be3917250826190,
     type: 3}
   m_PrefabInstance: {fileID: 7904257564407084069}
@@ -9574,7 +9574,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 89a0fcea425c9074c895f2a2c9d50f7d, type: 2}
+  - {fileID: 0}
   - {fileID: 2100000, guid: e89ebb261968a2443aead9c4505b89d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14365,7 +14365,7 @@ ParticleSystem:
 --- !u!199 &2437062880896633966
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14976,16 +14976,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1044097632813396467}
     m_Modifications:
-    - target: {fileID: 8333036956010911089, guid: 23a796a71523ef443be3917250826190,
-        type: 3}
-      propertyPath: m_Name
-      value: FinalStageParticle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8333036956010911089, guid: 23a796a71523ef443be3917250826190,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4413349469039464003, guid: 23a796a71523ef443be3917250826190,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15041,6 +15031,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8333036956010911089, guid: 23a796a71523ef443be3917250826190,
+        type: 3}
+      propertyPath: m_Name
+      value: FinalStageParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333036956010911089, guid: 23a796a71523ef443be3917250826190,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6846824490659861535, guid: 23a796a71523ef443be3917250826190,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -15056,11 +15056,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4904849171756039140, guid: 23a796a71523ef443be3917250826190,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: e89ebb261968a2443aead9c4505b89d4, type: 2}
     - target: {fileID: 5219901947466282857, guid: 23a796a71523ef443be3917250826190,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -15206,6 +15201,11 @@ PrefabInstance:
       propertyPath: TrailModule.inheritParticleColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4904849171756039140, guid: 23a796a71523ef443be3917250826190,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e89ebb261968a2443aead9c4505b89d4, type: 2}
     - target: {fileID: 7013325780403701343, guid: 23a796a71523ef443be3917250826190,
         type: 3}
       propertyPath: m_IsActive
