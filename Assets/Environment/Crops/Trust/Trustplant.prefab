@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6085d3723ba714f4aaf2cadcc42afb1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantObject: {fileID: 11400000, guid: e4a4eb37a83ddc345b0fcc7ae3c9c4b6, type: 2}
+  plantObject: {fileID: 11400000, guid: 9158efab8a9807946bd7b13cc4ab2595, type: 2}
   currentState: 0
   animator: {fileID: 3327012485218694011}
 --- !u!114 &8670260774570230775
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 3647c3482d584f3498bcd3dcd8c34413, type: 3}
   identifier: TrustCrop
+  isTool: 0
 --- !u!95 &3327012485218694011
 Animator:
   serializedVersion: 3
