@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43af5c0508be8a94282799f69c9da1e3, type: 3}
-  m_Name: Trust
+  m_Name: TrustCrop
   m_EditorClassIdentifier: 
-  Name: 0
-  stateReachTime: 
-  stateModel: []
-  buyPrice: 0
-  sellPrice: 0
+  Name: 4
+  stateReachTime: 010000000400000000000000
+  stateModel:
+  - {fileID: 7043965720686945750, guid: e3c935c969046f543aa5a58d93c930ba, type: 3}
+  - {fileID: 7048623938971609448, guid: ced2dfc53479d6348900b950931ed10f, type: 3}
+  - {fileID: 7048623938971609448, guid: 96d1f34c05aec084991d3ee0540a8b90, type: 3}
+  buyPrice: 10
+  sellPrice: 30

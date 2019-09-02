@@ -55,8 +55,6 @@ public class SeedFlute : MonoBehaviour, ITool
             case PlantScriptableObject.CropType.Trust:
                 audioPlayer.clip = audioTru;
                 break;
-
-
         }
 
 
