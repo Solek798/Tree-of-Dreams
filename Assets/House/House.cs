@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Linq;
 
 public class House : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
     [SerializeField] private LampionFabric lampionFabric = null;
     [SerializeField] private Journal journal = null;
-    [SerializeField] private GameObject sleepUI = null;
+    [SerializeField] private GameObject sleepMenu = null;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
@@ -21,14 +17,14 @@ public class House : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) &&
             Vector3.Distance(transform.position, player.transform.position) <= maxDistanceToSleep)
         {
-            SleepFunction();
-            StartCoroutine(Wait());
+            
+            StartCoroutine(Sleep());
         }
 
         
     }
 
-    private bool SleepFunction()
+    private bool ProccessNight()
     {
         foreach (FarmlandLevel level in farmland)
         {
@@ -45,30 +41,29 @@ public class House : MonoBehaviour
         return false;
     }
 
-    private void FadeBlack()
+    private IEnumerator Sleep()
     {
-        sleepUI.SetActive(true);
-        //var image = GetComponentInChildren<Image>();
-        //var tempColor = image.color;
-        //tempColor.a = 255f;
-        //image.color = tempColor;
+        Transition.Instance.FadeBlack();
+
+        yield return new WaitForSeconds(Transition.Instance.FadeBlackTime);
+        ProccessNight();
+        sleepMenu.SetActive(true);
+
+        Transition.Instance.FadeNormal();
     }
 
-    private IEnumerator Wait()
+    private  IEnumerator WakeUp()
     {
-        FadeBlack();
+        Transition.Instance.FadeBlack();
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(Transition.Instance.FadeBlackTime);
+        sleepMenu.SetActive(false);
 
-        FadeTransparent();
+        Transition.Instance.FadeNormal();
     }
 
-    private void FadeTransparent()
+    public void ResumeNight()
     {
-        sleepUI.SetActive(false);
-        //var image = GetComponentInChildren<Image>();
-        //var tempColor = image.color;
-        //tempColor.a = 0f;
-        //image.color = tempColor;
+        StartCoroutine(WakeUp());
     }
 }

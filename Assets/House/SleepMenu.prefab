@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 232926149939305654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 684794924696937710}
   - {fileID: 1357068967297575846}
@@ -40,7 +40,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 987, y: 549}
+  m_AnchoredPosition: {x: 617, y: 369}
   m_SizeDelta: {x: 998, y: 701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4412543458501973592
@@ -2268,6 +2268,7 @@ GameObject:
   - component: {fileID: 8024076443099058752}
   - component: {fileID: 7901508856694480414}
   - component: {fileID: 5113006349044628323}
+  - component: {fileID: 2349027263879603030}
   m_Layer: 5
   m_Name: SleepMenu
   m_TagString: Untagged
@@ -2316,7 +2317,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 32766
   m_TargetDisplay: 0
 --- !u!114 &7901508856694480414
 MonoBehaviour:
@@ -2357,6 +2358,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2349027263879603030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512622810012420859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370bafee40ce91cc0bd635bc3408c557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7246815050847847337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,7 +3406,7 @@ RectTransform:
   m_GameObject: {fileID: 9047747315084231621}
   m_LocalRotation: {x: -0, y: -0, z: 0.18031123, w: 0.9836097}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 442018873151352271}
   m_RootOrder: 1
