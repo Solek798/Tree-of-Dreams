@@ -12,7 +12,7 @@ public class BagOfStardust : MonoBehaviour, ITool
     {
         space.bagOfStardustParticle.Play();
         space.IsNurtured = true;
-        if(!(space.Plant == null))
+        if(space.Plant != null)
         { 
             space.Plant.animator.Play("NurturingAnimation");
         }
