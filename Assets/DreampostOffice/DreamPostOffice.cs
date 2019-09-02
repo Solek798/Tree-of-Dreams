@@ -58,7 +58,7 @@ public class DreamPostOffice : MonoBehaviour
     public void AddDisplay(QuestDisplay display)
     {
         display.transform.SetParent(layoutGroup.transform);
-
+        display.transform.localScale = Vector3.one;
         //newQuest.GetComponent<QuestDisplay>().Initialize(questData);
     }
 

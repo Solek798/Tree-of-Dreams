@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 64698235151549183}
   - component: {fileID: 64698235151549180}
   - component: {fileID: 6293582121753731977}
+  - component: {fileID: 5244723952628691396}
   m_Layer: 0
   m_Name: HappinessCrop
   m_TagString: Plant
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantObject: {fileID: 11400000, guid: b1edf6b1ac9fb2f4581d195a56d0a9d6, type: 2}
   currentState: 0
+  animator: {fileID: 5244723952628691396}
 --- !u!114 &6293582121753731977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,3 +62,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 54172db59d20ec74f9de14343b1994f6, type: 3}
   identifier: HappinessCrop
+--- !u!95 &5244723952628691396
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64698235151549181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b4417708a627ee4d9799183e3bc6929, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -2,19 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Stack : MonoBehaviour
 {
+    [SerializeField] private int maxStackCount = 9999;
+    [SerializeField] private bool isClosed = false;
+    
     private Stack<InventoryItem> _items;
-    [SerializeField] private Text count;
-    [SerializeField] private Image icon;
-    [SerializeField] private Image countBackground;
+    private Text _count;
+    private Image _icon;
+    
 
     public Slot Slot { get; set; }
-
-    public int Count => count.text == string.Empty ? 1 : Convert.ToInt32(count.text);
+    public bool IsClosed => isClosed;
+    public int Count => _count.text == string.Empty ? 1 : Convert.ToInt32(_count.text);
     
     // Make sure Selector is visible
     private void OnDrop()
@@ -26,6 +28,8 @@ public class Stack : MonoBehaviour
     {
         _items = new Stack<InventoryItem>();
         Slot = GetComponentInParent<Slot>();
+        _count = GetComponentInChildren<Text>();
+        _icon = GetComponentInChildren<Image>();
     }
 
     public InventoryItem Peek()
@@ -36,10 +40,14 @@ public class Stack : MonoBehaviour
     public bool Push(InventoryItem item)
     {
         
-        if (_items.Count > 0 && _items.Peek().Identifier != item.Identifier) 
+        if ((_items.Count > 0 && _items.Peek().Identifier != item.Identifier) || isClosed)
             return false;
         
         _items.Push(item);
+        item.transform.SetParent(transform);
+
+        if (_items.Count >= maxStackCount || item.IsTool)
+            isClosed = true;
         
         UpdateInfo();
         
@@ -71,22 +79,12 @@ public class Stack : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
-
-        if (_items.Count > 1)
+        
+        _count.text = _items.Count > 1 ? _items.Count.ToString() : "";
+        if (_icon.sprite == null)
         {
-            count.text = _items.Count.ToString();
-            countBackground.gameObject.SetActive(true);
-        }
-        else
-        {
-            count.text = "";
-            countBackground.gameObject.SetActive(false);
-        }
-
-        if (icon.sprite == null)
-        {
-            icon.sprite = _items.Peek().Icon;
-            icon.color = Color.white;
+            _icon.sprite = _items.Peek().Icon;
+            _icon.color = Color.white;
         }
     }
 }

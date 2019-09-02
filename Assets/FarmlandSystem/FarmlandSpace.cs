@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +12,7 @@ public class FarmlandSpace : MonoBehaviour
 
     [SerializeField] private GameObject soil = null;
     [SerializeField] private GameObject nurturedSoil = null;
-    
-    
-    private Vector3Int _cell;
+    [SerializeField] public Animator animator;
 
     public bool IsSoil
     {
@@ -37,6 +35,12 @@ public class FarmlandSpace : MonoBehaviour
         }
     }
 
+    public Lampion Lampion
+    {
+        get => GetComponentInChildren<Lampion>();
+        set => value.transform.SetParent(transform, true);
+    }
+
     public PlantState Plant
     {
         get => GetComponentInChildren<PlantState>();
@@ -51,13 +55,13 @@ public class FarmlandSpace : MonoBehaviour
             Plant?.UpdateCurrentState();
             return;
         }
-        
-        if ((IsSoil && Plant == null) || !IsSoil)
+
+        if ((IsSoil && Plant == null) || (!IsSoil && Lampion == null))
         {
+            
             IsSoil = false;
             SendMessageUpwards("OnFarmlandSpaceDeleted", this.gameObject);
             Destroy(this.gameObject);
-            return;
         }
     }
 }

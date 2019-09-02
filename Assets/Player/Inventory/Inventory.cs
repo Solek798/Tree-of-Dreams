@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-using UnityEngine.Serialization;
 
 public class Inventory : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject dreamSicklePrefab = null;
     
 
-    private Slot[] _slots = null;
+    private List<Slot> _slots = null;
 
     public Transform HandTransform => handTransform;
     public int MaxCurrency => maxCurrency;
@@ -37,32 +35,55 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         Currency = startCurrency;
-        
+
         _slots =
             slotContainer
                 .GetAllChildren()
                 .Select(t => t.GetComponent<Slot>())
                 .OfType<Slot>()
-                .ToArray();
+                .ToList();
 
         PickUp(Instantiate(cloudPlowPrefab));
         PickUp(Instantiate(stardustBagPrefab));
         PickUp(Instantiate(seedFlutePrefab));
         PickUp(Instantiate(dreamSicklePrefab));
+
+        SetSelectedSlot(0);
     }
 
     private void Update()
     {
         if (!PlayerScriptor.Instance.AllowInteracting)
             return;
+
+        int index;
+
+        if (Input.mouseScrollDelta.y < 0)
+        {
+            index = _slots.IndexOf(_slots.First(t => (bool) t.GetComponent<Toggle>()?.isOn)) - 1;
+            
+            SetSelectedSlot(index);
+        } else if (Input.mouseScrollDelta.y > 0)
+        {
+            index = _slots.IndexOf(_slots.First(t => (bool) t.GetComponent<Toggle>()?.isOn)) + 1;
+            
+            SetSelectedSlot(index);
+        }
         
         for (int i=0; i<=9; i++)
         {
             if (!Input.GetKeyDown(((i + 1) % 10).ToString())) continue;
             
-            _slots[i].GetComponent<Toggle>().isOn = true;
-            SelectedItem = _slots[i].GetComponentInChildren<Stack>()?.Peek();
+            SetSelectedSlot(i);
         }
+    }
+
+    private void SetSelectedSlot(int index)
+    {
+        if (index < 0 || index >= _slots.Count) return;
+        
+        _slots[index].GetComponent<Toggle>().isOn = true;
+        SelectedItem = _slots[index].GetComponentInChildren<Stack>()?.Peek();
     }
 
     public bool PickUp(GameObject newObject)
@@ -72,10 +93,21 @@ public class Inventory : MonoBehaviour
         if (item == null) 
             return false;
 
-        // TODO(FK): Convert to Linq?
-        foreach (var slot in _slots)
+        var fittingSlot =
+            _slots
+            .FirstOrDefault(t => t.Stack != null &&
+                            t.Stack.Peek().Identifier == item.Identifier &&
+                            !t.Stack.IsClosed);
+
+        if (fittingSlot != null)
         {
-            if (slot.Put(item))
+            fittingSlot.Stack.Push(item);
+            item.Store(this);
+            return true;
+        }
+        else
+        {
+            if (_slots.Any(slot => slot.Put(item)))
             {
                 item.Store(this);
                 return true;

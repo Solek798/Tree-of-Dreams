@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 
 public class Hand : MonoBehaviour
 {
@@ -22,31 +18,24 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            EditorApplication.isPaused = true;
-        }
-        
-        //Debug.Log(transform.parent.position);
-        //Debug.Log(transform.parent.position);
-        
         if (!PlayerScriptor.Instance.AllowInteracting)
             return;
         
         FarmlandLevel targetLevel = null;
-        var currentTool = inventory.SelectedItem?.GetComponent<ITool>();
+        var currentTool = inventory?.SelectedItem?.GetComponent<ITool>();
 
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+        
         if (Physics.Raycast(
             Camera.main.ScreenPointToRay(Input.mousePosition), 
             out var hit,
             raycastDistance,
             _collisionMask))
         {
-            //Debug.Log("hit: " + (transform.parent.position - hit.point));
+            
             foreach (FarmlandLevel level in farmland)
             {
-                Debug.Log(transform.parent.position);
-                Debug.Log(level.GetCellPosition(transform.parent.position));
+                
                 if (level.HitLevel(hit.collider.gameObject) && 
                     CheckToolInRange(currentTool, level.GetCellPosition(hit.point)))
                 {
@@ -69,13 +58,12 @@ public class Hand : MonoBehaviour
             var space = targetLevel.Interact();
 
             if (currentTool.IsUsable(space))
-                currentTool.Use(space);
+                StartCoroutine(currentTool.Use(space));
         }
     }
 
     private bool CheckToolInRange(ITool tool, Vector3 cell)
     {
-        //Debug.Log("Cell: " + (transform.parent.position - cell));
         return (transform.parent.position - cell).sqrMagnitude <=
                (tool?.MaxUsingDistance ?? 0.0f);
     }

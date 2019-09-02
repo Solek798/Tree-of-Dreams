@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -16,5 +17,10 @@ public class Farmland : MonoBehaviour, IEnumerable
     public IEnumerator GetEnumerator()
     {
         return GetComponentsInChildren<FarmlandLevel>().GetEnumerator();
+    }
+
+    public FarmlandLevel[] GetAllLevels()
+    {
+        return GetComponentsInChildren<FarmlandLevel>().ToArray();
     }
 }
