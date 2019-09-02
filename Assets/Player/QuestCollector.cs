@@ -23,4 +23,9 @@ public class QuestCollector : MonoBehaviour
         newDisplay.Initialize(quest);
         dreamPostOffice.AddDisplay(newDisplay);
     }
+
+    public Quest[] GetAllQuests()
+    {
+        return GetComponentsInChildren<Quest>();
+    }
 }

@@ -77,7 +77,7 @@ public class Journal : MonoBehaviour
         
     }
 
-    private void OpenJournal()
+    public void OpenJournal()
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState"))
         {
