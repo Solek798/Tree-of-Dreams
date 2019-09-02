@@ -35,8 +35,9 @@ public class SeedFlute : MonoBehaviour, ITool
         _space.seedFluteParticle.Play();
         SeedflutePlayer.clip = SeedfluteSfx;
         SeedflutePlayer.Play();
-
+        _space.Plant.animator.Play("PlantingAnimation");
+        _space.animator.Play("PlantingAnimation");
     }
-    
+
     public float MaxUsingDistance => maxPlantDistance;
 }
