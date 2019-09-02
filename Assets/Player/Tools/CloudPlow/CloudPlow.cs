@@ -13,6 +13,7 @@ public class CloudPlow : MonoBehaviour, ITool
     {
         if (space.IsSoil)
         {
+            Debug.Log("Despawning");
             CloudPlowPlayer.clip = CloudPlowSfx;
             CloudPlowPlayer.Play();
             space.animator.Play("SoilDespawnAnimation");
@@ -25,6 +26,7 @@ public class CloudPlow : MonoBehaviour, ITool
         }
         else
         {
+            Debug.Log("Spawning");
             CloudPlowPlayer.clip = CloudPlowSfx;
             CloudPlowPlayer.Play();
             space.animator.Play("SoilSpawnAnimation");
