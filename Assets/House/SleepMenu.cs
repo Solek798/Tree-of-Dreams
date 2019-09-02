@@ -13,14 +13,20 @@ public class SleepMenu : MonoBehaviour
         get => Convert.ToInt32(todaysEaringsText.text);
         set => value.ToString();
     }
-    
+
+    private void Awake()
+    {
+        TodaysEarings = 0;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        foreach (var quest in questCollector.GetAllQuests())
+        
+        /*foreach (var quest in questCollector.GetAllQuests())
         {
             
-        }
+        }*/
     }
 
     // Update is called once per frame
