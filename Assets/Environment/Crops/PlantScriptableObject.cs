@@ -5,8 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlantObject", menuName = "ScriptableObjects/Plants", order = 1)]
 public class PlantScriptableObject : ScriptableObject
 {
+    public enum CropType
+    {
+        Courage,
+        Curiosity,
+        Happiness,
+        Love,
+        Trust
+    }
     //Plantname
-    public string Name;
+    public CropType Name;
     //The Time the Plant needs to grow
     public List<int> stateReachTime = new List<int>();
     //The Model of the specific State
