@@ -30,7 +30,7 @@ public class SellArea : MonoBehaviour, IDropTarget
         
         Inventory.Currency += stackPrice;
         Journal.EarningsCounter += stackPrice;
-        SleepMenu.TodaysEarings += stackPrice;
+        //SleepMenu.TodaysEarings += stackPrice;
 
         return true;
     }
