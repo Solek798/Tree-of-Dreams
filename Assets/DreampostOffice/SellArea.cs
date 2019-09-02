@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class SellArea : MonoBehaviour, IDropTarget
 {
     public Inventory Inventory { get; set; }
     public Journal Journal { get; set; }
+    public SleepMenu SleepMenu { get; set; }
 
     public bool Handle(GameObject draggable)
     {
@@ -28,6 +30,7 @@ public class SellArea : MonoBehaviour, IDropTarget
         
         Inventory.Currency += stackPrice;
         Journal.EarningsCounter += stackPrice;
+        //SleepMenu.TodaysEarings += stackPrice;
 
         return true;
     }

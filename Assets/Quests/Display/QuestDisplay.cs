@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class QuestDisplay : MonoBehaviour
 {
     
-    [SerializeField] private Image npcIconUI = null;
-    [SerializeField] private GameObject requirementSlotPrefab = null;
-    [SerializeField] private HorizontalLayoutGroup requirementsLayoutGroup = null;
+    [SerializeField] protected Image npcIconUI = null;
+    [SerializeField] protected GameObject requirementSlotPrefab = null;
+    [SerializeField] protected HorizontalLayoutGroup requirementsLayoutGroup = null;
 
-    private Quest _quest = null;
+    protected Quest _quest = null;
     
     
     private static void Parent( GameObject parentOb, GameObject childOb )
@@ -21,7 +21,7 @@ public class QuestDisplay : MonoBehaviour
     }
     
     
-    public void Initialize(Quest quest)
+    public virtual void Initialize(Quest quest)
     {
         _quest = quest;
         npcIconUI.sprite = quest.Data.questNPCImage;

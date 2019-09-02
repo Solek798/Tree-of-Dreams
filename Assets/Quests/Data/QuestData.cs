@@ -11,6 +11,10 @@ public class QuestData : ScriptableObject
 
     [TextArea] public string questDescription;
 
+    [TextArea] public string fullfillText;
+
+    [TextArea] public string missingText;
+
     public Sprite questNPCImage;
 
     public bool isJournal = false;
