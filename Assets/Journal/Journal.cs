@@ -62,7 +62,7 @@ public class Journal : MonoBehaviour
         //var newQuest = Instantiate(questPanel);
         //Parent(layoutGroup, newQuest);
         display.transform.SetParent(layoutGroup.transform);
-        
+        display.transform.localScale = new Vector3(1, 1, 1);
 //        newQuest.GetComponent<JournalQuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
 //
 //        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
@@ -77,7 +77,7 @@ public class Journal : MonoBehaviour
         
     }
 
-    private void OpenJournal()
+    public void OpenJournal()
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState"))
         {

@@ -1,24 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &169874029424488724
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5281207474503537777}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b4417708a627ee4d9799183e3bc6929, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7048623938971609448
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,11 +43,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappinessModel_StageB
       objectReference: {fileID: 0}
-    - target: {fileID: -6919211364233395855, guid: 9a37ec50ec011a64db71a547c3eaf4a2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0086a967a50c6154aac5bb45681042e5, type: 2}
     - target: {fileID: -4216859302048453862, guid: 9a37ec50ec011a64db71a547c3eaf4a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9a37ec50ec011a64db71a547c3eaf4a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9a37ec50ec011a64db71a547c3eaf4a2,
         type: 3}
@@ -122,6 +98,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6919211364233395855, guid: 9a37ec50ec011a64db71a547c3eaf4a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0086a967a50c6154aac5bb45681042e5, type: 2}
     - target: {fileID: -1756026468717997975, guid: 9a37ec50ec011a64db71a547c3eaf4a2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -129,12 +110,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0086a967a50c6154aac5bb45681042e5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a37ec50ec011a64db71a547c3eaf4a2, type: 3}
---- !u!1 &5281207474503537777 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 9a37ec50ec011a64db71a547c3eaf4a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 4209584866052050296}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9156319348367631970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9a37ec50ec011a64db71a547c3eaf4a2,

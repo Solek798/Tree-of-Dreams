@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxThrowDistance: 50
-  BagOfStardustSfx: {fileID: 8300000, guid: 2a3fd617de6e7a249a39b990ad525787, type: 3}
-  BagOfStardustPlayer: {fileID: -8435089861164519424}
+  audioPlayer: {fileID: -8435089861164519424}
+  audioClips:
+  - {fileID: 8300000, guid: c558fec064365d242b6c6baa98d691f2, type: 3}
+  - {fileID: 8300000, guid: a61cdf075f53f14448408ed02731d7cb, type: 3}
+  - {fileID: 8300000, guid: 09b9739b454cc704386b57f1d99ccb45, type: 3}
 --- !u!114 &8239755129308263009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 412309f29c8193042a7893b8e1282166, type: 3}
   identifier: BagOfStardust
+  isTool: 1
 --- !u!82 &-8435089861164519424
 AudioSource:
   m_ObjectHideFlags: 0

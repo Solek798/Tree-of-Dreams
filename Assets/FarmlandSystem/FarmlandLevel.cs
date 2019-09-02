@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Linq;
+using UnityEngine.Experimental.XR;
 
 
 public class FarmlandLevel : MonoBehaviour
@@ -10,12 +11,14 @@ public class FarmlandLevel : MonoBehaviour
     [SerializeField] private Tilemap tilemap = null;
     [SerializeField] private GameObject cellSelector = null;
     [SerializeField] private GameObject ground = null;
+    [SerializeField] private BoundsInt randomCellBounds;
     private Dictionary<Vector3Int, GameObject> _register;
     private Grid _grid;
     
     
     private void Start()
     {
+        
         _register = new Dictionary<Vector3Int, GameObject>();
         _grid = GetComponent<Grid>();
     }
@@ -23,14 +26,19 @@ public class FarmlandLevel : MonoBehaviour
     public FarmlandSpace Interact()
     {
         var cell = _grid.WorldToCell(cellSelector.transform.position);
-
+        
         if (_register.ContainsKey(cell)) 
             return _register[cell].GetComponent<FarmlandSpace>();
+
         
-        
+        return CreateSpace(cell);
+    }
+
+    private FarmlandSpace CreateSpace(Vector3Int position)
+    {
         var space = Instantiate(farmlandSpacePrefab, transform, false);
-        space.transform.position = cellSelector.transform.position;
-        _register.Add(cell, space);
+        space.transform.position = _grid.GetCellCenterWorld(position);
+        _register.Add(position, space);
 
         return space.GetComponent<FarmlandSpace>();
     }
@@ -76,5 +84,23 @@ public class FarmlandLevel : MonoBehaviour
     {
         return _grid.GetCellCenterWorld(_grid.WorldToCell(worldPosition));
     }
-    
+
+    public FarmlandSpace GetRandomSpace(int maxGeneratingAttempts)
+    {
+        for (int i = 0 ; i <= maxGeneratingAttempts ; i++)
+        {
+            var position = new Vector3Int(
+                Random.Range(randomCellBounds.xMin, randomCellBounds.xMax),
+                Random.Range(randomCellBounds.yMin, randomCellBounds.yMax),
+                Random.Range(randomCellBounds.zMin, randomCellBounds.zMax)
+            );
+            
+            if (tilemap.HasTile(position) && !_register.ContainsKey(position))
+            {
+                return CreateSpace(position);
+            }
+        }
+        
+        return null;
+    }
 }

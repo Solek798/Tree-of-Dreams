@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,10 +9,16 @@ public class PlantState : MonoBehaviour
     public PlantScriptableObject plantObject;
     public int currentState = 1;
     private int ageOfState = 0;
+    private int yRotation;
+
+    [SerializeField] public Animator animator;
 
     private void Start()
     {
-        Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.identity, transform);       
+        yRotation = Random.Range(0, 360);
+        Debug.Log(yRotation);
+        Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.Euler(0, yRotation, 0), transform);
+        transform.Rotate(0, yRotation, 0);
     }
 
 
@@ -40,10 +45,9 @@ public class PlantState : MonoBehaviour
                         Destroy(childTransform.gameObject);
                 }
 
-                Instantiate(newPlantModel, transform.position, Quaternion.identity, transform);
+                Instantiate(newPlantModel, transform.position, Quaternion.Euler(0, yRotation ,0), transform);
             }
         }
-
     }
 
     public bool IsReadyToHarvest()
