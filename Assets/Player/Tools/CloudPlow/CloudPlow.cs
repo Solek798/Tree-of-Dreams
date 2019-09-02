@@ -5,8 +5,9 @@ using UnityEngine;
 public class CloudPlow : MonoBehaviour, ITool
 {
     [SerializeField] private float maxPlowDistance = 60.0f;
-    [SerializeField] private AudioClip CloudPlowSfx;
-    [SerializeField] private AudioSource CloudPlowPlayer;
+    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioClip fillAudio;
+    [SerializeField] private AudioClip plowAudio;
 
 
     public IEnumerator Use(FarmlandSpace space)
@@ -14,8 +15,10 @@ public class CloudPlow : MonoBehaviour, ITool
         if (space.IsSoil)
         {
             Debug.Log("Despawning");
-            CloudPlowPlayer.clip = CloudPlowSfx;
-            CloudPlowPlayer.Play();
+
+            audioPlayer.clip = fillAudio;
+            audioPlayer.Play();
+
             space.animator.Play("SoilDespawnAnimation");
 
             yield return new WaitForSeconds(space.animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
@@ -27,8 +30,10 @@ public class CloudPlow : MonoBehaviour, ITool
         else
         {
             Debug.Log("Spawning");
-            CloudPlowPlayer.clip = CloudPlowSfx;
-            CloudPlowPlayer.Play();
+            
+            audioPlayer.clip = plowAudio;
+            audioPlayer.Play();
+
             space.animator.Play("SoilSpawnAnimation");
             yield return space.IsSoil = true;
         }
