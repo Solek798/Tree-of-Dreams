@@ -5,8 +5,8 @@ using UnityEngine;
 public class BagOfStardust : MonoBehaviour, ITool
 {
     [SerializeField] private float maxThrowDistance = 60.0f;
-    [SerializeField] private AudioClip BagOfStardustSfx;
-    [SerializeField] private AudioSource BagOfStardustPlayer;
+    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private List<AudioClip> audioClips;
 
     public IEnumerator Use(FarmlandSpace space)
     {
@@ -16,8 +16,11 @@ public class BagOfStardust : MonoBehaviour, ITool
         { 
             space.Plant.animator.Play("NurturingAnimation");
         }
-        BagOfStardustPlayer.clip = BagOfStardustSfx;
-        BagOfStardustPlayer.Play(); 
+
+        int randInt = Random.Range(0, audioClips.Count - 1);
+        audioPlayer.clip = audioClips[randInt];
+        audioPlayer.Play(); 
+
         yield return new WaitForEndOfFrame();
     }
 
@@ -25,6 +28,5 @@ public class BagOfStardust : MonoBehaviour, ITool
     {
         return space.IsSoil;
     }
-
     public float MaxUsingDistance => maxThrowDistance;
 }

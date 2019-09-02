@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxThrowDistance: 50
-  BagOfStardustSfx: {fileID: 8300000, guid: 2a3fd617de6e7a249a39b990ad525787, type: 3}
-  BagOfStardustPlayer: {fileID: -8435089861164519424}
+  audioPlayer: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &8239755129308263009
 MonoBehaviour:
   m_ObjectHideFlags: 0
