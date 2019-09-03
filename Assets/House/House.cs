@@ -57,7 +57,7 @@ public class House : MonoBehaviour
         Transition.Instance.FadeBlack();
 
         yield return new WaitForSeconds(Transition.Instance.FadeBlackTime);
-        sleepMenu.SetActive(false);
+        //sleepMenu.SetActive(false);
 
         Transition.Instance.FadeNormal();
     }
