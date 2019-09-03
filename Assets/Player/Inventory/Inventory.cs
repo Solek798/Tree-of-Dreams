@@ -13,7 +13,6 @@ public class Inventory : MonoBehaviour
     [SerializeField] private int startCurrency = 0;
 
     [SerializeField] private GameObject[] startingItems;
-    
 
     private List<Slot> _slots = null;
 
