@@ -7,8 +7,12 @@ public class House : MonoBehaviour
     [SerializeField] private LampionFabric lampionFabric = null;
     [SerializeField] private Journal journal = null;
     [SerializeField] private GameObject sleepMenu = null;
+    [SerializeField] private int questFrequency = 3;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
+
+    private int daysSinceLastQuest;
+    
 
 
     private void Update()
@@ -20,8 +24,6 @@ public class House : MonoBehaviour
             
             StartCoroutine(Sleep());
         }
-
-        
     }
 
     private bool ProccessNight()
@@ -34,7 +36,10 @@ public class House : MonoBehaviour
             }
         }
 
-        lampionFabric.CreateAndSend();
+        if (daysSinceLastQuest == questFrequency)
+        {
+            lampionFabric.CreateAndSend();
+        }
 
         journal.Days++;
 
