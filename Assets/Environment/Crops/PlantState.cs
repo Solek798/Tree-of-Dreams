@@ -9,16 +9,66 @@ public class PlantState : MonoBehaviour
     public PlantScriptableObject plantObject;
     public int currentState = 1;
     private int ageOfState = 0;
-    private int yRotation;
+    private int yRotRandomizer;
+    private float yRot;
 
     [SerializeField] public Animator animator;
 
     private void Start()
     {
-        yRotation = Random.Range(0, 360);
-        Debug.Log(yRotation);
-        Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.Euler(0, yRotation, 0), transform);
-        transform.Rotate(0, yRotation, 0);
+        //yRotRandomizer = Random.Range(-15, 15);
+        //float x = Camera.main.transform.position.x;
+        //float z = Camera.main.transform.position.z;
+        //yRot = Mathf.Atan2(z, x) * Mathf.Rad2Deg;
+
+        //if (yRot < 0)
+        //{           
+        //    if (z / x >= -1) // -2
+        //    {
+        //        yRot += 202.5f;// + yRotRandomizer;
+        //    }
+        //    else // -0.5
+        //    {
+        //        yRot += 157.5f;// + yRotRandomizer;
+        //    }
+        //}
+        //else if (yRot <= 0) 
+        //{
+        //    yRot += yRotRandomizer;
+        //    if (z / x <= 1) // 0,5
+        //    {
+        //        yRot += -22.5f + yRotRandomizer;
+        //    }
+        //    else // 2
+        //    {
+        //        yRot += 22.5f + yRotRandomizer;
+        //    }
+        //}
+        //if (x <= 0 && z <= 0)
+        //{
+        //    yRot += ;
+        //}
+        //else if (x >= 0 && z >= 0)
+        //{
+        //   yRot += ;
+        //}
+        //else if (x > 0 && z < 0)
+        //{
+        //    yRot += 180;
+        //}
+        //else if (x < 0 && z > 0)
+        //{
+        //    yRot += 180;  //yRotRandomizer;
+        //}
+
+        //Debug.Log("X position " + x);
+        //Debug.Log("Z position " + z);
+        //Debug.Log(yRot);
+        //Debug.Log(yRotRandomizer);
+        var plantInstance = Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.Euler(0, yRot, 0), transform);
+        //yRot += 180 - yRotRandomizer; 
+        plantInstance.transform.LookAt(Camera.main.transform, Vector3.up);
+
     }
 
 
@@ -45,7 +95,8 @@ public class PlantState : MonoBehaviour
                         Destroy(childTransform.gameObject);
                 }
 
-                Instantiate(newPlantModel, transform.position, Quaternion.Euler(0, yRotation ,0), transform);
+                var plantInstance = Instantiate(newPlantModel, transform.position, Quaternion.Euler(0, yRot, 0), transform);
+                plantInstance.transform.LookAt(Camera.main.transform, Vector3.up);
             }
         }
     }
