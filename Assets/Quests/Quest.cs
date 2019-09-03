@@ -23,6 +23,11 @@ public class Quest : MonoBehaviour
         // TODO(FK): fill with correct content
         foreach (var display in _displays)
         {
+            if (display is ProgressDisplay progressDisplay)
+            {
+                progressDisplay.IsFulfilled = true;
+                continue;
+            }
             Destroy(display.gameObject);
         }
     }

@@ -1827,6 +1827,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732851040}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &736703795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1504512903186070945, guid: 0e18207248c31564fb1d158b50c8d9c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1659361758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cdc3915ce4f56c5a9c85bd47cb6d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &748728798
 GameObject:
   m_ObjectHideFlags: 0
@@ -4766,6 +4778,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93fd7dce1107f6c478ee9903b8233779, type: 3}
+--- !u!114 &931178269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6700056647749635720, guid: 04b02f1718710eb4ab14457826023981,
+    type: 3}
+  m_PrefabInstance: {fileID: 5850660164119376953}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370bafee40ce91cc0bd635bc3408c557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &953829094
 GameObject:
   m_ObjectHideFlags: 0
@@ -10983,7 +11007,11 @@ PrefabInstance:
       propertyPath: journal
       value: 
       objectReference: {fileID: 1172185312}
-      value: 44
+    - target: {fileID: 1504512903186070945, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: sleepMenu
+      value: 
+      objectReference: {fileID: 931178269}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}
 --- !u!1 &1663469889 stripped
@@ -12607,6 +12635,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6700056647749635720, guid: 04b02f1718710eb4ab14457826023981,
+        type: 3}
+      propertyPath: questCollector
+      value: 
+      objectReference: {fileID: 736703795}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b02f1718710eb4ab14457826023981, type: 3}
 --- !u!1001 &7156733779057248156
