@@ -18,19 +18,20 @@ public class Quest : MonoBehaviour
         _displays.Add(newDisplay);
     }
 
-    public void DestroyAllDisplays()
+    public void MarkAsFulfilled()
     {
+        // TODO(FK): fill with correct content
         foreach (var display in _displays)
         {
             Destroy(display.gameObject);
         }
     }
 
-    public void OnSlotSatisfactioned(RequirementSlot slot)
+    public void OnSlotChanged(RequirementSlot slot)
     {
         foreach (var display in _displays)
         {
-            display.SetSlotSatisfactioned(slot);
+            display.UpdateSlot(slot);
         }
     }
 }

@@ -42,14 +42,15 @@ public class QuestDisplay : MonoBehaviour
                 .GetComponent<RequirementSlot>();
 
             newSlot.PlantScriptableObject = requirementGroup.Key;
+            newSlot.Display = this;
             newSlot.Amount = requirementGroup.Count();
             newSlot.Icon = requirementGroup.First().Icon;
         }
     }
 
-    public void OnRequirementSatisfactioned(RequirementSlot slot)
+    public void OnSlotChanged(RequirementSlot slot)
     {
-        _quest.OnSlotSatisfactioned(slot);
+        _quest.OnSlotChanged(slot);
         CheckForFullfillment();
     }
 
@@ -68,17 +69,25 @@ public class QuestDisplay : MonoBehaviour
             _quest.Data.rewardDreamEssence, 
             SendMessageOptions.RequireReceiver);
         
-        _quest.DestroyAllDisplays();
+        _quest.MarkAsFulfilled();
     }
 
 
-    public void SetSlotSatisfactioned(RequirementSlot slot)
+    public void UpdateSlot(RequirementSlot slot)
     {
-        foreach (var requirementSlotlot in requirementsLayoutGroup.GetComponentsInChildren<RequirementSlot>())
+        foreach (var requirementSlot in requirementsLayoutGroup.GetComponentsInChildren<RequirementSlot>())
         {
-            if (requirementSlotlot.Icon == slot.Icon)
+            if (requirementSlot.Icon == slot.Icon)
             {
-                requirementSlotlot.MarkAsSatisfactioned();
+                Debug.Log("Amount: "+requirementSlot.Amount);
+                if (slot.Amount > 0)
+                {
+                    Debug.Log("Before: "+requirementSlot.Amount);
+                    requirementSlot.Amount = slot.Amount;
+                    Debug.Log("Before: "+requirementSlot.Amount);
+                }
+                else
+                    requirementSlot.MarkAsSatisfactioned();
             }
         }
     }
