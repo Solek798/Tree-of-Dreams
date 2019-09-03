@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class House : MonoBehaviour
@@ -12,8 +13,12 @@ public class House : MonoBehaviour
     public float maxDistanceToSleep = 10f;
 
     private int daysSinceLastQuest;
-    
 
+    private void Awake()
+    {
+        lampionFabric.CreateAndSend();
+        Debug.Log("CreateLampion");
+    }
 
     private void Update()
     {
@@ -39,6 +44,11 @@ public class House : MonoBehaviour
         if (daysSinceLastQuest == questFrequency)
         {
             lampionFabric.CreateAndSend();
+            daysSinceLastQuest = 0;
+        }
+        else
+        {
+            daysSinceLastQuest++;
         }
 
         journal.Days++;
