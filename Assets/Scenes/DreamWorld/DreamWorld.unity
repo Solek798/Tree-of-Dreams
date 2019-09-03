@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4849,6 +4849,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &966428844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4275965177881370917, guid: 43ff7f3244d85bc389df4e8a81e85f30,
+    type: 3}
+  m_PrefabInstance: {fileID: 400662052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &986626938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3747916400848082653, guid: dc8b0333016afae4ba90e98cec834732,
+    type: 3}
+  m_PrefabInstance: {fileID: 307306104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &989865878
 GameObject:
   m_ObjectHideFlags: 0
@@ -9370,7 +9382,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ambientVFX
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 986626938}
+    - target: {fileID: 762103139209282569, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: ambientVFXGlow
+      value: 
+      objectReference: {fileID: 986626938}
+    - target: {fileID: 762103139209282569, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: ambientVFXSakura
+      value: 
+      objectReference: {fileID: 966428844}
     - target: {fileID: 190478949068963579, guid: 2a4e1bed4e607034f888549ad741e49f,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -10502,7 +10524,7 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50107.812
+      value: 191195.94
       objectReference: {fileID: 0}
     - target: {fileID: 6200394970485799287, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
@@ -11002,6 +11024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.5613208
+      objectReference: {fileID: 0}
+    - target: {fileID: 133358348824471528, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}

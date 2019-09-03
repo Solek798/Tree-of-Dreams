@@ -8,7 +8,8 @@ using UnityEngine.Audio;
 public class Options : MonoBehaviour
 {
     [SerializeField] private AudioMixer mixer = null;
-    [SerializeField] private GameObject ambientVFX = null;
+    [SerializeField] private GameObject ambientVFXSakura = null;
+    [SerializeField] private GameObject ambientVFXGlow = null;
     
     
     // Start is called before the first frame update
@@ -19,7 +20,8 @@ public class Options : MonoBehaviour
 
     public void ToggleAmbiantVFX(bool value)
     {
-        ambientVFX.SetActive(value);
+        ambientVFXGlow.SetActive(value);
+        ambientVFXSakura.SetActive(value);
     }
 
     public void SetSFX(Single value)
