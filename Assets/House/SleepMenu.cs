@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SleepMenu : MonoBehaviour
 {
-    [SerializeField] private QuestCollector questCollector = null;
     [SerializeField] private Transform questLayoutGroup = null;
     [SerializeField] private Text todaysEaringsText = null;
 
@@ -19,19 +19,36 @@ public class SleepMenu : MonoBehaviour
         TodaysEarings = 0;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void AddDisplay(ProgressDisplay display)
     {
-        
-        /*foreach (var quest in questCollector.GetAllQuests())
-        {
-            
-        }*/
+        display.transform.SetParent(questLayoutGroup.transform);
+        display.transform.localScale = Vector3.one;
+    }
+    
+    
+
+    public void ManageDisplays()
+    {
+        StartCoroutine(WaitUntilTransitionFinished());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator WaitUntilTransitionFinished()
     {
-        
+        yield return new WaitForSeconds(Transition.Instance.FadeBlackTime);
+        SortOutFulfilledDisplays();
+    }
+
+    private void SortOutFulfilledDisplays()
+    {
+        Debug.Log("Start sorting out");
+        foreach (var display in questLayoutGroup.GetComponentsInChildren<ProgressDisplay>())
+        {
+            if (display.IsFulfilled)
+            {
+                Destroy(display.gameObject);
+            }
+        }
+
+        gameObject.SetActive(false);
     }
 }
