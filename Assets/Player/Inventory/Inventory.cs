@@ -12,10 +12,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private int maxCurrency = 0;
     [SerializeField] private int startCurrency = 0;
 
-    [SerializeField] private GameObject cloudPlowPrefab = null;
-    [SerializeField] private GameObject stardustBagPrefab = null;
-    [SerializeField] private GameObject seedFlutePrefab = null;
-    [SerializeField] private GameObject dreamSicklePrefab = null;
+    [SerializeField] private GameObject[] startingItems;
     
 
     private List<Slot> _slots = null;
@@ -43,10 +40,10 @@ public class Inventory : MonoBehaviour
                 .OfType<Slot>()
                 .ToList();
 
-        PickUp(Instantiate(cloudPlowPrefab));
-        PickUp(Instantiate(stardustBagPrefab));
-        PickUp(Instantiate(seedFlutePrefab));
-        PickUp(Instantiate(dreamSicklePrefab));
+        foreach (var item in startingItems)
+        {
+            PickUp(Instantiate(item));
+        }
 
         SetSelectedSlot(0);
     }
