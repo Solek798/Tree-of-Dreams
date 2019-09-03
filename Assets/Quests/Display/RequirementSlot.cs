@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +10,9 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
     [SerializeField] private Text amountText = null;
     [SerializeField] private Color iconColor = Color.white;
     [SerializeField] private Color fullFilledColor = Color.clear;
+    
     private PlantScriptableObject _plantScriptableObject = null;
+    private QuestDisplay _display;
 
     public Sprite Icon
     {
@@ -25,16 +26,26 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
     
     public int Amount
     {
-        private get
+        get
         {
             return amountText.text == string.Empty ? 0 : Convert.ToInt32(amountText.text); 
         }
-        set => amountText.text = value.ToString();
+        set
+        {
+            amountText.text = value.ToString();
+
+            if (value == 0) MarkAsSatisfactioned();
+        }
     }
     
     public PlantScriptableObject PlantScriptableObject
     {
         set => _plantScriptableObject = value;
+    }
+
+    public QuestDisplay Display
+    {
+        set => _display = value;
     }
 
     public bool Handle(GameObject draggable)
@@ -52,9 +63,9 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
                 Destroy(stack.Pop().gameObject);
                 
             }
+            
             Amount = 0;
-
-            CheckForSatisfaction();
+            _display.OnSlotChanged(this);
 
             return false;
         }
@@ -66,19 +77,9 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
             }
 
             Amount -= stack.Count;
-
-            CheckForSatisfaction();
+            _display.OnSlotChanged(this);
 
             return true;
-        }
-    }
-
-    private void CheckForSatisfaction()
-    {
-        if (Amount == 0)
-        {
-            MarkAsSatisfactioned();
-            SendMessageUpwards("OnRequirementSatisfactioned", this);
         }
     }
 
