@@ -1,95 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &457648380174616251
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5437854037946905242}
-  - component: {fileID: 651053338569075851}
-  - component: {fileID: 3252654842509073412}
-  m_Layer: 5
-  m_Name: TutorialText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5437854037946905242
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457648380174616251}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3916877917170960296}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.7, y: 16}
-  m_SizeDelta: {x: 975.3, y: 487.4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &651053338569075851
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457648380174616251}
-  m_CullTransparentMesh: 0
---- !u!114 &3252654842509073412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457648380174616251}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 35bfbc888f62c1244a340016d719486d, type: 3}
-    m_FontSize: 31
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 65
-    m_Alignment: 0
-    m_AlignByGeometry: 1
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "<color=#ffff00ff>MOVE</color> with <b>WASD\r</b>\n\nSelect your <color=#ffff00ff>
-    FARMING TOOLS </color> with keyboard buttons <b>1 - 4 </b> or by clicking them
-    \r\n\nTo <color=#ffff00ff> INTERACT </color> with the ground and plants use the
-    <b> left mouse button\r </b>\nWhen you are close to a <color=#ffff00ff> LAMPION
-    </color> you can collect a dream letter by pressing <b>E</b> \rWhen you are close
-    to the <color=#ffff00ff> DREAM POST OFFICE </color> press <b>E</b> to open it.
-    \r\nThere you can <color=#ffff00ff> SELL </color> dream plants or <color=#ffff00ff>
-    FULLFILL DREAMLETTERS </color>, via Drag\u2019n\u2019Drop to the corresponding
-    slot or letter\r\nBy pressing <b>E</b> when you are close, you can <color=#ffff00ff>
-    VISIT YOUR HOUSE </color>. Here you can advance to the <color=#ffff00ff> NEXT
-    DAY </color>.\r\nFor a detailed tutorial open the <color=#ffff00ff> JOURNAL</color>
-    \ by clicking\n"
 --- !u!1 &715203729221968763
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,12 +31,12 @@ RectTransform:
   m_Children:
   - {fileID: 321709308702126446}
   m_Father: {fileID: 3916877917170960296}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.70071, y: 21}
-  m_SizeDelta: {x: 975.3, y: 500.6}
+  m_AnchoredPosition: {x: 0.70071, y: 4.8}
+  m_SizeDelta: {x: 975.3, y: 509.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4379633500328197422
 CanvasRenderer:
@@ -156,16 +66,16 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "<color=#ffff00ff>MOVE</color> with <color=#ffff00ff>WASD\r</color>\n\nSelect
+  m_text: "<color=#ffff00ff>MOVE</color> with <color=#ffff00ff>WASD\r</color>.\n\nSelect
     your <color=#ffff00ff> FARMING TOOLS </color> with keyboard buttons <color=#ffff00ff>1
-    - 4</color> or by clicking them \r\n\nTo <color=#ffff00ff> INTERACT </color> with
-    the ground and plants use the <color=#ffff00ff> left mouse button\r </color>\n\nWhen
+    - 4</color> or by clicking them.\n\nTo <color=#ffff00ff> INTERACT </color>with
+    the ground and plants use the <color=#ffff00ff> left mouse button\r </color>.\n\nWhen
     you are close to a <color=#ffff00ff> LAMPION </color> you can collect a dream
-    letter by pressing <color=#ffff00ff>E</color> \r\n\nWhen you are close to the
+    letter by pressing <color=#ffff00ff>E</color>. \r\n\nWhen you are close to the
     <color=#ffff00ff> DREAM POST OFFICE </color> press <color=#ffff00ff>E</color>
     to open it. \r\nThere you can <color=#ffff00ff> SELL </color> dream plants or
     <color=#ffff00ff> FULLFILL DREAMLETTERS </color>, via DragNDrop to the corresponding
-    slot or letter\r\n\nBy pressing <color=#ffff00ff>E</color> when you are close,
+    slot or letter.\r\n\nBy pressing <color=#ffff00ff>E</color> when you are close,
     you can <color=#ffff00ff> VISIT YOUR HOUSE </color>. \nHere you can advance to
     the <color=#ffff00ff> NEXT DAY </color>.\r\n\nFor a detailed tutorial open the
     <color=#ffff00ff> JOURNAL</color>  by clicking\n"
@@ -196,7 +106,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30.6
+  m_fontSize: 30.7
   m_fontSizeBase: 29.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -207,7 +117,7 @@ MonoBehaviour:
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 2.13
+  m_lineSpacing: 3.32
   m_lineSpacingMax: 0
   m_paragraphSpacing: -20.7
   m_charWidthMaxAdj: 0
@@ -237,9 +147,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0.000030517578}
   m_textInfo:
     textComponent: {fileID: 4274580416745519536}
-    characterCount: 591
+    characterCount: 593
     spriteCount: 0
-    spaceCount: 135
+    spaceCount: 133
     wordCount: 105
     linkCount: 0
     lineCount: 16
@@ -840,7 +750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3597122745768336365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1189,7 +1099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.73333335, g: 0.36078432, b: 0.5058824, a: 0.29411766}
+  m_Color: {r: 0.73333335, g: 0.36078432, b: 0.5058824, a: 0.5568628}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1713,7 +1623,6 @@ RectTransform:
   - {fileID: 3597122745768336365}
   - {fileID: 6428822504333006081}
   - {fileID: 1128715882002858069}
-  - {fileID: 5437854037946905242}
   - {fileID: 7305107706737969630}
   m_Father: {fileID: 1144859189909448263}
   m_RootOrder: 3
