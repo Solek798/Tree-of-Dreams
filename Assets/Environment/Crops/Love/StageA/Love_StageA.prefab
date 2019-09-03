@@ -43,7 +43,7 @@ Animator:
   m_GameObject: {fileID: 7681992163476250339}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08aaab0e988900d44912fd26d77e1666, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -134,11 +134,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7534878154068350559}
     m_Modifications:
-    - target: {fileID: 7140304408766522050, guid: 58cc694b8fe27b1ba9e29e9ea926a928,
-        type: 3}
-      propertyPath: m_Name
-      value: LoveSeedVFX
-      objectReference: {fileID: 0}
     - target: {fileID: 7140304408766521919, guid: 58cc694b8fe27b1ba9e29e9ea926a928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -193,6 +188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140304408766522050, guid: 58cc694b8fe27b1ba9e29e9ea926a928,
+        type: 3}
+      propertyPath: m_Name
+      value: LoveSeedVFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58cc694b8fe27b1ba9e29e9ea926a928, type: 3}
