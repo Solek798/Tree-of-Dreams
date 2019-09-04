@@ -10513,7 +10513,7 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 421.99988
+      value: 4673.2
       objectReference: {fileID: 0}
     - target: {fileID: 6200394970485799287, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
@@ -10999,6 +10999,11 @@ PrefabInstance:
       propertyPath: sleepMenu
       value: 
       objectReference: {fileID: 931178269}
+    - target: {fileID: 7904133711529796429, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7414441532023008022, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -11047,7 +11052,7 @@ PrefabInstance:
     - target: {fileID: 3458134733114103197, guid: 5347234aadc00fedc8de30857131ff85,
         type: 3}
       propertyPath: m_Name
-      value: LampionFabric
+      value: LampionFactory
       objectReference: {fileID: 0}
     - target: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
         type: 3}
@@ -12182,6 +12187,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6700056647749635720, guid: 04b02f1718710eb4ab14457826023981,
+        type: 3}
+      propertyPath: dreamPostOffice
+      value: 
+      objectReference: {fileID: 1632083539}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: farmland
@@ -12202,16 +12212,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 474779525}
+    - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
+        type: 3}
+      propertyPath: lampionFactory
+      value: 
+      objectReference: {fileID: 3458134733114103196, guid: 5347234aadc00fedc8de30857131ff85,
+        type: 3}
     - target: {fileID: 5850660163728790363, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ae562765111ce7b40a26f22103281401, type: 2}
-    - target: {fileID: 6700056647749635720, guid: 04b02f1718710eb4ab14457826023981,
-        type: 3}
-      propertyPath: dreamPostOffice
-      value: 
-      objectReference: {fileID: 1632083539}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04b02f1718710eb4ab14457826023981, type: 3}
 --- !u!1001 &7156733779057248156
