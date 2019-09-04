@@ -8,15 +8,15 @@ public class Stack : MonoBehaviour
 {
     [SerializeField] private int maxStackCount = 9999;
     [SerializeField] private bool isClosed = false;
+    [SerializeField] private Text count = null;
+    [SerializeField] private Image countBG = null;
+    [SerializeField] private Image icon;
     
     private Stack<InventoryItem> _items;
-    private Text _count;
-    private Image _icon;
-    
 
     public Slot Slot { get; set; }
     public bool IsClosed => isClosed;
-    public int Count => _count.text == string.Empty ? 1 : Convert.ToInt32(_count.text);
+    public int Count => count.text == string.Empty ? 1 : Convert.ToInt32(count.text);
     
     // Make sure Selector is visible
     private void OnDrop()
@@ -28,8 +28,6 @@ public class Stack : MonoBehaviour
     {
         _items = new Stack<InventoryItem>();
         Slot = GetComponentInParent<Slot>();
-        _count = GetComponentInChildren<Text>();
-        _icon = GetComponentInChildren<Image>();
     }
 
     public InventoryItem Peek()
@@ -80,11 +78,13 @@ public class Stack : MonoBehaviour
             return;
         }
         
-        _count.text = _items.Count > 1 ? _items.Count.ToString() : "";
-        if (_icon.sprite == null)
+        count.text = _items.Count.ToString();
+        countBG.gameObject.SetActive(_items.Count > 1);
+        
+        if (icon.sprite == null)
         {
-            _icon.sprite = _items.Peek().Icon;
-            _icon.color = Color.white;
+            icon.sprite = _items.Peek().Icon;
+            icon.color = Color.white;
         }
     }
 }

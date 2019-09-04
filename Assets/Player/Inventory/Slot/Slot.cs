@@ -29,7 +29,7 @@ public class Slot : MonoBehaviour, IDropTarget
         if (stack)
         {
             stack.transform.SetParent(otherStack.Slot.stackParent);
-            stack.transform.SetAsFirstSibling();
+            stack.transform.SetAsLastSibling();
             stack.Slot = otherStack.Slot;
             stack.transform.localPosition = Vector2.zero;
         }
@@ -37,7 +37,7 @@ public class Slot : MonoBehaviour, IDropTarget
         if (otherStack)
         {
             otherStack.transform.SetParent(this.stackParent);
-            otherStack.transform.SetAsFirstSibling();
+            otherStack.transform.SetAsLastSibling();
             otherStack.Slot = this;
             otherStack.transform.localPosition = Vector2.zero;
         }
@@ -48,7 +48,7 @@ public class Slot : MonoBehaviour, IDropTarget
     private Stack CreateAndAttacheStack()
     {
         var newStack = Instantiate(stackPrefab, stackParent);
-        newStack.transform.SetAsFirstSibling();
+        newStack.transform.SetAsLastSibling();
         
         return newStack.GetComponent<Stack>();
     }

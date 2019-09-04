@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 5244868532317872877}
   - component: {fileID: 8885908190521995100}
   m_Layer: 2
-  m_Name: Image
+  m_Name: CountBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 409671313484918672}
   m_Father: {fileID: 5496371090681408516}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,7 +181,6 @@ RectTransform:
   m_Children:
   - {fileID: 1752558216391840894}
   - {fileID: 150714670326958703}
-  - {fileID: 409671313484918672}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -203,6 +203,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStackCount: 9999
   isClosed: 0
+  count: {fileID: 9136248284711745747}
+  countBG: {fileID: 8885908190521995100}
+  icon: {fileID: 1752558216391840895}
 --- !u!222 &2334804002219902555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -267,12 +270,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5496371090681408516}
-  m_RootOrder: 2
+  m_Father: {fileID: 150714670326958703}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8, y: 0.8}
   m_AnchorMax: {x: 0.8, y: 0.8}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -8, y: -8.5}
   m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3841128330917742431
