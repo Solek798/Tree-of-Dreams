@@ -5,7 +5,7 @@ using UnityEngine;
 public class House : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
-    //[SerializeField] private LampionFactory lampionFactory = null;
+    [SerializeField] private LampionFactory lampionFactory = null;
     [SerializeField] private Journal journal = null;
     [SerializeField] private GameObject sleepMenu = null;
     public GameObject player;
@@ -35,10 +35,10 @@ public class House : MonoBehaviour
             }
         }
 
-        //Debug.Log("Dat Factory: " +lampionFactory);
-        //Debug.Log("House Call farmland: " + lampionFactory.farmland);
+        Debug.Log("Dat Factory: " +lampionFactory);
+        Debug.Log("House Call farmland: " + lampionFactory.farmland);
 
-        //lampionFactory.CreateAndSend();
+        lampionFactory.CreateAndSend();
 
         journal.Days++;
 
