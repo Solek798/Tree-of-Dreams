@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class TutorialButton : MonoBehaviour
 {
@@ -12,6 +11,8 @@ public class TutorialButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tutorialName = null;
     [SerializeField] private TextMeshProUGUI tutorialText = null;
     [SerializeField] private Image tutorialImage = null;
+    [SerializeField] private VideoClip VideoClip = null;
+    [SerializeField] private VideoPlayer VideoPlayer = null;
 
 
     public void OnButtonClick()
@@ -19,5 +20,7 @@ public class TutorialButton : MonoBehaviour
         tutorialName.text = data.tutorialName;
         tutorialText.text = data.tutorialText;
         tutorialImage = data.tutorialImage;
+        VideoPlayer.clip = VideoClip;
+        VideoPlayer.Play();
     }
 }
