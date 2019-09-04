@@ -54,6 +54,7 @@ public class Lampion : MonoBehaviour
             player.GetComponentInChildren<QuestCollector>()?.AddNewQuest(newQuest);
         }
         
+        
     }
 
     private void Update()
