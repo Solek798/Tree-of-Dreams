@@ -4645,26 +4645,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outline
       objectReference: {fileID: 0}
-    - target: {fileID: -6217647891160246863, guid: 93fd7dce1107f6c478ee9903b8233779,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
-    - target: {fileID: -6217647891160246863, guid: 93fd7dce1107f6c478ee9903b8233779,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
-    - target: {fileID: -4618672274386851278, guid: 93fd7dce1107f6c478ee9903b8233779,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
-    - target: {fileID: -4618672274386851278, guid: 93fd7dce1107f6c478ee9903b8233779,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
     - target: {fileID: -4216859302048453862, guid: 93fd7dce1107f6c478ee9903b8233779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4735,6 +4715,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -6217647891160246863, guid: 93fd7dce1107f6c478ee9903b8233779,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
+    - target: {fileID: -6217647891160246863, guid: 93fd7dce1107f6c478ee9903b8233779,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
+    - target: {fileID: -4618672274386851278, guid: 93fd7dce1107f6c478ee9903b8233779,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
+    - target: {fileID: -4618672274386851278, guid: 93fd7dce1107f6c478ee9903b8233779,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c591f2b5d7c49284a8321910f14878ba, type: 2}
     - target: {fileID: 418856121950635078, guid: 93fd7dce1107f6c478ee9903b8233779,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -8175,7 +8175,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -8272,7 +8272,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -10721,7 +10721,7 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3344.6997
+      value: 2813.2998
       objectReference: {fileID: 0}
     - target: {fileID: 6200394970485799287, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
@@ -11207,16 +11207,16 @@ PrefabInstance:
       propertyPath: sleepMenu
       value: 
       objectReference: {fileID: 931178269}
-    - target: {fileID: 7904133711529796429, guid: 0e18207248c31564fb1d158b50c8d9c7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7414441532023008022, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1172185312}
+    - target: {fileID: 7904133711529796429, guid: 0e18207248c31564fb1d158b50c8d9c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e18207248c31564fb1d158b50c8d9c7, type: 3}
 --- !u!1 &1663469889 stripped
@@ -12520,9 +12520,9 @@ PrefabInstance:
       objectReference: {fileID: 230269633}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
-      propertyPath: lampionFactory
+      propertyPath: lampionFabric
       value: 
-      objectReference: {fileID: 424899783}
+      objectReference: {fileID: 0}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: journal
@@ -12535,14 +12535,14 @@ PrefabInstance:
       objectReference: {fileID: 474779525}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
-      propertyPath: goToSleepSound
+      propertyPath: lampionFactory
       value: 
-      objectReference: {fileID: 8300000, guid: 08a8765ef32e0444ab9e8c1e0e5ca228, type: 3}
+      objectReference: {fileID: 424899783}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
-      propertyPath: wakeUpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 88364a9f1a06a2840a9d3c61097f3521, type: 3}
+      propertyPath: questFrequency
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5850660163728790363, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: m_Controller
