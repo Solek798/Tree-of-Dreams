@@ -11,7 +11,6 @@ public class Clicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(IsMouseOverButton());
         if (Input.GetMouseButtonUp(0) && IsMouseOverButton())
         {    
             audioPlayer.Play();
@@ -26,13 +25,11 @@ public class Clicker : MonoBehaviour
         List<RaycastResult> raycastResults = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerEventData, raycastResults);
         
-        Debug.Log(raycastResults.Count);
-        
         for (int i = 0; i < raycastResults.Count; i++)
         {
-            if (raycastResults[i].gameObject.GetComponent<Button>() != null)
+            if (raycastResults[i].gameObject.GetComponent<Button>() != null ||
+                raycastResults[i].gameObject.GetComponent<Toggle>() != null)
             {
-                Debug.Log("ein button");
                 return true;
             }
         }
