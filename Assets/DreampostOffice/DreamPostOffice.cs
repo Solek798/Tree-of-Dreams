@@ -86,7 +86,7 @@ public class DreamPostOffice : MonoBehaviour
         UIStatus.Instance.DialogOpened = false;
     }
 
-    public void OnQuestFillfilled(int earnedCash)
+    public void OnDayFinished(int earnedCash)
     {
         inventory.Currency += earnedCash;
         journal.EarningsCounter += 
