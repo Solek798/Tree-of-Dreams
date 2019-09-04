@@ -11,6 +11,8 @@ public class QuestDisplay : MonoBehaviour
     [SerializeField] protected HorizontalLayoutGroup requirementsLayoutGroup = null;
 
     protected Quest _quest = null;
+
+    public Quest Quest => _quest;
     
     
     private static void Parent( GameObject parentOb, GameObject childOb )
@@ -65,10 +67,6 @@ public class QuestDisplay : MonoBehaviour
 
     public void OnButtonPressed()
     {
-        SendMessageUpwards("OnQuestFillfilled", 
-            _quest.Data.rewardDreamEssence, 
-            SendMessageOptions.RequireReceiver);
-        
         _quest.MarkAsFulfilled();
     }
 
@@ -79,12 +77,9 @@ public class QuestDisplay : MonoBehaviour
         {
             if (requirementSlot.Icon == slot.Icon)
             {
-                Debug.Log("Amount: "+requirementSlot.Amount);
                 if (slot.Amount > 0)
                 {
-                    Debug.Log("Before: "+requirementSlot.Amount);
                     requirementSlot.Amount = slot.Amount;
-                    Debug.Log("Before: "+requirementSlot.Amount);
                 }
                 else
                     requirementSlot.MarkAsSatisfactioned();

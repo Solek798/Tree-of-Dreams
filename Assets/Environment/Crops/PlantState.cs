@@ -9,16 +9,21 @@ public class PlantState : MonoBehaviour
     public PlantScriptableObject plantObject;
     public int currentState = 1;
     private int ageOfState = 0;
-    private int yRotation;
+    private int yRotRandomizer;
+    private float yRot;
 
     [SerializeField] public Animator animator;
 
     private void Start()
     {
-        yRotation = Random.Range(0, 360);
-        Debug.Log(yRotation);
-        Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.Euler(0, yRotation, 0), transform);
-        transform.Rotate(0, yRotation, 0);
+        yRotRandomizer = Random.Range(-30, 30);
+        var plantInstance = Instantiate(plantObject.stateModel[currentState], transform.position, Quaternion.Euler(0, yRot, 0), transform);
+        plantInstance.transform.LookAt(Camera.main.transform, Vector3.up);
+        var rotation = plantInstance.transform.rotation.eulerAngles;
+        yRot = rotation.y + yRotRandomizer;
+        Debug.Log(yRot);
+        Debug.Log(yRotRandomizer);
+
     }
 
 
@@ -45,7 +50,7 @@ public class PlantState : MonoBehaviour
                         Destroy(childTransform.gameObject);
                 }
 
-                Instantiate(newPlantModel, transform.position, Quaternion.Euler(0, yRotation ,0), transform);
+                Instantiate(newPlantModel, transform.position, Quaternion.Euler(0, yRot, 0), transform);
             }
         }
     }
