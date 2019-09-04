@@ -352,12 +352,17 @@ PrefabInstance:
     - target: {fileID: 3612797161902533354, guid: adedfb3da8b49683aa2bde5aa6c4b936,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 44.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
         type: 3}
       propertyPath: startingItems.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+        type: 3}
+      propertyPath: startCurrency
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
         type: 3}
@@ -383,14 +388,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8277282740219325842, guid: 5607fc6aed386f751bd224c0eae584a6,
         type: 3}
+    - target: {fileID: 7414441531122899015, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenJournal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414441531122899015, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adedfb3da8b49683aa2bde5aa6c4b936, type: 3}
---- !u!224 &7904133711529796429 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7904133711962427420, guid: adedfb3da8b49683aa2bde5aa6c4b936,
-    type: 3}
-  m_PrefabInstance: {fileID: 978957137}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3678869655743640439 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3678869655915167782, guid: adedfb3da8b49683aa2bde5aa6c4b936,
@@ -403,6 +412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff4ec79be5fae35a9383c46628970e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &7904133711529796429 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7904133711962427420, guid: adedfb3da8b49683aa2bde5aa6c4b936,
+    type: 3}
+  m_PrefabInstance: {fileID: 978957137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1369520589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -659,11 +674,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2483433778295244367}
     m_Modifications:
-    - target: {fileID: 5631520945979265069, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
-        type: 3}
-      propertyPath: m_Name
-      value: FairyTrailParticle
-      objectReference: {fileID: 0}
     - target: {fileID: 5631520945979265074, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -718,6 +728,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631520945979265069, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
+        type: 3}
+      propertyPath: m_Name
+      value: FairyTrailParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631520945979265072, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.9962695
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631520945979265072, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.5613208
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631520945979265072, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e5c23171ecef7649ad05539e3ce2f0b, type: 3}
@@ -805,6 +835,12 @@ PrefabInstance:
       propertyPath: fullfillableQuestDisplayPrefab
       value: 
       objectReference: {fileID: 2867283532235069155, guid: 3585e3e5e1a712d2d9ca5acafb3c54e9,
+        type: 3}
+    - target: {fileID: 8761758662607261853, guid: 2a24f1146343171569951f59034dad3b,
+        type: 3}
+      propertyPath: progressDisplayPrefab
+      value: 
+      objectReference: {fileID: 6663245851069378787, guid: 9e857d52a801c8aac8bffeb1242c716c,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a24f1146343171569951f59034dad3b, type: 3}

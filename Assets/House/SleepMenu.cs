@@ -1,37 +1,68 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SleepMenu : MonoBehaviour
 {
-    [SerializeField] private QuestCollector questCollector = null;
     [SerializeField] private Transform questLayoutGroup = null;
     [SerializeField] private Text todaysEaringsText = null;
+    [SerializeField] private DreamPostOffice dreamPostOffice = null;
 
     public int TodaysEarings
     {
         get => Convert.ToInt32(todaysEaringsText.text);
-        set => value.ToString();
+        set => todaysEaringsText.text = value.ToString();
     }
 
     private void Awake()
     {
         TodaysEarings = 0;
     }
-
-    // Start is called before the first frame update
-    void Start()
+    
+    private void OnEnable()
     {
-        
-        /*foreach (var quest in questCollector.GetAllQuests())
+        Debug.Log("Enabled");
+        foreach (var display in questLayoutGroup.GetComponentsInChildren<ProgressDisplay>())
         {
-            
-        }*/
+            Debug.Log(display);
+            if (display.IsFulfilled)
+            {
+                Debug.Log("Is fulfilled");
+                TodaysEarings += display.Quest.Data.rewardDreamEssence;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddDisplay(ProgressDisplay display)
     {
-        
+        display.transform.SetParent(questLayoutGroup.transform);
+        display.transform.localScale = Vector3.one;
+    }
+    
+    public void ManageDisplays()
+    {
+        StartCoroutine(WaitUntilTransitionFinished());
+    }
+
+    private IEnumerator WaitUntilTransitionFinished()
+    {
+        yield return new WaitForSeconds(Transition.Instance.FadeBlackTime);
+        SortOutFulfilledDisplays();
+    }
+
+    private void SortOutFulfilledDisplays()
+    {
+        foreach (var display in questLayoutGroup.GetComponentsInChildren<ProgressDisplay>())
+        {
+            if (display.IsFulfilled)
+            {
+                Destroy(display.gameObject);
+            }
+        }
+
+        dreamPostOffice.OnDayFinished(TodaysEarings);
+        TodaysEarings = 0;
+        gameObject.SetActive(false);
     }
 }
