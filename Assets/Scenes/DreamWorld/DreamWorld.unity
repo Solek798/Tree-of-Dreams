@@ -8175,7 +8175,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -8272,7 +8272,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -10721,7 +10721,7 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 422
+      value: 3344.6997
       objectReference: {fileID: 0}
     - target: {fileID: 6200394970485799287, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
@@ -12229,61 +12229,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LampionFactory
       objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 108.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1790826455086788392, guid: dc0c8fcedb039106aa8fe47a820d6e07,
         type: 3}
       propertyPath: questData.Array.size
@@ -12439,6 +12384,61 @@ PrefabInstance:
       propertyPath: farmland
       value: 
       objectReference: {fileID: 230269633}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 108.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052972291027067801, guid: dc0c8fcedb039106aa8fe47a820d6e07,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc0c8fcedb039106aa8fe47a820d6e07, type: 3}
 --- !u!1001 &5850660164119376953
@@ -12520,9 +12520,9 @@ PrefabInstance:
       objectReference: {fileID: 230269633}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
-      propertyPath: lampionFabric
+      propertyPath: lampionFactory
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 424899783}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: journal
@@ -12535,9 +12535,14 @@ PrefabInstance:
       objectReference: {fileID: 474779525}
     - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
-      propertyPath: lampionFactory
+      propertyPath: goToSleepSound
       value: 
-      objectReference: {fileID: 424899783}
+      objectReference: {fileID: 8300000, guid: 08a8765ef32e0444ab9e8c1e0e5ca228, type: 3}
+    - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
+        type: 3}
+      propertyPath: wakeUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 88364a9f1a06a2840a9d3c61097f3521, type: 3}
     - target: {fileID: 5850660163728790363, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: m_Controller
