@@ -1,30 +1,34 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using Random = UnityEngine.Random;
 
 public class LampionFactory : MonoBehaviour
 {
     [SerializeField] private GameObject lampionPrefab = null;
     [SerializeField] private GameObject player = null;
-    [SerializeField] private Farmland farmland;
+    public Farmland farmland;
 
     [SerializeField] private BoundsInt targetBounds;
     [SerializeField] private float spawnRadius = 30;
     [SerializeField] private int maxGeneratingAttempts = 10;
-    [SerializeField] private List<QuestData> questData;
+    public List<QuestData> questData;
 
+
+    private void Start()
+    {
+        Debug.Log(farmland);
+    }
     public void CreateAndSend()
     {
         if (questData.Count <= 0) return;
-        
+
         // Select random FarmlandSpace
+        Debug.Log("dAT fARMLAND: " + farmland);
+        //farmland = FindObjectOfType<Farmland>();
         var levels = farmland.GetAllLevels();
         var targetLevel = levels[Random.Range(0, levels.Length - 1)];
         var targetSpace = targetLevel.GetRandomSpace(maxGeneratingAttempts);
-
+        Debug.Log("Dat Space: " + targetSpace);
         if (targetSpace == null) return;
 
         var newLampion = Create();
@@ -46,6 +50,7 @@ public class LampionFactory : MonoBehaviour
     private void Send(Lampion newLampion, FarmlandSpace targetSpace)
     {
         // Select random spawn point
+        Debug.Log(newLampion);
         newLampion.transform.localPosition = new Vector3(spawnRadius * Random.value, 0, 0);
         newLampion.transform.RotateAround(
             newLampion.transform.parent.position, 
