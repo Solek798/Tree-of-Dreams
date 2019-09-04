@@ -16,12 +16,18 @@ public class LampionFactory : MonoBehaviour
     [SerializeField] private int maxGeneratingAttempts = 10;
     [SerializeField] private List<QuestData> questData;
 
+
+    private void Start()
+    {
+        Debug.Log(farmland);
+    }
     public void CreateAndSend()
     {
         if (questData.Count <= 0) return;
 
         // Select random FarmlandSpace
         Debug.Log(farmland);
+        farmland = FindObjectOfType<Farmland>();
         var levels = farmland.GetAllLevels();
         var targetLevel = levels[Random.Range(0, levels.Length - 1)];
         var targetSpace = targetLevel.GetRandomSpace(maxGeneratingAttempts);
@@ -47,6 +53,7 @@ public class LampionFactory : MonoBehaviour
     private void Send(Lampion newLampion, FarmlandSpace targetSpace)
     {
         // Select random spawn point
+        Debug.Log(newLampion);
         newLampion.transform.localPosition = new Vector3(spawnRadius * Random.value, 0, 0);
         newLampion.transform.RotateAround(
             newLampion.transform.parent.position, 
