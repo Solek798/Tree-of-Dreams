@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Camera cam = null;
+    [SerializeField] private AudioSource audioPlayer = null;
 
     private CharacterController _controller;
 
@@ -37,14 +38,18 @@ public class PlayerMovement : MonoBehaviour
         //Player Movement
         MovePlayer();
         //Checks if the Player is moving and if he does it emits the fairy dust particles
-        /*if (IsMoving())
+        if (IsMoving())
         {
-            playerTrail.Emit(1);
+            //playerTrail.Emit(1);
+            Debug.Log("is moving");
+            audioPlayer.Play();
         }
         else
         {
-            playerTrail.Stop();
-        }*/
+            //playerTrail.Stop();
+            Debug.Log("is not moving");
+            audioPlayer.Stop();
+        }
     }
 
     //The Main movement method which checks Input and moves the Character depending on its position around the Tree 
