@@ -21,6 +21,13 @@ public class Farmland : MonoBehaviour, IEnumerable
 
     public FarmlandLevel[] GetAllLevels()
     {
-        return GetComponentsInChildren<FarmlandLevel>().ToArray();
+        var target = GetComponentsInChildren<FarmlandLevel>();
+        Debug.Log(target.Length);
+        return target.ToArray();
+    }
+
+    public void OnDestroy()
+    {
+        Debug.Log("IM DYIN");
     }
 }
