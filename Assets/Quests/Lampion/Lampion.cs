@@ -1,9 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
 using UnityEngine;
-using UnityEngine.UI;
-using Image = UnityEngine.UIElements.Image;
 
 
 public class Lampion : MonoBehaviour
