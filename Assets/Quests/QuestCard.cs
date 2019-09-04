@@ -13,6 +13,7 @@ public class QuestCard : MonoBehaviour
     [SerializeField] private GameObject questPrefab = null;
     [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private Transform questParent = null;
+    [SerializeField] private AudioSource audioPlayer;
 
     private Quest _quest = null;
     
@@ -46,6 +47,7 @@ public class QuestCard : MonoBehaviour
         
         gameObject.SetActive(true);
         UIStatus.Instance.DialogOpened = true;
+        audioPlayer.Play();
     }
     
     
