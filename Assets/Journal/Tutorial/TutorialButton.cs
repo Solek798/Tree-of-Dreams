@@ -13,7 +13,8 @@ public class TutorialButton : MonoBehaviour
     [SerializeField] private Image tutorialImage = null;
     [SerializeField] private VideoClip VideoClip = null;
     [SerializeField] private VideoPlayer VideoPlayer = null;
-
+    [SerializeField] private RectTransform VideoRect = null;
+    [SerializeField] private Vector2 VideoRectSample = new Vector2(0, 0);
 
     public void OnButtonClick()
     {
@@ -21,6 +22,7 @@ public class TutorialButton : MonoBehaviour
         tutorialText.text = data.tutorialText;
         tutorialImage = data.tutorialImage;
         VideoPlayer.clip = VideoClip;
+        VideoRect.sizeDelta = VideoRectSample;
         VideoPlayer.Play();
     }
 }
