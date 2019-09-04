@@ -4,7 +4,7 @@ using UnityEngine;
 public class House : MonoBehaviour
 {
     [SerializeField] private Farmland farmland = null;
-    [SerializeField] private LampionFabric lampionFabric = null;
+    [SerializeField] private LampionFactory lampionFactory = null;
     [SerializeField] private Journal journal = null;
     [SerializeField] private GameObject sleepMenu = null;
     public GameObject player;
@@ -34,7 +34,7 @@ public class House : MonoBehaviour
             }
         }
 
-        lampionFabric.CreateAndSend();
+        lampionFactory.CreateAndSend();
 
         journal.Days++;
 
