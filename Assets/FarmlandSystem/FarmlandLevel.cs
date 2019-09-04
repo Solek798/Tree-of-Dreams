@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Linq;
-using UnityEngine.Experimental.XR;
 
 
 public class FarmlandLevel : MonoBehaviour
@@ -16,11 +15,12 @@ public class FarmlandLevel : MonoBehaviour
     private Grid _grid;
     
     
-    private void Start()
+    private void Awake()
     {
         
         _register = new Dictionary<Vector3Int, GameObject>();
         _grid = GetComponent<Grid>();
+        Debug.Log(_register);
     }
 
     public FarmlandSpace Interact()
@@ -94,7 +94,10 @@ public class FarmlandLevel : MonoBehaviour
                 Random.Range(randomCellBounds.yMin, randomCellBounds.yMax),
                 Random.Range(randomCellBounds.zMin, randomCellBounds.zMax)
             );
-            
+
+            Debug.Log(tilemap);
+            Debug.Log(_register);
+
             if (tilemap.HasTile(position) && !_register.ContainsKey(position))
             {
                 return CreateSpace(position);

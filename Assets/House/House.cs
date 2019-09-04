@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class House : MonoBehaviour
@@ -8,9 +7,17 @@ public class House : MonoBehaviour
     [SerializeField] private LampionFactory lampionFactory = null;
     [SerializeField] private Journal journal = null;
     [SerializeField] private GameObject sleepMenu = null;
+    [SerializeField] private int questFrequency;
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
+    private int daysSinceLastQuest;
+
+
+    private void Start()
+    {
+        lampionFactory.CreateAndSend();
+    }
 
     private void Update()
     {
@@ -35,10 +42,15 @@ public class House : MonoBehaviour
             }
         }
 
-        Debug.Log("Dat Factory: " +lampionFactory);
-        Debug.Log("House Call farmland: " + lampionFactory.farmland);
-
-        lampionFactory.CreateAndSend();
+        if (daysSinceLastQuest == questFrequency - 1)
+        {
+            lampionFactory.CreateAndSend();
+            daysSinceLastQuest = 0;
+        }
+        else
+        {
+            daysSinceLastQuest++;
+        }
 
         journal.Days++;
 

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class LampionFactory : MonoBehaviour
@@ -23,12 +22,9 @@ public class LampionFactory : MonoBehaviour
         if (questData.Count <= 0) return;
 
         // Select random FarmlandSpace
-        Debug.Log("dAT fARMLAND: " + farmland);
-        //farmland = FindObjectOfType<Farmland>();
         var levels = farmland.GetAllLevels();
         var targetLevel = levels[Random.Range(0, levels.Length - 1)];
         var targetSpace = targetLevel.GetRandomSpace(maxGeneratingAttempts);
-        Debug.Log("Dat Space: " + targetSpace);
         if (targetSpace == null) return;
 
         var newLampion = Create();
