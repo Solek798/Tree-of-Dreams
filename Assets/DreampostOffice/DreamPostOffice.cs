@@ -11,6 +11,7 @@ public class DreamPostOffice : MonoBehaviour
     [SerializeField] private GameObject layoutGroup = null;
     [FormerlySerializedAs("questPanel")] [SerializeField] private GameObject questPanelPrefab = null;
     [SerializeField] private GameObject dreamTree = null;
+    [SerializeField] private AudioSource audioPlayer;
     
     // temp
     [SerializeField] private Inventory inventory = null;
@@ -64,6 +65,7 @@ public class DreamPostOffice : MonoBehaviour
 
     private void OpenPostOfficeMenu()
     {
+        audioPlayer.Play();
         SetSliderDefaults();
         gameObject.GetComponent<Canvas>().enabled = true;
         _uiOpened = true;
