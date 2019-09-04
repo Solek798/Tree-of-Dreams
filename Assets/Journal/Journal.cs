@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Journal : MonoBehaviour
 {
     public Scrollbar slider = null;
