@@ -19,8 +19,9 @@ public class LampionFactory : MonoBehaviour
     public void CreateAndSend()
     {
         if (questData.Count <= 0) return;
-        
+
         // Select random FarmlandSpace
+        Debug.Log(farmland);
         var levels = farmland.GetAllLevels();
         var targetLevel = levels[Random.Range(0, levels.Length - 1)];
         var targetSpace = targetLevel.GetRandomSpace(maxGeneratingAttempts);
