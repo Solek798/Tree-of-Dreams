@@ -42,7 +42,7 @@ public class House : MonoBehaviour
             }
         }
 
-        if (daysSinceLastQuest == questFrequency)
+        if (daysSinceLastQuest == questFrequency - 1)
         {
             lampionFactory.CreateAndSend();
             daysSinceLastQuest = 0;
