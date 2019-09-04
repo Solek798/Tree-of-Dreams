@@ -34,6 +34,8 @@ public class House : MonoBehaviour
             }
         }
 
+        Debug.Log(lampionFactory);
+
         lampionFactory.CreateAndSend();
 
         journal.Days++;
