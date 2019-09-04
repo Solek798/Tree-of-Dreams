@@ -8,6 +8,10 @@ public class House : MonoBehaviour
     [SerializeField] private Journal journal = null;
     [SerializeField] private GameObject sleepMenu = null;
     [SerializeField] private int questFrequency;
+    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioClip goToSleepSound;
+    [SerializeField] private AudioClip wakeUpSound;
+
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
@@ -25,7 +29,6 @@ public class House : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) &&
             Vector3.Distance(transform.position, player.transform.position) <= maxDistanceToSleep)
         {
-            
             StartCoroutine(Sleep());
         }
 
@@ -53,12 +56,15 @@ public class House : MonoBehaviour
         }
 
         journal.Days++;
-
+        
         return false;
     }
 
     private IEnumerator Sleep()
     {
+        audioPlayer.clip = goToSleepSound;
+        audioPlayer.Play();
+        
         Transition.Instance.FadeBlack();
 
         yield return new WaitForSeconds(Transition.Instance.FadeBlackTime);
@@ -76,6 +82,9 @@ public class House : MonoBehaviour
         //sleepMenu.SetActive(false);
 
         Transition.Instance.FadeNormal();
+        
+        audioPlayer.clip = wakeUpSound;
+        audioPlayer.Play();
     }
 
     public void ResumeNight()
