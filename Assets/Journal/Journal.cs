@@ -13,6 +13,7 @@ public class Journal : MonoBehaviour
     [SerializeField] private Text dayCounter = null;
     [SerializeField] private Text earningsCounter = null;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource audioPlayer;
     
     private bool _uiOpened;
 
@@ -81,6 +82,8 @@ public class Journal : MonoBehaviour
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("IdleState"))
         {
+            audioPlayer.Play();
+
             animator.SetTrigger("Open");
 
             pauseTab.isOn = true;
@@ -98,6 +101,8 @@ public class Journal : MonoBehaviour
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("PopUPPanelIn"))
         animator.SetTrigger("Leave");
+
+        audioPlayer.Play();
 
         _uiOpened = false;
 
