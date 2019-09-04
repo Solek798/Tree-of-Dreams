@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class Journal : MonoBehaviour
@@ -13,6 +14,10 @@ public class Journal : MonoBehaviour
     [SerializeField] private Text dayCounter = null;
     [SerializeField] private Text earningsCounter = null;
     [SerializeField] private Animator animator;
+    [SerializeField] private Image imageNPC = null;
+    [SerializeField] private TextMeshProUGUI nameNPC = null;
+    [SerializeField] private TextMeshProUGUI storyNPC = null;
+    [SerializeField] private ToggleGroup questToggleGroup = null;
     
     private bool _uiOpened;
 
@@ -58,23 +63,12 @@ public class Journal : MonoBehaviour
 
     public void AddDisplay(QuestDisplay display)
     {
-        
-        //var newQuest = Instantiate(questPanel);
-        //Parent(layoutGroup, newQuest);
         display.transform.SetParent(layoutGroup.transform);
         display.transform.localScale = new Vector3(1, 1, 1);
-//        newQuest.GetComponent<JournalQuestPanel>().npcIcon.GetComponent<Image>().sprite = quest.questNPCImage;
-//
-//        requirementsPanel.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-//        foreach (var value in quest.requirements)
-//        {
-//            var panelVariant = Instantiate(requirementsPanel);
-//            var reqLayoutGroup = newQuest.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
-//            Parent(reqLayoutGroup,panelVariant);
-//            panelVariant.GetComponent<RequirementsPanel>().InitializePanel(quest.requirements);
-//        }
-    //newQuest.GetComponent<JournalQuestPanel>().InitializeJournalQuestPanel(questData);
-        
+
+        var toggle = display.GetComponent<Toggle>();
+        toggle.group = questToggleGroup;
+        toggle.interactable = true;
     }
 
     public void OpenJournal()
@@ -108,5 +102,11 @@ public class Journal : MonoBehaviour
     {
         CloseJournal();
     }
-
+    
+    public void OnSelectedDisplayChanged(QuestDisplay display)
+    {
+        nameNPC.text = display.Quest.Data.name;
+        imageNPC.sprite = display.Quest.Data.questNPCImage;
+        storyNPC.text = display.Quest.Data.questDescription;
+    }
 }

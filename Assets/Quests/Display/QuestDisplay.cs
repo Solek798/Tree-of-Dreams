@@ -86,4 +86,14 @@ public class QuestDisplay : MonoBehaviour
             }
         }
     }
+
+    public void OnSelectionCHanged(bool isChecked)
+    {
+        if (isChecked)
+        {
+            SendMessageUpwards("OnSelectedDisplayChanged", 
+                this, 
+                SendMessageOptions.DontRequireReceiver);
+        }
+    }
 }
