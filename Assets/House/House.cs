@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class House : MonoBehaviour
@@ -33,6 +34,9 @@ public class House : MonoBehaviour
                 space.UpdateState();
             }
         }
+
+        Debug.Log("Dat Factory: " +lampionFactory);
+        Debug.Log("House Call farmland: " + lampionFactory.farmland);
 
         lampionFactory.CreateAndSend();
 
