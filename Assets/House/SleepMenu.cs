@@ -7,16 +7,31 @@ public class SleepMenu : MonoBehaviour
 {
     [SerializeField] private Transform questLayoutGroup = null;
     [SerializeField] private Text todaysEaringsText = null;
+    [SerializeField] private DreamPostOffice dreamPostOffice = null;
 
     public int TodaysEarings
     {
         get => Convert.ToInt32(todaysEaringsText.text);
-        set => value.ToString();
+        set => todaysEaringsText.text = value.ToString();
     }
 
     private void Awake()
     {
         TodaysEarings = 0;
+    }
+    
+    private void OnEnable()
+    {
+        Debug.Log("Enabled");
+        foreach (var display in questLayoutGroup.GetComponentsInChildren<ProgressDisplay>())
+        {
+            Debug.Log(display);
+            if (display.IsFulfilled)
+            {
+                Debug.Log("Is fulfilled");
+                TodaysEarings += display.Quest.Data.rewardDreamEssence;
+            }
+        }
     }
 
     public void AddDisplay(ProgressDisplay display)
@@ -25,8 +40,6 @@ public class SleepMenu : MonoBehaviour
         display.transform.localScale = Vector3.one;
     }
     
-    
-
     public void ManageDisplays()
     {
         StartCoroutine(WaitUntilTransitionFinished());
@@ -40,7 +53,6 @@ public class SleepMenu : MonoBehaviour
 
     private void SortOutFulfilledDisplays()
     {
-        Debug.Log("Start sorting out");
         foreach (var display in questLayoutGroup.GetComponentsInChildren<ProgressDisplay>())
         {
             if (display.IsFulfilled)
@@ -49,6 +61,8 @@ public class SleepMenu : MonoBehaviour
             }
         }
 
+        dreamPostOffice.OnDayFinished(TodaysEarings);
+        TodaysEarings = 0;
         gameObject.SetActive(false);
     }
 }
