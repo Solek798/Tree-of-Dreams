@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Linq;
 using Random = UnityEngine.Random;
 
-public class LampionFabric : MonoBehaviour
+public class LampionFactory : MonoBehaviour
 {
     [SerializeField] private GameObject lampionPrefab = null;
     [SerializeField] private GameObject player = null;
