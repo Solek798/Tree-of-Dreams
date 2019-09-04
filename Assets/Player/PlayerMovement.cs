@@ -38,13 +38,11 @@ public class PlayerMovement : MonoBehaviour
         if (IsMoving())
         {
             //playerTrail.Emit(1);
-            Debug.Log("is moving");
             audioPlayer.Play();
         }
         else
         {
             //playerTrail.Stop();
-            Debug.Log("is not moving");
             audioPlayer.Stop();
         }
     }
