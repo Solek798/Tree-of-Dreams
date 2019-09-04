@@ -17,6 +17,7 @@ MonoBehaviour:
     type: 3}
   requirementsLayoutGroup: {fileID: 6663245849755241855}
   fulfillText: {fileID: 4613151603791348503}
+  isFulfilled: 0
 --- !u!1 &8996270587730173894
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,8 +52,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.15}
   m_AnchorMax: {x: 0.9, y: 0.85}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9.5, y: -0.05}
+  m_SizeDelta: {x: -19, y: -16.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4234486667294957057
 CanvasRenderer:
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -84,18 +85,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 35bfbc888f62c1244a340016d719486d, type: 3}
-    m_FontSize: 30
+    m_FontSize: 19
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 30
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\x13"
+    m_LineSpacing: 0.9
+  m_Text: Thank you kindly.
 --- !u!1001 &7272855248436375671
 PrefabInstance:
   m_ObjectHideFlags: 0
