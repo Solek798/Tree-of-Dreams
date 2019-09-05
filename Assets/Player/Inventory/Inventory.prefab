@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 4390355958717005770}
   - component: {fileID: 8424110221357286778}
   - component: {fileID: 3678869655915167782}
+  - component: {fileID: 6288173444369318243}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -399,6 +400,104 @@ MonoBehaviour:
   maxCurrency: 1000
   startCurrency: 1000
   startingItems: []
+  audioPlayer: {fileID: 6288173444369318243}
+--- !u!82 &6288173444369318243
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678869655915167780}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6157107262424544422, guid: 908723f9f13d0df75bbbaadd087c117d,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: d3a8876de8d30fd4f99eccd2224f96a8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5254898781653344543
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,11 +739,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -749,6 +843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
@@ -827,11 +926,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -937,6 +1031,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -1009,11 +1108,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,6 +1213,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -1171,6 +1270,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e72a095a3a563dfbbf63b537f4d1353, type: 3}
+--- !u!224 &9032614489141539924 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+    type: 3}
+  m_PrefabInstance: {fileID: 4212721704657696026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &929575040927093606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3931672716049147516, guid: 5e72a095a3a563dfbbf63b537f4d1353,
@@ -1183,12 +1288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4dac21bc3ac2de494546c6348b26d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &9032614489141539924 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-    type: 3}
-  m_PrefabInstance: {fileID: 4212721704657696026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6080007791875782924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1196,11 +1295,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1306,6 +1400,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -1383,11 +1482,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1493,6 +1587,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -1570,11 +1669,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1680,6 +1774,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -1732,12 +1831,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e72a095a3a563dfbbf63b537f4d1353, type: 3}
---- !u!224 &1957227639790332308 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-    type: 3}
-  m_PrefabInstance: {fileID: 6630894301694372058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7680239066932301478 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3931672716049147516, guid: 5e72a095a3a563dfbbf63b537f4d1353,
@@ -1750,6 +1843,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4dac21bc3ac2de494546c6348b26d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1957227639790332308 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+    type: 3}
+  m_PrefabInstance: {fileID: 6630894301694372058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6642196520227296200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1757,11 +1856,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1867,6 +1961,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -1944,11 +2043,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2054,6 +2148,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -2106,12 +2205,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e72a095a3a563dfbbf63b537f4d1353, type: 3}
---- !u!224 &2788622819707725942 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-    type: 3}
-  m_PrefabInstance: {fileID: 7034621215123368248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6273484836744105796 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3931672716049147516, guid: 5e72a095a3a563dfbbf63b537f4d1353,
@@ -2124,6 +2217,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4dac21bc3ac2de494546c6348b26d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &2788622819707725942 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+    type: 3}
+  m_PrefabInstance: {fileID: 7034621215123368248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7583132446513589426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2131,11 +2230,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2241,6 +2335,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -2293,12 +2392,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e72a095a3a563dfbbf63b537f4d1353, type: 3}
---- !u!224 &3319260535958973948 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-    type: 3}
-  m_PrefabInstance: {fileID: 7583132446513589426}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6894071262509402830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3931672716049147516, guid: 5e72a095a3a563dfbbf63b537f4d1353,
@@ -2311,6 +2404,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4dac21bc3ac2de494546c6348b26d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &3319260535958973948 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+    type: 3}
+  m_PrefabInstance: {fileID: 7583132446513589426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9037179851618047268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2318,11 +2417,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7314917890519466335}
     m_Modifications:
-    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
-        type: 3}
-      propertyPath: m_Name
-      value: Slot (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089230, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2427,6 +2521,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128706173115089225, guid: 5e72a095a3a563dfbbf63b537f4d1353,
+        type: 3}
+      propertyPath: m_Name
+      value: Slot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5128706173115089231, guid: 5e72a095a3a563dfbbf63b537f4d1353,
         type: 3}

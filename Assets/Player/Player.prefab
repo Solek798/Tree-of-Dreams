@@ -86,7 +86,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6157107262424544422, guid: 908723f9f13d0df75bbbaadd087c117d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2a1a0b806cd79ba4caaa90dec58e942e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a2cd1a24111c53546893ed578bb7c93b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -922,11 +922,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2483433778295244367}
     m_Modifications:
-    - target: {fileID: 5631520945979265069, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
-        type: 3}
-      propertyPath: m_Name
-      value: FairyTrailParticle
-      objectReference: {fileID: 0}
     - target: {fileID: 5631520945979265074, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -981,6 +976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631520945979265069, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
+        type: 3}
+      propertyPath: m_Name
+      value: FairyTrailParticle
       objectReference: {fileID: 0}
     - target: {fileID: 5631520945979265072, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
         type: 3}
