@@ -9,6 +9,7 @@ public class QuestDisplay : MonoBehaviour
     [SerializeField] protected Image npcIconUI = null;
     [SerializeField] protected GameObject requirementSlotPrefab = null;
     [SerializeField] protected HorizontalLayoutGroup requirementsLayoutGroup = null;
+    [SerializeField] protected Animator animator;
 
     protected Quest _quest = null;
 
@@ -68,7 +69,7 @@ public class QuestDisplay : MonoBehaviour
     public void OnButtonPressed()
     {
         SendMessageUpwards("OnQuestFulfilled");
-        _quest.MarkAsFulfilled();
+        animator.Play("Fulfilled");
     }
 
 
@@ -96,5 +97,10 @@ public class QuestDisplay : MonoBehaviour
                 this, 
                 SendMessageOptions.DontRequireReceiver);
         }
+    }
+
+    public void OnAnimatonEnd()
+    {
+        _quest.MarkAsFulfilled();
     }
 }
