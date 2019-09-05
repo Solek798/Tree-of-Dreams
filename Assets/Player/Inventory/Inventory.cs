@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
             PickUp(Instantiate(item));
         }
 
-        SetSelectedSlot(0);
+        SelectAndToggleSlot(0);
     }
 
     private void Update()
@@ -58,28 +58,35 @@ public class Inventory : MonoBehaviour
         {
             index = _slots.IndexOf(_slots.First(t => (bool) t.GetComponent<Toggle>()?.isOn)) - 1;
             
-            SetSelectedSlot(index);
-        } else if (Input.mouseScrollDelta.y > 0)
+            SelectAndToggleSlot(index);
+        } 
+        else if (Input.mouseScrollDelta.y > 0)
         {
             index = _slots.IndexOf(_slots.First(t => (bool) t.GetComponent<Toggle>()?.isOn)) + 1;
             
-            SetSelectedSlot(index);
+            SelectAndToggleSlot(index);
         }
         
         for (int i=0; i<=9; i++)
         {
             if (!Input.GetKeyDown(((i + 1) % 10).ToString())) continue;
             
-            SetSelectedSlot(i);
+            SelectAndToggleSlot(i);
         }
     }
 
-    private void SetSelectedSlot(int index)
+    public void SelectSlot(Slot slot)
+    {
+        var index = _slots.IndexOf(slot);
+        
+        SelectedItem = _slots[index].GetComponentInChildren<Stack>()?.Peek();
+    }
+
+    public void SelectAndToggleSlot(int index)
     {
         if (index < 0 || index >= _slots.Count) return;
         
         _slots[index].GetComponent<Toggle>().isOn = true;
-        SelectedItem = _slots[index].GetComponentInChildren<Stack>()?.Peek();
     }
 
     public bool PickUp(GameObject newObject)
