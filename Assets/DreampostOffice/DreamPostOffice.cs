@@ -12,6 +12,8 @@ public class DreamPostOffice : MonoBehaviour
     [FormerlySerializedAs("questPanel")] [SerializeField] private GameObject questPanelPrefab = null;
     [SerializeField] private GameObject dreamTree = null;
     [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioClip enterDPO;
+    [SerializeField] private AudioClip finishDreamLetter;
     
     // temp
     [SerializeField] private Inventory inventory = null;
@@ -34,6 +36,8 @@ public class DreamPostOffice : MonoBehaviour
         
         sellArea.Inventory = inventory;
         sellArea.Journal = journal;
+
+        audioPlayer.clip = enterDPO;
     }
 
     
@@ -53,14 +57,18 @@ public class DreamPostOffice : MonoBehaviour
             OpenPostOfficeMenu();
             _uiOpened = true;
         }
-        
+
+        if (!audioPlayer.isPlaying && audioPlayer.clip == finishDreamLetter)
+        {
+            audioPlayer.clip = enterDPO;
+        }
+
     }
     
     public void AddDisplay(QuestDisplay display)
     {
         display.transform.SetParent(layoutGroup.transform);
         display.transform.localScale = Vector3.one;
-        //newQuest.GetComponent<QuestDisplay>().Initialize(questData);
     }
 
     private void OpenPostOfficeMenu()
@@ -93,5 +101,14 @@ public class DreamPostOffice : MonoBehaviour
         inventory.Currency += earnedCash;
         journal.EarningsCounter += 
             inventory.Currency + earnedCash > inventory.MaxCurrency ? inventory.MaxCurrency : earnedCash;
+    }
+
+    public void OnQuestFulfilled()
+    {
+        Debug.Log("play finish quest sound");
+        audioPlayer.clip = finishDreamLetter;
+        Debug.Log(audioPlayer.clip);
+        audioPlayer.Play();
+        Debug.Log(audioPlayer.isPlaying);
     }
 }
