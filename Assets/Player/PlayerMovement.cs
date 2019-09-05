@@ -4,6 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Camera cam = null;
     [SerializeField] private AudioSource audioPlayer = null;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Animator animatorOutline;
 
     private CharacterController _controller;
 
@@ -38,10 +40,14 @@ public class PlayerMovement : MonoBehaviour
         if (IsMoving())
         {
             //playerTrail.Emit(1);
+            animator.SetFloat("Velocity", 10.0f);
+            animatorOutline.SetFloat("Velocity", 10.0f);
             audioPlayer.Play();
         }
         else
         {
+            animator.SetFloat("Velocity", 0);
+            animatorOutline.SetFloat("Velocity", 0);
             //playerTrail.Stop();
             audioPlayer.Stop();
         }
@@ -57,6 +63,9 @@ public class PlayerMovement : MonoBehaviour
         if (_controller.isGrounded)
         {
             _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * speed;
+            
+            //animator.SetFloat("Velocity", _moveDirection.sqrMagnitude);
+            //animatorOutline.SetFloat("Velocity", _moveDirection.sqrMagnitude);
             
             _moveDirection = cam.transform.TransformDirection(_moveDirection);
             _moveDirection.y = 0;
