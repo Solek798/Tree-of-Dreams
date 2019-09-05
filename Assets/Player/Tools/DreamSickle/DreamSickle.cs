@@ -8,24 +8,33 @@ public class DreamSickle : MonoBehaviour, ITool
     [SerializeField] private AudioSource audioPlayer;
     [SerializeField] private List<AudioClip> audioClips;
 
+    private bool _isUsed = false;
+
 
     public IEnumerator Use(FarmlandSpace space)
     {
-        var plant = space.Plant;
+        if (!_isUsed)
+        {
+            _isUsed = true;
 
-        int randInt = Random.Range(0, audioClips.Count - 1);
-        audioPlayer.clip = audioClips[randInt];
-        audioPlayer.Play();
+            var plant = space.Plant;
 
-        plant.animator.Play("HarvestingAnimation");
-        space.dreamSickleParticle.Play();
-    
+            int randInt = Random.Range(0, audioClips.Count - 1);
+            audioPlayer.clip = audioClips[randInt];
+            audioPlayer.Play();
 
-        yield return new WaitForSeconds(plant.animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
 
-        space.Plant = null;
-        GetComponent<InventoryItem>().Inventory.PickUp(plant.gameObject);
+            plant.animator.Play("HarvestingAnimation");
+            space.dreamSickleParticle.Play();
 
+
+            yield return new WaitForSeconds(plant.animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
+
+            space.Plant = null;
+            GetComponent<InventoryItem>().Inventory.PickUp(plant.gameObject);
+
+            _isUsed = false;
+        }
     }
 
     public bool IsUsable(FarmlandSpace space)
