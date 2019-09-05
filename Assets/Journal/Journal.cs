@@ -77,7 +77,7 @@ public class Journal : MonoBehaviour
         {
             audioPlayer.Play();
 
-            animator.SetTrigger("Open");
+            animator.Play("PopUPPanelIn");
 
             pauseTab.isOn = true;
 
@@ -93,13 +93,15 @@ public class Journal : MonoBehaviour
     private void CloseJournal()
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("PopUPPanelIn"))
-        animator.SetTrigger("Leave");
+        {
+            animator.Play("PopUPPanelOut");
+            
+            audioPlayer.Play();
 
-        audioPlayer.Play();
+            _uiOpened = false;
 
-        _uiOpened = false;
-
-        UIStatus.Instance.DialogOpened = false;
+            UIStatus.Instance.DialogOpened = false;
+        }
     }
     
     public void OnExitButtonClick()
