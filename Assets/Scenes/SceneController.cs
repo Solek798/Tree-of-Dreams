@@ -7,11 +7,22 @@ public class SceneController : MonoBehaviour
 {
     public void LoadMenu()
     {
-        SceneManager.LoadScene("MainMenu"); 
+        Debug.Log("LoadMenu");
+        StartCoroutine(Load("MainMenu"));
     }
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("DreamWorld");
+        StartCoroutine(Load("DreamWorld"));
+    }
+
+    private IEnumerator Load(string scene)
+    {
+        Debug.Log("Load");
+        Transition.Instance.FadeBlack();
+        
+        yield return new WaitForSeconds(Transition.Instance.FadeBlackTime);
+        
+        SceneManager.LoadScene(scene);
     }
 }
