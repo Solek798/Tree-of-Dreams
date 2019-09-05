@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Bryan.Printz\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Bryan.Printz\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Tree of Dreams.881101714.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Bryan.Printz\Desktop\Tree of Dreams" t="IncludeRecursive">
+    <e p="C:\Users\cornelius.nitschkoff\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\cornelius.nitschkoff\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Tree Of Dreams.-229137178.00" t="ExcludeRecursive" />
+    <e p="C:\Users\cornelius.nitschkoff\Desktop\Tree of Dreams" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="DreampostOffice" t="Include">
@@ -11,6 +11,7 @@
           <e p="SellArea.cs" t="Include" />
         </e>
         <e p="Environment" t="Include">
+          <e p="Clicker.cs" t="Include" />
           <e p="Crops" t="Include">
             <e p="PlantScriptableObject.cs" t="Include" />
             <e p="PlantState.cs" t="Include" />
@@ -104,7 +105,7 @@
           </e>
           <e p="Lampion" t="Include">
             <e p="Lampion.cs" t="Include" />
-            <e p="LampionFabric.cs" t="Include" />
+            <e p="LampionFactory.cs" t="Include" />
           </e>
           <e p="Quest.cs" t="Include" />
           <e p="QuestCard.cs" t="Include" />
@@ -186,10 +187,13 @@
           </e>
         </e>
       </e>
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Post-processLWRPAO.csproj" t="IncludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
       <e p="Tree of Dreams.sln" t="IncludeFlat" />
     </e>
   </component>

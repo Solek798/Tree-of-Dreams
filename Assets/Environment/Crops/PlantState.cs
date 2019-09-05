@@ -13,6 +13,8 @@ public class PlantState : MonoBehaviour
     private float yRot;
 
     [SerializeField] public Animator animator;
+    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private List<AudioClip> audioClips;
 
     private void Start()
     {
@@ -21,9 +23,6 @@ public class PlantState : MonoBehaviour
         plantInstance.transform.LookAt(Camera.main.transform, Vector3.up);
         var rotation = plantInstance.transform.rotation.eulerAngles;
         yRot = rotation.y + yRotRandomizer;
-        Debug.Log(yRot);
-        Debug.Log(yRotRandomizer);
-
     }
 
 
@@ -58,5 +57,12 @@ public class PlantState : MonoBehaviour
     public bool IsReadyToHarvest()
     {
         return currentState >= plantObject.stateModel.Count - 1;
+    }
+
+    public void SeedHitsGround()
+    {
+        int randInt = Random.Range(0, audioClips.Count - 1);
+        audioPlayer.clip = audioClips[randInt];
+        audioPlayer.Play();
     }
 }
