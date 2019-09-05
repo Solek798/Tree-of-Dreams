@@ -7,25 +7,22 @@ public class CameraZoom : MonoBehaviour
 {
     [SerializeField] private Transform focusTransform =null;
     [SerializeField] private Transform player = null;
-    [SerializeField] private CinemachineVirtualCamera cinemachineVirtualCamera = null;
-    public LensSettings m_Lens;
-    
-    //CamZoom is the position of the Focuspoint. The lower it is, the lower the Camera is looking
-    public int minCamZoom = 10;
-    public int maxCamZoom = -60;
-    //FOV is the "Zoom" of the camera.
-    public int minFOV = 30;
-    public int maxFOV = 80;
+    [SerializeField] private int minZoomLevel = -5;
+    [SerializeField] private int maxZoomLevel = 5;
+
+    private int _currentZoomLevel = 0;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && _currentZoomLevel + 1 <= maxZoomLevel)
         {
-            transform.Translate(0, 0, 5);
+            StartCoroutine(Move(5));
+            _currentZoomLevel++;
         }
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O) && _currentZoomLevel - 1 >= minZoomLevel)
         {
-            transform.Translate(0, 0, -5);
+            StartCoroutine(Move(-5));
+            _currentZoomLevel--;
         }
         
         
@@ -43,5 +40,20 @@ public class CameraZoom : MonoBehaviour
         
         //applies the new FOV to the Cinemachine Inhouse function
         cinemachineVirtualCamera.m_Lens.FieldOfView = newZoom;*/
+    }
+
+    private IEnumerator Move(float amount)
+    {
+        float absoluteZoom = 0;
+
+        while (Mathf.Abs(absoluteZoom) < Mathf.Abs(amount))
+        {
+            var zoom = amount * Time.deltaTime;
+            
+            transform.Translate(0, 0, zoom);
+            absoluteZoom += zoom;
+            
+            yield return null;
+        }
     }
 }
