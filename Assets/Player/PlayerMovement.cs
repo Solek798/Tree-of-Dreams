@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
     {
         var value = PlayerPrefs.GetInt(Options.AutoRunPref, 0);
         var retVal = value == 0 ? false : true;
-        Debug.Log(retVal);
+        
         return retVal;
     }
 
