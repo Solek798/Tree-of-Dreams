@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private GameObject[] startingItems;
 
+    [SerializeField] private AudioSource audioPlayer;
+
     private List<Slot> _slots = null;
 
     public Transform HandTransform => handTransform;
@@ -21,16 +23,25 @@ public class Inventory : MonoBehaviour
 
     public InventoryItem SelectedItem { get; private set; }
 
+    private int oldCurrency;
 
     public int Currency
     {
-        set => currencyText.text = value <= maxCurrency ? value.ToString() : maxCurrency.ToString();
+        set
+        {
+            currencyText.text = value <= maxCurrency ? value.ToString() : maxCurrency.ToString();
+            if (oldCurrency < value)
+            {
+                audioPlayer.Play();                
+            }
+        } 
         get => Convert.ToInt32(currencyText.text);
     }
     
     private void Start()
     {
         Currency = startCurrency;
+        oldCurrency = startCurrency;
 
         _slots =
             slotContainer
