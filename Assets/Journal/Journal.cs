@@ -18,6 +18,10 @@ public class Journal : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameNPC = null;
     [SerializeField] private TextMeshProUGUI storyNPC = null;
     [SerializeField] private ToggleGroup questToggleGroup = null;
+
+    [SerializeField] private GameObject noQuestsText = null;
+    [SerializeField] private GameObject questInfo = null;
+    [SerializeField] private TutorialButton defaultTutorialButton = null;
     
     private bool _uiOpened;
 
@@ -37,6 +41,7 @@ public class Journal : MonoBehaviour
     {
         Days = 0;
         EarningsCounter = 0;
+        defaultTutorialButton.OnButtonClick();
     }
 
     
@@ -69,6 +74,16 @@ public class Journal : MonoBehaviour
         var toggle = display.GetComponent<Toggle>();
         toggle.group = questToggleGroup;
         toggle.interactable = true;
+        
+        noQuestsText.SetActive(false);
+        questInfo.SetActive(true);
+        
+        if (layoutGroup.GetComponentsInChildren<QuestDisplay>().Length == 1)
+        {
+            toggle.isOn = true;
+            OnSelectedDisplayChanged(display);
+        }
+        
     }
 
     public void OpenJournal()
@@ -86,6 +101,15 @@ public class Journal : MonoBehaviour
             _uiOpened = true;
 
             UIStatus.Instance.DialogOpened = true;
+
+
+            if (layoutGroup.GetComponentsInChildren<QuestDisplay>().Length <= 0)
+            {
+                noQuestsText.SetActive(true);
+                questInfo.SetActive(false);
+
+                
+            }
         }      
     }
     
