@@ -56,9 +56,9 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
         if (stack.Peek().GetComponent<PlantState>().plantObject != _plantScriptableObject)
             return false;
 
-        if (stack.Count > Amount)
+        if (Amount < stack.Count)
         {
-            for (var i = 0; i < stack.Count; i++)
+            for (var i = 0; i < Amount; i++)
             {
                 Destroy(stack.Pop().gameObject);
                 
