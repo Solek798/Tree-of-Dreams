@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8038181292515298160
+--- !u!1 &7885475198879370798
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,98 +8,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2603246218300022539}
-  - component: {fileID: 2122497696108340157}
-  - component: {fileID: 7403587051465229698}
-  - component: {fileID: 6613059416929501871}
-  - component: {fileID: 918886532896125409}
+  - component: {fileID: 5592730166883834408}
+  - component: {fileID: 1360807752309823996}
+  - component: {fileID: 8921581341735726653}
   m_Layer: 0
-  m_Name: CourageCrop
-  m_TagString: Plant
+  m_Name: Clicker
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2603246218300022539
+--- !u!4 &5592730166883834408
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8038181292515298160}
+  m_GameObject: {fileID: 7885475198879370798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 317.00385, y: 89.95626, z: -559.47833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2122497696108340157
+--- !u!114 &1360807752309823996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8038181292515298160}
+  m_GameObject: {fileID: 7885475198879370798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6085d3723ba714f4aaf2cadcc42afb1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 91ae1a14add59f74f9515c91f0bea56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantObject: {fileID: 11400000, guid: d16f3cb8da764e34387cfcf858df82a6, type: 2}
-  currentState: 0
-  animator: {fileID: 6613059416929501871}
-  audioPlayer: {fileID: 918886532896125409}
-  audioClips:
-  - {fileID: 8300000, guid: 42cefde21a336434ea111bf95407fde1, type: 3}
-  - {fileID: 8300000, guid: 6f35f36044ed1b54da45f6652481da83, type: 3}
-  - {fileID: 8300000, guid: a1cd96d41f07ec34aa95613713617e97, type: 3}
---- !u!114 &7403587051465229698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8038181292515298160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff31fc9cf4aca58498c2bf1011f60f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: c32b62d8c933696419b04b6edd3d0300, type: 3}
-  identifier: CourageCrop
-  isTool: 0
---- !u!95 &6613059416929501871
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8038181292515298160}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b4417708a627ee4d9799183e3bc6929, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &918886532896125409
+  audioPlayer: {fileID: 8921581341735726653}
+--- !u!82 &8921581341735726653
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8038181292515298160}
+  m_GameObject: {fileID: 7885475198879370798}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6157107262424544422, guid: 908723f9f13d0df75bbbaadd087c117d,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b07f9e07951c3f44c87d7877b3fc8ef8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
