@@ -16,6 +16,11 @@ public class Transition : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        FadeNormal();
+    }
+
     public void FadeBlack()
     {
         GetComponent<Animation>().CrossFade("FadeBlack");
