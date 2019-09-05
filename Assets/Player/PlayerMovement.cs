@@ -37,12 +37,10 @@ public class PlayerMovement : MonoBehaviour
         //Checks if the Player is moving and if he does it emits the fairy dust particles
         if (IsMoving())
         {
-            //playerTrail.Emit(1);
             audioPlayer.Play();
         }
         else
         {
-            //playerTrail.Stop();
             audioPlayer.Stop();
         }
     }
