@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _controller = GetComponent<CharacterController>();
         _normalSpeed = speed;
+
+        speed = IsAutoRunOn() ? runSpeed : _normalSpeed;
     }
 
     private void Update()
@@ -50,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     //The Main movement method which checks Input and moves the Character depending on its position around the Tree 
     private void MovePlayer()
     {
+    
         var step = rotateSpeed * Time.deltaTime;
 
         Vector3 step1, step2, step3;
@@ -89,18 +92,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private bool IsAutoRunOn()
+    {
+        var value = PlayerPrefs.GetInt(Options.AutoRunPref, 0);
+        var retVal = value == 0 ? false : true;
+        Debug.Log(retVal);
+        return retVal;
+    }
 
     private void CheckIfRunning()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = runSpeed;
+            speed = IsAutoRunOn() ? _normalSpeed : runSpeed;
         }
-
-
-        else if (Input.GetKeyUp((KeyCode.LeftShift)))
+        else
         {
-            speed = _normalSpeed;
+            speed = IsAutoRunOn() ? runSpeed : _normalSpeed;
         }
     }
 
