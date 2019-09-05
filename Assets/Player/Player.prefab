@@ -70,6 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   audioPlayer: {fileID: 514254754474348019}
+  animator: {fileID: 0}
+  animatorOutline: {fileID: 0}
   speed: 7
   runSpeed: 10
   jumpDuration: 8
@@ -922,6 +924,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2483433778295244367}
     m_Modifications:
+    - target: {fileID: 5631520945979265069, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
+        type: 3}
+      propertyPath: m_Name
+      value: FairyTrailParticle
+      objectReference: {fileID: 0}
     - target: {fileID: 5631520945979265074, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -976,11 +983,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5631520945979265069, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
-        type: 3}
-      propertyPath: m_Name
-      value: FairyTrailParticle
       objectReference: {fileID: 0}
     - target: {fileID: 5631520945979265072, guid: 2e5c23171ecef7649ad05539e3ce2f0b,
         type: 3}
@@ -1164,6 +1166,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012075166954776304, guid: 6859219396c5d714a87f2583400f6b67,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96513766
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012075166954776304, guid: 6859219396c5d714a87f2583400f6b67,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.26174274
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012075166954776304, guid: 6859219396c5d714a87f2583400f6b67,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000014479727
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012075166954776304, guid: 6859219396c5d714a87f2583400f6b67,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000031583475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6859219396c5d714a87f2583400f6b67, type: 3}
