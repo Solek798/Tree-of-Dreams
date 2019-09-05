@@ -16,6 +16,7 @@ public class QuestData : ScriptableObject
     [TextArea] public string missingText;
 
     public Sprite questNPCImage;
+    public Sprite roundQuestNPCImage;
 
     public bool isJournal = false;
 

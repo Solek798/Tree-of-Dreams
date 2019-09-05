@@ -41,14 +41,10 @@ public class PlayerMovement : MonoBehaviour
         //Checks if the Player is moving and if he does it emits the fairy dust particles
         if (IsMoving())
         {
-            //animator.SetFloat("Velocity", 10.0f);
-            //animatorOutline.SetFloat("Velocity", 10.0f);
             audioPlayer.Play();
         }
         else
         {
-            //animator.SetFloat("Velocity", 0);
-            //animatorOutline.SetFloat("Velocity", 0);
             audioPlayer.Stop();
         }
     }
@@ -65,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical")) * speed;
             
-            Debug.Log(_moveDirection.magnitude);
             
             animator.SetFloat("Velocity", _moveDirection.magnitude / 7.0f);
             animatorOutline.SetFloat("Velocity", _moveDirection.magnitude / 7.0f);

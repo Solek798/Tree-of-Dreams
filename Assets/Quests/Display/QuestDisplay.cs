@@ -27,7 +27,7 @@ public class QuestDisplay : MonoBehaviour
     public virtual void Initialize(Quest quest)
     {
         _quest = quest;
-        npcIconUI.sprite = quest.Data.questNPCImage;
+        npcIconUI.sprite = quest.Data.roundQuestNPCImage;
         
         /*foreach (var requirement in requirements)
         {
