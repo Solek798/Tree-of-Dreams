@@ -12,11 +12,10 @@ public class LampionFactory : MonoBehaviour
     [SerializeField] private int maxGeneratingAttempts = 10;
     public List<QuestData> questData;
 
-
-    private void Start()
-    {
-        Debug.Log(farmland);
-    }
+    [SerializeField] private AudioSource audioPlayer;
+    private Lampion newLampion;
+    private FarmlandSpace targetSpace;
+    
     public void CreateAndSend()
     {
         if (questData.Count <= 0) return;
@@ -28,6 +27,7 @@ public class LampionFactory : MonoBehaviour
         if (targetSpace == null) return;
 
         var newLampion = Create();
+
         
         Send(newLampion, targetSpace);
     }
@@ -43,10 +43,13 @@ public class LampionFactory : MonoBehaviour
         return newLampion;
     }
 
-    private void Send(Lampion newLampion, FarmlandSpace targetSpace)
+    private void Send(Lampion _newLampion, FarmlandSpace _targetSpace)
     {
+        
+        newLampion = _newLampion;
+        targetSpace = _targetSpace;
+
         // Select random spawn point
-        Debug.Log(newLampion);
         newLampion.transform.localPosition = new Vector3(spawnRadius * Random.value, 0, 0);
         newLampion.transform.RotateAround(
             newLampion.transform.parent.position, 
@@ -57,5 +60,24 @@ public class LampionFactory : MonoBehaviour
         // send Lampion by setting TravelTarget
         targetSpace.Lampion = newLampion;
         newLampion.TravelTarget = targetSpace.transform.position;
+    }
+    
+    private void Update()
+    {
+        RingWhenArrived();
+    }
+
+    private void RingWhenArrived()
+    {
+        if(newLampion != null && targetSpace != null)
+        {
+            if ((int)newLampion.transform.position.x == (int)targetSpace.transform.position.x &&
+                (int)newLampion.transform.position.z == (int)targetSpace.transform.position.z)
+            {
+                audioPlayer.Play();
+                newLampion = null;
+                targetSpace = null;
+            }
+        }
     }
 }
