@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SeedFlute : MonoBehaviour, ITool
 {
@@ -21,9 +22,14 @@ public class SeedFlute : MonoBehaviour, ITool
         _space = space;
         
         var inventory = GetComponent<InventoryItem>().Inventory;
-        
+
         if (inventory != null)
+        {
+            Debug.Log(Input.mousePosition);
+            cropUi.transform.position = Input.mousePosition;
+            
             cropUi.OpenUiMenu(inventory);
+        }
 
         yield return true;
     }

@@ -27,7 +27,6 @@ public class SleepMenu : MonoBehaviour
         
         foreach (var display in questLayoutGroup.GetComponentsInChildren<ProgressDisplay>())
         {
-            Debug.Log(display);
             if (display.IsFulfilled)
             {
                 Debug.Log("Is fulfilled");
