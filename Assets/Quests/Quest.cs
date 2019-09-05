@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
+    [SerializeField] private bool isFulFilled = false;
     private List<QuestDisplay> _displays = new List<QuestDisplay>();
-    
+
+    public bool IsFulFilled => isFulFilled;
+
     public QuestData Data { get; private set; }
 
     public void Initialize(QuestData questData)
@@ -20,7 +23,6 @@ public class Quest : MonoBehaviour
 
     public void MarkAsFulfilled()
     {
-        // TODO(FK): fill with correct content
         foreach (var display in _displays)
         {
             if (display is ProgressDisplay progressDisplay)
@@ -30,6 +32,8 @@ public class Quest : MonoBehaviour
             }
             Destroy(display.gameObject);
         }
+
+        isFulFilled = true;
     }
 
     public void OnSlotChanged(RequirementSlot slot)
