@@ -6,15 +6,35 @@ using UnityEngine.UI;
 
 public class Clicker : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private Texture2D cursorNormal;
+    [SerializeField] private Texture2D cursorClick;
     
+    [SerializeField] private AudioSource audioPlayer;
+
+    private void Start()
+    {
+        Cursor.SetCursor(cursorNormal, Vector2.zero, CursorMode.Auto);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && IsMouseOverButton())
-        {    
-            audioPlayer.Play();
+        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = cursorPos;
+        
+        
+        if (Input.GetMouseButtonUp(0))
+        {
+            Cursor.SetCursor(cursorNormal, Vector2.zero, CursorMode.Auto);
+            if (IsMouseOverButton())
+            {
+                audioPlayer.Play();                
+            }
         }
+
+        else if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.SetCursor(cursorClick, Vector2.zero, CursorMode.Auto);        }
     }
 
     private bool IsMouseOverButton()

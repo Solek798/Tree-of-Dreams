@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -39,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
         //Checks if the Player is moving and if he does it emits the fairy dust particles
         if (IsMoving())
         {
-            //playerTrail.Emit(1);
             animator.SetFloat("Velocity", 10.0f);
             animatorOutline.SetFloat("Velocity", 10.0f);
             audioPlayer.Play();
@@ -48,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Velocity", 0);
             animatorOutline.SetFloat("Velocity", 0);
-            //playerTrail.Stop();
             audioPlayer.Stop();
         }
     }
