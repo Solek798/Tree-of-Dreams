@@ -22,7 +22,9 @@ public class SleepMenu : MonoBehaviour
     
     private void OnEnable()
     {
-        Debug.Log("Enabled");
+        PlayerScriptor.Instance.AllowMoving = false;
+        PlayerScriptor.Instance.AllowInteracting = false;
+        
         foreach (var display in questLayoutGroup.GetComponentsInChildren<ProgressDisplay>())
         {
             Debug.Log(display);
@@ -32,6 +34,12 @@ public class SleepMenu : MonoBehaviour
                 TodaysEarings += display.Quest.Data.rewardDreamEssence;
             }
         }
+    }
+
+    private void OnDisable()
+    {
+        PlayerScriptor.Instance.AllowMoving = true;
+        PlayerScriptor.Instance.AllowInteracting = true;
     }
 
     public void AddDisplay(ProgressDisplay display)
