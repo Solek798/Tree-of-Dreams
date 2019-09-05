@@ -10298,6 +10298,16 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2419432706706069816, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419432706706069816, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5982519917864520944, guid: 2a4e1bed4e607034f888549ad741e49f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a4e1bed4e607034f888549ad741e49f, type: 3}
@@ -10928,7 +10938,7 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 468421.56
+      value: 15676.308
       objectReference: {fileID: 0}
     - target: {fileID: 5891307867673125693, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
