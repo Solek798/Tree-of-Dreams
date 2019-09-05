@@ -9,13 +9,15 @@ public class CloudPlow : MonoBehaviour, ITool
     [SerializeField] private AudioClip fillAudio;
     [SerializeField] private AudioClip plowAudio;
 
+    private bool isInUse = false;
+
 
     public IEnumerator Use(FarmlandSpace space)
     {
+        isInUse = true;
+
         if (space.IsSoil)
         {
-            Debug.Log("Despawning");
-
             audioPlayer.clip = fillAudio;
             audioPlayer.Play();
 
@@ -24,25 +26,34 @@ public class CloudPlow : MonoBehaviour, ITool
             yield return new WaitForSeconds(space.animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
 
             space.UpdateState();
-                        
+            isInUse = false;
+
+
             yield return space.IsSoil = false;
         }
         else
-        {
-            Debug.Log("Spawning");
-            
+        {            
             audioPlayer.clip = plowAudio;
             audioPlayer.Play();
 
             space.animator.Play("SoilSpawnAnimation");
+
+            StartCoroutine(AnimationEnds(space));
+                                               
             yield return space.IsSoil = true;
         }
-        
+
+    }
+
+    IEnumerator AnimationEnds(FarmlandSpace space)
+    {
+        yield return new WaitForSeconds(space.animator.GetCurrentAnimatorStateInfo(0).length - 0.5f);
+        isInUse = false;
     }
 
     public bool IsUsable(FarmlandSpace space)
     {
-        return !space.IsSoil && space.Lampion == null;
+        return isInUse == false && space.Lampion == null && space.Plant == null;
     }
 
     public float MaxUsingDistance => maxPlowDistance;
