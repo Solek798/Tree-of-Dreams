@@ -67,6 +67,7 @@ public class QuestDisplay : MonoBehaviour
 
     public void OnButtonPressed()
     {
+        SendMessageUpwards("OnQuestFulfilled");
         _quest.MarkAsFulfilled();
     }
 
