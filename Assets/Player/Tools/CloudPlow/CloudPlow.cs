@@ -53,7 +53,7 @@ public class CloudPlow : MonoBehaviour, ITool
 
     public bool IsUsable(FarmlandSpace space)
     {
-        return isInUse == false && space.Lampion == null;
+        return isInUse == false && space.Lampion == null && space.Plant == null;
     }
 
     public float MaxUsingDistance => maxPlowDistance;
