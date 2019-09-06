@@ -14,12 +14,15 @@ public class House : MonoBehaviour
     [SerializeField] private AudioClip wakeUpSound;
     [SerializeField] private QuestCollector questCollector = null;
     [SerializeField] private GameObject thxForPlayingScreen = null;
+    [SerializeField] private GameObject floatingTextPrefab;
 
     public GameObject player;
     public float maxDistanceToSleep = 10f;
 
     private int _daysSinceLastQuest = 0;
     private int _questCount = 0;
+    private GameObject hotkeyText;
+    private Vector3 offset = new Vector3(8,8,0);
 
 
     private void Start()
@@ -30,14 +33,25 @@ public class House : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(Vector3.Distance(transform.position, player.transform.position));
-        if (Input.GetKeyDown(KeyCode.E) &&
-            Vector3.Distance(transform.position, player.transform.position) <= maxDistanceToSleep)
+        if (Vector3.Distance(transform.position, player.transform.position) <= maxDistanceToSleep)
         {
-            StartCoroutine(Sleep());
+            if (!transform.GetComponentInChildren<TextMesh>())
+            {
+                hotkeyText = Instantiate(floatingTextPrefab, transform.position + offset, Quaternion.identity, transform);
+            }
+            
+            hotkeyText.transform.LookAt(Camera.main.transform);
+            hotkeyText.transform.Rotate(0,180,0);
+            
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(Sleep());
+            }    
         }
-
-        
+        else if (hotkeyText != null)
+        {
+            Destroy(hotkeyText);
+        }
     }
 
     private bool ProccessNight()

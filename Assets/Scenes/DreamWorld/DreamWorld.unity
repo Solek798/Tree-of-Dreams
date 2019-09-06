@@ -10358,16 +10358,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1172185312}
-    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnExitButtonClick
-      objectReference: {fileID: 0}
     - target: {fileID: 7114320276157419700, guid: 2a4e1bed4e607034f888549ad741e49f,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -10397,6 +10387,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_inputSource
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1172185312}
+    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnExitButtonClick
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5982519917864520944, guid: 2a4e1bed4e607034f888549ad741e49f, type: 3}
@@ -11045,7 +11045,7 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: 11425.1045
       objectReference: {fileID: 0}
     - target: {fileID: 5891307867673125693, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
@@ -11072,6 +11072,11 @@ PrefabInstance:
       propertyPath: MinDistance
       value: 143.44005
       objectReference: {fileID: 0}
+    - target: {fileID: 4281552962141016854, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 474779525}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87cdd19e8b7087a4f889e99dfa2aa511, type: 3}
 --- !u!114 &1632083539 stripped
@@ -11453,7 +11458,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 133358348824471541, guid: 0e18207248c31564fb1d158b50c8d9c7,
+    - target: {fileID: 7013615638518706737, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -11463,12 +11468,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6445997620329154010, guid: 0e18207248c31564fb1d158b50c8d9c7,
+    - target: {fileID: 133358348824471541, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7013615638518706737, guid: 0e18207248c31564fb1d158b50c8d9c7,
+    - target: {fileID: 6445997620329154010, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -13602,6 +13607,12 @@ PrefabInstance:
       propertyPath: thxForPlayingScreen
       value: 
       objectReference: {fileID: 807391020}
+    - target: {fileID: 5850660163728790361, guid: 04b02f1718710eb4ab14457826023981,
+        type: 3}
+      propertyPath: floatingTextPrefab
+      value: 
+      objectReference: {fileID: 2082796490174555407, guid: 48f59ad9aec8f0746abda220e27bf960,
+        type: 3}
     - target: {fileID: 5850660163728790363, guid: 04b02f1718710eb4ab14457826023981,
         type: 3}
       propertyPath: m_Controller

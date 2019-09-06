@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4038198100676796921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7916082652809535424}
   - {fileID: 3607670800196608920}
@@ -51,6 +51,8 @@ MonoBehaviour:
   maxDistanceToPlayer: 10
   questCard: {fileID: 8046721964117653325}
   questPrefab: {fileID: 9064750230641782500, guid: 91676e7bed0be0ac6a27305f321d0b52,
+    type: 3}
+  floatingTextPrefab: {fileID: 2082796490174555407, guid: 48f59ad9aec8f0746abda220e27bf960,
     type: 3}
 --- !u!1 &8113403339494882368
 GameObject:
