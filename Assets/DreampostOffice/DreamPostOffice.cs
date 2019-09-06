@@ -10,7 +10,7 @@ public class DreamPostOffice : MonoBehaviour
     
     [SerializeField] private GameObject layoutGroup = null;
     [FormerlySerializedAs("questPanel")] [SerializeField] private GameObject questPanelPrefab = null;
-    [SerializeField] private GameObject dreamTree = null;
+    [SerializeField] private GameObject dreamPostOffice = null;
     [SerializeField] private AudioSource audioPlayer;
     [SerializeField] private AudioClip enterDPO;
     [SerializeField] private AudioClip finishDreamLetter;
@@ -50,7 +50,7 @@ public class DreamPostOffice : MonoBehaviour
 
     private void Update()
     {
-        var playerInRange = Vector3.Distance(dreamTree.transform.position, player.transform.position);
+        var playerInRange = Vector3.Distance(dreamPostOffice.transform.position, player.transform.position);
         
         if (Input.GetKeyDown(KeyCode.E) && playerInRange <= maxDistanceToPostOffice && _uiOpened == false) 
         {
@@ -105,10 +105,7 @@ public class DreamPostOffice : MonoBehaviour
 
     public void OnQuestFulfilled()
     {
-        Debug.Log("play finish quest sound");
         audioPlayer.clip = finishDreamLetter;
-        Debug.Log(audioPlayer.clip);
         audioPlayer.Play();
-        Debug.Log(audioPlayer.isPlaying);
     }
 }

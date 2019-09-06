@@ -10,8 +10,11 @@ public class Lampion : MonoBehaviour
     [SerializeField] private float maxDistanceToPlayer = 10f;
     [SerializeField] private QuestCard questCard = null;
     [SerializeField] private GameObject questPrefab = null;
+    [SerializeField] private GameObject floatingTextPrefab;
     
     private Vector3 _travelTarget;
+    private GameObject hotkeyText;
+    private Vector3 offset = new Vector3(0,4,0);
     
     public Vector3 TravelTarget
     {
@@ -58,17 +61,28 @@ public class Lampion : MonoBehaviour
     private void Update()
     {
         var playerInRange = Vector3.Distance(transform.position, player.transform.position);
-        
-        if (Input.GetKeyDown(KeyCode.E) && 
-            questCard != null &&
-            playerInRange <= maxDistanceToPlayer && 
-            !questCard.gameObject.activeInHierarchy) 
+
+        if (playerInRange <= maxDistanceToPlayer)
         {
-            LampionActivation();
+            if (!transform.GetComponentInChildren<TextMesh>())
+            {
+                hotkeyText = Instantiate(floatingTextPrefab, transform.position + offset, Quaternion.identity, transform);
+            }
+
+            hotkeyText.transform.LookAt(Camera.main.transform);
+            hotkeyText.transform.Rotate(0,180,0);
+            
+            if (Input.GetKeyDown(KeyCode.E) && 
+                questCard != null &&
+                !questCard.gameObject.activeInHierarchy) 
+            {
+                LampionActivation();
+            }
         }
-
-
-        //activate questcard
+        else if (hotkeyText != null)
+        {
+            Destroy(hotkeyText);
+        }
     }
 
     private IEnumerator Movement(Vector3 target)
