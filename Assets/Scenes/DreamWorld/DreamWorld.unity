@@ -993,6 +993,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320348996}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &385420641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4094062780133996037, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
+    type: 3}
+  m_PrefabInstance: {fileID: 1632083536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &400662052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10353,11 +10359,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 853398685607010357, guid: 2a4e1bed4e607034f888549ad741e49f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7114320276157419700, guid: 2a4e1bed4e607034f888549ad741e49f,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -10373,6 +10374,21 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 853398685607010357, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1172185312}
+    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnExitButtonClick
+      objectReference: {fileID: 0}
     - target: {fileID: 3250815895540784295, guid: 2a4e1bed4e607034f888549ad741e49f,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -10387,16 +10403,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_inputSource
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1172185312}
-    - target: {fileID: 8775725986380027512, guid: 2a4e1bed4e607034f888549ad741e49f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnExitButtonClick
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5982519917864520944, guid: 2a4e1bed4e607034f888549ad741e49f, type: 3}
@@ -10987,6 +10993,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 474779525}
+    - target: {fileID: 3715262284916569968, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
+        type: 3}
+      propertyPath: dreamPostOffice
+      value: 
+      objectReference: {fileID: 385420641}
     - target: {fileID: 8153240580162813351, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -11045,7 +11056,7 @@ PrefabInstance:
     - target: {fileID: 5891307867780580422, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 108671.67
+      value: 120894.016
       objectReference: {fileID: 0}
     - target: {fileID: 5891307867673125693, guid: 87cdd19e8b7087a4f889e99dfa2aa511,
         type: 3}
@@ -11458,7 +11469,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7013615638518706737, guid: 0e18207248c31564fb1d158b50c8d9c7,
+    - target: {fileID: 133358348824471541, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -11468,12 +11479,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 133358348824471541, guid: 0e18207248c31564fb1d158b50c8d9c7,
+    - target: {fileID: 6445997620329154010, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6445997620329154010, guid: 0e18207248c31564fb1d158b50c8d9c7,
+    - target: {fileID: 7013615638518706737, guid: 0e18207248c31564fb1d158b50c8d9c7,
         type: 3}
       propertyPath: m_IsActive
       value: 1
