@@ -9,7 +9,7 @@ public class HotkeyDisplay : MonoBehaviour
     [SerializeField] private GameObject floatingTextPrefab;
 
     private GameObject hotkeyText;
-    private Vector3 offset = new Vector3(4,4, 0);
+    private Vector3 offset = new Vector3(0,4, 0);
 
 
     void Update()
