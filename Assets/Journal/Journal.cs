@@ -20,6 +20,7 @@ public class Journal : MonoBehaviour
     [SerializeField] private ToggleGroup questToggleGroup = null;
 
     [SerializeField] private GameObject noQuestsText = null;
+    [SerializeField] private GameObject noQuestsImage = null;
     [SerializeField] private GameObject questInfo = null;
     [SerializeField] private TutorialButton defaultTutorialButton = null;
     
@@ -76,6 +77,7 @@ public class Journal : MonoBehaviour
         toggle.interactable = true;
         
         noQuestsText.SetActive(false);
+        noQuestsImage.SetActive(false);
         questInfo.SetActive(true);
         
         if (layoutGroup.GetComponentsInChildren<QuestDisplay>().Length == 1)
@@ -106,6 +108,7 @@ public class Journal : MonoBehaviour
             if (layoutGroup.GetComponentsInChildren<QuestDisplay>().Length <= 0)
             {
                 noQuestsText.SetActive(true);
+                noQuestsImage.SetActive(true);
                 questInfo.SetActive(false);
 
                 
