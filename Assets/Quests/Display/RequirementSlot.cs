@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +10,7 @@ public class RequirementSlot : MonoBehaviour, IDropTarget
     [SerializeField] private Color fullFilledColor = Color.clear;
     
     private PlantScriptableObject _plantScriptableObject = null;
-    private QuestDisplay _display;
+    private QuestDisplay _display = null;
 
     public Sprite Icon
     {

@@ -12,9 +12,9 @@ public class Journal : MonoBehaviour
     [SerializeField] private Toggle pauseTab = null;
     [SerializeField] private Text dayCounter = null;
     [SerializeField] private Text earningsCounter = null;
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator animator = null;
     [SerializeField] private Image imageNPC = null;
-    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioSource audioPlayer = null;
     [SerializeField] private TextMeshProUGUI nameNPC = null;
     [SerializeField] private TextMeshProUGUI storyNPC = null;
     [SerializeField] private ToggleGroup questToggleGroup = null;

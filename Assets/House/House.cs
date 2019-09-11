@@ -8,21 +8,21 @@ public class House : MonoBehaviour
     [SerializeField] private LampionFactory lampionFactory = null;
     [SerializeField] private Journal journal = null;
     [SerializeField] private GameObject sleepMenu = null;
-    [SerializeField] private int questFrequency;
-    [SerializeField] private AudioSource audioPlayer;
-    [SerializeField] private AudioClip goToSleepSound;
-    [SerializeField] private AudioClip wakeUpSound;
+    [SerializeField] private int questFrequency = 0;
+    [SerializeField] private AudioSource audioPlayer = null;
+    [SerializeField] private AudioClip goToSleepSound = null;
+    [SerializeField] private AudioClip wakeUpSound = null;
     [SerializeField] private QuestCollector questCollector = null;
     [SerializeField] private GameObject thxForPlayingScreen = null;
-    [SerializeField] private GameObject floatingTextPrefab;
+    [SerializeField] private GameObject floatingTextPrefab = null;
 
-    public GameObject player;
+    public GameObject player = null;
     public float maxDistanceToSleep = 10f;
 
     private int _daysSinceLastQuest = 0;
     private int _questCount = 0;
-    private GameObject hotkeyText;
-    private Vector3 offset = new Vector3(8,8,0);
+    private GameObject _hotkeyText = null;
+    private Vector3 _offset = new Vector3(8,8,0);
 
 
     private void Start()
@@ -37,20 +37,20 @@ public class House : MonoBehaviour
         {
             if (!transform.GetComponentInChildren<TextMesh>())
             {
-                hotkeyText = Instantiate(floatingTextPrefab, transform.position + offset, Quaternion.identity, transform);
+                _hotkeyText = Instantiate(floatingTextPrefab, transform.position + _offset, Quaternion.identity, transform);
             }
             
-            hotkeyText.transform.LookAt(Camera.main.transform);
-            hotkeyText.transform.Rotate(0,180,0);
+            _hotkeyText.transform.LookAt(Camera.main.transform);
+            _hotkeyText.transform.Rotate(0,180,0);
             
             if (Input.GetKeyDown(KeyCode.E))
             {
                 StartCoroutine(Sleep());
             }    
         }
-        else if (hotkeyText != null)
+        else if (_hotkeyText != null)
         {
-            Destroy(hotkeyText);
+            Destroy(_hotkeyText);
         }
     }
 
