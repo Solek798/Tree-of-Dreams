@@ -10,9 +10,9 @@ public class Stack : MonoBehaviour
     [SerializeField] private bool isClosed = false;
     [SerializeField] private Text count = null;
     [SerializeField] private Image countBG = null;
-    [SerializeField] private Image icon;
+    [SerializeField] private Image icon = null;
     
-    private Stack<InventoryItem> _items;
+    private Stack<InventoryItem> _items = null;
 
     public Slot Slot { get; set; }
     public bool IsClosed => isClosed;

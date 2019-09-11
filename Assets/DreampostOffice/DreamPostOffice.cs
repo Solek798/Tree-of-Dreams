@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -9,10 +6,11 @@ public class DreamPostOffice : MonoBehaviour
 {
     
     [SerializeField] private GameObject layoutGroup = null;
+    // TODO(FK): delete FormerlySerializedAs Attribute
     [FormerlySerializedAs("questPanel")] [SerializeField] private GameObject questPanelPrefab = null;
     [SerializeField] private GameObject dreamPostOffice = null;
-    [SerializeField] private AudioSource audioPlayer;
-    [SerializeField] private AudioClip enterDPO;
+    [SerializeField] private AudioSource audioPlayer = null;
+    [SerializeField] private AudioClip enterDPO = null;
     [SerializeField] private AudioClip finishDreamLetter;
     
     // temp

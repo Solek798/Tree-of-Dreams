@@ -11,8 +11,8 @@ public class FarmlandLevel : MonoBehaviour
     [SerializeField] private GameObject cellSelector = null;
     [SerializeField] private GameObject ground = null;
     [SerializeField] private BoundsInt randomCellBounds;
-    private Dictionary<Vector3Int, GameObject> _register;
-    private Grid _grid;
+    private Dictionary<Vector3Int, GameObject> _register = null;
+    private Grid _grid = null;
     
     
     private void Awake()

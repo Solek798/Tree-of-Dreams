@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class TabSoundPlayer : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioPlayer;
-    [SerializeField] private List<AudioClip> audioClips;
+    [SerializeField] private AudioSource audioPlayer = null;
+    [SerializeField] private List<AudioClip> audioClips = null;
 
     public void PlayRandomSound()
     {

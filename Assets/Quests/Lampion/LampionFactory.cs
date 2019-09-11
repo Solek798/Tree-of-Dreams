@@ -5,16 +5,16 @@ public class LampionFactory : MonoBehaviour
 {
     [SerializeField] private GameObject lampionPrefab = null;
     [SerializeField] private GameObject player = null;
-    public Farmland farmland;
+    public Farmland farmland = null;
 
     [SerializeField] private BoundsInt targetBounds;
     [SerializeField] private float spawnRadius = 30;
     [SerializeField] private int maxGeneratingAttempts = 10;
-    public List<QuestData> questData;
+    public List<QuestData> questData = null;
 
-    [SerializeField] private AudioSource audioPlayer;
-    private Lampion newLampion;
-    private FarmlandSpace targetSpace;
+    [SerializeField] private AudioSource audioPlayer = null;
+    private Lampion newLampion = null;
+    private FarmlandSpace targetSpace = null;
     
     public void CreateAndSend()
     {
