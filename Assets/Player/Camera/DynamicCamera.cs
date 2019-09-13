@@ -25,7 +25,6 @@ public class DynamicCamera : MonoBehaviour
     private void Start()
     {
         _zoomStep = maxZoom / (maxDistance - minDistance);
-        Debug.Log(_zoomStep);
     }
 
     // Update is called once per frame
