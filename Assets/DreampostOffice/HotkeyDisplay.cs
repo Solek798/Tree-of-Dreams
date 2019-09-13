@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HotkeyDisplay : MonoBehaviour
 {
-    [SerializeField] private GameObject dreamPostOffice;
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject floatingTextPrefab;
+    [SerializeField] private GameObject dreamPostOffice = null;
+    [SerializeField] private GameObject player = null;
+    [SerializeField] private GameObject floatingTextPrefab = null;
 
-    private GameObject hotkeyText;
+    private GameObject hotkeyText = null;
     private Vector3 offset = new Vector3(0,4, 0);
 
 

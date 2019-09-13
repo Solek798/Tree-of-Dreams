@@ -4,17 +4,16 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Camera cam = null;
     [SerializeField] private AudioSource audioPlayer = null;
-    [SerializeField] private Animator animator;
-    [SerializeField] private Animator animatorOutline;
+    [SerializeField] private Animator animator = null;
+    [SerializeField] private Animator animatorOutline = null;
 
-    private CharacterController _controller;
+    private CharacterController _controller = null;
 
     public float speed = 6.0f;
     private float _normalSpeed = 0.0f;
     public float runSpeed = 12.0f;
     public float jumpDuration = 8.0f;
     public float gravity = 20.0f;
-    //public ParticleSystem playerTrail;
 
     public float rotateSpeed = 5;
 

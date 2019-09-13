@@ -5,8 +5,8 @@ using UnityEngine;
 public class DreamSickle : MonoBehaviour, ITool
 {
     [SerializeField] private float maxHarvestDistance = 60.0f;
-    [SerializeField] private AudioSource audioPlayer;
-    [SerializeField] private List<AudioClip> audioClips;
+    [SerializeField] private AudioSource audioPlayer = null;
+    [SerializeField] private List<AudioClip> audioClips = null;
 
     private bool _isUsed = false;
 

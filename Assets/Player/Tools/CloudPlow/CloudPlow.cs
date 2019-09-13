@@ -1,13 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CloudPlow : MonoBehaviour, ITool
 {
     [SerializeField] private float maxPlowDistance = 60.0f;
-    [SerializeField] private AudioSource audioPlayer;
-    [SerializeField] private AudioClip fillAudio;
-    [SerializeField] private AudioClip plowAudio;
+    [SerializeField] private AudioSource audioPlayer = null;
+    [SerializeField] private AudioClip fillAudio = null;
+    [SerializeField] private AudioClip plowAudio = null;
 
     private bool isInUse = false;
 
