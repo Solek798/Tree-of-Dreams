@@ -20,7 +20,6 @@ public class FarmlandLevel : MonoBehaviour
         
         _register = new Dictionary<Vector3Int, GameObject>();
         _grid = GetComponent<Grid>();
-        Debug.Log(_register);
     }
 
     public FarmlandSpace Interact()
@@ -94,9 +93,6 @@ public class FarmlandLevel : MonoBehaviour
                 Random.Range(randomCellBounds.yMin, randomCellBounds.yMax),
                 Random.Range(randomCellBounds.zMin, randomCellBounds.zMax)
             );
-
-            Debug.Log(tilemap);
-            Debug.Log(_register);
 
             if (tilemap.HasTile(position) && !_register.ContainsKey(position))
             {
