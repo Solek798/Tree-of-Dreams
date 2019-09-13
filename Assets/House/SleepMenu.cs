@@ -45,6 +45,7 @@ public class SleepMenu : MonoBehaviour
     {
         display.transform.SetParent(questLayoutGroup.transform);
         display.transform.localScale = Vector3.one;
+        display.transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
     
     public void ManageDisplays()
