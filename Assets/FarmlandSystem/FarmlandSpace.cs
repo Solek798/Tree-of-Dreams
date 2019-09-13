@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FarmlandSpace : MonoBehaviour
 {
-    public ParticleSystem seedFluteParticle;
-    public ParticleSystem bagOfStardustParticle;
-    public ParticleSystem farmlandSpaceParticle;
-    public ParticleSystem dreamSickleParticle;
+    public ParticleSystem seedFluteParticle = null;
+    public ParticleSystem bagOfStardustParticle = null;
+    public ParticleSystem farmlandSpaceParticle = null;
+    public ParticleSystem dreamSickleParticle = null;
     
 
     [SerializeField] private GameObject soil = null;
     [SerializeField] private GameObject nurturedSoil = null;
-    [SerializeField] public Animator animator;
+    [SerializeField] public Animator animator = null;
 
     public bool IsSoil
     {

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Lampion : MonoBehaviour
 {
-    public GameObject player;
-    public QuestData questData;
+    public GameObject player = null;
+    public QuestData questData = null;
     
     [SerializeField] private float maxDistanceToPlayer = 10f;
     [SerializeField] private QuestCard questCard = null;
     [SerializeField] private GameObject questPrefab = null;
-    [SerializeField] private GameObject floatingTextPrefab;
+    [SerializeField] private GameObject floatingTextPrefab = null;
     
     private Vector3 _travelTarget;
-    private GameObject hotkeyText;
+    private GameObject hotkeyText = null;
     private Vector3 offset = new Vector3(0,4,0);
     
     public Vector3 TravelTarget
@@ -26,13 +26,6 @@ public class Lampion : MonoBehaviour
             StopCoroutine("Movement");
             StartCoroutine("Movement", _travelTarget);
         }
-    }
-    
-    private void Start()
-    {
-        
-        //questData.isJournal = false;
-        
     }
 
 

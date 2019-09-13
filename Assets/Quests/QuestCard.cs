@@ -13,7 +13,7 @@ public class QuestCard : MonoBehaviour
     [SerializeField] private GameObject questPrefab = null;
     [SerializeField] private GameObject requirementSlotPrefab = null;
     [SerializeField] private Transform questParent = null;
-    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioSource audioPlayer = null;
 
     private Quest _quest = null;
     

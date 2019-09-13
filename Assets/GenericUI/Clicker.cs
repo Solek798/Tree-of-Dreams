@@ -1,15 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Clicker : MonoBehaviour
 {
-    [SerializeField] private Texture2D cursorNormal;
-    [SerializeField] private Texture2D cursorClick;
+    [SerializeField] private Texture2D cursorNormal = null;
+    [SerializeField] private Texture2D cursorClick = null;
     
-    [SerializeField] private AudioSource audioPlayer;
+    [SerializeField] private AudioSource audioPlayer = null;
 
     private void Start()
     {

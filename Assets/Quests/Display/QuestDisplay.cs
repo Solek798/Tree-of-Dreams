@@ -9,7 +9,7 @@ public class QuestDisplay : MonoBehaviour
     [SerializeField] protected Image npcIconUI = null;
     [SerializeField] protected GameObject requirementSlotPrefab = null;
     [SerializeField] protected HorizontalLayoutGroup requirementsLayoutGroup = null;
-    [SerializeField] protected Animator animator;
+    [SerializeField] protected Animator animator = null;
 
     protected Quest _quest = null;
 
@@ -29,10 +29,6 @@ public class QuestDisplay : MonoBehaviour
         _quest = quest;
         npcIconUI.sprite = quest.Data.roundQuestNPCImage;
         
-        /*foreach (var requirement in requirements)
-        {
-            requirement.transform.SetParent(requirementsLayoutGroup.transform);
-        }*/
         
         var requirementGroups = quest.Data.requirements
             .Select(t => t.GetComponent<PlantState>())

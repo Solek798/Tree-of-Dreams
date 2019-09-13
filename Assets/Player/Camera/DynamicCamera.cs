@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DynamicCamera : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
-    [SerializeField] private Transform focusPoint;
-    [SerializeField] private Transform cameraTransform;
-    [SerializeField] private Transform zoomTransform;
+    [SerializeField] private Transform playerTransform = null;
+    [SerializeField] private Transform focusPoint = null;
+    [SerializeField] private Transform cameraTransform = null;
+    [SerializeField] private Transform zoomTransform = null;
 
     [SerializeField, Range(0, 1)] private float turnDumpingFactor = 1;
     [SerializeField, Range(1, 20)] private float turnSpeedFactor = 1;

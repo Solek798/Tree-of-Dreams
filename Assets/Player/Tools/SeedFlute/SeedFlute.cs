@@ -1,17 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class SeedFlute : MonoBehaviour, ITool
 {
     [SerializeField] private float maxPlantDistance = 60.0f;
-    [SerializeField] private AudioSource audioPlayer;
-    [SerializeField] private AudioClip audioCou;
-    [SerializeField] private AudioClip audioCur;
-    [SerializeField] private AudioClip audioHap;
-    [SerializeField] private AudioClip audioLov;
-    [SerializeField] private AudioClip audioTru;
+    [SerializeField] private AudioSource audioPlayer = null;
+    [SerializeField] private AudioClip audioCou = null;
+    [SerializeField] private AudioClip audioCur = null;
+    [SerializeField] private AudioClip audioHap = null;
+    [SerializeField] private AudioClip audioLov = null;
+    [SerializeField] private AudioClip audioTru = null;
 
     private FarmlandSpace _space;
 
